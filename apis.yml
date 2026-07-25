@@ -1,27 +1,605 @@
 aid: conductorone
 name: ConductorOne
-description: 'ConductorOne is a company surfaced as a portfolio company of accel and added to the API
-  Evangelist network as a stub for enrichment. Sector: cloud-saas. This profile is a lead awaiting the
-  enrichment pipeline.'
+description: ConductorOne (now branded C1) is an identity security and access governance platform that
+  automates access reviews, just-in-time access requests, provisioning, role mining, and least-privilege
+  enforcement across 400+ connected apps and cloud infrastructure, plus governance of AI/MCP access. Its
+  HTTP API lets teams manage apps, entitlements, users, access reviews, automations, connectors, policies,
+  and audit data, and integrate identity security directly into internal tools and developer workflows.
+  The API is documented with a full OpenAPI 3.1 spec and backed by Go and TypeScript SDKs, a Terraform
+  provider, a Postman collection, and the c1i/cone command-line tools.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://www.c1.ai/favicon.ico
 url: https://raw.githubusercontent.com/api-evangelist/conductorone/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - accel
-x-tier: stub
+x-tier: enriched
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
 - Cloud Saas
-apis: []
+- Identity Security
+- Access Governance
+- Identity and Access Management
+- Access Reviews
+- Provisioning
+- Least Privilege
+- MCP Governance
+- Security
+apis:
+- aid: conductorone:conductorone-access-conflict-api
+  name: ConductorOne Access Conflict API
+  description: The Access Conflict API from ConductorOne — 2 operation(s) for access conflict.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - Access Conflict
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-access-conflict-api-openapi.yml
+- aid: conductorone:conductorone-app-api
+  name: ConductorOne App API
+  description: The App API from ConductorOne — 3 operation(s) for app.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - App
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-app-api-openapi.yml
+- aid: conductorone:conductorone-app-entitlement-api
+  name: ConductorOne App Entitlement API
+  description: The App Entitlement API from ConductorOne — 11 operation(s) for app entitlement.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - App Entitlement
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-app-entitlement-api-openapi.yml
+- aid: conductorone:conductorone-app-entitlement-automation-api
+  name: ConductorOne App Entitlement Automation API
+  description: >-
+    The App Entitlement Automation API from ConductorOne — 3 operation(s) for app entitlement automation.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - App Entitlement Automation
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-app-entitlement-automation-api-openapi.yml
+- aid: conductorone:conductorone-app-entitlement-automation-exclusion-api
+  name: ConductorOne App Entitlement Automation Exclusion API
+  description: >-
+    The App Entitlement Automation Exclusion API from ConductorOne — 1 operation(s) for app entitlement
+    automation exclusion.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - App Entitlement Automation Exclusion
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-app-entitlement-automation-exclusion-api-openapi.yml
+- aid: conductorone:conductorone-app-entitlement-monitor-binding-api
+  name: ConductorOne App Entitlement Monitor Binding API
+  description: >-
+    The App Entitlement Monitor Binding API from ConductorOne — 2 operation(s) for app entitlement monitor
+    binding.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - App Entitlement Monitor Binding
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-app-entitlement-monitor-binding-api-openapi.yml
+- aid: conductorone:conductorone-app-entitlement-owner-api
+  name: ConductorOne App Entitlement Owner API
+  description: >-
+    The App Entitlement Owner API from ConductorOne — 3 operation(s) for app entitlement owner.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - App Entitlement Owner
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-app-entitlement-owner-api-openapi.yml
+- aid: conductorone:conductorone-app-entitlement-proxy-binding-api
+  name: ConductorOne App Entitlement Proxy Binding API
+  description: >-
+    The App Entitlement Proxy Binding API from ConductorOne — 1 operation(s) for app entitlement proxy
+    binding.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - App Entitlement Proxy Binding
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-app-entitlement-proxy-binding-api-openapi.yml
+- aid: conductorone:conductorone-app-entitlement-user-binding-api
+  name: ConductorOne App Entitlement User Binding API
+  description: >-
+    The App Entitlement User Binding API from ConductorOne — 3 operation(s) for app entitlement user binding.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - App Entitlement User Binding
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-app-entitlement-user-binding-api-openapi.yml
+- aid: conductorone:conductorone-app-entitlement-user-binding-feed-api
+  name: ConductorOne App Entitlement User Binding Feed API
+  description: >-
+    The App Entitlement User Binding Feed API from ConductorOne — 1 operation(s) for app entitlement user
+    binding feed.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - App Entitlement User Binding Feed
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-app-entitlement-user-binding-feed-api-openapi.yml
+- aid: conductorone:conductorone-app-entitlement-user-binding-history-api
+  name: ConductorOne App Entitlement User Binding History API
+  description: >-
+    The App Entitlement User Binding History API from ConductorOne — 1 operation(s) for app entitlement
+    user binding history.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - App Entitlement User Binding History
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-app-entitlement-user-binding-history-api-openapi.yml
+- aid: conductorone:conductorone-app-owner-api
+  name: ConductorOne App Owner API
+  description: The App Owner API from ConductorOne — 3 operation(s) for app owner.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - App Owner
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-app-owner-api-openapi.yml
+- aid: conductorone:conductorone-app-reports-api
+  name: ConductorOne App Reports API
+  description: The App Reports API from ConductorOne — 1 operation(s) for app reports.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - App Reports
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-app-reports-api-openapi.yml
+- aid: conductorone:conductorone-app-resource-api
+  name: ConductorOne App Resource API
+  description: The App Resource API from ConductorOne — 4 operation(s) for app resource.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - App Resource
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-app-resource-api-openapi.yml
+- aid: conductorone:conductorone-app-resource-owner-api
+  name: ConductorOne App Resource Owner API
+  description: The App Resource Owner API from ConductorOne — 2 operation(s) for app resource owner.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - App Resource Owner
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-app-resource-owner-api-openapi.yml
+- aid: conductorone:conductorone-app-resource-type-api
+  name: ConductorOne App Resource Type API
+  description: The App Resource Type API from ConductorOne — 2 operation(s) for app resource type.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - App Resource Type
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-app-resource-type-api-openapi.yml
+- aid: conductorone:conductorone-app-usage-controls-api
+  name: ConductorOne App Usage Controls API
+  description: The App Usage Controls API from ConductorOne — 1 operation(s) for app usage controls.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - App Usage Controls
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-app-usage-controls-api-openapi.yml
+- aid: conductorone:conductorone-appaccessrequestdefaults-api
+  name: ConductorOne AppAccessRequestDefaults API
+  description: >-
+    The AppAccessRequestDefaults API from ConductorOne — 2 operation(s) for appaccessrequestdefaults.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - AppAccessRequestDefaults
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-appaccessrequestdefaults-api-openapi.yml
+- aid: conductorone:conductorone-appusers-api
+  name: ConductorOne AppUsers API
+  description: The AppUsers API from ConductorOne — 5 operation(s) for appusers.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - AppUsers
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-appusers-api-openapi.yml
+- aid: conductorone:conductorone-attribute-api
+  name: ConductorOne Attribute API
+  description: The Attribute API from ConductorOne — 6 operation(s) for attribute.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - Attribute
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-attribute-api-openapi.yml
+- aid: conductorone:conductorone-auth-api
+  name: ConductorOne Auth API
+  description: The Auth API from ConductorOne — 1 operation(s) for auth.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - Auth
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-auth-api-openapi.yml
+- aid: conductorone:conductorone-automations-api
+  name: ConductorOne Automations API
+  description: The Automations API from ConductorOne — 9 operation(s) for automations.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - Automations
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-automations-api-openapi.yml
+- aid: conductorone:conductorone-aws-external-id-settings-api
+  name: ConductorOne AWS External ID Settings API
+  description: >-
+    The AWS External ID Settings API from ConductorOne — 1 operation(s) for aws external id settings.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - AWS External ID Settings
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-aws-external-id-settings-api-openapi.yml
+- aid: conductorone:conductorone-compliance-framework-api
+  name: ConductorOne Compliance Framework API
+  description: >-
+    The Compliance Framework API from ConductorOne — 2 operation(s) for compliance framework.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - Compliance Framework
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-compliance-framework-api-openapi.yml
+- aid: conductorone:conductorone-connector-api
+  name: ConductorOne Connector API
+  description: The Connector API from ConductorOne — 11 operation(s) for connector.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - Connector
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-connector-api-openapi.yml
+- aid: conductorone:conductorone-connector-catalog-api
+  name: ConductorOne Connector Catalog API
+  description: The Connector Catalog API from ConductorOne — 1 operation(s) for connector catalog.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - Connector Catalog
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-connector-catalog-api-openapi.yml
+- aid: conductorone:conductorone-directory-api
+  name: ConductorOne Directory API
+  description: The Directory API from ConductorOne — 2 operation(s) for directory.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - Directory
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-directory-api-openapi.yml
+- aid: conductorone:conductorone-function-api
+  name: ConductorOne Function API
+  description: The Function API from ConductorOne — 5 operation(s) for function.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - Function
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-function-api-openapi.yml
+- aid: conductorone:conductorone-function-commit-api
+  name: ConductorOne Function Commit API
+  description: The Function Commit API from ConductorOne — 2 operation(s) for function commit.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - Function Commit
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-function-commit-api-openapi.yml
+- aid: conductorone:conductorone-function-tag-api
+  name: ConductorOne Function Tag API
+  description: The Function Tag API from ConductorOne — 1 operation(s) for function tag.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - Function Tag
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-function-tag-api-openapi.yml
+- aid: conductorone:conductorone-org-domain-api
+  name: ConductorOne Org Domain API
+  description: The Org Domain API from ConductorOne — 1 operation(s) for org domain.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - Org Domain
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-org-domain-api-openapi.yml
+- aid: conductorone:conductorone-personal-client-api
+  name: ConductorOne Personal Client API
+  description: The Personal Client API from ConductorOne — 3 operation(s) for personal client.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - Personal Client
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-personal-client-api-openapi.yml
+- aid: conductorone:conductorone-policy-api
+  name: ConductorOne Policy API
+  description: The Policy API from ConductorOne — 5 operation(s) for policy.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - Policy
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-policy-api-openapi.yml
+- aid: conductorone:conductorone-request-catalog-api
+  name: ConductorOne Request Catalog API
+  description: The Request Catalog API from ConductorOne — 13 operation(s) for request catalog.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - Request Catalog
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-request-catalog-api-openapi.yml
+- aid: conductorone:conductorone-request-schema-api
+  name: ConductorOne Request Schema API
+  description: The Request Schema API from ConductorOne — 2 operation(s) for request schema.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - Request Schema
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-request-schema-api-openapi.yml
+- aid: conductorone:conductorone-request-schema-entitlement-binding-api
+  name: ConductorOne Request Schema Entitlement Binding API
+  description: >-
+    The Request Schema Entitlement Binding API from ConductorOne — 1 operation(s) for request schema entitlement
+    binding.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - Request Schema Entitlement Binding
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-request-schema-entitlement-binding-api-openapi.yml
+- aid: conductorone:conductorone-risk-level-api
+  name: ConductorOne Risk Level API
+  description: The Risk Level API from ConductorOne — 2 operation(s) for risk level.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - Risk Level
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-risk-level-api-openapi.yml
+- aid: conductorone:conductorone-role-api
+  name: ConductorOne Role API
+  description: The Role API from ConductorOne — 2 operation(s) for role.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - Role
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-role-api-openapi.yml
+- aid: conductorone:conductorone-session-settings-api
+  name: ConductorOne Session Settings API
+  description: The Session Settings API from ConductorOne — 2 operation(s) for session settings.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - Session Settings
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-session-settings-api-openapi.yml
+- aid: conductorone:conductorone-step-up-authentication-providers-api
+  name: ConductorOne Step Up Authentication Providers API
+  description: >-
+    The Step Up Authentication Providers API from ConductorOne — 5 operation(s) for step up authentication
+    providers.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - Step Up Authentication Providers
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-step-up-authentication-providers-api-openapi.yml
+- aid: conductorone:conductorone-step-up-authentication-transactions-api
+  name: ConductorOne Step Up Authentication Transactions API
+  description: >-
+    The Step Up Authentication Transactions API from ConductorOne — 2 operation(s) for step up authentication
+    transactions.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - Step Up Authentication Transactions
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-step-up-authentication-transactions-api-openapi.yml
+- aid: conductorone:conductorone-system-log-api
+  name: ConductorOne System Log API
+  description: The System Log API from ConductorOne — 1 operation(s) for system log.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - System Log
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-system-log-api-openapi.yml
+- aid: conductorone:conductorone-system-log-exporter-api
+  name: ConductorOne System Log Exporter API
+  description: The System Log Exporter API from ConductorOne — 4 operation(s) for system log exporter.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - System Log Exporter
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-system-log-exporter-api-openapi.yml
+- aid: conductorone:conductorone-task-api
+  name: ConductorOne Task API
+  description: The Task API from ConductorOne — 19 operation(s) for task.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - Task
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-task-api-openapi.yml
+- aid: conductorone:conductorone-user-api
+  name: ConductorOne User API
+  description: The User API from ConductorOne — 5 operation(s) for user.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - User
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-user-api-openapi.yml
+- aid: conductorone:conductorone-webhook-api
+  name: ConductorOne Webhook API
+  description: The Webhook API from ConductorOne — 4 operation(s) for webhook.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - Webhook
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-webhook-api-openapi.yml
+common:
+- type: TrustCenter
+  url: https://trust.c1.ai/
+- type: VulnerabilityDisclosure
+  url: security/conductorone-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/conductorone-domain-security.yml
+- type: AgenticAccess
+  url: agentic-access/conductorone-agentic-access.yml
+- type: OAuthScopes
+  url: scopes/conductorone-scopes.yml
+- type: Authentication
+  url: authentication/conductorone-authentication.yml
+- type: Website
+  url: https://www.conductorone.com/
+- type: DeveloperPortal
+  url: https://www.c1.ai/docs/developer/intro
+- type: Documentation
+  url: https://www.c1.ai/docs/
+- type: APIReference
+  url: https://www.c1.ai/docs/conductorone-api/api
+- type: GettingStarted
+  url: https://www.c1.ai/docs/conductorone-api/authenticate
+- type: Blog
+  url: https://www.c1.ai/blog
+- type: GitHubOrganization
+  url: https://github.com/conductorone
+- type: Pricing
+  url: https://www.c1.ai/pricing
+- type: Login
+  url: https://app.conductor.one/login
+- type: PrivacyPolicy
+  url: https://www.c1.ai/privacy-policy
+- type: Postman
+  url: https://github.com/conductorone/conductorone-sdk-postman
+- type: Packages
+  url: packages/conductorone-packages.yml
+- type: SDKs
+  url: packages/conductorone-packages.yml
+- type: CLI
+  url: cli/conductorone-cli.yml
+- type: MCPServer
+  url: mcp/conductorone-mcp.yml
+- type: LLMsTxt
+  url: llms/conductorone-llms.txt
+- type: Overlay
+  url: overlays/conductorone-openapi-overlay.yaml
+- type: Conventions
+  url: conventions/conductorone-conventions.yml
+- type: ErrorCatalog
+  url: errors/conductorone-error-codes.yml
+- type: DataModel
+  url: data-model/conductorone-data-model.yml
+- type: Lifecycle
+  url: lifecycle/conductorone-lifecycle.yml
+- type: StatusPage
+  url: https://status.c1.ai/
+- type: Conformance
+  url: conformance/conductorone-conformance.yml
+- type: Compliance
+  url: https://trust.c1.ai/
+- type: Webhooks
+  url: asyncapi/conductorone-webhooks.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: ChangeLog
+  url: https://www.c1.ai/docs/product/release-notes
+- type: Security
+  url: https://www.c1.ai/security
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-common:
-- type: Website
-  url: https://www.conductorone.com/
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

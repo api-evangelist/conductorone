@@ -1,0 +1,15 @@
+generated: '2026-07-18'
+method: searched
+source:
+- openapi/conductorone-openapi-original.yml
+- https://www.c1.ai/docs/product/release-notes
+- https://status.c1.ai/
+versioning:
+  scheme: uri-path
+  current: v1
+  spec_version: 0.1.0-alpha
+  docs: https://www.c1.ai/docs/conductorone-api/api
+status_page: https://status.c1.ai/
+release_notes: https://www.c1.ai/docs/product/release-notes
+deprecated_operations:
+- openapi/conductorone-openapi-original.yml#c1.api.app.v1.AppEntitlements.ListUsers

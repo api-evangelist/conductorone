@@ -1,0 +1,38 @@
+generated: '2026-07-18'
+method: derived
+source:
+- openapi/conductorone-openapi-original.yml
+- https://www.c1.ai/security
+- https://trust.c1.ai/
+standards:
+- id: oauth2
+  conforms: true
+  evidence: securitySchemes declares oauth2 clientCredentials flow (tokenUrl /auth/v1/token)
+- id: oauth2-client-credentials
+  conforms: true
+  evidence: RFC 6749 client credentials grant
+- id: http-bearer
+  conforms: true
+  evidence: bearerAuth http bearer scheme
+- id: connect-rpc
+  conforms: true
+  evidence: Connect (connectrpc.com) protocol; operationIds are fully-qualified protobuf service methods
+    (c1.api.*.v1.Service.Method)
+- id: grpc-status-model
+  conforms: true
+  evidence: errors returned as google.rpc.Status envelope
+- id: protobuf-fieldmask
+  conforms: true
+  evidence: update operations use updateMask (google.protobuf.FieldMask)
+- id: cursor-pagination
+  conforms: true
+  evidence: page_size/page_token + nextPageToken
+- id: soc2
+  conforms: true
+  evidence: SOC 2 published on trust center (trust.c1.ai)
+- id: rfc9457-problem-details
+  conforms: false
+- id: openidconnect
+  conforms: false
+- id: scim2
+  conforms: false

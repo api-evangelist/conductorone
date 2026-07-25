@@ -1,0 +1,38 @@
+generated: '2026-07-18'
+method: searched
+source:
+- https://github.com/conductorone/c1i
+- https://github.com/conductorone/cone
+- https://www.c1.ai/docs/developer/intro
+clis:
+- name: c1i
+  description: "Agent-oriented CLI for the C1 API \u2014 structured NDJSON/JSON output, built-in API docs,\
+    \ auto-pagination."
+  repo: https://github.com/conductorone/c1i
+  status: beta
+  install:
+  - go install github.com/ConductorOne/c1i@latest
+  auth: c1i auth login --url mycompany.conductor.one
+  command_groups:
+  - auth
+  - users
+  - apps
+  - tasks
+  - docs
+  example_flows:
+  - c1i users list --status enabled
+  - c1i apps list
+  - c1i docs search "access reviews"
+  - c1i docs endpoints --filter task
+- name: cone
+  description: Human-friendly C1 platform CLI for end-users/administrators (login, search, approvals).
+  repo: https://github.com/conductorone/cone
+  install:
+  - brew tap conductorone/baton
+- name: baton
+  description: Standalone CLI for inspecting Baton connector sync output (.c1z files).
+  repo: https://github.com/conductorone/baton-sdk
+  command_groups:
+  - resources
+  - grants
+  - entitlements

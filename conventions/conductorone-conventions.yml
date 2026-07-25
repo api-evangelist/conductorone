@@ -1,0 +1,45 @@
+generated: '2026-07-18'
+method: derived
+source:
+- openapi/conductorone-openapi-original.yml
+- https://www.c1.ai/docs/conductorone-api/api
+protocol: Connect (connectrpc.com) over HTTP/JSON; POST-style RPC operations plus RESTful GET list/get
+  endpoints
+base_url: https://{tenantDomain}.conductor.one
+authentication:
+  styles:
+  - oauth2 client_credentials
+  - http bearer
+  oauth2_token_url: /auth/v1/token
+  note: Client credentials must be sent in the request BODY, not headers. See authentication/conductorone-authentication.yml.
+idempotency:
+  supported: false
+  note: No Idempotency-Key header is documented or present in the OpenAPI.
+pagination:
+  style: cursor
+  request_params:
+  - page_size
+  - page_token
+  response_fields:
+  - nextPageToken
+  note: List endpoints accept page_size + page_token and return nextPageToken; SDKs/CLI auto-paginate.
+field_mask:
+  supported: true
+  note: Update operations accept an updateMask to indicate which fields to modify (protobuf FieldMask).
+expand:
+  supported: true
+  note: Responses carry an "expanded" list of serialized related objects (@type-tagged) to inline related
+    resources.
+error_envelope:
+  schema: google.rpc.Status
+  ref: errors/conductorone-error-codes.yml
+versioning:
+  scheme: uri-path
+  current: v1
+  ref: lifecycle/conductorone-lifecycle.yml
+rate_limiting:
+  note: Automations support a circuit breaker for rate limiting; resource_exhausted (429) signals throttling.
+cross_links:
+  authentication: authentication/conductorone-authentication.yml
+  errors: errors/conductorone-error-codes.yml
+  lifecycle: lifecycle/conductorone-lifecycle.yml

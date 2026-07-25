@@ -1,0 +1,19 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for ConductorOne
+  version: 1.0.0
+extends: openapi/conductorone-openapi-original.yml
+actions:
+- target: $.info
+  update:
+    x-apievangelist-rating: 4
+    x-apievangelist-notes: Connect/gRPC-style API; OAuth2 client credentials; cursor
+      pagination; outbound webhooks; SOC 2.
+- target: $.info
+  update:
+    x-artifacts:
+      authentication: authentication/conductorone-authentication.yml
+      conventions: conventions/conductorone-conventions.yml
+      errors: errors/conductorone-error-codes.yml
+      webhooks: asyncapi/conductorone-webhooks.yml
+      data_model: data-model/conductorone-data-model.yml

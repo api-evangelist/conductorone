@@ -1,0 +1,48 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/conductorone-openapi-original.yml (google.rpc.Status error envelope)
+format: connect-rpc
+notes: The ConductorOne API is a Connect (buf.build/connectrpc) HTTP API. Errors are returned as a google.rpc.Status
+  object (code, message, details[]) with an HTTP status mapped from the Connect/gRPC error code. The OpenAPI
+  declares only 200 responses; this catalog is derived from the google.rpc.Status schema and the standard
+  Connect error-code mapping.
+envelope:
+  schema: google.rpc.Status
+  fields:
+  - code
+  - message
+  - details
+error_codes:
+- code: invalid_argument
+  http_status: 400
+  meaning: The request was malformed or contained invalid parameters.
+- code: unauthenticated
+  http_status: 401
+  meaning: Missing or invalid OAuth2 client credentials / bearer token.
+- code: permission_denied
+  http_status: 403
+  meaning: The authenticated credential lacks the scope/role for this operation.
+- code: not_found
+  http_status: 404
+  meaning: The requested resource does not exist or is not visible to the caller.
+- code: already_exists
+  http_status: 409
+  meaning: A resource with the same identifier already exists.
+- code: resource_exhausted
+  http_status: 429
+  meaning: Rate limit or quota exceeded; retry after backing off.
+- code: failed_precondition
+  http_status: 400
+  meaning: The request cannot be executed in the current system state.
+- code: aborted
+  http_status: 409
+  meaning: The operation was aborted, typically due to a concurrency conflict.
+- code: deadline_exceeded
+  http_status: 504
+  meaning: The operation did not complete within the server deadline.
+- code: internal
+  http_status: 500
+  meaning: An internal server error occurred.
+- code: unavailable
+  http_status: 503
+  meaning: The service is temporarily unavailable; retry with backoff.

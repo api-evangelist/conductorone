@@ -1,0 +1,99 @@
+generated: '2026-07-18'
+method: derived
+status: candidate
+source: openapi/conductorone-openapi-original.yml
+notes: ConductorOne is itself an AI/MCP access-governance platform (governs MCP servers via a private
+  bridge) and ships c1i, an agent-oriented CLI with structured NDJSON output and built-in API docs (github.com/conductorone/c1i).
+  No first-party hosted MCP server for the C1 API is published; this is a candidate tool list derived
+  from OpenAPI operations.
+related:
+  agent_cli: https://github.com/conductorone/c1i
+  ai_access_management: https://www.c1.ai/docs/product/admin/mcp-server/
+server:
+  name: conductorone
+  transport: stdio
+tools:
+- name: apps_list
+  description: List on App
+  source_operation: openapi/conductorone-openapi-original.yml#c1.api.app.v1.Apps.List
+- name: appuserservice_list
+  description: List on AppUsers
+  source_operation: openapi/conductorone-openapi-original.yml#c1.api.app.v1.AppUserService.List
+- name: connectorservice_list
+  description: List on Connector
+  source_operation: openapi/conductorone-openapi-original.yml#c1.api.app.v1.ConnectorService.List
+- name: appentitlements_list
+  description: List on App Entitlement
+  source_operation: openapi/conductorone-openapi-original.yml#c1.api.app.v1.AppEntitlements.List
+- name: appentitlementowners_list
+  description: List on App Entitlement Owner
+  source_operation: openapi/conductorone-openapi-original.yml#c1.api.app.v1.AppEntitlementOwners.List
+- name: appowners_list
+  description: List on App Owner
+  source_operation: openapi/conductorone-openapi-original.yml#c1.api.app.v1.AppOwners.List
+- name: appreportservice_list
+  description: List on App Reports
+  source_operation: openapi/conductorone-openapi-original.yml#c1.api.app.v1.AppReportService.List
+- name: appresourcetypeservice_list
+  description: List on App Resource Type
+  source_operation: openapi/conductorone-openapi-original.yml#c1.api.app.v1.AppResourceTypeService.List
+- name: appresourceservice_list
+  description: List on App Resource
+  source_operation: openapi/conductorone-openapi-original.yml#c1.api.app.v1.AppResourceService.List
+- name: appresourceowners_list
+  description: List on App Resource Owner
+  source_operation: openapi/conductorone-openapi-original.yml#c1.api.app.v1.AppResourceOwners.List
+- name: appusagecontrolsservice_get
+  description: Get on App Usage Controls
+  source_operation: openapi/conductorone-openapi-original.yml#c1.api.app.v1.AppUsageControlsService.Get
+- name: appentitlementsproxy_get
+  description: Get on App Entitlement Proxy Binding
+  source_operation: openapi/conductorone-openapi-original.yml#c1.api.app.v1.AppEntitlementsProxy.Get
+- name: requestcatalogmanagementservice_list
+  description: List on Request Catalog
+  source_operation: openapi/conductorone-openapi-original.yml#c1.api.requestcatalog.v1.RequestCatalogManagementService.List
+- name: directoryservice_list
+  description: List on Directory
+  source_operation: openapi/conductorone-openapi-original.yml#c1.api.directory.v1.DirectoryService.List
+- name: personalclientservice_list
+  description: List on Personal Client
+  source_operation: openapi/conductorone-openapi-original.yml#c1.api.iam.v1.PersonalClientService.List
+- name: roles_list
+  description: List on Role
+  source_operation: openapi/conductorone-openapi-original.yml#c1.api.iam.v1.Roles.List
+- name: policies_list
+  description: List on Policy
+  source_operation: openapi/conductorone-openapi-original.yml#c1.api.policy.v1.Policies.List
+- name: requestschemaservice_create
+  description: Create on Request Schema
+  source_operation: openapi/conductorone-openapi-original.yml#c1.api.request_schema.v1.RequestSchemaService.Create
+- name: functionssearch_search
+  description: Search on Function
+  source_operation: openapi/conductorone-openapi-original.yml#c1.api.functions.v1.FunctionsSearch.Search
+- name: stepupproviderservice_search
+  description: Search on Step Up Authentication Providers
+  source_operation: openapi/conductorone-openapi-original.yml#c1.api.stepup.v1.StepUpProviderService.Search
+- name: stepuptransactionservice_search
+  description: Search on Step Up Authentication Transactions
+  source_operation: openapi/conductorone-openapi-original.yml#c1.api.stepup.v1.StepUpTransactionService.Search
+- name: exportssearchservice_search
+  description: Search on System Log Exporter
+  source_operation: openapi/conductorone-openapi-original.yml#c1.api.systemlog.v1.ExportsSearchService.Search
+- name: tasksearchservice_search
+  description: Search on Task
+  source_operation: openapi/conductorone-openapi-original.yml#c1.api.task.v1.TaskSearchService.Search
+- name: usersearch_search
+  description: Search on User
+  source_operation: openapi/conductorone-openapi-original.yml#c1.api.user.v1.UserSearch.Search
+- name: webhookssearch_search
+  description: Search on Webhook
+  source_operation: openapi/conductorone-openapi-original.yml#c1.api.webhooks.v1.WebhooksSearch.Search
+- name: awsexternalidsettings_get
+  description: Get on AWS External ID Settings
+  source_operation: openapi/conductorone-openapi-original.yml#c1.api.settings.v1.AWSExternalIDSettings.Get
+- name: orgdomainservice_list
+  description: List on Org Domain
+  source_operation: openapi/conductorone-openapi-original.yml#c1.api.settings.v1.OrgDomainService.List
+- name: sessionsettingsservice_get
+  description: Get on Session Settings
+  source_operation: openapi/conductorone-openapi-original.yml#c1.api.settings.v1.SessionSettingsService.Get

@@ -1,0 +1,67 @@
+generated: '2026-07-18'
+method: searched
+source:
+- https://www.c1.ai/docs/developer/intro
+- https://github.com/conductorone
+packages:
+- language: go
+  registry: pkg.go.dev
+  name: github.com/conductorone/conductorone-sdk-go
+  url: https://pkg.go.dev/github.com/conductorone/conductorone-sdk-go
+  repo: https://github.com/conductorone/conductorone-sdk-go
+  install: go get github.com/conductorone/conductorone-sdk-go
+  official: true
+  kind: sdk
+- language: typescript
+  registry: npm
+  name: conductorone-sdk-typescript
+  url: https://www.npmjs.com/package/conductorone-sdk-typescript
+  repo: https://github.com/conductorone/conductorone-sdk-typescript
+  install: npm install conductorone-sdk-typescript
+  version: 1.3.1
+  official: true
+  kind: sdk
+- language: hcl
+  registry: terraform
+  name: conductorone/conductorone
+  url: https://registry.terraform.io/providers/conductorone/conductorone/latest
+  repo: https://github.com/conductorone/terraform-provider-conductorone
+  version: 1.4.3
+  official: true
+  kind: terraform-provider
+- language: json
+  registry: github
+  name: conductorone-sdk-postman
+  url: https://github.com/conductorone/conductorone-sdk-postman
+  official: true
+  kind: postman-collection
+- language: go
+  registry: github
+  name: baton-sdk
+  url: https://github.com/conductorone/baton-sdk
+  install: go get github.com/conductorone/baton-sdk
+  official: true
+  kind: connector-sdk
+  description: Go SDK for building Baton connectors
+- language: go
+  registry: github
+  name: c1i
+  url: https://github.com/conductorone/c1i
+  install: go install github.com/ConductorOne/c1i@latest
+  official: true
+  kind: cli
+  description: Agent-oriented CLI for the C1 API (NDJSON/JSON, auto-pagination)
+- language: go
+  registry: github
+  name: cone
+  url: https://github.com/conductorone/cone
+  official: true
+  kind: cli
+  description: Human-friendly C1 platform CLI (login, search, approvals)
+- language: ruby
+  registry: homebrew
+  name: homebrew-baton
+  url: https://github.com/conductorone/homebrew-baton
+  install: brew tap conductorone/baton
+  official: true
+  kind: homebrew-tap

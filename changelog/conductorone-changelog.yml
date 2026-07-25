@@ -1,0 +1,56 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.c1.ai/docs/product/release-notes
+scheme: dated
+url: https://www.c1.ai/docs/product/release-notes
+entries:
+- date: '2026-07-10'
+  type: additions
+  highlights:
+  - Real-time access profile changes
+  - Bulk revoke access from app pages
+  - Visual condition builder for Directory sources
+  - AI Governance Administrator role
+  - MCP improvements
+  - Customizable columns and markdown support in forms
+- date: '2026-06-26'
+  type: additions
+  highlights:
+  - Role mining refresh with token-based filters
+  - Bulk role assignment
+  - Customizable columns with CSV export
+  - 38 new MCP server setup guides
+- date: '2026-06-12'
+  type: additions
+  highlights:
+  - AI assistant can trigger requestable actions from Slack
+  - Simplified MCP server authentication
+  - Entitlements as resource owners
+  - Annotations in policies and automations
+  - Multi-step approval notifications
+- date: '2026-05-29'
+  type: additions
+  highlights:
+  - Expanded analytics dashboard
+  - Access profile entitlements grouped by app
+  - Shared/per-user credentials for MCP HTTP basic auth
+  - Featured MCP tools curation
+- date: '2026-05-15'
+  type: additions
+  highlights:
+  - AI access management (AIAM) for MCP server governance
+  - Automation circuit breaker for rate limiting
+  - Object annotations for custom metadata
+- date: '2026-05-01'
+  type: additions
+  highlights:
+  - AI connections via Model Context Protocol
+  - Wiz Insights integration
+  - Resource-based access review view
+  - Slack enterprise grid support
+- date: '2026-04-24'
+  type: additions
+  highlights:
+  - c1i command-line interface (early access)
+  - Schedule automation triggers
+  - Azure Blob Storage as external data source

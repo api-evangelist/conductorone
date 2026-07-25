@@ -1,0 +1,27 @@
+generated: '2026-07-18'
+method: generated
+source: openapi/conductorone-openapi-original.yml
+skills:
+- file: conductorone-grant-access.md
+  name: Grant and revoke access with ConductorOne
+  api: openapi/conductorone-openapi-original.yml
+  operations:
+  - c1.api.app.v1.Apps.List
+  - c1.api.app.v1.AppEntitlements.List
+  - c1.api.task.v1.TaskService.CreateGrantTask
+  - c1.api.task.v1.TaskService.CreateRevokeTask
+  - c1.api.task.v1.TaskActionsService.Approve
+- file: conductorone-self-service-request.md
+  name: Configure a self-service access request catalog
+  api: openapi/conductorone-openapi-original.yml
+  operations:
+  - c1.api.requestcatalog.v1.RequestCatalogManagementService.Create
+  - c1.api.requestcatalog.v1.RequestCatalogManagementService.AddAppEntitlements
+  - c1.api.requestcatalog.v1.RequestCatalogManagementService.ListEntitlementsPerCatalog
+- file: conductorone-register-webhook.md
+  name: Register and test a ConductorOne outbound webhook
+  api: openapi/conductorone-openapi-original.yml
+  operations:
+  - c1.api.webhooks.v1.WebhooksService.Create
+  - c1.api.webhooks.v1.WebhooksService.Test
+  - c1.api.webhooks.v1.WebhooksService.Get

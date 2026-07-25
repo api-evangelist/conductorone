@@ -1,0 +1,45 @@
+generated: '2026-07-18'
+method: searched
+source:
+- openapi/conductorone-openapi-original.yml
+- https://www.c1.ai/docs/conductorone-api/api
+spec_type: Webhooks
+summary: ConductorOne delivers outbound webhooks for policy/approval/provision/workflow events. Receivers
+  are identified by the Webhook-Event header and may reply 202 Accepted with an async response to the
+  Webhook-Callback-Url. Listener auth supports HMAC and JWT (JWKS).
+delivery:
+  headers:
+  - Webhook-Event
+  - Webhook-Callback-Url
+  async_ack: Return HTTP 202 Accepted and POST the response body to the Webhook-Callback-Url header value
+  auth:
+  - HMAC
+  - JWT (jwksUrl)
+event_types:
+- c1.webhooks.v1.PayloadTest
+- c1.webhooks.v1.PayloadPolicyApprovalStep
+- c1.webhooks.v1.PayloadPolicyPostAction
+- c1.webhooks.v1.PayloadProvisionStep
+- c1.webhooks.v1.PayloadWorkflowStep
+management_operations:
+- operationId: c1.api.webhooks.v1.WebhooksSearch.Search
+  method: POST
+  path: /api/v1/search/webhooks
+- operationId: c1.api.webhooks.v1.WebhooksService.List
+  method: GET
+  path: /api/v1/webhooks
+- operationId: c1.api.webhooks.v1.WebhooksService.Create
+  method: POST
+  path: /api/v1/webhooks
+- operationId: c1.api.webhooks.v1.WebhooksService.Delete
+  method: DELETE
+  path: /api/v1/webhooks/{id}
+- operationId: c1.api.webhooks.v1.WebhooksService.Get
+  method: GET
+  path: /api/v1/webhooks/{id}
+- operationId: c1.api.webhooks.v1.WebhooksService.Update
+  method: POST
+  path: /api/v1/webhooks/{id}
+- operationId: c1.api.webhooks.v1.WebhooksService.Test
+  method: POST
+  path: /api/v1/webhooks/{id}/test

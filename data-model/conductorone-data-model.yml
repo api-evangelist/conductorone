@@ -1,0 +1,170 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/conductorone-openapi-original.yml
+notes: Entity graph derived from OpenAPI tags (services) and id-reference fields across 779 schemas.
+entities:
+- name: AWS External ID Settings
+  operations: 1
+- name: Access Conflict
+  operations: 4
+- name: App
+  operations: 6
+- name: App Entitlement
+  operations: 14
+- name: App Entitlement Automation
+  operations: 4
+- name: App Entitlement Automation Exclusion
+  operations: 3
+- name: App Entitlement Monitor Binding
+  operations: 3
+- name: App Entitlement Owner
+  operations: 6
+- name: App Entitlement Proxy Binding
+  operations: 3
+- name: App Entitlement User Binding
+  operations: 3
+- name: App Entitlement User Binding Feed
+  operations: 1
+- name: App Entitlement User Binding History
+  operations: 1
+- name: App Owner
+  operations: 6
+- name: App Reports
+  operations: 2
+- name: App Resource
+  operations: 7
+- name: App Resource Owner
+  operations: 6
+- name: App Resource Type
+  operations: 5
+- name: App Usage Controls
+  operations: 2
+- name: AppAccessRequestDefaults
+  operations: 3
+- name: AppUsers
+  operations: 5
+- name: Attribute
+  operations: 6
+- name: Auth
+  operations: 1
+- name: Automations
+  operations: 12
+- name: Compliance Framework
+  operations: 4
+- name: Connector
+  operations: 15
+- name: Connector Catalog
+  operations: 1
+- name: Directory
+  operations: 5
+- name: Function
+  operations: 7
+- name: Function Commit
+  operations: 3
+- name: Function Tag
+  operations: 2
+- name: Org Domain
+  operations: 2
+- name: Personal Client
+  operations: 6
+- name: Policy
+  operations: 8
+- name: Request Catalog
+  operations: 20
+- name: Request Schema
+  operations: 4
+- name: Request Schema Entitlement Binding
+  operations: 3
+- name: Risk Level
+  operations: 4
+- name: Role
+  operations: 3
+- name: Session Settings
+  operations: 3
+- name: Step Up Authentication Providers
+  operations: 8
+- name: Step Up Authentication Transactions
+  operations: 2
+- name: System Log
+  operations: 1
+- name: System Log Exporter
+  operations: 7
+- name: Task
+  operations: 19
+- name: User
+  operations: 5
+- name: Webhook
+  operations: 7
+relationships:
+- via: appId
+  references: app
+  occurrences: 56
+  kind: belongs_to
+- via: appEntitlementId
+  references: appEntitlement
+  occurrences: 19
+  kind: belongs_to
+- via: userId
+  references: user
+  occurrences: 19
+  kind: belongs_to
+- via: appUserId
+  references: appUser
+  occurrences: 15
+  kind: belongs_to
+- via: webhookId
+  references: webhook
+  occurrences: 14
+  kind: belongs_to
+- via: connectorId
+  references: connector
+  occurrences: 12
+  kind: belongs_to
+- via: policyStepId
+  references: policyStep
+  occurrences: 11
+  kind: belongs_to
+- via: webhookInstanceId
+  references: webhookInstance
+  occurrences: 9
+  kind: belongs_to
+- via: ticketActionId
+  references: ticketAction
+  occurrences: 7
+  kind: belongs_to
+- via: stepId
+  references: step
+  occurrences: 7
+  kind: belongs_to
+- via: identityUserId
+  references: identityUser
+  occurrences: 6
+  kind: belongs_to
+- via: oldPolicyStepId
+  references: oldPolicyStep
+  occurrences: 6
+  kind: belongs_to
+- via: requestSchemaId
+  references: requestSchema
+  occurrences: 5
+  kind: belongs_to
+- via: ticketId
+  references: ticket
+  occurrences: 5
+  kind: belongs_to
+- via: externalTicketProvisionerConfigId
+  references: externalTicketProvisionerConfig
+  occurrences: 5
+  kind: belongs_to
+- via: newPolicyStepId
+  references: newPolicyStep
+  occurrences: 5
+  kind: belongs_to
+- via: monitorId
+  references: monitor
+  occurrences: 4
+  kind: belongs_to
+- via: certifyPolicyId
+  references: certifyPolicy
+  occurrences: 4
+  kind: belongs_to
