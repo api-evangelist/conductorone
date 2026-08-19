@@ -1,0 +1,417 @@
+{
+  "item": [
+    {
+      "id": "34c315e5-8be7-4332-9326-46ad0cc8a9b9",
+      "name": "Role",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "af1b935f-4dae-46b0-91a3-b5a2ce54ab24",
+          "name": "List",
+          "request": {
+            "name": "List",
+            "description": {
+              "content": "List all roles for the current user.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "iam",
+                "roles"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "page_token",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9c7d5aed-ff24-4142-9106-4abd0f62e61a",
+              "name": "The ListRolesResponse message contains a list of results and a nextPageToken if applicable.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "iam",
+                    "roles"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page_size",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "page_token",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"list\": [\n    {\n      \"createdAt\": \"1985-01-13T02:33:28.546Z\",\n      \"deletedAt\": \"1957-10-11T18:34:52.782Z\",\n      \"displayName\": \"string\",\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"permissions\": [\n        \"string\",\n        \"string\"\n      ],\n      \"serviceRoles\": [\n        \"string\",\n        \"string\"\n      ],\n      \"systemApiOnly\": true,\n      \"systemBuiltin\": false,\n      \"updatedAt\": \"1985-03-25T15:09:16.395Z\"\n    },\n    {\n      \"createdAt\": \"1951-12-22T12:03:42.331Z\",\n      \"deletedAt\": \"1963-04-07T23:02:25.691Z\",\n      \"displayName\": \"string\",\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"permissions\": [\n        \"string\",\n        \"string\"\n      ],\n      \"serviceRoles\": [\n        \"string\",\n        \"string\"\n      ],\n      \"systemApiOnly\": false,\n      \"systemBuiltin\": false,\n      \"updatedAt\": \"2019-08-29T16:47:18.993Z\"\n    }\n  ],\n  \"nextPageToken\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a59cddf4-52b6-4ed4-bda7-dda9b96b0c9b",
+          "name": "Get",
+          "request": {
+            "name": "Get",
+            "description": {
+              "content": "Get a role by id.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "iam",
+                "roles",
+                ":role_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "role_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fff0ff20-cbe6-40be-9899-a104763b35b6",
+              "name": "The GetRolesResponse message contains the retrieved role.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "iam",
+                    "roles",
+                    ":role_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "role_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"role\": {\n    \"createdAt\": \"2008-06-06T05:00:42.216Z\",\n    \"deletedAt\": \"1962-07-27T17:36:25.058Z\",\n    \"displayName\": \"string\",\n    \"id\": \"string\",\n    \"name\": \"string\",\n    \"permissions\": [\n      \"string\",\n      \"string\"\n    ],\n    \"serviceRoles\": [\n      \"string\",\n      \"string\"\n    ],\n    \"systemApiOnly\": true,\n    \"systemBuiltin\": true,\n    \"updatedAt\": \"1978-03-29T02:01:37.288Z\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ab801c3d-71db-4cfe-9264-88ffa1a44210",
+          "name": "Update",
+          "request": {
+            "name": "Update",
+            "description": {
+              "content": "Update a role by passing a Role object.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "iam",
+                "roles",
+                ":role_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "role_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"role\": {\n    \"displayName\": \"<string>\",\n    \"permissions\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"serviceRoles\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"updateMask\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "f91cbebb-01da-473e-85a5-fd519356cfa3",
+              "name": "UpdateRolesResponse is the response message containing the updated role.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "iam",
+                    "roles",
+                    ":role_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "role_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"role\": {\n    \"displayName\": \"string\",\n    \"permissions\": [\n      \"string\",\n      \"string\"\n    ],\n    \"serviceRoles\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"updateMask\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"role\": {\n    \"createdAt\": \"1996-02-07T16:14:40.370Z\",\n    \"deletedAt\": \"1948-09-08T06:09:50.469Z\",\n    \"displayName\": \"string\",\n    \"id\": \"string\",\n    \"name\": \"string\",\n    \"permissions\": [\n      \"string\",\n      \"string\"\n    ],\n    \"serviceRoles\": [\n      \"string\",\n      \"string\"\n    ],\n    \"systemApiOnly\": true,\n    \"systemBuiltin\": false,\n    \"updatedAt\": \"2022-10-16T13:07:06.720Z\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "The domain of the tenant to use for this request.",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "example",
+      "key": "tenantDomain"
+    },
+    {
+      "type": "string",
+      "value": "https://{{tenantDomain}}.conductor.one",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "dbfcf011-1663-4e66-bee5-c291362d2ca8",
+    "name": "ConductorOne Access Conflict Role API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The ConductorOne API is a HTTP API for managing ConductorOne resources.",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,758 @@
+{
+  "item": [
+    {
+      "id": "60c1511a-3cfe-4fb3-b78d-18ab24563859",
+      "name": "AppUsers",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4827185a-91e9-42f2-9f45-412ee93f4fe5",
+          "name": "List",
+          "request": {
+            "name": "List",
+            "description": {
+              "content": "Invokes the c1.api.app.v1.AppUserService.List method.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "apps",
+                ":app_id",
+                "app_users"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "page_token",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "app_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "39d69e76-a9e6-48ee-8bbf-9f3950039afc",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "apps",
+                    ":app_id",
+                    "app_users"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page_size",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "page_token",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "app_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"expanded\": [\n    {\n      \"@type\": \"string\"\n    },\n    {\n      \"@type\": \"string\",\n      \"key_0\": 9596.174524979098,\n      \"key_1\": 7179,\n      \"key_2\": false\n    }\n  ],\n  \"list\": [\n    {\n      \"appPath\": \"string\",\n      \"appUser\": {\n        \"appId\": \"string\",\n        \"appUserType\": \"APP_USER_TYPE_USER\",\n        \"createdAt\": \"2012-09-02T22:55:24.431Z\",\n        \"deletedAt\": \"1988-03-07T11:43:17.866Z\",\n        \"displayName\": \"string\",\n        \"email\": \"string\",\n        \"emails\": [\n          \"string\",\n          \"string\"\n        ],\n        \"employeeIds\": [\n          \"string\",\n          \"string\"\n        ],\n        \"id\": \"string\",\n        \"identityUserId\": \"string\",\n        \"isExternal\": true,\n        \"profile\": {\n          \"key_0\": \"string\"\n        },\n        \"status\": {\n          \"details\": \"string\",\n          \"status\": \"STATUS_DELETED\"\n        },\n        \"updatedAt\": \"1988-08-19T04:33:52.118Z\",\n        \"username\": \"string\",\n        \"usernames\": [\n          \"string\",\n          \"string\"\n        ]\n      },\n      \"identityUserPath\": \"string\",\n      \"lastUsagePath\": \"string\"\n    },\n    {\n      \"appPath\": \"string\",\n      \"appUser\": {\n        \"appId\": \"string\",\n        \"appUserType\": \"APP_USER_TYPE_SYSTEM_ACCOUNT\",\n        \"createdAt\": \"1993-06-01T02:54:10.330Z\",\n        \"deletedAt\": \"1990-06-28T00:14:32.484Z\",\n        \"displayName\": \"string\",\n        \"email\": \"string\",\n        \"emails\": [\n          \"string\",\n          \"string\"\n        ],\n        \"employeeIds\": [\n          \"string\",\n          \"string\"\n        ],\n        \"id\": \"string\",\n        \"identityUserId\": \"string\",\n        \"isExternal\": false,\n        \"profile\": {\n          \"key_0\": 8427.075695452444,\n          \"key_1\": true,\n          \"key_2\": \"string\"\n        },\n        \"status\": {\n          \"details\": \"string\",\n          \"status\": \"STATUS_DELETED\"\n        },\n        \"updatedAt\": \"1953-10-15T09:47:46.967Z\",\n        \"username\": \"string\",\n        \"usernames\": [\n          \"string\",\n          \"string\"\n        ]\n      },\n      \"identityUserPath\": \"string\",\n      \"lastUsagePath\": \"string\"\n    }\n  ],\n  \"nextPageToken\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "cbf62cd4-0949-4ccb-999e-7a42cd3ede7e",
+          "name": "List App User Credentials",
+          "request": {
+            "name": "List App User Credentials",
+            "description": {
+              "content": "Invokes the c1.api.app.v1.AppUserService.ListAppUserCredentials method.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "apps",
+                ":app_id",
+                "app_users",
+                ":app_user_id",
+                "credentials"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "page_token",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "app_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "app_user_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "45416caf-d93e-49b2-9afa-5aa2a3718ce2",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "apps",
+                    ":app_id",
+                    "app_users",
+                    ":app_user_id",
+                    "credentials"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page_size",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "page_token",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "app_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "app_user_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"list\": [\n    {\n      \"appId\": \"string\",\n      \"appUserId\": \"string\",\n      \"createdAt\": \"2007-09-26T19:56:09.213Z\",\n      \"deletedAt\": \"1999-06-30T02:09:04.736Z\",\n      \"encryptedData\": {\n        \"description\": \"string\",\n        \"encryptedBytes\": \"string\",\n        \"keyId\": \"string\",\n        \"name\": \"string\",\n        \"provider\": \"string\",\n        \"schema\": \"string\"\n      },\n      \"expiresAt\": \"2023-10-02T17:58:00.503Z\",\n      \"id\": \"string\",\n      \"updatedAt\": \"1980-06-18T19:54:49.206Z\"\n    },\n    {\n      \"appId\": \"string\",\n      \"appUserId\": \"string\",\n      \"createdAt\": \"1957-10-05T03:14:53.491Z\",\n      \"deletedAt\": \"2009-09-18T08:03:38.742Z\",\n      \"encryptedData\": {\n        \"description\": \"string\",\n        \"encryptedBytes\": \"string\",\n        \"keyId\": \"string\",\n        \"name\": \"string\",\n        \"provider\": \"string\",\n        \"schema\": \"string\"\n      },\n      \"expiresAt\": \"1962-03-22T10:01:13.035Z\",\n      \"id\": \"string\",\n      \"updatedAt\": \"1950-12-15T13:37:33.516Z\"\n    }\n  ],\n  \"nextPageToken\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f54a6c65-bb88-46e3-bf69-e99e3b709573",
+          "name": "List App Users For User",
+          "request": {
+            "name": "List App Users For User",
+            "description": {
+              "content": "Invokes the c1.api.app.v1.AppUserService.ListAppUsersForUser method.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "apps",
+                ":app_id",
+                "users",
+                ":user_id",
+                "app_users"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "page_token",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "app_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "user_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "081d9dda-43c4-4946-b074-d0f8691de756",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "apps",
+                    ":app_id",
+                    "users",
+                    ":user_id",
+                    "app_users"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page_size",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "page_token",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "app_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "user_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"expanded\": [\n    {\n      \"@type\": \"string\",\n      \"key_0\": \"string\"\n    },\n    {\n      \"@type\": \"string\",\n      \"key_0\": \"string\",\n      \"key_1\": 1127\n    }\n  ],\n  \"list\": [\n    {\n      \"appPath\": \"string\",\n      \"appUser\": {\n        \"appId\": \"string\",\n        \"appUserType\": \"APP_USER_TYPE_SERVICE_ACCOUNT\",\n        \"createdAt\": \"1973-08-06T05:44:40.817Z\",\n        \"deletedAt\": \"2015-10-25T11:47:57.960Z\",\n        \"displayName\": \"string\",\n        \"email\": \"string\",\n        \"emails\": [\n          \"string\",\n          \"string\"\n        ],\n        \"employeeIds\": [\n          \"string\",\n          \"string\"\n        ],\n        \"id\": \"string\",\n        \"identityUserId\": \"string\",\n        \"isExternal\": false,\n        \"profile\": {\n          \"key_0\": 90\n        },\n        \"status\": {\n          \"details\": \"string\",\n          \"status\": \"STATUS_ENABLED\"\n        },\n        \"updatedAt\": \"1988-01-22T01:26:02.809Z\",\n        \"username\": \"string\",\n        \"usernames\": [\n          \"string\",\n          \"string\"\n        ]\n      },\n      \"identityUserPath\": \"string\",\n      \"lastUsagePath\": \"string\"\n    },\n    {\n      \"appPath\": \"string\",\n      \"appUser\": {\n        \"appId\": \"string\",\n        \"appUserType\": \"APP_USER_TYPE_UNSPECIFIED\",\n        \"createdAt\": \"2015-01-12T08:32:03.217Z\",\n        \"deletedAt\": \"1964-05-22T12:50:13.873Z\",\n        \"displayName\": \"string\",\n        \"email\": \"string\",\n        \"emails\": [\n          \"string\",\n          \"string\"\n        ],\n        \"employeeIds\": [\n          \"string\",\n          \"string\"\n        ],\n        \"id\": \"string\",\n        \"identityUserId\": \"string\",\n        \"isExternal\": true,\n        \"profile\": {\n          \"key_0\": true\n        },\n        \"status\": {\n          \"details\": \"string\",\n          \"status\": \"STATUS_UNSPECIFIED\"\n        },\n        \"updatedAt\": \"2015-04-30T11:08:48.846Z\",\n        \"username\": \"string\",\n        \"usernames\": [\n          \"string\",\n          \"string\"\n        ]\n      },\n      \"identityUserPath\": \"string\",\n      \"lastUsagePath\": \"string\"\n    }\n  ],\n  \"nextPageToken\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8426f5f6-d7d1-4f00-980d-e38b2103b7a0",
+          "name": "Update",
+          "request": {
+            "name": "Update",
+            "description": {
+              "content": "Update an app user by ID. Only the fields specified in the update mask are updated.\n Currently, only the appUserType, and identityUserId fields can be updated.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "apps",
+                ":app_user_app_id",
+                "app_users",
+                ":app_user_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "app_user_app_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "app_user_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"appUser\": {\n    \"appUserType\": \"<string>\",\n    \"status\": {}\n  },\n  \"expandMask\": {\n    \"paths\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"updateMask\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "e5c8f465-8a63-4394-8c3a-70c94350bf29",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "apps",
+                    ":app_user_app_id",
+                    "app_users",
+                    ":app_user_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "app_user_app_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "app_user_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"appUser\": {\n    \"appUserType\": \"APP_USER_TYPE_UNSPECIFIED\",\n    \"status\": {}\n  },\n  \"expandMask\": {\n    \"paths\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"updateMask\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"appUserView\": {\n    \"appPath\": \"string\",\n    \"appUser\": {\n      \"appId\": \"string\",\n      \"appUserType\": \"APP_USER_TYPE_SYSTEM_ACCOUNT\",\n      \"createdAt\": \"1994-01-17T03:32:58.211Z\",\n      \"deletedAt\": \"2010-05-17T21:40:24.880Z\",\n      \"displayName\": \"string\",\n      \"email\": \"string\",\n      \"emails\": [\n        \"string\",\n        \"string\"\n      ],\n      \"employeeIds\": [\n        \"string\",\n        \"string\"\n      ],\n      \"id\": \"string\",\n      \"identityUserId\": \"string\",\n      \"isExternal\": false,\n      \"profile\": {\n        \"key_0\": 1690.2147348584995\n      },\n      \"status\": {\n        \"details\": \"string\",\n        \"status\": \"STATUS_DELETED\"\n      },\n      \"updatedAt\": \"1947-08-04T21:50:06.198Z\",\n      \"username\": \"string\",\n      \"usernames\": [\n        \"string\",\n        \"string\"\n      ]\n    },\n    \"identityUserPath\": \"string\",\n    \"lastUsagePath\": \"string\"\n  },\n  \"expanded\": [\n    {\n      \"@type\": \"string\"\n    },\n    {\n      \"@type\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9a3f00c9-27a4-4ae0-b4a3-9498dacb49ea",
+          "name": "Search",
+          "request": {
+            "name": "Search",
+            "description": {
+              "content": "Search app users based on filters specified in the request body.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "search",
+                "app_users"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"appId\": \"<string>\",\n  \"appUserDomains\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"appUserIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"appUserStatusDetails\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"appUserStatuses\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"appUserTypes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"excludeAppUserIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"expandMask\": {\n    \"paths\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"pageSize\": \"<integer>\",\n  \"pageToken\": \"<string>\",\n  \"query\": \"<string>\",\n  \"refs\": [\n    {\n      \"appId\": \"<string>\",\n      \"id\": \"<string>\"\n    },\n    {\n      \"appId\": \"<string>\",\n      \"id\": \"<string>\"\n    }\n  ],\n  \"userIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "a9de0a5d-8908-4b19-b8c2-649af49eb9eb",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "search",
+                    "app_users"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"appId\": \"<string>\",\n  \"appUserDomains\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"appUserIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"appUserStatusDetails\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"appUserStatuses\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"appUserTypes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"excludeAppUserIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"expandMask\": {\n    \"paths\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"pageSize\": \"<integer>\",\n  \"pageToken\": \"<string>\",\n  \"query\": \"<string>\",\n  \"refs\": [\n    {\n      \"appId\": \"string\",\n      \"id\": \"string\"\n    },\n    {\n      \"appId\": \"string\",\n      \"id\": \"string\"\n    }\n  ],\n  \"userIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"expanded\": [\n    {\n      \"@type\": \"string\",\n      \"key_0\": 2723\n    },\n    {\n      \"@type\": \"string\",\n      \"key_0\": \"string\"\n    }\n  ],\n  \"list\": [\n    {\n      \"appPath\": \"string\",\n      \"appUser\": {\n        \"appId\": \"string\",\n        \"appUserType\": \"APP_USER_TYPE_UNSPECIFIED\",\n        \"createdAt\": \"1997-05-12T05:12:14.239Z\",\n        \"deletedAt\": \"1990-06-15T04:38:25.566Z\",\n        \"displayName\": \"string\",\n        \"email\": \"string\",\n        \"emails\": [\n          \"string\",\n          \"string\"\n        ],\n        \"employeeIds\": [\n          \"string\",\n          \"string\"\n        ],\n        \"id\": \"string\",\n        \"identityUserId\": \"string\",\n        \"isExternal\": true,\n        \"profile\": {\n          \"key_0\": 715.4546175801369,\n          \"key_1\": 1985.5586472206444,\n          \"key_2\": 4213\n        },\n        \"status\": {\n          \"details\": \"string\",\n          \"status\": \"STATUS_DISABLED\"\n        },\n        \"updatedAt\": \"1948-09-13T05:12:17.386Z\",\n        \"username\": \"string\",\n        \"usernames\": [\n          \"string\",\n          \"string\"\n        ]\n      },\n      \"identityUserPath\": \"string\",\n      \"lastUsagePath\": \"string\"\n    },\n    {\n      \"appPath\": \"string\",\n      \"appUser\": {\n        \"appId\": \"string\",\n        \"appUserType\": \"APP_USER_TYPE_UNSPECIFIED\",\n        \"createdAt\": \"2006-04-26T03:50:57.827Z\",\n        \"deletedAt\": \"2005-12-11T10:43:37.081Z\",\n        \"displayName\": \"string\",\n        \"email\": \"string\",\n        \"emails\": [\n          \"string\",\n          \"string\"\n        ],\n        \"employeeIds\": [\n          \"string\",\n          \"string\"\n        ],\n        \"id\": \"string\",\n        \"identityUserId\": \"string\",\n        \"isExternal\": true,\n        \"profile\": {\n          \"key_0\": 5391.502434844238\n        },\n        \"status\": {\n          \"details\": \"string\",\n          \"status\": \"STATUS_UNSPECIFIED\"\n        },\n        \"updatedAt\": \"1946-12-18T00:54:19.310Z\",\n        \"username\": \"string\",\n        \"usernames\": [\n          \"string\",\n          \"string\"\n        ]\n      },\n      \"identityUserPath\": \"string\",\n      \"lastUsagePath\": \"string\"\n    }\n  ],\n  \"nextPageToken\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "The domain of the tenant to use for this request.",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "example",
+      "key": "tenantDomain"
+    },
+    {
+      "type": "string",
+      "value": "https://{{tenantDomain}}.conductor.one",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "a0fd2eba-2ae7-4558-be19-aff975549e73",
+    "name": "ConductorOne Access Conflict AppUsers API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The ConductorOne API is a HTTP API for managing ConductorOne resources.",
+      "type": "text/plain"
+    }
+  }
+}

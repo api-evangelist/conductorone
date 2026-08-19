@@ -1,0 +1,578 @@
+{
+  "item": [
+    {
+      "id": "cbb725ef-53c5-465d-b546-d550fe25b4ef",
+      "name": "App Entitlement Proxy Binding",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3c7c9a99-adfa-4895-9f89-ea6b721ad7cb",
+          "name": "Delete",
+          "request": {
+            "name": "Delete",
+            "description": {
+              "content": "Invokes the c1.api.app.v1.AppEntitlementsProxy.Delete method.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "apps",
+                ":src_app_id",
+                ":src_app_entitlement_id",
+                "bindings",
+                ":dst_app_id",
+                ":dst_app_entitlement_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "src_app_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "src_app_entitlement_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "dst_app_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "dst_app_entitlement_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "7be43ad6-bb6f-4060-9963-5d4c4f5da838",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "apps",
+                    ":src_app_id",
+                    ":src_app_entitlement_id",
+                    "bindings",
+                    ":dst_app_id",
+                    ":dst_app_entitlement_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "src_app_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "src_app_entitlement_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "dst_app_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "dst_app_entitlement_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<object>",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "88df9c6e-6de6-45b5-8979-18b7edaf0180",
+          "name": "Get",
+          "request": {
+            "name": "Get",
+            "description": {
+              "content": "Invokes the c1.api.app.v1.AppEntitlementsProxy.Get method.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "apps",
+                ":src_app_id",
+                ":src_app_entitlement_id",
+                "bindings",
+                ":dst_app_id",
+                ":dst_app_entitlement_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "src_app_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "src_app_entitlement_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "dst_app_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "dst_app_entitlement_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "99921b94-525d-4aa7-9771-86fca8226ddc",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "apps",
+                    ":src_app_id",
+                    ":src_app_entitlement_id",
+                    "bindings",
+                    ":dst_app_id",
+                    ":dst_app_entitlement_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "src_app_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "src_app_entitlement_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "dst_app_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "dst_app_entitlement_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"appProxyEntitlementView\": {\n    \"appProxyEntitlement\": {\n      \"createdAt\": \"1982-05-06T01:51:06.921Z\",\n      \"deletedAt\": \"1978-06-03T04:15:25.648Z\",\n      \"dstAppEntitlementId\": \"string\",\n      \"dstAppId\": \"string\",\n      \"implicit\": false,\n      \"srcAppEntitlementId\": \"string\",\n      \"srcAppId\": \"string\",\n      \"systemBuiltin\": true,\n      \"updatedAt\": \"2006-11-16T15:37:07.606Z\"\n    },\n    \"dstAppEntitlementPath\": \"string\",\n    \"dstAppPath\": \"string\",\n    \"srcAppEntitlementPath\": \"string\",\n    \"srcAppPath\": \"string\"\n  },\n  \"expanded\": [\n    {\n      \"@type\": \"string\"\n    },\n    {\n      \"@type\": \"string\",\n      \"key_0\": 2808.5916596454995\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ac62cf70-ead1-4820-ac70-11a2acb0a0d3",
+          "name": "Create",
+          "request": {
+            "name": "Create",
+            "description": {
+              "content": "Invokes the c1.api.app.v1.AppEntitlementsProxy.Create method.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "apps",
+                ":src_app_id",
+                ":src_app_entitlement_id",
+                "bindings",
+                ":dst_app_id",
+                ":dst_app_entitlement_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "src_app_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "src_app_entitlement_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "dst_app_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "dst_app_entitlement_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"expandMask\": {\n    \"paths\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "e8f867a6-81ec-460d-ae82-66832c8baf23",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "apps",
+                    ":src_app_id",
+                    ":src_app_entitlement_id",
+                    "bindings",
+                    ":dst_app_id",
+                    ":dst_app_entitlement_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "src_app_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "src_app_entitlement_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "dst_app_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "dst_app_entitlement_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"expandMask\": {\n    \"paths\": [\n      \"string\",\n      \"string\"\n    ]\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"appProxyEntitlementView\": {\n    \"appProxyEntitlement\": {\n      \"createdAt\": \"2014-04-07T02:24:51.299Z\",\n      \"deletedAt\": \"2023-04-20T07:03:49.333Z\",\n      \"dstAppEntitlementId\": \"string\",\n      \"dstAppId\": \"string\",\n      \"implicit\": true,\n      \"srcAppEntitlementId\": \"string\",\n      \"srcAppId\": \"string\",\n      \"systemBuiltin\": false,\n      \"updatedAt\": \"2008-06-18T09:40:47.579Z\"\n    },\n    \"dstAppEntitlementPath\": \"string\",\n    \"dstAppPath\": \"string\",\n    \"srcAppEntitlementPath\": \"string\",\n    \"srcAppPath\": \"string\"\n  },\n  \"expanded\": [\n    {\n      \"@type\": \"string\",\n      \"key_0\": true,\n      \"key_1\": 124.42367978539592\n    },\n    {\n      \"@type\": \"string\",\n      \"key_0\": false\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "The domain of the tenant to use for this request.",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "example",
+      "key": "tenantDomain"
+    },
+    {
+      "type": "string",
+      "value": "https://{{tenantDomain}}.conductor.one",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "58dc539e-196b-4c21-8ebd-63e3d2b14a6f",
+    "name": "ConductorOne Access Conflict App Entitlement Proxy Binding API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The ConductorOne API is a HTTP API for managing ConductorOne resources.",
+      "type": "text/plain"
+    }
+  }
+}

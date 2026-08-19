@@ -1,0 +1,962 @@
+{
+  "item": [
+    {
+      "id": "a8279c5b-a639-4d27-8626-5b73f7ab5e67",
+      "name": "App Entitlement Owner",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c5dc2391-b80d-4419-8f77-81438d8491ab",
+          "name": "List Owner I Ds",
+          "request": {
+            "name": "List Owner I Ds",
+            "description": {
+              "content": "ListUserIDs lists owner IDs for a given app entitlement.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "apps",
+                ":app_id",
+                "entitlements",
+                ":entitlement_id",
+                "ownerids"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "app_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "entitlement_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8a183323-6fa9-428a-858e-2f37a0e3b2fa",
+              "name": "The response message for listing app entitlement owners IDs.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "apps",
+                    ":app_id",
+                    "entitlements",
+                    ":entitlement_id",
+                    "ownerids"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "app_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "entitlement_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"userIds\": [\n    \"string\",\n    \"string\"\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "93268ec6-2a90-4a1b-964c-6e948fb43fcc",
+          "name": "Delete",
+          "request": {
+            "name": "Delete",
+            "description": {
+              "content": "Delete deletes the owners from a given app entitlement.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "apps",
+                ":app_id",
+                "entitlements",
+                ":entitlement_id",
+                "owners"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "app_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "entitlement_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "4e556306-f01d-44a9-8996-875bf211f8bb",
+              "name": "the empty response message for deleting app entitlement owners.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "apps",
+                    ":app_id",
+                    "entitlements",
+                    ":entitlement_id",
+                    "owners"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "app_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "entitlement_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<object>",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2ecc7d7f-7c4a-451d-b304-da2eaa29775f",
+          "name": "List",
+          "request": {
+            "name": "List",
+            "description": {
+              "content": "List owners for a given app entitlement.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "apps",
+                ":app_id",
+                "entitlements",
+                ":entitlement_id",
+                "owners"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "page_token",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "app_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "entitlement_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bfedc8d1-2846-46ce-b428-dc8658f32adc",
+              "name": "The response message for listing app entitlement owners.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "apps",
+                    ":app_id",
+                    "entitlements",
+                    ":entitlement_id",
+                    "owners"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page_size",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "page_token",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "app_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "entitlement_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"list\": [\n    {\n      \"createdAt\": \"1974-07-05T18:45:10.408Z\",\n      \"delegatedUserId\": \"string\",\n      \"deletedAt\": \"1948-12-02T17:23:31.302Z\",\n      \"department\": \"string\",\n      \"departmentSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"directoryIds\": [\n        \"string\",\n        \"string\"\n      ],\n      \"directoryStatus\": \"DELETED\",\n      \"directoryStatusSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"displayName\": \"string\",\n      \"email\": \"string\",\n      \"emailSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"emails\": [\n        \"string\",\n        \"string\"\n      ],\n      \"employeeIdSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"employeeIds\": [\n        \"string\",\n        \"string\"\n      ],\n      \"employmentStatus\": \"string\",\n      \"employmentStatusSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"employmentType\": \"string\",\n      \"employmentTypeSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"id\": \"string\",\n      \"jobTitle\": \"string\",\n      \"jobTitleSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"managerIds\": [\n        \"string\",\n        \"string\"\n      ],\n      \"managerSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"profile\": {\n        \"key_0\": 4398,\n        \"key_1\": 1863\n      },\n      \"roleIds\": [\n        \"string\",\n        \"string\"\n      ],\n      \"status\": \"ENABLED\",\n      \"type\": \"USER_TYPE_AGENT\",\n      \"updatedAt\": \"1948-11-09T04:48:24.617Z\",\n      \"username\": \"string\",\n      \"usernameSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"usernames\": [\n        \"string\",\n        \"string\"\n      ]\n    },\n    {\n      \"createdAt\": \"1964-11-01T01:42:08.129Z\",\n      \"delegatedUserId\": \"string\",\n      \"deletedAt\": \"2009-01-29T20:23:45.639Z\",\n      \"department\": \"string\",\n      \"departmentSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"directoryIds\": [\n        \"string\",\n        \"string\"\n      ],\n      \"directoryStatus\": \"DELETED\",\n      \"directoryStatusSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"displayName\": \"string\",\n      \"email\": \"string\",\n      \"emailSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"emails\": [\n        \"string\",\n        \"string\"\n      ],\n      \"employeeIdSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"employeeIds\": [\n        \"string\",\n        \"string\"\n      ],\n      \"employmentStatus\": \"string\",\n      \"employmentStatusSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"employmentType\": \"string\",\n      \"employmentTypeSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"id\": \"string\",\n      \"jobTitle\": \"string\",\n      \"jobTitleSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"managerIds\": [\n        \"string\",\n        \"string\"\n      ],\n      \"managerSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"profile\": {\n        \"key_0\": false,\n        \"key_1\": 4295.975264325193,\n        \"key_2\": 8006,\n        \"key_3\": \"string\"\n      },\n      \"roleIds\": [\n        \"string\",\n        \"string\"\n      ],\n      \"status\": \"DELETED\",\n      \"type\": \"USER_TYPE_AGENT\",\n      \"updatedAt\": \"2007-03-06T01:39:46.234Z\",\n      \"username\": \"string\",\n      \"usernameSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"usernames\": [\n        \"string\",\n        \"string\"\n      ]\n    }\n  ],\n  \"nextPageToken\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7fbce19e-4a56-4897-a2a8-f8fe2fc4d8c0",
+          "name": "Add",
+          "request": {
+            "name": "Add",
+            "description": {
+              "content": "Add an owner to a given app entitlement.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "apps",
+                ":app_id",
+                "entitlements",
+                ":entitlement_id",
+                "owners"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "app_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "entitlement_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "f64d0843-95e5-4de4-9fda-f6f36c94e871",
+              "name": "The empty response message for adding an app entitlement owner.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "apps",
+                    ":app_id",
+                    "entitlements",
+                    ":entitlement_id",
+                    "owners"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "app_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "entitlement_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"userId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "cbeb7c31-21c2-4a08-af71-5d38cd827c7c",
+          "name": "Set",
+          "request": {
+            "name": "Set",
+            "description": {
+              "content": "Sets the owners for a given app entitlement to the specified list of users.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "apps",
+                ":app_id",
+                "entitlements",
+                ":entitlement_id",
+                "owners"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "app_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "entitlement_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "c4812589-a413-4c0e-8786-1f4c4fac35c7",
+              "name": "The empty response message for setting the app entitlement owners.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "apps",
+                    ":app_id",
+                    "entitlements",
+                    ":entitlement_id",
+                    "owners"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "app_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "entitlement_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"userIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "405e67f3-933d-482f-b344-e8ed71ed58ce",
+          "name": "Remove",
+          "request": {
+            "name": "Remove",
+            "description": {
+              "content": "Remove an owner from a given app entitlement.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "apps",
+                ":app_id",
+                "entitlements",
+                ":entitlement_id",
+                "owners",
+                ":user_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "app_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "entitlement_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "user_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "36e3fa7f-954c-4faf-b9a4-6659c5574e73",
+              "name": "The empty response message for removing an app entitlement owner.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "apps",
+                    ":app_id",
+                    "entitlements",
+                    ":entitlement_id",
+                    "owners",
+                    ":user_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "app_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "entitlement_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "user_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<object>",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "The domain of the tenant to use for this request.",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "example",
+      "key": "tenantDomain"
+    },
+    {
+      "type": "string",
+      "value": "https://{{tenantDomain}}.conductor.one",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "2543e9f0-d2aa-4257-933d-3858bfcfeeaa",
+    "name": "ConductorOne Access Conflict App Entitlement Owner API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The ConductorOne API is a HTTP API for managing ConductorOne resources.",
+      "type": "text/plain"
+    }
+  }
+}

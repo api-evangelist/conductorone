@@ -1,0 +1,545 @@
+{
+  "item": [
+    {
+      "id": "a937a831-899f-4120-8d6a-1fc2addaf707",
+      "name": "Access Conflict",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "fa4c5734-cae0-4c94-bba1-972c162b1140",
+          "name": "Create Monitor",
+          "request": {
+            "name": "Create Monitor",
+            "description": {
+              "content": "Invokes the c1.api.accessconflict.v1.AccessConflictService.CreateMonitor method.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "accessconflict"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"displayName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"notificationConfig\": {\n    \"emailNotifications\": {\n      \"enabled\": \"<boolean>\",\n      \"identityUserIds\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    },\n    \"slackNotifications\": {\n      \"channelId\": \"<string>\",\n      \"channelName\": \"<string>\",\n      \"enabled\": \"<boolean>\"\n    }\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "33b604b3-0c50-4b6b-a9a5-a7e62600a1f6",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "accessconflict"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"displayName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"notificationConfig\": {\n    \"emailNotifications\": {\n      \"enabled\": false,\n      \"identityUserIds\": [\n        \"string\",\n        \"string\"\n      ]\n    },\n    \"slackNotifications\": {\n      \"channelId\": \"string\",\n      \"channelName\": \"string\",\n      \"enabled\": false\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"createdAt\": \"1956-08-26T15:37:06.788Z\",\n  \"deletedAt\": \"2003-09-19T02:36:19.311Z\",\n  \"description\": \"string\",\n  \"displayName\": \"string\",\n  \"enabled\": false,\n  \"entitlementSetAId\": \"string\",\n  \"entitlementSetBId\": \"string\",\n  \"id\": \"string\",\n  \"notificationConfig\": {\n    \"emailNotifications\": {\n      \"enabled\": true,\n      \"identityUserIds\": [\n        \"string\",\n        \"string\"\n      ]\n    },\n    \"slackNotifications\": {\n      \"channelId\": \"string\",\n      \"channelName\": \"string\",\n      \"enabled\": true\n    }\n  },\n  \"updatedAt\": \"2004-05-04T02:35:30.104Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "75c065ad-4805-4ca8-960c-0214f64098ba",
+          "name": "Delete Monitor",
+          "request": {
+            "name": "Delete Monitor",
+            "description": {
+              "content": "Invokes the c1.api.accessconflict.v1.AccessConflictService.DeleteMonitor method.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "accessconflict",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "05061ebc-1fb3-4c6d-8367-c404941429da",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "accessconflict",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<object>",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b565267b-0dd7-4236-9831-466aefce405d",
+          "name": "Get Monitor",
+          "request": {
+            "name": "Get Monitor",
+            "description": {
+              "content": "Invokes the c1.api.accessconflict.v1.AccessConflictService.GetMonitor method.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "accessconflict",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "71b9e6d6-af40-4763-a3b3-812ab6901c91",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "accessconflict",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"createdAt\": \"1956-08-26T15:37:06.788Z\",\n  \"deletedAt\": \"2003-09-19T02:36:19.311Z\",\n  \"description\": \"string\",\n  \"displayName\": \"string\",\n  \"enabled\": false,\n  \"entitlementSetAId\": \"string\",\n  \"entitlementSetBId\": \"string\",\n  \"id\": \"string\",\n  \"notificationConfig\": {\n    \"emailNotifications\": {\n      \"enabled\": true,\n      \"identityUserIds\": [\n        \"string\",\n        \"string\"\n      ]\n    },\n    \"slackNotifications\": {\n      \"channelId\": \"string\",\n      \"channelName\": \"string\",\n      \"enabled\": true\n    }\n  },\n  \"updatedAt\": \"2004-05-04T02:35:30.104Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c5e1e6f3-d140-4c4e-b58f-9cb15c4f35ac",
+          "name": "Update Monitor",
+          "request": {
+            "name": "Update Monitor",
+            "description": {
+              "content": "Invokes the c1.api.accessconflict.v1.AccessConflictService.UpdateMonitor method.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "accessconflict",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"description\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"notificationConfig\": {\n    \"emailNotifications\": {\n      \"enabled\": \"<boolean>\",\n      \"identityUserIds\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    },\n    \"slackNotifications\": {\n      \"channelId\": \"<string>\",\n      \"channelName\": \"<string>\",\n      \"enabled\": \"<boolean>\"\n    }\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "6887ea76-6634-4a0f-97ce-ae0f0b149002",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "accessconflict",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"description\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"notificationConfig\": {\n    \"emailNotifications\": {\n      \"enabled\": false,\n      \"identityUserIds\": [\n        \"string\",\n        \"string\"\n      ]\n    },\n    \"slackNotifications\": {\n      \"channelId\": \"string\",\n      \"channelName\": \"string\",\n      \"enabled\": false\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"createdAt\": \"1956-08-26T15:37:06.788Z\",\n  \"deletedAt\": \"2003-09-19T02:36:19.311Z\",\n  \"description\": \"string\",\n  \"displayName\": \"string\",\n  \"enabled\": false,\n  \"entitlementSetAId\": \"string\",\n  \"entitlementSetBId\": \"string\",\n  \"id\": \"string\",\n  \"notificationConfig\": {\n    \"emailNotifications\": {\n      \"enabled\": true,\n      \"identityUserIds\": [\n        \"string\",\n        \"string\"\n      ]\n    },\n    \"slackNotifications\": {\n      \"channelId\": \"string\",\n      \"channelName\": \"string\",\n      \"enabled\": true\n    }\n  },\n  \"updatedAt\": \"2004-05-04T02:35:30.104Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "The domain of the tenant to use for this request.",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "example",
+      "key": "tenantDomain"
+    },
+    {
+      "type": "string",
+      "value": "https://{{tenantDomain}}.conductor.one",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "458471a3-c67c-499f-8322-0a4cdaae5fd7",
+    "name": "ConductorOne Access Conflict API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The ConductorOne API is a HTTP API for managing ConductorOne resources.",
+      "type": "text/plain"
+    }
+  }
+}

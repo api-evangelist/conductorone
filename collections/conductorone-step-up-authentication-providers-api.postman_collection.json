@@ -1,0 +1,1046 @@
+{
+  "item": [
+    {
+      "id": "24ec139a-0dee-46ac-9ba1-23289f744182",
+      "name": "Step Up Authentication Providers",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f4df9daf-11f5-496d-a0b8-88bc99a458a9",
+          "name": "Search",
+          "request": {
+            "name": "Search",
+            "description": {
+              "content": "Search allows searching for step-up providers with various filters",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "search",
+                "step-up",
+                "providers"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pageSize\": \"<integer>\",\n  \"pageToken\": \"<string>\",\n  \"providerType\": \"<string>\",\n  \"query\": \"<string>\",\n  \"refs\": [\n    {\n      \"id\": \"<string>\"\n    },\n    {\n      \"id\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "11e17a6c-1914-41c3-979a-53c2b822b47b",
+              "name": "Response message for searching step-up providers",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "search",
+                    "step-up",
+                    "providers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"pageSize\": \"<integer>\",\n  \"pageToken\": \"<string>\",\n  \"providerType\": \"<string>\",\n  \"query\": \"<string>\",\n  \"refs\": [\n    {\n      \"id\": \"string\"\n    },\n    {\n      \"id\": \"string\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"list\": [\n    {\n      \"clientId\": \"string\",\n      \"createdAt\": \"1990-01-07T04:47:21.084Z\",\n      \"displayName\": \"string\",\n      \"enabled\": true,\n      \"id\": \"string\",\n      \"issuerUrl\": \"string\",\n      \"lastTestedAt\": \"1962-04-07T12:03:59.447Z\",\n      \"microsoft\": {\n        \"conditionalAccessIds\": [\n          \"string\",\n          \"string\"\n        ],\n        \"tenant\": \"string\"\n      },\n      \"oauth2\": {\n        \"acrValues\": [\n          \"string\",\n          \"string\"\n        ]\n      },\n      \"updatedAt\": \"1997-12-05T01:29:18.723Z\"\n    },\n    {\n      \"clientId\": \"string\",\n      \"createdAt\": \"2011-11-08T08:24:04.426Z\",\n      \"displayName\": \"string\",\n      \"enabled\": true,\n      \"id\": \"string\",\n      \"issuerUrl\": \"string\",\n      \"lastTestedAt\": \"1963-08-18T11:04:58.382Z\",\n      \"microsoft\": {\n        \"conditionalAccessIds\": [\n          \"string\",\n          \"string\"\n        ],\n        \"tenant\": \"string\"\n      },\n      \"oauth2\": {\n        \"acrValues\": [\n          \"string\",\n          \"string\"\n        ]\n      },\n      \"updatedAt\": \"1950-01-02T09:55:02.553Z\"\n    }\n  ],\n  \"nextPageToken\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5e976e35-6938-492a-aa47-0ac695ffffb6",
+          "name": "List",
+          "request": {
+            "name": "List",
+            "description": {
+              "content": "Invokes the c1.api.stepup.v1.StepUpProviderService.List method.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "step-up",
+                "providers"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "72404097-27f2-422e-9c6b-5b2316d4a5b7",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "step-up",
+                    "providers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"list\": [\n    {\n      \"clientId\": \"string\",\n      \"createdAt\": \"1968-04-12T17:07:56.192Z\",\n      \"displayName\": \"string\",\n      \"enabled\": true,\n      \"id\": \"string\",\n      \"issuerUrl\": \"string\",\n      \"lastTestedAt\": \"1998-07-27T06:09:15.408Z\",\n      \"microsoft\": {\n        \"conditionalAccessIds\": [\n          \"string\",\n          \"string\"\n        ],\n        \"tenant\": \"string\"\n      },\n      \"oauth2\": {\n        \"acrValues\": [\n          \"string\",\n          \"string\"\n        ]\n      },\n      \"updatedAt\": \"1992-03-11T09:51:17.600Z\"\n    },\n    {\n      \"clientId\": \"string\",\n      \"createdAt\": \"1993-01-09T17:47:28.573Z\",\n      \"displayName\": \"string\",\n      \"enabled\": false,\n      \"id\": \"string\",\n      \"issuerUrl\": \"string\",\n      \"lastTestedAt\": \"1955-05-19T06:52:19.801Z\",\n      \"microsoft\": {\n        \"conditionalAccessIds\": [\n          \"string\",\n          \"string\"\n        ],\n        \"tenant\": \"string\"\n      },\n      \"oauth2\": {\n        \"acrValues\": [\n          \"string\",\n          \"string\"\n        ]\n      },\n      \"updatedAt\": \"1963-11-11T03:42:33.970Z\"\n    }\n  ],\n  \"nextPageToken\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "634b097f-3185-4ca0-a859-27394476dfe8",
+          "name": "Create",
+          "request": {
+            "name": "Create",
+            "description": {
+              "content": "Invokes the c1.api.stepup.v1.StepUpProviderService.Create method.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "step-up",
+                "providers"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"clientId\": \"<string>\",\n  \"clientSecret\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"issuerUrl\": \"<string>\",\n  \"microsoft\": {\n    \"conditionalAccessIds\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"tenant\": \"<string>\"\n  },\n  \"oauth2\": {\n    \"acrValues\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "7dcda2cb-40f1-45a8-9839-0b1b948cbe24",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "step-up",
+                    "providers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"clientId\": \"<string>\",\n  \"clientSecret\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"issuerUrl\": \"<string>\",\n  \"microsoft\": {\n    \"conditionalAccessIds\": [\n      \"string\",\n      \"string\"\n    ],\n    \"tenant\": \"string\"\n  },\n  \"oauth2\": {\n    \"acrValues\": [\n      \"string\",\n      \"string\"\n    ]\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"stepUpProvider\": {\n    \"clientId\": \"string\",\n    \"createdAt\": \"1952-12-03T17:59:15.132Z\",\n    \"displayName\": \"string\",\n    \"enabled\": true,\n    \"id\": \"string\",\n    \"issuerUrl\": \"string\",\n    \"lastTestedAt\": \"1959-02-20T13:17:33.482Z\",\n    \"microsoft\": {\n      \"conditionalAccessIds\": [\n        \"string\",\n        \"string\"\n      ],\n      \"tenant\": \"string\"\n    },\n    \"oauth2\": {\n      \"acrValues\": [\n        \"string\",\n        \"string\"\n      ]\n    },\n    \"updatedAt\": \"2017-04-04T19:24:20.035Z\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "41bd94cd-fe9f-4e6c-8e84-a8e7247f7dab",
+          "name": "Delete",
+          "request": {
+            "name": "Delete",
+            "description": {
+              "content": "Invokes the c1.api.stepup.v1.StepUpProviderService.Delete method.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "step-up",
+                "providers",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "6f9ba9a3-865e-42b2-b6e8-1e25d41f9153",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "step-up",
+                    "providers",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<object>",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e84b4121-36b6-4568-8363-b3b1323f7ebb",
+          "name": "Get",
+          "request": {
+            "name": "Get",
+            "description": {
+              "content": "Invokes the c1.api.stepup.v1.StepUpProviderService.Get method.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "step-up",
+                "providers",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5ab8f834-fef3-42a5-86b5-2a79c9dfea50",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "step-up",
+                    "providers",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"stepUpProvider\": {\n    \"clientId\": \"string\",\n    \"createdAt\": \"1996-12-13T19:53:34.615Z\",\n    \"displayName\": \"string\",\n    \"enabled\": true,\n    \"id\": \"string\",\n    \"issuerUrl\": \"string\",\n    \"lastTestedAt\": \"2025-06-15T05:16:55.710Z\",\n    \"microsoft\": {\n      \"conditionalAccessIds\": [\n        \"string\",\n        \"string\"\n      ],\n      \"tenant\": \"string\"\n    },\n    \"oauth2\": {\n      \"acrValues\": [\n        \"string\",\n        \"string\"\n      ]\n    },\n    \"updatedAt\": \"1993-01-07T09:01:51.966Z\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0f34c715-c3a5-4e3a-85d3-8700b103f0cc",
+          "name": "Update",
+          "request": {
+            "name": "Update",
+            "description": {
+              "content": "Invokes the c1.api.stepup.v1.StepUpProviderService.Update method.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "step-up",
+                "providers",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"stepUpProvider\": {\n    \"clientId\": \"<string>\",\n    \"displayName\": \"<string>\",\n    \"enabled\": \"<boolean>\",\n    \"issuerUrl\": \"<string>\",\n    \"microsoft\": {\n      \"conditionalAccessIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"tenant\": \"<string>\"\n    },\n    \"oauth2\": {\n      \"acrValues\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  },\n  \"updateMask\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "36332102-52e9-4a34-b230-d65e6de7cc24",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "step-up",
+                    "providers",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"stepUpProvider\": {\n    \"clientId\": \"string\",\n    \"displayName\": \"string\",\n    \"enabled\": false,\n    \"issuerUrl\": \"string\",\n    \"microsoft\": {\n      \"conditionalAccessIds\": [\n        \"string\",\n        \"string\"\n      ],\n      \"tenant\": \"string\"\n    },\n    \"oauth2\": {\n      \"acrValues\": [\n        \"string\",\n        \"string\"\n      ]\n    }\n  },\n  \"updateMask\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"stepUpProvider\": {\n    \"clientId\": \"string\",\n    \"createdAt\": \"2006-05-02T07:27:53.766Z\",\n    \"displayName\": \"string\",\n    \"enabled\": true,\n    \"id\": \"string\",\n    \"issuerUrl\": \"string\",\n    \"lastTestedAt\": \"1998-12-31T17:17:22.769Z\",\n    \"microsoft\": {\n      \"conditionalAccessIds\": [\n        \"string\",\n        \"string\"\n      ],\n      \"tenant\": \"string\"\n    },\n    \"oauth2\": {\n      \"acrValues\": [\n        \"string\",\n        \"string\"\n      ]\n    },\n    \"updatedAt\": \"2006-08-31T09:46:52.752Z\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b2660385-25c1-49ed-acb0-135c8fc178cb",
+          "name": "Update Secret",
+          "request": {
+            "name": "Update Secret",
+            "description": {
+              "content": "Invokes the c1.api.stepup.v1.StepUpProviderService.UpdateSecret method.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "step-up",
+                "providers",
+                ":id",
+                "secret"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"clientSecret\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "f895cb54-92de-4618-9627-089dc7658d9c",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "step-up",
+                    "providers",
+                    ":id",
+                    "secret"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"clientSecret\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"stepUpProvider\": {\n    \"clientId\": \"string\",\n    \"createdAt\": \"1956-07-23T16:08:22.984Z\",\n    \"displayName\": \"string\",\n    \"enabled\": true,\n    \"id\": \"string\",\n    \"issuerUrl\": \"string\",\n    \"lastTestedAt\": \"1998-11-01T04:08:40.073Z\",\n    \"microsoft\": {\n      \"conditionalAccessIds\": [\n        \"string\",\n        \"string\"\n      ],\n      \"tenant\": \"string\"\n    },\n    \"oauth2\": {\n      \"acrValues\": [\n        \"string\",\n        \"string\"\n      ]\n    },\n    \"updatedAt\": \"1946-11-28T07:10:03.269Z\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9793ff58-a31f-4bbc-b331-629a7a93040f",
+          "name": "Test",
+          "request": {
+            "name": "Test",
+            "description": {
+              "content": "Invokes the c1.api.stepup.v1.StepUpProviderService.Test method.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "step-up",
+                "providers",
+                ":id",
+                "test"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "b5d9aef3-fd9d-4cd0-b1f8-d3f85086a991",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "step-up",
+                    "providers",
+                    ":id",
+                    "test"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<object>",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"redirectUrl\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "The domain of the tenant to use for this request.",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "example",
+      "key": "tenantDomain"
+    },
+    {
+      "type": "string",
+      "value": "https://{{tenantDomain}}.conductor.one",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "bb117e38-9649-4c30-8709-aefe6c1dc2ce",
+    "name": "ConductorOne Access Conflict Step Up Authentication Providers API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The ConductorOne API is a HTTP API for managing ConductorOne resources.",
+      "type": "text/plain"
+    }
+  }
+}

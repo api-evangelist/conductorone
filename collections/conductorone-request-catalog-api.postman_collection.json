@@ -1,0 +1,2636 @@
+{
+  "item": [
+    {
+      "id": "7456e6b1-260b-4b83-a5e5-6b97f83b288a",
+      "name": "Request Catalog",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "fb8a5897-edf6-40c7-93c8-6b512c596992",
+          "name": "List",
+          "request": {
+            "name": "List",
+            "description": {
+              "content": "Get a list of request catalogs.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "catalogs"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "page_token",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "15ded68c-8534-46a7-962d-ad9faec851d6",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "catalogs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page_size",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "page_token",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"expanded\": [\n    {\n      \"@type\": \"string\",\n      \"key_0\": 5841.651150959317\n    },\n    {\n      \"@type\": \"string\"\n    }\n  ],\n  \"list\": [\n    {\n      \"accessEntitlementsPath\": \"string\",\n      \"createdByUserPath\": \"string\",\n      \"memberCount\": \"string\",\n      \"requestCatalog\": {\n        \"accessEntitlements\": [\n          {\n            \"alias\": \"string\",\n            \"appId\": \"string\",\n            \"appResourceId\": \"string\",\n            \"appResourceTypeId\": \"string\",\n            \"certifyPolicyId\": \"string\",\n            \"complianceFrameworkValueIds\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"createdAt\": \"1978-08-29T23:54:44.712Z\",\n            \"defaultValuesApplied\": true,\n            \"deletedAt\": \"1989-10-10T09:51:08.121Z\",\n            \"deprovisionerPolicy\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"description\": \"string\",\n            \"displayName\": \"string\",\n            \"durationGrant\": \"string\",\n            \"durationUnset\": {},\n            \"emergencyGrantEnabled\": true,\n            \"emergencyGrantPolicyId\": \"string\",\n            \"grantCount\": \"string\",\n            \"grantPolicyId\": \"string\",\n            \"id\": \"string\",\n            \"isAutomationEnabled\": true,\n            \"isManuallyManaged\": true,\n            \"matchBatonId\": \"string\",\n            \"overrideAccessRequestsDefaults\": true,\n            \"provisionerPolicy\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"purpose\": \"APP_ENTITLEMENT_PURPOSE_VALUE_ASSIGNMENT\",\n            \"requestSchemaId\": \"string\",\n            \"revokePolicyId\": \"string\",\n            \"riskLevelValueId\": \"string\",\n            \"slug\": \"string\",\n            \"sourceConnectorIds\": {\n              \"key_0\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"key_1\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            \"systemBuiltin\": true,\n            \"updatedAt\": \"1964-02-15T10:45:57.985Z\",\n            \"userEditedMask\": \"string\"\n          },\n          {\n            \"alias\": \"string\",\n            \"appId\": \"string\",\n            \"appResourceId\": \"string\",\n            \"appResourceTypeId\": \"string\",\n            \"certifyPolicyId\": \"string\",\n            \"complianceFrameworkValueIds\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"createdAt\": \"2010-12-22T04:15:19.979Z\",\n            \"defaultValuesApplied\": false,\n            \"deletedAt\": \"1991-06-22T06:52:06.966Z\",\n            \"deprovisionerPolicy\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"description\": \"string\",\n            \"displayName\": \"string\",\n            \"durationGrant\": \"string\",\n            \"durationUnset\": {},\n            \"emergencyGrantEnabled\": false,\n            \"emergencyGrantPolicyId\": \"string\",\n            \"grantCount\": \"string\",\n            \"grantPolicyId\": \"string\",\n            \"id\": \"string\",\n            \"isAutomationEnabled\": true,\n            \"isManuallyManaged\": false,\n            \"matchBatonId\": \"string\",\n            \"overrideAccessRequestsDefaults\": false,\n            \"provisionerPolicy\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"purpose\": \"APP_ENTITLEMENT_PURPOSE_VALUE_UNSPECIFIED\",\n            \"requestSchemaId\": \"string\",\n            \"revokePolicyId\": \"string\",\n            \"riskLevelValueId\": \"string\",\n            \"slug\": \"string\",\n            \"sourceConnectorIds\": {\n              \"key_0\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"key_1\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            \"systemBuiltin\": false,\n            \"updatedAt\": \"1961-02-18T16:49:53.353Z\",\n            \"userEditedMask\": \"string\"\n          }\n        ],\n        \"createdAt\": \"2017-10-16T01:30:28.866Z\",\n        \"createdByUserId\": \"string\",\n        \"deletedAt\": \"2013-01-21T10:04:52.935Z\",\n        \"description\": \"string\",\n        \"displayName\": \"string\",\n        \"enrollmentBehavior\": \"REQUEST_CATALOG_ENROLLMENT_BEHAVIOR_BYPASS_ENTITLEMENT_REQUEST_POLICY\",\n        \"id\": \"string\",\n        \"published\": false,\n        \"requestBundle\": false,\n        \"unenrollmentBehavior\": \"REQUEST_CATALOG_UNENROLLMENT_BEHAVIOR_REVOKE_UNJUSTIFIED\",\n        \"unenrollmentEntitlementBehavior\": \"REQUEST_CATALOG_UNENROLLMENT_ENTITLEMENT_BEHAVIOR_ENFORCE\",\n        \"updatedAt\": \"1953-05-23T03:14:57.575Z\",\n        \"visibleToEveryone\": false\n      }\n    },\n    {\n      \"accessEntitlementsPath\": \"string\",\n      \"createdByUserPath\": \"string\",\n      \"memberCount\": \"string\",\n      \"requestCatalog\": {\n        \"accessEntitlements\": [\n          {\n            \"alias\": \"string\",\n            \"appId\": \"string\",\n            \"appResourceId\": \"string\",\n            \"appResourceTypeId\": \"string\",\n            \"certifyPolicyId\": \"string\",\n            \"complianceFrameworkValueIds\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"createdAt\": \"1979-08-10T13:30:24.952Z\",\n            \"defaultValuesApplied\": false,\n            \"deletedAt\": \"1947-11-19T14:07:45.143Z\",\n            \"deprovisionerPolicy\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"description\": \"string\",\n            \"displayName\": \"string\",\n            \"durationGrant\": \"string\",\n            \"durationUnset\": {},\n            \"emergencyGrantEnabled\": false,\n            \"emergencyGrantPolicyId\": \"string\",\n            \"grantCount\": \"string\",\n            \"grantPolicyId\": \"string\",\n            \"id\": \"string\",\n            \"isAutomationEnabled\": true,\n            \"isManuallyManaged\": false,\n            \"matchBatonId\": \"string\",\n            \"overrideAccessRequestsDefaults\": false,\n            \"provisionerPolicy\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"purpose\": \"APP_ENTITLEMENT_PURPOSE_VALUE_UNSPECIFIED\",\n            \"requestSchemaId\": \"string\",\n            \"revokePolicyId\": \"string\",\n            \"riskLevelValueId\": \"string\",\n            \"slug\": \"string\",\n            \"sourceConnectorIds\": {\n              \"key_0\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            \"systemBuiltin\": true,\n            \"updatedAt\": \"1998-02-04T23:07:58.354Z\",\n            \"userEditedMask\": \"string\"\n          },\n          {\n            \"alias\": \"string\",\n            \"appId\": \"string\",\n            \"appResourceId\": \"string\",\n            \"appResourceTypeId\": \"string\",\n            \"certifyPolicyId\": \"string\",\n            \"complianceFrameworkValueIds\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"createdAt\": \"1974-11-20T16:41:44.053Z\",\n            \"defaultValuesApplied\": false,\n            \"deletedAt\": \"1996-11-26T17:06:19.780Z\",\n            \"deprovisionerPolicy\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"description\": \"string\",\n            \"displayName\": \"string\",\n            \"durationGrant\": \"string\",\n            \"durationUnset\": {},\n            \"emergencyGrantEnabled\": true,\n            \"emergencyGrantPolicyId\": \"string\",\n            \"grantCount\": \"string\",\n            \"grantPolicyId\": \"string\",\n            \"id\": \"string\",\n            \"isAutomationEnabled\": true,\n            \"isManuallyManaged\": false,\n            \"matchBatonId\": \"string\",\n            \"overrideAccessRequestsDefaults\": true,\n            \"provisionerPolicy\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"purpose\": \"APP_ENTITLEMENT_PURPOSE_VALUE_UNSPECIFIED\",\n            \"requestSchemaId\": \"string\",\n            \"revokePolicyId\": \"string\",\n            \"riskLevelValueId\": \"string\",\n            \"slug\": \"string\",\n            \"sourceConnectorIds\": {\n              \"key_0\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            \"systemBuiltin\": false,\n            \"updatedAt\": \"2011-11-03T22:39:23.131Z\",\n            \"userEditedMask\": \"string\"\n          }\n        ],\n        \"createdAt\": \"1965-09-08T14:48:29.026Z\",\n        \"createdByUserId\": \"string\",\n        \"deletedAt\": \"1979-02-18T02:27:56.634Z\",\n        \"description\": \"string\",\n        \"displayName\": \"string\",\n        \"enrollmentBehavior\": \"REQUEST_CATALOG_ENROLLMENT_BEHAVIOR_ENFORCE_ENTITLEMENT_REQUEST_POLICY\",\n        \"id\": \"string\",\n        \"published\": true,\n        \"requestBundle\": false,\n        \"unenrollmentBehavior\": \"REQUEST_CATALOG_UNENROLLMENT_BEHAVIOR_UNSPECIFIED\",\n        \"unenrollmentEntitlementBehavior\": \"REQUEST_CATALOG_UNENROLLMENT_ENTITLEMENT_BEHAVIOR_UNSPECIFIED\",\n        \"updatedAt\": \"1969-09-16T15:23:01.568Z\",\n        \"visibleToEveryone\": true\n      }\n    }\n  ],\n  \"nextPageToken\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c45d37a7-dabd-4f60-b7bb-420e970defb9",
+          "name": "Create",
+          "request": {
+            "name": "Create",
+            "description": {
+              "content": "Creates a new request catalog.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "catalogs"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"displayName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"enrollmentBehavior\": \"<string>\",\n  \"expandMask\": {\n    \"paths\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"published\": \"<boolean>\",\n  \"requestBundle\": \"<boolean>\",\n  \"unenrollmentBehavior\": \"<string>\",\n  \"unenrollmentEntitlementBehavior\": \"<string>\",\n  \"visibleToEveryone\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "2ba6ce85-c3d3-4d5b-91f5-610ae7368aa7",
+              "name": "The request catalog management service get response returns a request catalog view with the expanded items in the expanded array indicated by the expand mask in the request.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "catalogs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"displayName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"enrollmentBehavior\": \"<string>\",\n  \"expandMask\": {\n    \"paths\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"published\": \"<boolean>\",\n  \"requestBundle\": \"<boolean>\",\n  \"unenrollmentBehavior\": \"<string>\",\n  \"unenrollmentEntitlementBehavior\": \"<string>\",\n  \"visibleToEveryone\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"expanded\": [\n    {\n      \"@type\": \"string\"\n    },\n    {\n      \"@type\": \"string\",\n      \"key_0\": 2173.5502165618805\n    }\n  ],\n  \"requestCatalogView\": {\n    \"accessEntitlementsPath\": \"string\",\n    \"createdByUserPath\": \"string\",\n    \"memberCount\": \"string\",\n    \"requestCatalog\": {\n      \"accessEntitlements\": [\n        {\n          \"alias\": \"string\",\n          \"appId\": \"string\",\n          \"appResourceId\": \"string\",\n          \"appResourceTypeId\": \"string\",\n          \"certifyPolicyId\": \"string\",\n          \"complianceFrameworkValueIds\": [\n            \"string\",\n            \"string\"\n          ],\n          \"createdAt\": \"2016-11-24T05:13:43.841Z\",\n          \"defaultValuesApplied\": false,\n          \"deletedAt\": \"1979-04-12T20:37:23.635Z\",\n          \"deprovisionerPolicy\": {\n            \"action\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connector\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"delegated\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"externalTicket\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"manual\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"multiStep\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"unconfigured\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"webhook\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"description\": \"string\",\n          \"displayName\": \"string\",\n          \"durationGrant\": \"string\",\n          \"durationUnset\": {},\n          \"emergencyGrantEnabled\": false,\n          \"emergencyGrantPolicyId\": \"string\",\n          \"grantCount\": \"string\",\n          \"grantPolicyId\": \"string\",\n          \"id\": \"string\",\n          \"isAutomationEnabled\": true,\n          \"isManuallyManaged\": true,\n          \"matchBatonId\": \"string\",\n          \"overrideAccessRequestsDefaults\": true,\n          \"provisionerPolicy\": {\n            \"action\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connector\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"delegated\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"externalTicket\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"manual\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"multiStep\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"unconfigured\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"webhook\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"purpose\": \"APP_ENTITLEMENT_PURPOSE_VALUE_UNSPECIFIED\",\n          \"requestSchemaId\": \"string\",\n          \"revokePolicyId\": \"string\",\n          \"riskLevelValueId\": \"string\",\n          \"slug\": \"string\",\n          \"sourceConnectorIds\": {\n            \"key_0\": \"string\"\n          },\n          \"systemBuiltin\": true,\n          \"updatedAt\": \"1956-04-16T23:20:28.150Z\",\n          \"userEditedMask\": \"string\"\n        },\n        {\n          \"alias\": \"string\",\n          \"appId\": \"string\",\n          \"appResourceId\": \"string\",\n          \"appResourceTypeId\": \"string\",\n          \"certifyPolicyId\": \"string\",\n          \"complianceFrameworkValueIds\": [\n            \"string\",\n            \"string\"\n          ],\n          \"createdAt\": \"1996-04-04T01:36:55.337Z\",\n          \"defaultValuesApplied\": true,\n          \"deletedAt\": \"2013-01-15T16:48:26.428Z\",\n          \"deprovisionerPolicy\": {\n            \"action\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connector\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"delegated\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"externalTicket\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"manual\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"multiStep\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"unconfigured\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"webhook\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"description\": \"string\",\n          \"displayName\": \"string\",\n          \"durationGrant\": \"string\",\n          \"durationUnset\": {},\n          \"emergencyGrantEnabled\": true,\n          \"emergencyGrantPolicyId\": \"string\",\n          \"grantCount\": \"string\",\n          \"grantPolicyId\": \"string\",\n          \"id\": \"string\",\n          \"isAutomationEnabled\": false,\n          \"isManuallyManaged\": true,\n          \"matchBatonId\": \"string\",\n          \"overrideAccessRequestsDefaults\": false,\n          \"provisionerPolicy\": {\n            \"action\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connector\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"delegated\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"externalTicket\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"manual\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"multiStep\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"unconfigured\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"webhook\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"purpose\": \"APP_ENTITLEMENT_PURPOSE_VALUE_PERMISSION\",\n          \"requestSchemaId\": \"string\",\n          \"revokePolicyId\": \"string\",\n          \"riskLevelValueId\": \"string\",\n          \"slug\": \"string\",\n          \"sourceConnectorIds\": {\n            \"key_0\": \"string\",\n            \"key_1\": \"string\"\n          },\n          \"systemBuiltin\": true,\n          \"updatedAt\": \"1988-08-06T00:25:33.544Z\",\n          \"userEditedMask\": \"string\"\n        }\n      ],\n      \"createdAt\": \"1978-02-05T05:26:02.896Z\",\n      \"createdByUserId\": \"string\",\n      \"deletedAt\": \"2019-05-16T00:12:59.880Z\",\n      \"description\": \"string\",\n      \"displayName\": \"string\",\n      \"enrollmentBehavior\": \"REQUEST_CATALOG_ENROLLMENT_BEHAVIOR_UNSPECIFIED\",\n      \"id\": \"string\",\n      \"published\": false,\n      \"requestBundle\": true,\n      \"unenrollmentBehavior\": \"REQUEST_CATALOG_UNENROLLMENT_BEHAVIOR_LEAVE_ACCESS_AS_IS\",\n      \"unenrollmentEntitlementBehavior\": \"REQUEST_CATALOG_UNENROLLMENT_ENTITLEMENT_BEHAVIOR_UNSPECIFIED\",\n      \"updatedAt\": \"1987-02-02T20:44:45.927Z\",\n      \"visibleToEveryone\": true\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1dc69d04-b8a9-4c5c-816c-d78060d4f0cd",
+          "name": "List All Entitlement Ids Per App",
+          "request": {
+            "name": "List All Entitlement Ids Per App",
+            "description": {
+              "content": "Invokes the c1.api.requestcatalog.v1.RequestCatalogManagementService.ListAllEntitlementIdsPerApp method.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "catalogs",
+                ":catalog_id",
+                "requestable_entitlementIDs"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "catalog_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2a2f973d-942c-4b42-bb61-6cc94b996215",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "catalogs",
+                    ":catalog_id",
+                    "requestable_entitlementIDs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "catalog_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"refs\": [\n    {\n      \"appId\": \"string\",\n      \"id\": \"string\"\n    },\n    {\n      \"appId\": \"string\",\n      \"id\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0170b605-1fc5-4805-8898-1b1f010978b6",
+          "name": "List Entitlements Per Catalog",
+          "request": {
+            "name": "List Entitlements Per Catalog",
+            "description": {
+              "content": "List entitlements in a catalog that are requestable.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "catalogs",
+                ":catalog_id",
+                "requestable_entitlements"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "page_token",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "catalog_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "59fed793-0746-42bb-9e16-6e26337f9227",
+              "name": "The RequestCatalogManagementServiceListEntitlementsPerCatalogResponse message contains a list of results and a nextPageToken if applicable.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "catalogs",
+                    ":catalog_id",
+                    "requestable_entitlements"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page_size",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "page_token",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "catalog_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"expanded\": [\n    {\n      \"@type\": \"string\",\n      \"key_0\": 4673\n    },\n    {\n      \"@type\": \"string\",\n      \"key_0\": true,\n      \"key_1\": 7208\n    }\n  ],\n  \"list\": [\n    {\n      \"appEntitlement\": {\n        \"alias\": \"string\",\n        \"appId\": \"string\",\n        \"appResourceId\": \"string\",\n        \"appResourceTypeId\": \"string\",\n        \"certifyPolicyId\": \"string\",\n        \"complianceFrameworkValueIds\": [\n          \"string\",\n          \"string\"\n        ],\n        \"createdAt\": \"1950-10-30T02:15:33.489Z\",\n        \"defaultValuesApplied\": false,\n        \"deletedAt\": \"1986-09-14T23:27:38.763Z\",\n        \"deprovisionerPolicy\": {\n          \"action\": {\n            \"actionName\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connectorId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"displayName\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"connector\": {\n            \"account\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultBehavior\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"deleteAccount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"delegated\": {\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"entitlementId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"implicit\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"externalTicket\": {\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connectorId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"externalTicketProvisionerConfigId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"instructions\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"manual\": {\n            \"instructions\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"userIds\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"multiStep\": {\n            \"provisionSteps\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"unconfigured\": {},\n          \"webhook\": {\n            \"webhookId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"description\": \"string\",\n        \"displayName\": \"string\",\n        \"durationGrant\": \"string\",\n        \"durationUnset\": {},\n        \"emergencyGrantEnabled\": true,\n        \"emergencyGrantPolicyId\": \"string\",\n        \"grantCount\": \"string\",\n        \"grantPolicyId\": \"string\",\n        \"id\": \"string\",\n        \"isAutomationEnabled\": false,\n        \"isManuallyManaged\": false,\n        \"matchBatonId\": \"string\",\n        \"overrideAccessRequestsDefaults\": false,\n        \"provisionerPolicy\": {\n          \"action\": {\n            \"actionName\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connectorId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"displayName\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"connector\": {\n            \"account\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultBehavior\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"deleteAccount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"delegated\": {\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"entitlementId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"implicit\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"externalTicket\": {\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connectorId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"externalTicketProvisionerConfigId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"instructions\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"manual\": {\n            \"instructions\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"userIds\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"multiStep\": {\n            \"provisionSteps\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"unconfigured\": {},\n          \"webhook\": {\n            \"webhookId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"purpose\": \"APP_ENTITLEMENT_PURPOSE_VALUE_ASSIGNMENT\",\n        \"requestSchemaId\": \"string\",\n        \"revokePolicyId\": \"string\",\n        \"riskLevelValueId\": \"string\",\n        \"slug\": \"string\",\n        \"sourceConnectorIds\": {\n          \"key_0\": \"string\",\n          \"key_1\": \"string\",\n          \"key_2\": \"string\",\n          \"key_3\": \"string\"\n        },\n        \"systemBuiltin\": true,\n        \"updatedAt\": \"1963-09-19T13:12:53.030Z\",\n        \"userEditedMask\": \"string\"\n      },\n      \"appPath\": \"string\",\n      \"appResourcePath\": \"string\",\n      \"appResourceTypePath\": \"string\"\n    },\n    {\n      \"appEntitlement\": {\n        \"alias\": \"string\",\n        \"appId\": \"string\",\n        \"appResourceId\": \"string\",\n        \"appResourceTypeId\": \"string\",\n        \"certifyPolicyId\": \"string\",\n        \"complianceFrameworkValueIds\": [\n          \"string\",\n          \"string\"\n        ],\n        \"createdAt\": \"2009-05-07T10:19:12.089Z\",\n        \"defaultValuesApplied\": false,\n        \"deletedAt\": \"1997-12-29T13:38:56.855Z\",\n        \"deprovisionerPolicy\": {\n          \"action\": {\n            \"actionName\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connectorId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"displayName\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"connector\": {\n            \"account\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultBehavior\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"deleteAccount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"delegated\": {\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"entitlementId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"implicit\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"externalTicket\": {\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connectorId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"externalTicketProvisionerConfigId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"instructions\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"manual\": {\n            \"instructions\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"userIds\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"multiStep\": {\n            \"provisionSteps\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"unconfigured\": {},\n          \"webhook\": {\n            \"webhookId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"description\": \"string\",\n        \"displayName\": \"string\",\n        \"durationGrant\": \"string\",\n        \"durationUnset\": {},\n        \"emergencyGrantEnabled\": false,\n        \"emergencyGrantPolicyId\": \"string\",\n        \"grantCount\": \"string\",\n        \"grantPolicyId\": \"string\",\n        \"id\": \"string\",\n        \"isAutomationEnabled\": false,\n        \"isManuallyManaged\": false,\n        \"matchBatonId\": \"string\",\n        \"overrideAccessRequestsDefaults\": true,\n        \"provisionerPolicy\": {\n          \"action\": {\n            \"actionName\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connectorId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"displayName\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"connector\": {\n            \"account\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultBehavior\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"deleteAccount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"delegated\": {\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"entitlementId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"implicit\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"externalTicket\": {\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connectorId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"externalTicketProvisionerConfigId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"instructions\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"manual\": {\n            \"instructions\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"userIds\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"multiStep\": {\n            \"provisionSteps\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"unconfigured\": {},\n          \"webhook\": {\n            \"webhookId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"purpose\": \"APP_ENTITLEMENT_PURPOSE_VALUE_ASSIGNMENT\",\n        \"requestSchemaId\": \"string\",\n        \"revokePolicyId\": \"string\",\n        \"riskLevelValueId\": \"string\",\n        \"slug\": \"string\",\n        \"sourceConnectorIds\": {\n          \"key_0\": \"string\"\n        },\n        \"systemBuiltin\": false,\n        \"updatedAt\": \"1984-03-07T18:30:17.581Z\",\n        \"userEditedMask\": \"string\"\n      },\n      \"appPath\": \"string\",\n      \"appResourcePath\": \"string\",\n      \"appResourceTypePath\": \"string\"\n    }\n  ],\n  \"nextPageToken\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "efbcd216-63b6-4585-9133-210ae14e8314",
+          "name": "Update App Entitlements",
+          "request": {
+            "name": "Update App Entitlements",
+            "description": {
+              "content": "Invokes the c1.api.requestcatalog.v1.RequestCatalogManagementService.UpdateAppEntitlements method.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "catalogs",
+                ":catalog_id",
+                "requestable_entitlements",
+                "update"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "catalog_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"appEntitlements\": [\n    {\n      \"appId\": \"<string>\",\n      \"id\": \"<string>\"\n    },\n    {\n      \"appId\": \"<string>\",\n      \"id\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "9f5c58f8-4020-4073-8233-ea641fafbd0c",
+              "name": "The RequestCatalogManagementServiceUpdateAppEntitlementsResponse object is is the response from UpdateAppEntitlements endpoint.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "catalogs",
+                    ":catalog_id",
+                    "requestable_entitlements",
+                    "update"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "catalog_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"appEntitlements\": [\n    {\n      \"appId\": \"string\",\n      \"id\": \"string\"\n    },\n    {\n      \"appId\": \"string\",\n      \"id\": \"string\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "251e7e87-d4ce-4ed2-8f4b-bd1afb5db6f6",
+          "name": "Remove App Entitlements",
+          "request": {
+            "name": "Remove App Entitlements",
+            "description": {
+              "content": "Remove requestable entitlements from a catalog.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "catalogs",
+                ":catalog_id",
+                "requestable_entries"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "catalog_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"appEntitlements\": [\n    {\n      \"appId\": \"<string>\",\n      \"id\": \"<string>\"\n    },\n    {\n      \"appId\": \"<string>\",\n      \"id\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "67b1537c-bffd-40a4-a034-566d312ac6ed",
+              "name": "Empty response with a status code indicating success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "catalogs",
+                    ":catalog_id",
+                    "requestable_entries"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "catalog_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"appEntitlements\": [\n    {\n      \"appId\": \"string\",\n      \"id\": \"string\"\n    },\n    {\n      \"appId\": \"string\",\n      \"id\": \"string\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c4230651-0876-495e-95e5-a1f964525f4f",
+          "name": "Add App Entitlements",
+          "request": {
+            "name": "Add App Entitlements",
+            "description": {
+              "content": "Add requestable entitlements to a catalog.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "catalogs",
+                ":catalog_id",
+                "requestable_entries"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "catalog_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"appEntitlements\": [\n    {\n      \"appId\": \"<string>\",\n      \"id\": \"<string>\"\n    },\n    {\n      \"appId\": \"<string>\",\n      \"id\": \"<string>\"\n    }\n  ],\n  \"createRequests\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "7057a295-f838-4da1-a82b-31c4c3502dca",
+              "name": "Empty response with a status code indicating success.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "catalogs",
+                    ":catalog_id",
+                    "requestable_entries"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "catalog_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"appEntitlements\": [\n    {\n      \"appId\": \"string\",\n      \"id\": \"string\"\n    },\n    {\n      \"appId\": \"string\",\n      \"id\": \"string\"\n    }\n  ],\n  \"createRequests\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d284b6fb-e6ea-461c-b19a-14c7f7823283",
+          "name": "Remove Access Entitlements",
+          "request": {
+            "name": "Remove Access Entitlements",
+            "description": {
+              "content": "Remove visibility bindings (access entitlements) to a catalog.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "catalogs",
+                ":catalog_id",
+                "visibility_bindings"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "catalog_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"accessEntitlements\": [\n    {\n      \"appId\": \"<string>\",\n      \"id\": \"<string>\"\n    },\n    {\n      \"appId\": \"<string>\",\n      \"id\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "cb32a25b-46c3-4d53-a5ae-44c1fb6b63ae",
+              "name": "Empty response with a status code indicating success.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "catalogs",
+                    ":catalog_id",
+                    "visibility_bindings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "catalog_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"accessEntitlements\": [\n    {\n      \"appId\": \"string\",\n      \"id\": \"string\"\n    },\n    {\n      \"appId\": \"string\",\n      \"id\": \"string\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "68fa5e4e-8c73-41b7-bb84-eb0cf53df509",
+          "name": "Add Access Entitlements",
+          "request": {
+            "name": "Add Access Entitlements",
+            "description": {
+              "content": "Add visibility bindings (access entitlements) to a catalog.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "catalogs",
+                ":catalog_id",
+                "visibility_bindings"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "catalog_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"accessEntitlements\": [\n    {\n      \"appId\": \"<string>\",\n      \"id\": \"<string>\"\n    },\n    {\n      \"appId\": \"<string>\",\n      \"id\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "6861334e-b047-42f2-a917-d6d80b855a87",
+              "name": "Empty response with a status code indicating success.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "catalogs",
+                    ":catalog_id",
+                    "visibility_bindings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "catalog_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"accessEntitlements\": [\n    {\n      \"appId\": \"string\",\n      \"id\": \"string\"\n    },\n    {\n      \"appId\": \"string\",\n      \"id\": \"string\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3d721ddd-55a5-45ad-bfc9-db9ac45adc17",
+          "name": "List Entitlements For Access",
+          "request": {
+            "name": "List Entitlements For Access",
+            "description": {
+              "content": "List visibility bindings (access entitlements) for a catalog.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "catalogs",
+                ":catalog_id",
+                "visibility_entitlements"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "page_token",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "catalog_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8e55d419-89ae-41fc-9121-77e09c9f6a13",
+              "name": "The RequestCatalogManagementServiceListEntitlementsForAccessResponse message contains a list of results and a nextPageToken if applicable.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "catalogs",
+                    ":catalog_id",
+                    "visibility_entitlements"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page_size",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "page_token",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "catalog_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"expanded\": [\n    {\n      \"@type\": \"string\"\n    },\n    {\n      \"@type\": \"string\",\n      \"key_0\": 3981.724827676236,\n      \"key_1\": \"string\"\n    }\n  ],\n  \"list\": [\n    {\n      \"appEntitlement\": {\n        \"alias\": \"string\",\n        \"appId\": \"string\",\n        \"appResourceId\": \"string\",\n        \"appResourceTypeId\": \"string\",\n        \"certifyPolicyId\": \"string\",\n        \"complianceFrameworkValueIds\": [\n          \"string\",\n          \"string\"\n        ],\n        \"createdAt\": \"1993-02-17T23:40:34.053Z\",\n        \"defaultValuesApplied\": true,\n        \"deletedAt\": \"1977-09-19T11:08:58.785Z\",\n        \"deprovisionerPolicy\": {\n          \"action\": {\n            \"actionName\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connectorId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"displayName\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"connector\": {\n            \"account\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultBehavior\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"deleteAccount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"delegated\": {\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"entitlementId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"implicit\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"externalTicket\": {\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connectorId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"externalTicketProvisionerConfigId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"instructions\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"manual\": {\n            \"instructions\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"userIds\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"multiStep\": {\n            \"provisionSteps\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"unconfigured\": {},\n          \"webhook\": {\n            \"webhookId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"description\": \"string\",\n        \"displayName\": \"string\",\n        \"durationGrant\": \"string\",\n        \"durationUnset\": {},\n        \"emergencyGrantEnabled\": true,\n        \"emergencyGrantPolicyId\": \"string\",\n        \"grantCount\": \"string\",\n        \"grantPolicyId\": \"string\",\n        \"id\": \"string\",\n        \"isAutomationEnabled\": false,\n        \"isManuallyManaged\": false,\n        \"matchBatonId\": \"string\",\n        \"overrideAccessRequestsDefaults\": true,\n        \"provisionerPolicy\": {\n          \"action\": {\n            \"actionName\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connectorId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"displayName\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"connector\": {\n            \"account\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultBehavior\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"deleteAccount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"delegated\": {\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"entitlementId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"implicit\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"externalTicket\": {\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connectorId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"externalTicketProvisionerConfigId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"instructions\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"manual\": {\n            \"instructions\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"userIds\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"multiStep\": {\n            \"provisionSteps\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"unconfigured\": {},\n          \"webhook\": {\n            \"webhookId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"purpose\": \"APP_ENTITLEMENT_PURPOSE_VALUE_UNSPECIFIED\",\n        \"requestSchemaId\": \"string\",\n        \"revokePolicyId\": \"string\",\n        \"riskLevelValueId\": \"string\",\n        \"slug\": \"string\",\n        \"sourceConnectorIds\": {\n          \"key_0\": \"string\"\n        },\n        \"systemBuiltin\": true,\n        \"updatedAt\": \"1981-12-25T08:13:57.849Z\",\n        \"userEditedMask\": \"string\"\n      },\n      \"appPath\": \"string\",\n      \"appResourcePath\": \"string\",\n      \"appResourceTypePath\": \"string\"\n    },\n    {\n      \"appEntitlement\": {\n        \"alias\": \"string\",\n        \"appId\": \"string\",\n        \"appResourceId\": \"string\",\n        \"appResourceTypeId\": \"string\",\n        \"certifyPolicyId\": \"string\",\n        \"complianceFrameworkValueIds\": [\n          \"string\",\n          \"string\"\n        ],\n        \"createdAt\": \"2013-07-18T02:03:45.666Z\",\n        \"defaultValuesApplied\": true,\n        \"deletedAt\": \"1980-10-05T08:29:02.096Z\",\n        \"deprovisionerPolicy\": {\n          \"action\": {\n            \"actionName\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connectorId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"displayName\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"connector\": {\n            \"account\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultBehavior\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"deleteAccount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"delegated\": {\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"entitlementId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"implicit\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"externalTicket\": {\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connectorId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"externalTicketProvisionerConfigId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"instructions\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"manual\": {\n            \"instructions\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"userIds\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"multiStep\": {\n            \"provisionSteps\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"unconfigured\": {},\n          \"webhook\": {\n            \"webhookId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"description\": \"string\",\n        \"displayName\": \"string\",\n        \"durationGrant\": \"string\",\n        \"durationUnset\": {},\n        \"emergencyGrantEnabled\": true,\n        \"emergencyGrantPolicyId\": \"string\",\n        \"grantCount\": \"string\",\n        \"grantPolicyId\": \"string\",\n        \"id\": \"string\",\n        \"isAutomationEnabled\": false,\n        \"isManuallyManaged\": true,\n        \"matchBatonId\": \"string\",\n        \"overrideAccessRequestsDefaults\": false,\n        \"provisionerPolicy\": {\n          \"action\": {\n            \"actionName\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connectorId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"displayName\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"connector\": {\n            \"account\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultBehavior\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"deleteAccount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"delegated\": {\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"entitlementId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"implicit\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"externalTicket\": {\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connectorId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"externalTicketProvisionerConfigId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"instructions\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"manual\": {\n            \"instructions\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"userIds\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"multiStep\": {\n            \"provisionSteps\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"unconfigured\": {},\n          \"webhook\": {\n            \"webhookId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"purpose\": \"APP_ENTITLEMENT_PURPOSE_VALUE_UNSPECIFIED\",\n        \"requestSchemaId\": \"string\",\n        \"revokePolicyId\": \"string\",\n        \"riskLevelValueId\": \"string\",\n        \"slug\": \"string\",\n        \"sourceConnectorIds\": {\n          \"key_0\": \"string\",\n          \"key_1\": \"string\",\n          \"key_2\": \"string\",\n          \"key_3\": \"string\",\n          \"key_4\": \"string\"\n        },\n        \"systemBuiltin\": true,\n        \"updatedAt\": \"1978-01-17T02:41:46.295Z\",\n        \"userEditedMask\": \"string\"\n      },\n      \"appPath\": \"string\",\n      \"appResourcePath\": \"string\",\n      \"appResourceTypePath\": \"string\"\n    }\n  ],\n  \"nextPageToken\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "11dbf453-96be-467d-b2e7-d4b5ec9e72d6",
+          "name": "Delete",
+          "request": {
+            "name": "Delete",
+            "description": {
+              "content": "Delete a catalog.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "catalogs",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "50b7739e-22ef-4375-9ed7-0af04467eb50",
+              "name": "Empty response with a status code indicating success.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "catalogs",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<object>",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "04c9fe61-9946-4ada-b016-f578bd03f15b",
+          "name": "Get",
+          "request": {
+            "name": "Get",
+            "description": {
+              "content": "Get a catalog.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "catalogs",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "43441efa-b3e5-468f-b1a1-3ed753d50bd0",
+              "name": "The request catalog management service get response returns a request catalog view with the expanded items in the expanded array indicated by the expand mask in the request.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "catalogs",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"expanded\": [\n    {\n      \"@type\": \"string\"\n    },\n    {\n      \"@type\": \"string\",\n      \"key_0\": 2173.5502165618805\n    }\n  ],\n  \"requestCatalogView\": {\n    \"accessEntitlementsPath\": \"string\",\n    \"createdByUserPath\": \"string\",\n    \"memberCount\": \"string\",\n    \"requestCatalog\": {\n      \"accessEntitlements\": [\n        {\n          \"alias\": \"string\",\n          \"appId\": \"string\",\n          \"appResourceId\": \"string\",\n          \"appResourceTypeId\": \"string\",\n          \"certifyPolicyId\": \"string\",\n          \"complianceFrameworkValueIds\": [\n            \"string\",\n            \"string\"\n          ],\n          \"createdAt\": \"2016-11-24T05:13:43.841Z\",\n          \"defaultValuesApplied\": false,\n          \"deletedAt\": \"1979-04-12T20:37:23.635Z\",\n          \"deprovisionerPolicy\": {\n            \"action\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connector\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"delegated\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"externalTicket\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"manual\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"multiStep\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"unconfigured\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"webhook\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"description\": \"string\",\n          \"displayName\": \"string\",\n          \"durationGrant\": \"string\",\n          \"durationUnset\": {},\n          \"emergencyGrantEnabled\": false,\n          \"emergencyGrantPolicyId\": \"string\",\n          \"grantCount\": \"string\",\n          \"grantPolicyId\": \"string\",\n          \"id\": \"string\",\n          \"isAutomationEnabled\": true,\n          \"isManuallyManaged\": true,\n          \"matchBatonId\": \"string\",\n          \"overrideAccessRequestsDefaults\": true,\n          \"provisionerPolicy\": {\n            \"action\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connector\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"delegated\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"externalTicket\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"manual\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"multiStep\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"unconfigured\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"webhook\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"purpose\": \"APP_ENTITLEMENT_PURPOSE_VALUE_UNSPECIFIED\",\n          \"requestSchemaId\": \"string\",\n          \"revokePolicyId\": \"string\",\n          \"riskLevelValueId\": \"string\",\n          \"slug\": \"string\",\n          \"sourceConnectorIds\": {\n            \"key_0\": \"string\"\n          },\n          \"systemBuiltin\": true,\n          \"updatedAt\": \"1956-04-16T23:20:28.150Z\",\n          \"userEditedMask\": \"string\"\n        },\n        {\n          \"alias\": \"string\",\n          \"appId\": \"string\",\n          \"appResourceId\": \"string\",\n          \"appResourceTypeId\": \"string\",\n          \"certifyPolicyId\": \"string\",\n          \"complianceFrameworkValueIds\": [\n            \"string\",\n            \"string\"\n          ],\n          \"createdAt\": \"1996-04-04T01:36:55.337Z\",\n          \"defaultValuesApplied\": true,\n          \"deletedAt\": \"2013-01-15T16:48:26.428Z\",\n          \"deprovisionerPolicy\": {\n            \"action\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connector\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"delegated\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"externalTicket\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"manual\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"multiStep\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"unconfigured\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"webhook\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"description\": \"string\",\n          \"displayName\": \"string\",\n          \"durationGrant\": \"string\",\n          \"durationUnset\": {},\n          \"emergencyGrantEnabled\": true,\n          \"emergencyGrantPolicyId\": \"string\",\n          \"grantCount\": \"string\",\n          \"grantPolicyId\": \"string\",\n          \"id\": \"string\",\n          \"isAutomationEnabled\": false,\n          \"isManuallyManaged\": true,\n          \"matchBatonId\": \"string\",\n          \"overrideAccessRequestsDefaults\": false,\n          \"provisionerPolicy\": {\n            \"action\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connector\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"delegated\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"externalTicket\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"manual\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"multiStep\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"unconfigured\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"webhook\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"purpose\": \"APP_ENTITLEMENT_PURPOSE_VALUE_PERMISSION\",\n          \"requestSchemaId\": \"string\",\n          \"revokePolicyId\": \"string\",\n          \"riskLevelValueId\": \"string\",\n          \"slug\": \"string\",\n          \"sourceConnectorIds\": {\n            \"key_0\": \"string\",\n            \"key_1\": \"string\"\n          },\n          \"systemBuiltin\": true,\n          \"updatedAt\": \"1988-08-06T00:25:33.544Z\",\n          \"userEditedMask\": \"string\"\n        }\n      ],\n      \"createdAt\": \"1978-02-05T05:26:02.896Z\",\n      \"createdByUserId\": \"string\",\n      \"deletedAt\": \"2019-05-16T00:12:59.880Z\",\n      \"description\": \"string\",\n      \"displayName\": \"string\",\n      \"enrollmentBehavior\": \"REQUEST_CATALOG_ENROLLMENT_BEHAVIOR_UNSPECIFIED\",\n      \"id\": \"string\",\n      \"published\": false,\n      \"requestBundle\": true,\n      \"unenrollmentBehavior\": \"REQUEST_CATALOG_UNENROLLMENT_BEHAVIOR_LEAVE_ACCESS_AS_IS\",\n      \"unenrollmentEntitlementBehavior\": \"REQUEST_CATALOG_UNENROLLMENT_ENTITLEMENT_BEHAVIOR_UNSPECIFIED\",\n      \"updatedAt\": \"1987-02-02T20:44:45.927Z\",\n      \"visibleToEveryone\": true\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e6b87281-e493-4d47-8758-f9d91df364a9",
+          "name": "Update",
+          "request": {
+            "name": "Update",
+            "description": {
+              "content": "Update a catalog.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "catalogs",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"catalog\": {\n    \"accessEntitlements\": [\n      {\n        \"alias\": \"<string>\",\n        \"appId\": \"<string>\",\n        \"appResourceId\": \"<string>\",\n        \"appResourceTypeId\": \"<string>\",\n        \"certifyPolicyId\": \"<string>\",\n        \"complianceFrameworkValueIds\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"defaultValuesApplied\": \"<boolean>\",\n        \"deprovisionerPolicy\": {\n          \"action\": {\n            \"actionName\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connectorId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"displayName\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"connector\": {\n            \"account\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultBehavior\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"deleteAccount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"delegated\": {\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"entitlementId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"implicit\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"externalTicket\": {\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connectorId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"externalTicketProvisionerConfigId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"instructions\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"manual\": {\n            \"instructions\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"userIds\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"multiStep\": {\n            \"provisionSteps\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"unconfigured\": \"<object>\",\n          \"webhook\": {\n            \"webhookId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"description\": \"<string>\",\n        \"displayName\": \"<string>\",\n        \"durationGrant\": \"<duration>\",\n        \"durationUnset\": \"<object>\",\n        \"emergencyGrantEnabled\": \"<boolean>\",\n        \"emergencyGrantPolicyId\": \"<string>\",\n        \"grantPolicyId\": \"<string>\",\n        \"isManuallyManaged\": \"<boolean>\",\n        \"matchBatonId\": \"<string>\",\n        \"overrideAccessRequestsDefaults\": \"<boolean>\",\n        \"provisionerPolicy\": {\n          \"action\": {\n            \"actionName\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connectorId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"displayName\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"connector\": {\n            \"account\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultBehavior\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"deleteAccount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"delegated\": {\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"entitlementId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"implicit\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"externalTicket\": {\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connectorId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"externalTicketProvisionerConfigId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"instructions\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"manual\": {\n            \"instructions\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"userIds\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"multiStep\": {\n            \"provisionSteps\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"unconfigured\": \"<object>\",\n          \"webhook\": {\n            \"webhookId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"purpose\": \"<string>\",\n        \"requestSchemaId\": \"<string>\",\n        \"revokePolicyId\": \"<string>\",\n        \"riskLevelValueId\": \"<string>\",\n        \"slug\": \"<string>\",\n        \"sourceConnectorIds\": {\n          \"key_0\": \"<string>\",\n          \"key_1\": \"<string>\",\n          \"key_2\": \"<string>\",\n          \"key_3\": \"<string>\"\n        },\n        \"userEditedMask\": \"<string>\"\n      },\n      {\n        \"alias\": \"<string>\",\n        \"appId\": \"<string>\",\n        \"appResourceId\": \"<string>\",\n        \"appResourceTypeId\": \"<string>\",\n        \"certifyPolicyId\": \"<string>\",\n        \"complianceFrameworkValueIds\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"defaultValuesApplied\": \"<boolean>\",\n        \"deprovisionerPolicy\": {\n          \"action\": {\n            \"actionName\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connectorId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"displayName\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"connector\": {\n            \"account\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultBehavior\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"deleteAccount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"delegated\": {\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"entitlementId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"implicit\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"externalTicket\": {\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connectorId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"externalTicketProvisionerConfigId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"instructions\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"manual\": {\n            \"instructions\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"userIds\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"multiStep\": {\n            \"provisionSteps\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"unconfigured\": \"<object>\",\n          \"webhook\": {\n            \"webhookId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"description\": \"<string>\",\n        \"displayName\": \"<string>\",\n        \"durationGrant\": \"<duration>\",\n        \"durationUnset\": \"<object>\",\n        \"emergencyGrantEnabled\": \"<boolean>\",\n        \"emergencyGrantPolicyId\": \"<string>\",\n        \"grantPolicyId\": \"<string>\",\n        \"isManuallyManaged\": \"<boolean>\",\n        \"matchBatonId\": \"<string>\",\n        \"overrideAccessRequestsDefaults\": \"<boolean>\",\n        \"provisionerPolicy\": {\n          \"action\": {\n            \"actionName\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connectorId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"displayName\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"connector\": {\n            \"account\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultBehavior\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"deleteAccount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"delegated\": {\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"entitlementId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"implicit\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"externalTicket\": {\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connectorId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"externalTicketProvisionerConfigId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"instructions\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"manual\": {\n            \"instructions\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"userIds\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"multiStep\": {\n            \"provisionSteps\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"unconfigured\": \"<object>\",\n          \"webhook\": {\n            \"webhookId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"purpose\": \"<string>\",\n        \"requestSchemaId\": \"<string>\",\n        \"revokePolicyId\": \"<string>\",\n        \"riskLevelValueId\": \"<string>\",\n        \"slug\": \"<string>\",\n        \"sourceConnectorIds\": {\n          \"key_0\": \"<string>\",\n          \"key_1\": \"<string>\",\n          \"key_2\": \"<string>\"\n        },\n        \"userEditedMask\": \"<string>\"\n      }\n    ],\n    \"createdByUserId\": \"<string>\",\n    \"description\": \"<string>\",\n    \"displayName\": \"<string>\",\n    \"enrollmentBehavior\": \"<string>\",\n    \"id\": \"<string>\",\n    \"published\": \"<boolean>\",\n    \"requestBundle\": \"<boolean>\",\n    \"unenrollmentBehavior\": \"<string>\",\n    \"unenrollmentEntitlementBehavior\": \"<string>\",\n    \"visibleToEveryone\": \"<boolean>\"\n  },\n  \"expandMask\": {\n    \"paths\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"updateMask\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "6e26ca30-afe2-4654-aeba-d7ee2ddde22e",
+              "name": "The request catalog management service get response returns a request catalog view with the expanded items in the expanded array indicated by the expand mask in the request.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "catalogs",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"catalog\": {\n    \"accessEntitlements\": [\n      {\n        \"alias\": \"string\",\n        \"appId\": \"string\",\n        \"appResourceId\": \"string\",\n        \"appResourceTypeId\": \"string\",\n        \"certifyPolicyId\": \"string\",\n        \"complianceFrameworkValueIds\": [\n          \"string\",\n          \"string\"\n        ],\n        \"defaultValuesApplied\": true,\n        \"deprovisionerPolicy\": {\n          \"action\": {\n            \"actionName\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connectorId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"displayName\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"connector\": {\n            \"account\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultBehavior\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"deleteAccount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"delegated\": {\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"entitlementId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"implicit\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"externalTicket\": {\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connectorId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"externalTicketProvisionerConfigId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"instructions\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"manual\": {\n            \"instructions\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"userIds\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"multiStep\": {\n            \"provisionSteps\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"unconfigured\": {},\n          \"webhook\": {\n            \"webhookId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"description\": \"string\",\n        \"displayName\": \"string\",\n        \"durationGrant\": \"string\",\n        \"durationUnset\": {},\n        \"emergencyGrantEnabled\": false,\n        \"emergencyGrantPolicyId\": \"string\",\n        \"grantPolicyId\": \"string\",\n        \"isManuallyManaged\": true,\n        \"matchBatonId\": \"string\",\n        \"overrideAccessRequestsDefaults\": false,\n        \"provisionerPolicy\": {\n          \"action\": {\n            \"actionName\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connectorId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"displayName\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"connector\": {\n            \"account\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultBehavior\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"deleteAccount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"delegated\": {\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"entitlementId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"implicit\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"externalTicket\": {\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connectorId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"externalTicketProvisionerConfigId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"instructions\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"manual\": {\n            \"instructions\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"userIds\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"multiStep\": {\n            \"provisionSteps\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"unconfigured\": {},\n          \"webhook\": {\n            \"webhookId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"purpose\": \"APP_ENTITLEMENT_PURPOSE_VALUE_ASSIGNMENT\",\n        \"requestSchemaId\": \"string\",\n        \"revokePolicyId\": \"string\",\n        \"riskLevelValueId\": \"string\",\n        \"slug\": \"string\",\n        \"sourceConnectorIds\": {\n          \"key_0\": \"string\"\n        },\n        \"userEditedMask\": \"string\"\n      },\n      {\n        \"alias\": \"string\",\n        \"appId\": \"string\",\n        \"appResourceId\": \"string\",\n        \"appResourceTypeId\": \"string\",\n        \"certifyPolicyId\": \"string\",\n        \"complianceFrameworkValueIds\": [\n          \"string\",\n          \"string\"\n        ],\n        \"defaultValuesApplied\": false,\n        \"deprovisionerPolicy\": {\n          \"action\": {\n            \"actionName\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connectorId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"displayName\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"connector\": {\n            \"account\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultBehavior\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"deleteAccount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"delegated\": {\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"entitlementId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"implicit\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"externalTicket\": {\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connectorId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"externalTicketProvisionerConfigId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"instructions\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"manual\": {\n            \"instructions\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"userIds\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"multiStep\": {\n            \"provisionSteps\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"unconfigured\": {},\n          \"webhook\": {\n            \"webhookId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"description\": \"string\",\n        \"displayName\": \"string\",\n        \"durationGrant\": \"string\",\n        \"durationUnset\": {},\n        \"emergencyGrantEnabled\": false,\n        \"emergencyGrantPolicyId\": \"string\",\n        \"grantPolicyId\": \"string\",\n        \"isManuallyManaged\": false,\n        \"matchBatonId\": \"string\",\n        \"overrideAccessRequestsDefaults\": true,\n        \"provisionerPolicy\": {\n          \"action\": {\n            \"actionName\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connectorId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"displayName\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"connector\": {\n            \"account\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultBehavior\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"deleteAccount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"delegated\": {\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"entitlementId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"implicit\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"externalTicket\": {\n            \"appId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connectorId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"externalTicketProvisionerConfigId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"instructions\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"manual\": {\n            \"instructions\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"userIds\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"multiStep\": {\n            \"provisionSteps\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"unconfigured\": {},\n          \"webhook\": {\n            \"webhookId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"purpose\": \"APP_ENTITLEMENT_PURPOSE_VALUE_ASSIGNMENT\",\n        \"requestSchemaId\": \"string\",\n        \"revokePolicyId\": \"string\",\n        \"riskLevelValueId\": \"string\",\n        \"slug\": \"string\",\n        \"sourceConnectorIds\": {\n          \"key_0\": \"string\"\n        },\n        \"userEditedMask\": \"string\"\n      }\n    ],\n    \"createdByUserId\": \"string\",\n    \"description\": \"string\",\n    \"displayName\": \"string\",\n    \"enrollmentBehavior\": \"REQUEST_CATALOG_ENROLLMENT_BEHAVIOR_ENFORCE_ENTITLEMENT_REQUEST_POLICY\",\n    \"id\": \"string\",\n    \"published\": false,\n    \"requestBundle\": true,\n    \"unenrollmentBehavior\": \"REQUEST_CATALOG_UNENROLLMENT_BEHAVIOR_REVOKE_ALL\",\n    \"unenrollmentEntitlementBehavior\": \"REQUEST_CATALOG_UNENROLLMENT_ENTITLEMENT_BEHAVIOR_ENFORCE\",\n    \"visibleToEveryone\": true\n  },\n  \"expandMask\": {\n    \"paths\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"updateMask\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"expanded\": [\n    {\n      \"@type\": \"string\"\n    },\n    {\n      \"@type\": \"string\",\n      \"key_0\": 2173.5502165618805\n    }\n  ],\n  \"requestCatalogView\": {\n    \"accessEntitlementsPath\": \"string\",\n    \"createdByUserPath\": \"string\",\n    \"memberCount\": \"string\",\n    \"requestCatalog\": {\n      \"accessEntitlements\": [\n        {\n          \"alias\": \"string\",\n          \"appId\": \"string\",\n          \"appResourceId\": \"string\",\n          \"appResourceTypeId\": \"string\",\n          \"certifyPolicyId\": \"string\",\n          \"complianceFrameworkValueIds\": [\n            \"string\",\n            \"string\"\n          ],\n          \"createdAt\": \"2016-11-24T05:13:43.841Z\",\n          \"defaultValuesApplied\": false,\n          \"deletedAt\": \"1979-04-12T20:37:23.635Z\",\n          \"deprovisionerPolicy\": {\n            \"action\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connector\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"delegated\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"externalTicket\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"manual\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"multiStep\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"unconfigured\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"webhook\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"description\": \"string\",\n          \"displayName\": \"string\",\n          \"durationGrant\": \"string\",\n          \"durationUnset\": {},\n          \"emergencyGrantEnabled\": false,\n          \"emergencyGrantPolicyId\": \"string\",\n          \"grantCount\": \"string\",\n          \"grantPolicyId\": \"string\",\n          \"id\": \"string\",\n          \"isAutomationEnabled\": true,\n          \"isManuallyManaged\": true,\n          \"matchBatonId\": \"string\",\n          \"overrideAccessRequestsDefaults\": true,\n          \"provisionerPolicy\": {\n            \"action\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connector\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"delegated\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"externalTicket\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"manual\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"multiStep\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"unconfigured\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"webhook\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"purpose\": \"APP_ENTITLEMENT_PURPOSE_VALUE_UNSPECIFIED\",\n          \"requestSchemaId\": \"string\",\n          \"revokePolicyId\": \"string\",\n          \"riskLevelValueId\": \"string\",\n          \"slug\": \"string\",\n          \"sourceConnectorIds\": {\n            \"key_0\": \"string\"\n          },\n          \"systemBuiltin\": true,\n          \"updatedAt\": \"1956-04-16T23:20:28.150Z\",\n          \"userEditedMask\": \"string\"\n        },\n        {\n          \"alias\": \"string\",\n          \"appId\": \"string\",\n          \"appResourceId\": \"string\",\n          \"appResourceTypeId\": \"string\",\n          \"certifyPolicyId\": \"string\",\n          \"complianceFrameworkValueIds\": [\n            \"string\",\n            \"string\"\n          ],\n          \"createdAt\": \"1996-04-04T01:36:55.337Z\",\n          \"defaultValuesApplied\": true,\n          \"deletedAt\": \"2013-01-15T16:48:26.428Z\",\n          \"deprovisionerPolicy\": {\n            \"action\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connector\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"delegated\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"externalTicket\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"manual\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"multiStep\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"unconfigured\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"webhook\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"description\": \"string\",\n          \"displayName\": \"string\",\n          \"durationGrant\": \"string\",\n          \"durationUnset\": {},\n          \"emergencyGrantEnabled\": true,\n          \"emergencyGrantPolicyId\": \"string\",\n          \"grantCount\": \"string\",\n          \"grantPolicyId\": \"string\",\n          \"id\": \"string\",\n          \"isAutomationEnabled\": false,\n          \"isManuallyManaged\": true,\n          \"matchBatonId\": \"string\",\n          \"overrideAccessRequestsDefaults\": false,\n          \"provisionerPolicy\": {\n            \"action\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connector\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"delegated\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"externalTicket\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"manual\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"multiStep\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"unconfigured\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"webhook\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"purpose\": \"APP_ENTITLEMENT_PURPOSE_VALUE_PERMISSION\",\n          \"requestSchemaId\": \"string\",\n          \"revokePolicyId\": \"string\",\n          \"riskLevelValueId\": \"string\",\n          \"slug\": \"string\",\n          \"sourceConnectorIds\": {\n            \"key_0\": \"string\",\n            \"key_1\": \"string\"\n          },\n          \"systemBuiltin\": true,\n          \"updatedAt\": \"1988-08-06T00:25:33.544Z\",\n          \"userEditedMask\": \"string\"\n        }\n      ],\n      \"createdAt\": \"1978-02-05T05:26:02.896Z\",\n      \"createdByUserId\": \"string\",\n      \"deletedAt\": \"2019-05-16T00:12:59.880Z\",\n      \"description\": \"string\",\n      \"displayName\": \"string\",\n      \"enrollmentBehavior\": \"REQUEST_CATALOG_ENROLLMENT_BEHAVIOR_UNSPECIFIED\",\n      \"id\": \"string\",\n      \"published\": false,\n      \"requestBundle\": true,\n      \"unenrollmentBehavior\": \"REQUEST_CATALOG_UNENROLLMENT_BEHAVIOR_LEAVE_ACCESS_AS_IS\",\n      \"unenrollmentEntitlementBehavior\": \"REQUEST_CATALOG_UNENROLLMENT_ENTITLEMENT_BEHAVIOR_UNSPECIFIED\",\n      \"updatedAt\": \"1987-02-02T20:44:45.927Z\",\n      \"visibleToEveryone\": true\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "65b38331-a8e4-4cb8-a8c5-8ca6cd5b3803",
+          "name": "Delete Bundle Automation",
+          "request": {
+            "name": "Delete Bundle Automation",
+            "description": {
+              "content": "Invokes the c1.api.requestcatalog.v1.RequestCatalogManagementService.DeleteBundleAutomation method.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "catalogs",
+                ":request_catalog_id",
+                "bundle_automation"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "request_catalog_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "f9e59547-a696-4287-b160-97cbfc6fdd26",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "catalogs",
+                    ":request_catalog_id",
+                    "bundle_automation"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "request_catalog_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<object>",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "922cb9a2-0048-4322-a4d5-7ed039cefb9e",
+          "name": "Get Bundle Automation",
+          "request": {
+            "name": "Get Bundle Automation",
+            "description": {
+              "content": "Get bundle automation",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "catalogs",
+                ":request_catalog_id",
+                "bundle_automation"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "request_catalog_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0c95f89a-9f50-4385-bbc4-0d05d4e8f74f",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "catalogs",
+                    ":request_catalog_id",
+                    "bundle_automation"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "request_catalog_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"circuitBreaker\": {\n    \"removedMembersThresholdPercentage\": \"string\",\n    \"state\": \"CIRCUIT_BREAKER_STATE_BYPASS\",\n    \"updatedAt\": \"2016-01-20T23:32:51.501Z\",\n    \"userRef\": {\n      \"id\": \"string\"\n    }\n  },\n  \"createTasks\": true,\n  \"createdAt\": \"1993-04-22T09:46:37.365Z\",\n  \"deletedAt\": \"1996-09-02T21:56:47.163Z\",\n  \"disableCircuitBreaker\": true,\n  \"enabled\": false,\n  \"entitlements\": {\n    \"entitlementRefs\": [\n      {\n        \"appId\": \"string\",\n        \"id\": \"string\"\n      },\n      {\n        \"appId\": \"string\",\n        \"id\": \"string\"\n      }\n    ]\n  },\n  \"requestCatalogId\": \"string\",\n  \"state\": {\n    \"errorMessage\": \"string\",\n    \"lastRunAt\": \"1979-03-02T10:31:07.203Z\",\n    \"status\": \"BUNDLE_AUTOMATION_RUN_STATUS_FAILURE\"\n  },\n  \"tenantId\": \"string\",\n  \"updatedAt\": \"1996-12-02T05:12:37.380Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "82941a39-3868-4766-baea-86c2925ae1bf",
+          "name": "Set Bundle Automation",
+          "request": {
+            "name": "Set Bundle Automation",
+            "description": {
+              "content": "Invokes the c1.api.requestcatalog.v1.RequestCatalogManagementService.SetBundleAutomation method.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "catalogs",
+                ":request_catalog_id",
+                "bundle_automation"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "request_catalog_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"createTasks\": \"<boolean>\",\n  \"disableCircuitBreaker\": \"<boolean>\",\n  \"enabled\": \"<boolean>\",\n  \"entitlements\": {\n    \"entitlementRefs\": [\n      {\n        \"appId\": \"<string>\",\n        \"id\": \"<string>\"\n      },\n      {\n        \"appId\": \"<string>\",\n        \"id\": \"<string>\"\n      }\n    ]\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "5c77d803-6bb2-487f-9076-ac2aca1bef91",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "catalogs",
+                    ":request_catalog_id",
+                    "bundle_automation"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "request_catalog_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"createTasks\": \"<boolean>\",\n  \"disableCircuitBreaker\": \"<boolean>\",\n  \"enabled\": \"<boolean>\",\n  \"entitlements\": {\n    \"entitlementRefs\": [\n      {\n        \"appId\": \"string\",\n        \"id\": \"string\"\n      },\n      {\n        \"appId\": \"string\",\n        \"id\": \"string\"\n      }\n    ]\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"circuitBreaker\": {\n    \"removedMembersThresholdPercentage\": \"string\",\n    \"state\": \"CIRCUIT_BREAKER_STATE_BYPASS\",\n    \"updatedAt\": \"2016-01-20T23:32:51.501Z\",\n    \"userRef\": {\n      \"id\": \"string\"\n    }\n  },\n  \"createTasks\": true,\n  \"createdAt\": \"1993-04-22T09:46:37.365Z\",\n  \"deletedAt\": \"1996-09-02T21:56:47.163Z\",\n  \"disableCircuitBreaker\": true,\n  \"enabled\": false,\n  \"entitlements\": {\n    \"entitlementRefs\": [\n      {\n        \"appId\": \"string\",\n        \"id\": \"string\"\n      },\n      {\n        \"appId\": \"string\",\n        \"id\": \"string\"\n      }\n    ]\n  },\n  \"requestCatalogId\": \"string\",\n  \"state\": {\n    \"errorMessage\": \"string\",\n    \"lastRunAt\": \"1979-03-02T10:31:07.203Z\",\n    \"status\": \"BUNDLE_AUTOMATION_RUN_STATUS_FAILURE\"\n  },\n  \"tenantId\": \"string\",\n  \"updatedAt\": \"1996-12-02T05:12:37.380Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e1e592d3-6e7d-4664-88d9-4d192d0f6f09",
+          "name": "Create Bundle Automation",
+          "request": {
+            "name": "Create Bundle Automation",
+            "description": {
+              "content": "Invokes the c1.api.requestcatalog.v1.RequestCatalogManagementService.CreateBundleAutomation method.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "catalogs",
+                ":request_catalog_id",
+                "bundle_automation",
+                "create"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "request_catalog_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"createTasks\": \"<boolean>\",\n  \"disableCircuitBreaker\": \"<boolean>\",\n  \"enabled\": \"<boolean>\",\n  \"entitlements\": {\n    \"entitlementRefs\": [\n      {\n        \"appId\": \"<string>\",\n        \"id\": \"<string>\"\n      },\n      {\n        \"appId\": \"<string>\",\n        \"id\": \"<string>\"\n      }\n    ]\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "a1bd8524-2934-40a7-9daf-4503b103564d",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "catalogs",
+                    ":request_catalog_id",
+                    "bundle_automation",
+                    "create"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "request_catalog_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"createTasks\": \"<boolean>\",\n  \"disableCircuitBreaker\": \"<boolean>\",\n  \"enabled\": \"<boolean>\",\n  \"entitlements\": {\n    \"entitlementRefs\": [\n      {\n        \"appId\": \"string\",\n        \"id\": \"string\"\n      },\n      {\n        \"appId\": \"string\",\n        \"id\": \"string\"\n      }\n    ]\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"circuitBreaker\": {\n    \"removedMembersThresholdPercentage\": \"string\",\n    \"state\": \"CIRCUIT_BREAKER_STATE_BYPASS\",\n    \"updatedAt\": \"2016-01-20T23:32:51.501Z\",\n    \"userRef\": {\n      \"id\": \"string\"\n    }\n  },\n  \"createTasks\": true,\n  \"createdAt\": \"1993-04-22T09:46:37.365Z\",\n  \"deletedAt\": \"1996-09-02T21:56:47.163Z\",\n  \"disableCircuitBreaker\": true,\n  \"enabled\": false,\n  \"entitlements\": {\n    \"entitlementRefs\": [\n      {\n        \"appId\": \"string\",\n        \"id\": \"string\"\n      },\n      {\n        \"appId\": \"string\",\n        \"id\": \"string\"\n      }\n    ]\n  },\n  \"requestCatalogId\": \"string\",\n  \"state\": {\n    \"errorMessage\": \"string\",\n    \"lastRunAt\": \"1979-03-02T10:31:07.203Z\",\n    \"status\": \"BUNDLE_AUTOMATION_RUN_STATUS_FAILURE\"\n  },\n  \"tenantId\": \"string\",\n  \"updatedAt\": \"1996-12-02T05:12:37.380Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "146c3161-0898-4382-92d9-3e8bd62c303d",
+          "name": "Resume Paused Bundle Automation",
+          "request": {
+            "name": "Resume Paused Bundle Automation",
+            "description": {
+              "content": "Invokes the c1.api.requestcatalog.v1.RequestCatalogManagementService.ResumePausedBundleAutomation method.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "catalogs",
+                ":request_catalog_id",
+                "bundle_automation",
+                "resume"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "request_catalog_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "89f7addc-c99f-4fb9-99cf-75b7dd53da5c",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "catalogs",
+                    ":request_catalog_id",
+                    "bundle_automation",
+                    "resume"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "request_catalog_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<object>",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f024c756-993b-485b-8578-9a532295f1df",
+          "name": "Force Run Bundle Automation",
+          "request": {
+            "name": "Force Run Bundle Automation",
+            "description": {
+              "content": "Invokes the c1.api.requestcatalog.v1.RequestCatalogManagementService.ForceRunBundleAutomation method.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "catalogs",
+                ":request_catalog_id",
+                "bundle_automation",
+                "run"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "request_catalog_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"refs\": [\n    {\n      \"appId\": \"<string>\",\n      \"id\": \"<string>\"\n    },\n    {\n      \"appId\": \"<string>\",\n      \"id\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "0183e87c-8819-47bd-b175-127c23c11790",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "catalogs",
+                    ":request_catalog_id",
+                    "bundle_automation",
+                    "run"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "request_catalog_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"refs\": [\n    {\n      \"appId\": \"string\",\n      \"id\": \"string\"\n    },\n    {\n      \"appId\": \"string\",\n      \"id\": \"string\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c018f724-32fa-4e7f-b46e-f23da594b729",
+          "name": "Search Entitlements",
+          "request": {
+            "name": "Search Entitlements",
+            "description": {
+              "content": "Search request catalogs based on filters specified in the request body.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "search",
+                "request_catalog",
+                "entitlements"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"appDisplayName\": \"<string>\",\n  \"entitlementAlias\": \"<string>\",\n  \"expandMask\": {\n    \"paths\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"grantedStatus\": \"<string>\",\n  \"includeDeleted\": \"<boolean>\",\n  \"pageSize\": \"<integer>\",\n  \"pageToken\": \"<string>\",\n  \"query\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "0e7e6b51-8c87-40d7-8f17-5cbccc4d14e7",
+              "name": "The RequestCatalogSearchServiceSearchEntitlementsResponse message contains a list of results and a nextPageToken if applicable.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "search",
+                    "request_catalog",
+                    "entitlements"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"appDisplayName\": \"<string>\",\n  \"entitlementAlias\": \"<string>\",\n  \"expandMask\": {\n    \"paths\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"grantedStatus\": \"<string>\",\n  \"includeDeleted\": \"<boolean>\",\n  \"pageSize\": \"<integer>\",\n  \"pageToken\": \"<string>\",\n  \"query\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"expanded\": [\n    {\n      \"@type\": \"string\",\n      \"key_0\": false,\n      \"key_1\": true,\n      \"key_2\": true\n    },\n    {\n      \"@type\": \"string\",\n      \"key_0\": 7967.606167235904,\n      \"key_1\": 7475.934248596903\n    }\n  ],\n  \"list\": [\n    {\n      \"appEntitlementUserBindings\": [\n        {\n          \"appEntitlementId\": \"string\",\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"createdAt\": \"1959-04-11T09:34:53.750Z\",\n          \"deletedAt\": \"1948-12-28T08:43:30.688Z\",\n          \"deprovisionAt\": \"2000-02-25T22:29:17.248Z\",\n          \"grantSources\": [\n            {\n              \"appId\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            {\n              \"appId\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            }\n          ]\n        },\n        {\n          \"appEntitlementId\": \"string\",\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"createdAt\": \"1954-11-01T18:21:32.789Z\",\n          \"deletedAt\": \"2013-04-14T03:50:26.188Z\",\n          \"deprovisionAt\": \"1957-11-13T07:05:56.908Z\",\n          \"grantSources\": [\n            {\n              \"appId\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            {\n              \"appId\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            }\n          ]\n        }\n      ],\n      \"entitlement\": {\n        \"appEntitlement\": {\n          \"alias\": \"string\",\n          \"appId\": \"string\",\n          \"appResourceId\": \"string\",\n          \"appResourceTypeId\": \"string\",\n          \"certifyPolicyId\": \"string\",\n          \"complianceFrameworkValueIds\": [\n            \"string\",\n            \"string\"\n          ],\n          \"createdAt\": \"1980-04-11T15:55:13.776Z\",\n          \"defaultValuesApplied\": false,\n          \"deletedAt\": \"1997-02-21T17:30:48.559Z\",\n          \"deprovisionerPolicy\": {\n            \"action\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connector\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"delegated\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"externalTicket\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"manual\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"multiStep\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"unconfigured\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"webhook\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"description\": \"string\",\n          \"displayName\": \"string\",\n          \"durationGrant\": \"string\",\n          \"durationUnset\": {},\n          \"emergencyGrantEnabled\": false,\n          \"emergencyGrantPolicyId\": \"string\",\n          \"grantCount\": \"string\",\n          \"grantPolicyId\": \"string\",\n          \"id\": \"string\",\n          \"isAutomationEnabled\": true,\n          \"isManuallyManaged\": true,\n          \"matchBatonId\": \"string\",\n          \"overrideAccessRequestsDefaults\": true,\n          \"provisionerPolicy\": {\n            \"action\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connector\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"delegated\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"externalTicket\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"manual\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"multiStep\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"unconfigured\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"webhook\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"purpose\": \"APP_ENTITLEMENT_PURPOSE_VALUE_ASSIGNMENT\",\n          \"requestSchemaId\": \"string\",\n          \"revokePolicyId\": \"string\",\n          \"riskLevelValueId\": \"string\",\n          \"slug\": \"string\",\n          \"sourceConnectorIds\": {\n            \"key_0\": \"string\",\n            \"key_1\": \"string\"\n          },\n          \"systemBuiltin\": false,\n          \"updatedAt\": \"2005-08-30T12:13:40.111Z\",\n          \"userEditedMask\": \"string\"\n        },\n        \"appPath\": \"string\",\n        \"appResourcePath\": \"string\",\n        \"appResourceTypePath\": \"string\"\n      }\n    },\n    {\n      \"appEntitlementUserBindings\": [\n        {\n          \"appEntitlementId\": \"string\",\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"createdAt\": \"1984-11-12T20:00:17.194Z\",\n          \"deletedAt\": \"1987-01-15T12:44:43.694Z\",\n          \"deprovisionAt\": \"1995-05-23T12:11:53.049Z\",\n          \"grantSources\": [\n            {\n              \"appId\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            {\n              \"appId\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            }\n          ]\n        },\n        {\n          \"appEntitlementId\": \"string\",\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"createdAt\": \"1958-07-06T12:12:50.717Z\",\n          \"deletedAt\": \"1990-09-04T04:22:55.285Z\",\n          \"deprovisionAt\": \"2022-12-31T03:47:48.390Z\",\n          \"grantSources\": [\n            {\n              \"appId\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            {\n              \"appId\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            }\n          ]\n        }\n      ],\n      \"entitlement\": {\n        \"appEntitlement\": {\n          \"alias\": \"string\",\n          \"appId\": \"string\",\n          \"appResourceId\": \"string\",\n          \"appResourceTypeId\": \"string\",\n          \"certifyPolicyId\": \"string\",\n          \"complianceFrameworkValueIds\": [\n            \"string\",\n            \"string\"\n          ],\n          \"createdAt\": \"2002-09-29T04:05:37.807Z\",\n          \"defaultValuesApplied\": false,\n          \"deletedAt\": \"2010-06-10T21:21:02.881Z\",\n          \"deprovisionerPolicy\": {\n            \"action\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connector\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"delegated\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"externalTicket\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"manual\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"multiStep\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"unconfigured\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"webhook\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"description\": \"string\",\n          \"displayName\": \"string\",\n          \"durationGrant\": \"string\",\n          \"durationUnset\": {},\n          \"emergencyGrantEnabled\": true,\n          \"emergencyGrantPolicyId\": \"string\",\n          \"grantCount\": \"string\",\n          \"grantPolicyId\": \"string\",\n          \"id\": \"string\",\n          \"isAutomationEnabled\": false,\n          \"isManuallyManaged\": false,\n          \"matchBatonId\": \"string\",\n          \"overrideAccessRequestsDefaults\": true,\n          \"provisionerPolicy\": {\n            \"action\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"connector\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"delegated\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"externalTicket\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"manual\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"multiStep\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"unconfigured\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"webhook\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"purpose\": \"APP_ENTITLEMENT_PURPOSE_VALUE_UNSPECIFIED\",\n          \"requestSchemaId\": \"string\",\n          \"revokePolicyId\": \"string\",\n          \"riskLevelValueId\": \"string\",\n          \"slug\": \"string\",\n          \"sourceConnectorIds\": {\n            \"key_0\": \"string\",\n            \"key_1\": \"string\"\n          },\n          \"systemBuiltin\": true,\n          \"updatedAt\": \"1958-05-27T04:09:51.465Z\",\n          \"userEditedMask\": \"string\"\n        },\n        \"appPath\": \"string\",\n        \"appResourcePath\": \"string\",\n        \"appResourceTypePath\": \"string\"\n      }\n    }\n  ],\n  \"nextPageToken\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "The domain of the tenant to use for this request.",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "example",
+      "key": "tenantDomain"
+    },
+    {
+      "type": "string",
+      "value": "https://{{tenantDomain}}.conductor.one",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "ff925d0a-b118-48c7-a056-41973fe89309",
+    "name": "ConductorOne Access Conflict Request Catalog API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The ConductorOne API is a HTTP API for managing ConductorOne resources.",
+      "type": "text/plain"
+    }
+  }
+}

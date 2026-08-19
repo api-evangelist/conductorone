@@ -1,0 +1,772 @@
+{
+  "item": [
+    {
+      "id": "6cf24f54-f45e-4a6f-8643-edbef78c176d",
+      "name": "Personal Client",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "59b6ba05-9533-4f03-8068-11ccfea09c6a",
+          "name": "NOTE: Only shows personal clients for the current user.",
+          "request": {
+            "name": "NOTE: Only shows personal clients for the current user.",
+            "description": {
+              "content": "Invokes the c1.api.iam.v1.PersonalClientService.List method.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "iam",
+                "personal_clients"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "35c8d7bf-68fd-4581-bd59-8d8c3d71767b",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "iam",
+                    "personal_clients"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"list\": [\n    {\n      \"allowSourceCidr\": [\n        \"string\",\n        \"string\"\n      ],\n      \"clientId\": \"string\",\n      \"createdAt\": \"2024-04-29T16:27:27.857Z\",\n      \"deletedAt\": \"1953-03-07T19:39:18.472Z\",\n      \"displayName\": \"string\",\n      \"expiresTime\": \"1951-12-12T22:24:26.288Z\",\n      \"id\": \"string\",\n      \"lastUsedAt\": \"1956-01-07T04:15:02.354Z\",\n      \"scopedRoles\": [\n        \"string\",\n        \"string\"\n      ],\n      \"updatedAt\": \"1960-03-16T03:39:50.748Z\",\n      \"userId\": \"string\"\n    },\n    {\n      \"allowSourceCidr\": [\n        \"string\",\n        \"string\"\n      ],\n      \"clientId\": \"string\",\n      \"createdAt\": \"1986-12-10T08:35:23.570Z\",\n      \"deletedAt\": \"1962-05-04T05:03:52.777Z\",\n      \"displayName\": \"string\",\n      \"expiresTime\": \"1973-05-08T10:00:26.184Z\",\n      \"id\": \"string\",\n      \"lastUsedAt\": \"1965-11-09T23:49:14.775Z\",\n      \"scopedRoles\": [\n        \"string\",\n        \"string\"\n      ],\n      \"updatedAt\": \"1959-01-14T22:53:21.776Z\",\n      \"userId\": \"string\"\n    }\n  ],\n  \"nextPageToken\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2dde8cd9-639b-4468-b83a-65f60c53a8b0",
+          "name": "Create",
+          "request": {
+            "name": "Create",
+            "description": {
+              "content": "Create creates a new PersonalClient object for the current User.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "iam",
+                "personal_clients"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"allowSourceCidr\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"displayName\": \"<string>\",\n  \"expires\": \"<duration>\",\n  \"scopedRoles\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "a9211fa1-7422-4e51-a5a8-4a5e4b008796",
+              "name": "The PersonalClientServiceCreateResponse message contains the created personal client and client secret.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "iam",
+                    "personal_clients"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"allowSourceCidr\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"displayName\": \"<string>\",\n  \"expires\": \"<duration>\",\n  \"scopedRoles\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"client\": {\n    \"allowSourceCidr\": [\n      \"string\",\n      \"string\"\n    ],\n    \"clientId\": \"string\",\n    \"createdAt\": \"2004-03-27T22:50:27.439Z\",\n    \"deletedAt\": \"1992-08-11T16:37:18.857Z\",\n    \"displayName\": \"string\",\n    \"expiresTime\": \"1995-12-11T07:09:59.788Z\",\n    \"id\": \"string\",\n    \"lastUsedAt\": \"2019-09-01T17:41:12.641Z\",\n    \"scopedRoles\": [\n      \"string\",\n      \"string\"\n    ],\n    \"updatedAt\": \"1950-12-11T16:53:12.377Z\",\n    \"userId\": \"string\"\n  },\n  \"clientSecret\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "de224a4c-66e9-4c6e-915a-87c49ddb5188",
+          "name": "Delete",
+          "request": {
+            "name": "Delete",
+            "description": {
+              "content": "Invokes the c1.api.iam.v1.PersonalClientService.Delete method.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "iam",
+                "personal_clients",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "99b4bf83-eee3-4ac5-af0e-3fdb64e592cc",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "iam",
+                    "personal_clients",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<object>",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "29e00748-a36f-41f9-a3af-f0c3ec2bd682",
+          "name": "Get",
+          "request": {
+            "name": "Get",
+            "description": {
+              "content": "Invokes the c1.api.iam.v1.PersonalClientService.Get method.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "iam",
+                "personal_clients",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bd968f02-2040-40bc-86f5-bef402059436",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "iam",
+                    "personal_clients",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"client\": {\n    \"allowSourceCidr\": [\n      \"string\",\n      \"string\"\n    ],\n    \"clientId\": \"string\",\n    \"createdAt\": \"2008-05-04T05:38:18.289Z\",\n    \"deletedAt\": \"1989-10-06T14:01:27.024Z\",\n    \"displayName\": \"string\",\n    \"expiresTime\": \"1960-10-18T02:40:50.090Z\",\n    \"id\": \"string\",\n    \"lastUsedAt\": \"1998-09-15T10:38:58.552Z\",\n    \"scopedRoles\": [\n      \"string\",\n      \"string\"\n    ],\n    \"updatedAt\": \"2013-10-09T13:33:25.059Z\",\n    \"userId\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6582243a-4307-4d70-9da0-8198e6ed5ea9",
+          "name": "Update",
+          "request": {
+            "name": "Update",
+            "description": {
+              "content": "Invokes the c1.api.iam.v1.PersonalClientService.Update method.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "iam",
+                "personal_clients",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"client\": {\n    \"allowSourceCidr\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"displayName\": \"<string>\",\n    \"expiresTime\": \"<dateTime>\",\n    \"scopedRoles\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"updateMask\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "27da7c8f-9a27-4bea-88da-a96d8cdc6baf",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "iam",
+                    "personal_clients",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"client\": {\n    \"allowSourceCidr\": [\n      \"string\",\n      \"string\"\n    ],\n    \"displayName\": \"string\",\n    \"expiresTime\": \"1967-12-19T18:20:00.872Z\",\n    \"scopedRoles\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"updateMask\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"client\": {\n    \"allowSourceCidr\": [\n      \"string\",\n      \"string\"\n    ],\n    \"clientId\": \"string\",\n    \"createdAt\": \"1954-01-28T14:11:31.004Z\",\n    \"deletedAt\": \"1955-01-21T21:54:00.288Z\",\n    \"displayName\": \"string\",\n    \"expiresTime\": \"1956-09-17T19:32:16.515Z\",\n    \"id\": \"string\",\n    \"lastUsedAt\": \"2014-04-27T14:19:51.416Z\",\n    \"scopedRoles\": [\n      \"string\",\n      \"string\"\n    ],\n    \"updatedAt\": \"1996-11-04T20:00:28.671Z\",\n    \"userId\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b496f71c-aec4-440e-9136-5c852276f149",
+          "name": "NOTE: Searches personal clients for all users",
+          "request": {
+            "name": "NOTE: Searches personal clients for all users",
+            "description": {
+              "content": "Invokes the c1.api.iam.v1.PersonalClientSearchService.Search method.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "search",
+                "iam",
+                "personal_clients"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "The domain of the tenant to use for this request.",
+                  "type": "any",
+                  "value": "{{tenantDomain}}",
+                  "key": "tenantDomain"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pageSize\": \"<integer>\",\n  \"pageToken\": \"<string>\",\n  \"query\": \"<string>\",\n  \"users\": [\n    {\n      \"id\": \"<string>\"\n    },\n    {\n      \"id\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "d7c2bd36-66f9-4e2a-adf3-faf18ee509d8",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "search",
+                    "iam",
+                    "personal_clients"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The domain of the tenant to use for this request.",
+                      "type": "any",
+                      "value": "{{tenantDomain}}",
+                      "key": "tenantDomain"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"pageSize\": \"<integer>\",\n  \"pageToken\": \"<string>\",\n  \"query\": \"<string>\",\n  \"users\": [\n    {\n      \"id\": \"string\"\n    },\n    {\n      \"id\": \"string\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"list\": [\n    {\n      \"allowSourceCidr\": [\n        \"string\",\n        \"string\"\n      ],\n      \"clientId\": \"string\",\n      \"createdAt\": \"1974-11-21T08:13:41.895Z\",\n      \"deletedAt\": \"2022-06-13T07:52:06.452Z\",\n      \"displayName\": \"string\",\n      \"expiresTime\": \"2023-01-09T22:32:55.664Z\",\n      \"id\": \"string\",\n      \"lastUsedAt\": \"1974-02-04T07:54:11.313Z\",\n      \"scopedRoles\": [\n        \"string\",\n        \"string\"\n      ],\n      \"updatedAt\": \"2015-12-26T08:58:53.511Z\",\n      \"userId\": \"string\"\n    },\n    {\n      \"allowSourceCidr\": [\n        \"string\",\n        \"string\"\n      ],\n      \"clientId\": \"string\",\n      \"createdAt\": \"1951-04-06T07:15:08.857Z\",\n      \"deletedAt\": \"2005-04-16T17:04:32.525Z\",\n      \"displayName\": \"string\",\n      \"expiresTime\": \"1959-09-07T16:13:36.917Z\",\n      \"id\": \"string\",\n      \"lastUsedAt\": \"1979-09-22T21:58:15.810Z\",\n      \"scopedRoles\": [\n        \"string\",\n        \"string\"\n      ],\n      \"updatedAt\": \"2011-07-25T22:35:44.240Z\",\n      \"userId\": \"string\"\n    }\n  ],\n  \"nextPageToken\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "The domain of the tenant to use for this request.",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "example",
+      "key": "tenantDomain"
+    },
+    {
+      "type": "string",
+      "value": "https://{{tenantDomain}}.conductor.one",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "2a78cfb8-25c9-4eb2-a363-41eb499e1347",
+    "name": "ConductorOne Access Conflict Personal Client API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The ConductorOne API is a HTTP API for managing ConductorOne resources.",
+      "type": "text/plain"
+    }
+  }
+}
