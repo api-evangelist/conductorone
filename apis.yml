@@ -7,6 +7,18 @@ description: ConductorOne (now branded C1) is an identity security and access go
   and audit data, and integrate identity security directly into internal tools and developer workflows.
   The API is documented with a full OpenAPI 3.1 spec and backed by Go and TypeScript SDKs, a Terraform
   provider, a Postman collection, and the c1i/cone command-line tools.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
