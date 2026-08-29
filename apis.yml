@@ -539,6 +539,9 @@ apis:
   - type: OpenAPI
     url: openapi/conductorone-webhook-api-openapi.yml
 common:
+- type: CapabilityMap
+  url: capabilities/conductorone-capability-edges.yml
+  name: ConductorOne Business Capability Map
 - type: TrustCenter
   url: https://trust.c1.ai/
 - type: VulnerabilityDisclosure

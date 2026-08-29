@@ -1,0 +1,257 @@
+slug: conductorone
+provider: ConductorOne
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 25
+edges:
+- tag: App Entitlement
+  spec_file: conductorone-app-entitlement-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.9
+  evidence: c1.api.app.v1.AppEntitlements.RemoveEntitlementMembership  Remove Entitlement Membership ...
+    /entitlements/{app_entitlement_id}/grants ... ManualProvision, ConnectorProvision
+  reason: Directly manages entitlements, grants, memberships and provisioning of users against applications
+    — the core of identity and access management/governance.
+- tag: App Entitlement Automation
+  spec_file: conductorone-app-entitlement-automation-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.85
+  evidence: c1.api.app.v1.AppEntitlements.CreateAutomation ... AppEntitlementAutomationRuleCEL, AppEntitlementAutomationRuleEntitlement
+  reason: Rule-based automation that grants or revokes application entitlements automatically (rule expressions,
+    last-run status). This is automated access provisioning within identity and access management.
+- tag: App Entitlement User Binding
+  spec_file: conductorone-app-entitlement-user-binding-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.85
+  evidence: Update Grant Duration / Remove Grant Duration ... List App Users For Identity With Grant,
+    c1.api.app.v1.AppEntitlementUserBinding
+  reason: Manages the grant of an entitlement to a specific app user including time-bound duration — user-to-access
+    assignment, core identity and access management (just-in-time / least privilege).
+- tag: App Entitlement User Binding History
+  spec_file: conductorone-app-entitlement-user-binding-history-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.85
+  evidence: POST /api/v1/search/past-grants  ... SearchPastGrants; schema c1.api.app.v1.AppEntitlementUserBindingHistory
+  reason: Historical record of which users held which app entitlements (grants) — access governance/audit
+    trail of identity and access, i.e. Identity & Access Management.
+- tag: AppAccessRequestDefaults
+  spec_file: conductorone-appaccessrequestdefaults-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.85
+  evidence: GET /api/v1/apps/{app_id}/access_request_defaults  GetAppAccessRequestsDefaults
+  reason: Configures default policy for access requests against an application — squarely access request/approval
+    governance within IAM.
+- tag: AppUsers
+  spec_file: conductorone-appusers-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.85
+  evidence: GET /api/v1/apps/{app_id}/app_users/{app_user_id}/credentials  ListAppUserCredentials; schema
+    AppUserStatus
+  reason: Manages application user accounts and their credentials across connected apps — account/identity
+    lifecycle, i.e. Identity & Access Management.
+- tag: Role
+  spec_file: conductorone-role-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.85
+  evidence: GET /api/v1/iam/roles c1.api.iam.v1.Roles.List; schema c1.api.iam.v1.Role
+  reason: Explicit IAM role listing and update operations — core Identity & Access Management, not organisational
+    HR roles.
+- tag: Step Up Authentication Providers
+  spec_file: conductorone-step-up-authentication-providers-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.85
+  evidence: POST /api/v1/step-up/providers StepUpProviderService.Create; schemas StepUpMicrosoftSettings,
+    StepUpOAuth2Settings
+  reason: Manages step-up (re-)authentication providers and their OAuth2/Microsoft settings — authentication
+    and access control configuration under Identity & Access Management.
+- tag: Task
+  spec_file: conductorone-task-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.85
+  evidence: POST /api/v1/task/grant "Create Grant Task"; POST /api/v1/task/offboarding "Create Offboarding
+    Task"; POST /api/v1/tasks/{task_id}/action/escalate "Escalate To Emergency Access"
+  reason: Tasks here are access grant/revoke/offboarding approval workflows with approve/deny/step-up
+    actions — the joiner-mover-leaver and access approval core of Identity & Access Management, not generic
+    work management.
+- tag: App Entitlement Automation Exclusion
+  spec_file: conductorone-app-entitlement-automation-exclusion-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.8
+  evidence: Add Automation Exclusion ... c1.api.app.v1.UserWithAppEntitlementUserBindingView
+  reason: Manages which users are exempted from automated entitlement grant/revoke rules — a control on
+    access provisioning, hence identity and access management.
+- tag: App Entitlement Owner
+  spec_file: conductorone-app-entitlement-owner-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.8
+  evidence: c1.api.app.v1.AppEntitlementOwners.Add / Set / Remove, with c1.api.user.v1.User
+  reason: Assigns and maintains the user owners accountable for each application entitlement — ownership/stewardship
+    of access rights, part of identity and access management and governance.
+- tag: Request Schema Entitlement Binding
+  spec_file: conductorone-request-schema-entitlement-binding-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.8
+  evidence: POST /api/v1/request_schema_entitlement_binding ... "Create Entitlement Binding"; schema c1.api.app.v1.AppEntitlementRef
+  reason: Binds request schemas to application entitlements in an identity governance platform — this
+    is access-entitlement administration, i.e. Identity & Access Management, not SaaS commercial entitlement
+    (BC-4240.70).
+- tag: App Entitlement Monitor Binding
+  spec_file: conductorone-app-entitlement-monitor-binding-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.75
+  evidence: c1.api.accessconflict.v1.AppEntitlementMonitorBindingService.CreateAppEntitlementMonitorBinding
+  reason: Binds application entitlements to access-conflict monitors, i.e. configures which access rights
+    are watched for conflicting-access violations. Sits within identity and access governance; the specific
+    sub-capability framing is somewhat arguable.
+- tag: App Entitlement Proxy Binding
+  spec_file: conductorone-app-entitlement-proxy-binding-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.75
+  evidence: /api/v1/apps/{src_app_id}/{src_app_entitlement_id}/bindings/{dst_app_id}/{dst_app_entitlement_id}
+    ... c1.api.app.v1.AppEntitlementProxy
+  reason: Creates linkages so that granting one application entitlement confers another (e.g. IdP group
+    to downstream app role). This is access-rights modelling within identity and access management.
+- tag: App Entitlement User Binding Feed
+  spec_file: conductorone-app-entitlement-user-binding-feed-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.75
+  evidence: POST /api/v1/grants/feed  SearchGrantFeed ... AppEntitlementUserBindingExpandHistoryMask
+  reason: Search over the history feed of entitlement grants to users, providing the access-assignment
+    audit trail on an identity governance platform. Fits identity and access management; it is a query
+    surface rather than a distinct capability, so moderate confidence.
+- tag: App Owner
+  spec_file: conductorone-app-owner-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.75
+  evidence: GET /api/v1/apps/{app_id}/owners  c1.api.app.v1.AppOwners.List; AddAppOwnerRequestInput
+  reason: Assigning owning users to connected applications within an identity governance platform; ownership
+    underpins access review/approval routing, so IAM is the best fit.
+- tag: App Resource Owner
+  spec_file: conductorone-app-resource-owner-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.75
+  evidence: POST /api/v1/apps/{app_id}/resource_types/{resource_type_id}/resource/{resource_id}/owners  AppResourceOwners.Add
+  reason: Assigns owner users to app resources so access decisions/reviews can be routed; part of access
+    governance (IAM).
+- tag: Policy
+  spec_file: conductorone-policy-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.75
+  evidence: POST /api/v1/policies/test-account-provision-policy  AccountProvisionPolicyTest.Test; schemas
+    'c1.api.policy.v1.ConnectorProvision', 'c1.api.policy.v1.Escalation', 'c1.api.policy.v1.PolicyStep'
+  reason: Policies here define approval steps, escalations and account provisioning behaviour for access
+    requests — the governance rules of identity and access management, not generic corporate policy lifecycle.
+- tag: Request Catalog
+  spec_file: conductorone-request-catalog-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.75
+  evidence: GET /api/v1/catalogs/{catalog_id}/requestable_entitlements  'List Entitlements Per Catalog';
+    POST '.../requestable_entries' 'Add App Entitlements'
+  reason: Manages catalogs of requestable application entitlements and their visibility bindings — the
+    access-request and entitlement governance core of IAM.
+- tag: Step Up Authentication Transactions
+  spec_file: conductorone-step-up-authentication-transactions-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.75
+  evidence: GET /api/v1/step-up/transactions/{id}; schema c1.api.stepup.v1.StepUpTransaction
+  reason: Retrieval of step-up authentication transaction records (authentication challenge events), an
+    IAM concern; 'transaction' here is an auth challenge, not a financial payment.
+- tag: User
+  spec_file: conductorone-user-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.75
+  evidence: GET /api/v1/users; POST /api/v1/users/{user_id}/set-delegation-by-admin "Set Expiring User
+    Delegation Binding By Admin"
+  reason: Identity records and admin delegation bindings within an access governance platform — IAM identity
+    administration rather than HR employee records or CRM customer data.
+- tag: Access Conflict
+  spec_file: conductorone-access-conflict-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.7
+  evidence: c1.api.accessconflict.v1.AccessConflictService.CreateMonitor  Create Monitor ... c1.api.accessconflict.v1.ConflictMonitor
+  reason: Conflict monitors on an identity governance platform detect toxic/conflicting access combinations
+    (separation-of-duties style) across entitlements, which sits inside identity and access governance.
+    Some ambiguity as it could also be read as process-level SoD control management, hence moderate confidence.
+- tag: App
+  spec_file: conductorone-app-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.7
+  evidence: c1.api.app.v1.Apps.Create / c1.api.app.v1.App, with c1.api.policy.v1.PolicyRef and c1.api.user.v1.User
+  reason: CRUD over the registry of connected applications that are the targets of access reviews, entitlements
+    and policies on an access governance platform. Read as IAM rather than IT application portfolio management;
+    the policy and user references ground the identity reading, though an application-inventory reading
+    is possible.
+- tag: App Resource
+  spec_file: conductorone-app-resource-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.7
+  evidence: POST /api/v1/apps/{app_id}/resource_types/{app_resource_type_id}/resources  CreateManuallyManagedAppResource;
+    schema c1.api.app.v1.SecretTrait
+  reason: Catalogues the resources within connected apps that entitlements are granted over — the object
+    model of the access governance platform, mapping to Identity & Access Management.
+- tag: App Usage Controls
+  spec_file: conductorone-app-usage-controls-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.7
+  evidence: GET /api/v1/apps/{app_id}/usage_controls  AppUsageControlsService.Get; schema c1.api.app.v1.AppUsageControls
+  reason: Configures controls governing usage/access of a connected app (e.g. unused-access policies)
+    in an access governance product; IAM policy configuration.
