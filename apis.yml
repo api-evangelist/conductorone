@@ -249,16 +249,6 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/conductorone-appaccessrequestdefaults-api-openapi.yml
-- aid: conductorone:conductorone-appusers-api
-  name: ConductorOne AppUsers API
-  description: The AppUsers API from ConductorOne — 5 operation(s) for appusers.
-  humanURL: https://www.c1.ai/docs/conductorone-api/api
-  baseURL: https://example.conductor.one
-  tags:
-  - AppUsers
-  properties:
-  - type: OpenAPI
-    url: openapi/conductorone-appusers-api-openapi.yml
 - aid: conductorone:conductorone-attribute-api
   name: ConductorOne Attribute API
   description: The Attribute API from ConductorOne — 6 operation(s) for attribute.
@@ -539,6 +529,16 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/conductorone-webhook-api-openapi.yml
+- aid: conductorone:conductorone-app-users-api
+  name: ConductorOne App Users API
+  description: The App Users API from ConductorOne — 5 operation(s) for app users.
+  humanURL: https://www.c1.ai/docs/conductorone-api/api
+  baseURL: https://example.conductor.one
+  tags:
+  - App Users
+  properties:
+  - type: OpenAPI
+    url: openapi/conductorone-app-users-api-openapi.yml
 common:
 - type: CapabilityMap
   url: capabilities/conductorone-capability-edges.yml
