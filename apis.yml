@@ -277,6 +277,8 @@ apis:
   humanURL: https://www.c1.ai/docs/conductorone-api/api
   baseURL: https://example.conductor.one
   tags:
+  - Automation
+  tags_raw:
   - Automations
   properties:
   - type: OpenAPI
@@ -535,6 +537,8 @@ apis:
   humanURL: https://www.c1.ai/docs/conductorone-api/api
   baseURL: https://example.conductor.one
   tags:
+  - AppUsers
+  tags_raw:
   - App Users
   properties:
   - type: OpenAPI
