@@ -61,7 +61,8 @@ edges:
   reason: Configures default policy for access requests against an application — squarely access request/approval
     governance within IAM.
 - tag: AppUsers
-  spec_file: conductorone-appusers-api-openapi.yml
+  spec_file: conductorone-app-users-api-openapi.yml
+  reanchored_from: conductorone-appusers-api-openapi.yml
   capability_id: BC-620.20
   capability_id_l1: BC-620
   capability_name: Identity & Access Management
