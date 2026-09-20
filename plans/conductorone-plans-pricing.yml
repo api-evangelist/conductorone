@@ -1,0 +1,28 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-09-20'
+method: searched
+source: https://www.c1.ai/pricing
+sources:
+- https://www.c1.ai/pricing
+provenance:
+  tool: planning/api-economics/harvest_pricing.py
+  run: 20260920T120546
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: negotiated
+published: false
+note: No numeric price is published on the pricing page; Pricing page describes two pricing models (SKU-based
+  Platform and usage-based Flex) with no numeric prices; directs users to book a demo for a tailored quote.
+plan_count: 2
+plans:
+- name: Platform pricing
+  price_text: Predictable, SKU-based pricing
+  period: none
+  unit: managed identities
+  included_quota: 'Program size options: 100, 500, 1,000, 5,000, 10,000, 20,000 managed identities; Platform
+    levels Pro and Advanced'
+- name: Flex pricing
+  price_text: Usage-based pricing
+  period: month
+  unit: C1 Tokens
+  included_quota: Billable events consume C1 Tokens; billing occurs monthly
