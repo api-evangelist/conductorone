@@ -1,7 +1,7 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   description: The ConductorOne API is a HTTP API for managing ConductorOne resources.
-  title: ConductorOne Access Conflict System Log Exporter API
+  title: ConductorOne System Log Exporter API
   version: 0.1.0-alpha
 servers:
 - description: The ConductorOne API server for the current tenant.
@@ -198,6 +198,18 @@ paths:
       x-speakeasy-name-override: ListEvents
 components:
   schemas:
+    c1.api.systemlog.v1.ExportServiceUpdateRequestInput:
+      description: The ExportServiceUpdateRequest message.
+      properties:
+        exporter:
+          $ref: '#/components/schemas/c1.api.systemlog.v1.Exporter'
+        updateMask:
+          nullable: true
+          readOnly: false
+          type: string
+      title: Export Service Update Request
+      type: object
+      x-speakeasy-name-override: ExportServiceUpdateRequest
     c1.api.systemlog.v1.ExportServiceDeleteResponse:
       description: The ExportServiceDeleteResponse message.
       title: Export Service Delete Response
@@ -213,11 +225,30 @@ components:
       title: Exporter Ref
       type: object
       x-speakeasy-name-override: ExporterRef
-    c1.api.systemlog.v1.ExportServiceDeleteRequestInput:
-      description: The ExportServiceDeleteRequest message.
-      title: Export Service Delete Request
+    c1.api.systemlog.v1.ExportToDatasource:
+      description: The ExportToDatasource message.
+      nullable: true
+      properties:
+        datasourceId:
+          description: The datasourceId field.
+          readOnly: false
+          type: string
+        format:
+          description: The format field.
+          enum:
+          - EXPORT_FORMAT_UNSPECIFIED
+          - EXPORT_FORMAT_OCSF_JSON_ZSTD
+          - EXPORT_FORMAT_OCSF_JSON_GZIP
+          readOnly: false
+          type: string
+          x-speakeasy-unknown-values: allow
+        prefix:
+          description: The prefix field.
+          readOnly: false
+          type: string
+      title: Export To Datasource
       type: object
-      x-speakeasy-name-override: ExportServiceDeleteRequest
+      x-speakeasy-name-override: ExportToDatasource
     c1.api.systemlog.v1.ExportServiceCreateRequest:
       description: "The ExportServiceCreateRequest message is used to create a new system log exporter.\n\nThis message contains a oneof named export_to. Only a single field of the following list may be set at a time:\n  - datasource\n"
       properties:
@@ -230,14 +261,6 @@ components:
       title: Export Service Create Request
       type: object
       x-speakeasy-name-override: ExportServiceCreateRequest
-    c1.api.systemlog.v1.ExportServiceCreateResponse:
-      description: The ExportServiceCreateResponse message.
-      properties:
-        exporter:
-          $ref: '#/components/schemas/c1.api.systemlog.v1.Exporter'
-      title: Export Service Create Response
-      type: object
-      x-speakeasy-name-override: ExportServiceCreateResponse
     c1.api.systemlog.v1.ExportServiceListEventsRequestInput:
       description: The ExportServiceListEventsRequest message.
       properties:
@@ -253,23 +276,22 @@ components:
       title: Export Service List Events Request
       type: object
       x-speakeasy-name-override: ExportServiceListEventsRequest
-    c1.api.systemlog.v1.ExportsSearchServiceSearchResponse:
-      description: The ExportsSearchServiceSearchResponse message.
+    c1.api.systemlog.v1.ExportServiceCreateResponse:
+      description: The ExportServiceCreateResponse message.
       properties:
-        list:
-          description: The list field.
-          items:
-            $ref: '#/components/schemas/c1.api.systemlog.v1.Exporter'
-          nullable: true
-          readOnly: false
-          type: array
-        nextPageToken:
-          description: The nextPageToken field.
-          readOnly: false
-          type: string
-      title: Exports Search Service Search Response
+        exporter:
+          $ref: '#/components/schemas/c1.api.systemlog.v1.Exporter'
+      title: Export Service Create Response
       type: object
-      x-speakeasy-name-override: ExportsSearchServiceSearchResponse
+      x-speakeasy-name-override: ExportServiceCreateResponse
+    c1.api.systemlog.v1.ExportServiceGetResponse:
+      description: The ExportServiceGetResponse message contains the system log exporter object.
+      properties:
+        exporter:
+          $ref: '#/components/schemas/c1.api.systemlog.v1.Exporter'
+      title: Export Service Get Response
+      type: object
+      x-speakeasy-name-override: ExportServiceGetResponse
     c1.api.systemlog.v1.ExportsSearchServiceSearchRequest:
       description: The ExportsSearchServiceSearchRequest message.
       properties:
@@ -300,50 +322,6 @@ components:
       title: Exports Search Service Search Request
       type: object
       x-speakeasy-name-override: ExportsSearchServiceSearchRequest
-    c1.api.systemlog.v1.ExportServiceUpdateResponse:
-      description: The ExportServiceUpdateResponse message.
-      properties:
-        exporter:
-          $ref: '#/components/schemas/c1.api.systemlog.v1.Exporter'
-      title: Export Service Update Response
-      type: object
-      x-speakeasy-name-override: ExportServiceUpdateResponse
-    c1.api.systemlog.v1.ExportToDatasource:
-      description: The ExportToDatasource message.
-      nullable: true
-      properties:
-        datasourceId:
-          description: The datasourceId field.
-          readOnly: false
-          type: string
-        format:
-          description: The format field.
-          enum:
-          - EXPORT_FORMAT_UNSPECIFIED
-          - EXPORT_FORMAT_OCSF_JSON_ZSTD
-          - EXPORT_FORMAT_OCSF_JSON_GZIP
-          readOnly: false
-          type: string
-          x-speakeasy-unknown-values: allow
-        prefix:
-          description: The prefix field.
-          readOnly: false
-          type: string
-      title: Export To Datasource
-      type: object
-      x-speakeasy-name-override: ExportToDatasource
-    c1.api.systemlog.v1.ExportServiceUpdateRequestInput:
-      description: The ExportServiceUpdateRequest message.
-      properties:
-        exporter:
-          $ref: '#/components/schemas/c1.api.systemlog.v1.Exporter'
-        updateMask:
-          nullable: true
-          readOnly: false
-          type: string
-      title: Export Service Update Request
-      type: object
-      x-speakeasy-name-override: ExportServiceUpdateRequest
     c1.api.systemlog.v1.Exporter:
       description: "The Exporter message.\n\nThis message contains a oneof named export_to. Only a single field of the following list may be set at a time:\n  - datasource\n"
       properties:
@@ -386,6 +364,45 @@ components:
       title: Exporter
       type: object
       x-speakeasy-name-override: Exporter
+    c1.api.systemlog.v1.ExportServiceDeleteRequestInput:
+      description: The ExportServiceDeleteRequest message.
+      title: Export Service Delete Request
+      type: object
+      x-speakeasy-name-override: ExportServiceDeleteRequest
+    c1.api.systemlog.v1.ExportServiceListResponse:
+      description: The ExportServiceListResponse message.
+      properties:
+        list:
+          description: The list of results containing up to X results, where X is the page size defined in the request
+          items:
+            $ref: '#/components/schemas/c1.api.systemlog.v1.Exporter'
+          nullable: true
+          readOnly: false
+          type: array
+        nextPageToken:
+          description: The nextPageToken is shown for the next page if the number of results is larger than the max page size. The server returns one page of results and the nextPageToken until all results are retreived. To retrieve the next page, use the same request and append a pageToken field with the value of nextPageToken shown on the previous page.
+          readOnly: false
+          type: string
+      title: Export Service List Response
+      type: object
+      x-speakeasy-name-override: ExportServiceListResponse
+    c1.api.systemlog.v1.ExportsSearchServiceSearchResponse:
+      description: The ExportsSearchServiceSearchResponse message.
+      properties:
+        list:
+          description: The list field.
+          items:
+            $ref: '#/components/schemas/c1.api.systemlog.v1.Exporter'
+          nullable: true
+          readOnly: false
+          type: array
+        nextPageToken:
+          description: The nextPageToken field.
+          readOnly: false
+          type: string
+      title: Exports Search Service Search Response
+      type: object
+      x-speakeasy-name-override: ExportsSearchServiceSearchResponse
     c1.api.systemlog.v1.ExportServiceListEventsResponse:
       description: The ExportServiceListEventsResponse message.
       properties:
@@ -405,31 +422,14 @@ components:
       title: Export Service List Events Response
       type: object
       x-speakeasy-name-override: ExportServiceListEventsResponse
-    c1.api.systemlog.v1.ExportServiceGetResponse:
-      description: The ExportServiceGetResponse message contains the system log exporter object.
+    c1.api.systemlog.v1.ExportServiceUpdateResponse:
+      description: The ExportServiceUpdateResponse message.
       properties:
         exporter:
           $ref: '#/components/schemas/c1.api.systemlog.v1.Exporter'
-      title: Export Service Get Response
+      title: Export Service Update Response
       type: object
-      x-speakeasy-name-override: ExportServiceGetResponse
-    c1.api.systemlog.v1.ExportServiceListResponse:
-      description: The ExportServiceListResponse message.
-      properties:
-        list:
-          description: The list of results containing up to X results, where X is the page size defined in the request
-          items:
-            $ref: '#/components/schemas/c1.api.systemlog.v1.Exporter'
-          nullable: true
-          readOnly: false
-          type: array
-        nextPageToken:
-          description: The nextPageToken is shown for the next page if the number of results is larger than the max page size. The server returns one page of results and the nextPageToken until all results are retreived. To retrieve the next page, use the same request and append a pageToken field with the value of nextPageToken shown on the previous page.
-          readOnly: false
-          type: string
-      title: Export Service List Response
-      type: object
-      x-speakeasy-name-override: ExportServiceListResponse
+      x-speakeasy-name-override: ExportServiceUpdateResponse
   securitySchemes:
     bearerAuth:
       scheme: bearer

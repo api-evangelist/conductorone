@@ -1,0 +1,32 @@
+# Front Door AI Index — conductorone — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: conductorone
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.conductorone.com
+  final_host: www.c1.ai
+  ownership: inherited
+  owner: conductorone
+  shares_host_with: null
+  inherited_from: c1.ai
+  verdict: scored
+  score: null
+  host_score: 37
+  density: null
+  words: 573
+  tiers:
+    agentic: 17
+    core: 20
+    model: 0
+  ambiguous: 17
+  top_terms:
+    AI: 19
+    agent: 17
+    MCP: 8
+    agentic: 4
+    AI agent: 2
+    autonomous agent: 2
+    LLMs: 1
+    inference: 1

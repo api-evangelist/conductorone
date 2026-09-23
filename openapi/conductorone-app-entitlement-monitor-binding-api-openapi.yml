@@ -1,7 +1,7 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   description: The ConductorOne API is a HTTP API for managing ConductorOne resources.
-  title: ConductorOne Access Conflict App Entitlement Monitor Binding API
+  title: ConductorOne App Entitlement Monitor Binding API
   version: 0.1.0-alpha
 servers:
 - description: The ConductorOne API server for the current tenant.
@@ -87,13 +87,8 @@ paths:
       x-speakeasy-name-override: GetAppEntitlementMonitorBinding
 components:
   schemas:
-    c1.api.accessconflict.v1.DeleteAppEntitlementMonitorBindingResponse:
-      description: The DeleteAppEntitlementMonitorBindingResponse message.
-      title: Delete App Entitlement Monitor Binding Response
-      type: object
-      x-speakeasy-name-override: DeleteAppEntitlementMonitorBindingResponse
-    c1.api.accessconflict.v1.CreateAppEntitlementMonitorBindingRequest:
-      description: The CreateAppEntitlementMonitorBindingRequest message.
+    c1.api.accessconflict.v1.AppEntitlementMonitorBinding:
+      description: The AppEntitlementMonitorBinding message.
       properties:
         appEntitlementId:
           description: The appEntitlementId field.
@@ -101,6 +96,14 @@ components:
           type: string
         appId:
           description: The appId field.
+          readOnly: false
+          type: string
+        createdAt:
+          format: date-time
+          readOnly: false
+          type: string
+        deletedAt:
+          format: date-time
           readOnly: false
           type: string
         entitlementGroup:
@@ -116,9 +119,13 @@ components:
           description: The monitorId field.
           readOnly: false
           type: string
-      title: Create App Entitlement Monitor Binding Request
+        updatedAt:
+          format: date-time
+          readOnly: false
+          type: string
+      title: App Entitlement Monitor Binding
       type: object
-      x-speakeasy-name-override: CreateAppEntitlementMonitorBindingRequest
+      x-speakeasy-name-override: AppEntitlementMonitorBinding
     c1.api.accessconflict.v1.DeleteAppEntitlementMonitorBindingRequest:
       description: The DeleteAppEntitlementMonitorBindingRequest message.
       properties:
@@ -173,8 +180,8 @@ components:
       title: Get App Entitlement Monitor Binding Request
       type: object
       x-speakeasy-name-override: GetAppEntitlementMonitorBindingRequest
-    c1.api.accessconflict.v1.AppEntitlementMonitorBinding:
-      description: The AppEntitlementMonitorBinding message.
+    c1.api.accessconflict.v1.CreateAppEntitlementMonitorBindingRequest:
+      description: The CreateAppEntitlementMonitorBindingRequest message.
       properties:
         appEntitlementId:
           description: The appEntitlementId field.
@@ -182,14 +189,6 @@ components:
           type: string
         appId:
           description: The appId field.
-          readOnly: false
-          type: string
-        createdAt:
-          format: date-time
-          readOnly: false
-          type: string
-        deletedAt:
-          format: date-time
           readOnly: false
           type: string
         entitlementGroup:
@@ -205,13 +204,14 @@ components:
           description: The monitorId field.
           readOnly: false
           type: string
-        updatedAt:
-          format: date-time
-          readOnly: false
-          type: string
-      title: App Entitlement Monitor Binding
+      title: Create App Entitlement Monitor Binding Request
       type: object
-      x-speakeasy-name-override: AppEntitlementMonitorBinding
+      x-speakeasy-name-override: CreateAppEntitlementMonitorBindingRequest
+    c1.api.accessconflict.v1.DeleteAppEntitlementMonitorBindingResponse:
+      description: The DeleteAppEntitlementMonitorBindingResponse message.
+      title: Delete App Entitlement Monitor Binding Response
+      type: object
+      x-speakeasy-name-override: DeleteAppEntitlementMonitorBindingResponse
   securitySchemes:
     bearerAuth:
       scheme: bearer
