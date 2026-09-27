@@ -87,11 +87,6 @@ components:
       title: Functions Service List Tags Response
       type: object
       x-speakeasy-name-override: FunctionsServiceListTagsResponse
-    c1.api.functions.v1.FunctionsServiceCreateTagResponse:
-      description: The FunctionsServiceCreateTagResponse message.
-      title: Functions Service Create Tag Response
-      type: object
-      x-speakeasy-name-override: FunctionsServiceCreateTagResponse
     c1.api.functions.v1.FunctionsServiceCreateTagRequestInput:
       description: The FunctionsServiceCreateTagRequest message.
       properties:
@@ -132,6 +127,11 @@ components:
       title: Function Commit
       type: object
       x-speakeasy-name-override: FunctionCommit
+    c1.api.functions.v1.FunctionsServiceCreateTagResponse:
+      description: The FunctionsServiceCreateTagResponse message.
+      title: Functions Service Create Tag Response
+      type: object
+      x-speakeasy-name-override: FunctionsServiceCreateTagResponse
   securitySchemes:
     bearerAuth:
       scheme: bearer

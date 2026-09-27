@@ -179,6 +179,19 @@ components:
       title: App Entitlement User Binding
       type: object
       x-speakeasy-name-override: AppEntitlementUserBinding
+    c1.api.app.v1.ListAppUsersForIdentityWithGrantResponse:
+      description: The ListAppUsersForIdentityWithGrantResponse message.
+      properties:
+        bindings:
+          description: "The list of app users that may also have grant information.\n Without a grant, only the tenant, app, and app user ID will be set. With a grant, the whole struct is populated"
+          items:
+            $ref: '#/components/schemas/c1.api.app.v1.AppEntitlementUserBinding'
+          nullable: true
+          readOnly: false
+          type: array
+      title: List App Users For Identity With Grant Response
+      type: object
+      x-speakeasy-name-override: ListAppUsersForIdentityWithGrantResponse
     c1.api.app.v1.UpdateGrantDurationResponse:
       description: The UpdateGrantDurationResponse message.
       properties:
@@ -187,6 +200,21 @@ components:
       title: Update Grant Duration Response
       type: object
       x-speakeasy-name-override: UpdateGrantDurationResponse
+    c1.api.app.v1.UpdateGrantDurationRequestInput:
+      description: The UpdateGrantDurationRequest message.
+      properties:
+        newDeprovisionAt:
+          format: date-time
+          readOnly: false
+          type: string
+      title: Update Grant Duration Request
+      type: object
+      x-speakeasy-name-override: UpdateGrantDurationRequest
+    c1.api.app.v1.RemoveGrantDurationRequestInput:
+      description: The RemoveGrantDurationRequest message.
+      title: Remove Grant Duration Request
+      type: object
+      x-speakeasy-name-override: RemoveGrantDurationRequest
     c1.api.app.v1.RemoveGrantDurationResponse:
       description: The RemoveGrantDurationResponse message.
       properties:
@@ -209,34 +237,6 @@ components:
       title: App Entitlement Ref
       type: object
       x-speakeasy-name-override: AppEntitlementRef
-    c1.api.app.v1.RemoveGrantDurationRequestInput:
-      description: The RemoveGrantDurationRequest message.
-      title: Remove Grant Duration Request
-      type: object
-      x-speakeasy-name-override: RemoveGrantDurationRequest
-    c1.api.app.v1.UpdateGrantDurationRequestInput:
-      description: The UpdateGrantDurationRequest message.
-      properties:
-        newDeprovisionAt:
-          format: date-time
-          readOnly: false
-          type: string
-      title: Update Grant Duration Request
-      type: object
-      x-speakeasy-name-override: UpdateGrantDurationRequest
-    c1.api.app.v1.ListAppUsersForIdentityWithGrantResponse:
-      description: The ListAppUsersForIdentityWithGrantResponse message.
-      properties:
-        bindings:
-          description: "The list of app users that may also have grant information.\n Without a grant, only the tenant, app, and app user ID will be set. With a grant, the whole struct is populated"
-          items:
-            $ref: '#/components/schemas/c1.api.app.v1.AppEntitlementUserBinding'
-          nullable: true
-          readOnly: false
-          type: array
-      title: List App Users For Identity With Grant Response
-      type: object
-      x-speakeasy-name-override: ListAppUsersForIdentityWithGrantResponse
   securitySchemes:
     bearerAuth:
       scheme: bearer

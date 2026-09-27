@@ -85,32 +85,6 @@ components:
       title: List Org Domains Response
       type: object
       x-speakeasy-name-override: ListOrgDomainsResponse
-    c1.api.settings.v1.OrgDomain:
-      description: The OrgDomain message.
-      properties:
-        createdAt:
-          format: date-time
-          readOnly: true
-          type: string
-        deletedAt:
-          format: date-time
-          readOnly: true
-          type: string
-        domain:
-          description: The domain field.
-          readOnly: false
-          type: string
-        id:
-          description: The id field.
-          readOnly: false
-          type: string
-        updatedAt:
-          format: date-time
-          readOnly: true
-          type: string
-      title: Org Domain
-      type: object
-      x-speakeasy-name-override: OrgDomain
     c1.api.settings.v1.UpdateOrgDomainResponse:
       description: The UpdateOrgDomainResponse message.
       properties:
@@ -137,6 +111,32 @@ components:
       title: Update Org Domain Request
       type: object
       x-speakeasy-name-override: UpdateOrgDomainRequest
+    c1.api.settings.v1.OrgDomain:
+      description: The OrgDomain message.
+      properties:
+        createdAt:
+          format: date-time
+          readOnly: true
+          type: string
+        deletedAt:
+          format: date-time
+          readOnly: true
+          type: string
+        domain:
+          description: The domain field.
+          readOnly: false
+          type: string
+        id:
+          description: The id field.
+          readOnly: false
+          type: string
+        updatedAt:
+          format: date-time
+          readOnly: true
+          type: string
+      title: Org Domain
+      type: object
+      x-speakeasy-name-override: OrgDomain
   securitySchemes:
     bearerAuth:
       scheme: bearer

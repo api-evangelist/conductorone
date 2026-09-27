@@ -294,23 +294,33 @@ paths:
         type: cursor
 components:
   schemas:
-    c1.api.app.v1.SearchAppResourceTypesResponse:
-      description: The SearchAppResourceTypesResponse message contains a list of results and a nextPageToken if applicable.
+    c1.api.app.v1.AppResourceServiceUpdateRequestInput:
+      description: The AppResourceServiceUpdateRequest message.
       properties:
-        list:
-          description: The list of results containing up to X results, where X is the page size defined in the request.
+        appResource:
+          $ref: '#/components/schemas/c1.api.app.v1.AppResource'
+        expandMask:
+          $ref: '#/components/schemas/c1.api.app.v1.AppResourceExpandMask'
+        updateMask:
+          nullable: true
+          readOnly: false
+          type: string
+      title: App Resource Service Update Request
+      type: object
+      x-speakeasy-name-override: AppResourceServiceUpdateRequest
+    c1.api.app.v1.AppResourceExpandMask:
+      description: The app resource expand mask lets you get information about related objects from the request.
+      properties:
+        paths:
+          description: The app resource expanded fields. Maybe be any combination of "*", "app_id", "app_resource_type_id".
           items:
-            $ref: '#/components/schemas/c1.api.app.v1.AppResourceType'
+            type: string
           nullable: true
           readOnly: false
           type: array
-        nextPageToken:
-          description: "The nextPageToken is shown for the next page if the number of results is larger than the max page size.\n The server returns one page of results and the nextPageToken until all results are retreived.\n To retrieve the next page, use the same request and append a pageToken field with the value of nextPageToken shown on the previous page."
-          readOnly: false
-          type: string
-      title: Search App Resource Types Response
+      title: App Resource Expand Mask
       type: object
-      x-speakeasy-name-override: SearchAppResourceTypesResponse
+      x-speakeasy-name-override: AppResourceExpandMask
     c1.api.app.v1.SecretTrait:
       description: The SecretTrait message.
       nullable: true
@@ -334,6 +344,68 @@ components:
       title: Secret Trait
       type: object
       x-speakeasy-name-override: SecretTrait
+    c1.api.app.v1.AppResource:
+      description: "The app resource message is a single resource that can have entitlements.\n\nThis message contains a oneof named metadata. Only a single field of the following list may be set at a time:\n  - secretTrait\n"
+      properties:
+        appId:
+          description: The app that this resource belongs to.
+          readOnly: false
+          type: string
+        appResourceTypeId:
+          description: The resource type that this resource is.
+          readOnly: false
+          type: string
+        createdAt:
+          format: date-time
+          readOnly: true
+          type: string
+        customDescription:
+          description: A custom description that can be set for a resource.
+          readOnly: false
+          type: string
+        deletedAt:
+          format: date-time
+          readOnly: true
+          type: string
+        description:
+          description: The description set for the resource.
+          readOnly: false
+          type: string
+        displayName:
+          description: The display name for this resource.
+          readOnly: false
+          type: string
+        grantCount:
+          description: The number of grants to this resource.
+          format: int64
+          readOnly: false
+          type: string
+        id:
+          description: The id of the resource.
+          readOnly: false
+          type: string
+        matchBatonId:
+          description: The matchBatonId field.
+          readOnly: false
+          type: string
+        parentAppResourceId:
+          description: The parent resource id, if this resource is a child of another resource.
+          readOnly: false
+          type: string
+        parentAppResourceTypeId:
+          description: The parent resource type id, if this resource is a child of another resource.
+          readOnly: false
+          type: string
+        secretTrait:
+          $ref: '#/components/schemas/c1.api.app.v1.SecretTrait'
+        updatedAt:
+          format: date-time
+          readOnly: true
+          type: string
+      title: App Resource
+      type: object
+      x-speakeasy-entity: App Resource
+      x-speakeasy-name-override: AppResource
     c1.api.app.v1.AppResourceServiceGetResponse:
       description: The app resource service get response contains the app resource view and array of expanded items indicated by the request's expand mask.
       properties:
@@ -356,37 +428,6 @@ components:
       title: App Resource Service Get Response
       type: object
       x-speakeasy-name-override: AppResourceServiceGetResponse
-    c1.api.app.v1.SearchAppResourcesResponse:
-      description: The SearchAppResourcesResponse message.
-      properties:
-        expanded:
-          description: The expanded field.
-          items:
-            additionalProperties: true
-            description: Contains an arbitrary serialized message along with a @type that describes the type of the serialized message.
-            properties:
-              '@type':
-                description: The type of the serialized message.
-                type: string
-            readOnly: false
-            type: object
-          nullable: true
-          readOnly: false
-          type: array
-        list:
-          description: The list field.
-          items:
-            $ref: '#/components/schemas/c1.api.app.v1.AppResourceView'
-          nullable: true
-          readOnly: false
-          type: array
-        nextPageToken:
-          description: The nextPageToken field.
-          readOnly: false
-          type: string
-      title: Search App Resources Response
-      type: object
-      x-speakeasy-name-override: SearchAppResourcesResponse
     c1.api.app.v1.SearchAppResourcesRequest:
       description: The SearchAppResourcesRequest message.
       properties:
@@ -463,68 +504,145 @@ components:
       title: Search App Resources Request
       type: object
       x-speakeasy-name-override: SearchAppResourcesRequest
-    c1.api.app.v1.AppResource:
-      description: "The app resource message is a single resource that can have entitlements.\n\nThis message contains a oneof named metadata. Only a single field of the following list may be set at a time:\n  - secretTrait\n"
+    c1.api.app.v1.DeleteManuallyManagedAppResourceResponse:
+      description: The DeleteManuallyManagedAppResourceResponse message.
+      title: Delete Manually Managed App Resource Response
+      type: object
+      x-speakeasy-name-override: DeleteManuallyManagedAppResourceResponse
+    c1.api.app.v1.CreateManuallyManagedAppResourceResponse:
+      description: The CreateManuallyManagedAppResourceResponse message.
+      properties:
+        appResource:
+          $ref: '#/components/schemas/c1.api.app.v1.AppResource'
+      title: Create Manually Managed App Resource Response
+      type: object
+      x-speakeasy-name-override: CreateManuallyManagedAppResourceResponse
+    c1.api.app.v1.AppResourceServiceUpdateResponse:
+      description: The AppResourceServiceUpdateResponse message.
+      properties:
+        appResourceView:
+          $ref: '#/components/schemas/c1.api.app.v1.AppResourceView'
+        expanded:
+          description: The expanded field.
+          items:
+            additionalProperties: true
+            description: Contains an arbitrary serialized message along with a @type that describes the type of the serialized message.
+            properties:
+              '@type':
+                description: The type of the serialized message.
+                type: string
+            readOnly: false
+            type: object
+          nullable: true
+          readOnly: false
+          type: array
+      title: App Resource Service Update Response
+      type: object
+      x-speakeasy-name-override: AppResourceServiceUpdateResponse
+    c1.api.app.v1.AppResourceView:
+      description: The app resource view returns an app resource with paths for items in the expand mask filled in when this response is returned and a request expand mask has "*" or "app_id" or "resource_type_id".
+      properties:
+        appPath:
+          description: JSONPATH expression indicating the location of the App object in the array
+          readOnly: false
+          type: string
+        appResource:
+          $ref: '#/components/schemas/c1.api.app.v1.AppResource'
+        parentResourcePath:
+          description: JSONPATH expression indicating the location of the Parent Resource object in the array
+          readOnly: false
+          type: string
+        parentResourceTypePath:
+          description: JSONPATH expression indicating the location of the Parent Resource Type object in the array
+          readOnly: false
+          type: string
+        resourceTypePath:
+          description: JSONPATH expression indicating the location of the Resource Type object in the array
+          readOnly: false
+          type: string
+      title: App Resource View
+      type: object
+      x-speakeasy-name-override: AppResourceView
+    c1.api.app.v1.AppResourceServiceListResponse:
+      description: The AppResourceServiceListResponse message contains a list of results and a nextPageToken if applicable.
+      properties:
+        expanded:
+          description: List of serialized related objects.
+          items:
+            additionalProperties: true
+            description: Contains an arbitrary serialized message along with a @type that describes the type of the serialized message.
+            properties:
+              '@type':
+                description: The type of the serialized message.
+                type: string
+            readOnly: false
+            type: object
+          nullable: true
+          readOnly: false
+          type: array
+        list:
+          description: The list of results containing up to X results, where X is the page size defined in the request.
+          items:
+            $ref: '#/components/schemas/c1.api.app.v1.AppResourceView'
+          nullable: true
+          readOnly: false
+          type: array
+        nextPageToken:
+          description: "The nextPageToken is shown for the next page if the number of results is larger than the max page size.\n The server returns one page of results and the nextPageToken until all results are retreived.\n To retrieve the next page, use the same request and append a pageToken field with the value of nextPageToken shown on the previous page."
+          readOnly: false
+          type: string
+      title: App Resource Service List Response
+      type: object
+      x-speakeasy-name-override: AppResourceServiceListResponse
+    c1.api.app.v1.SearchAppResourcesResponse:
+      description: The SearchAppResourcesResponse message.
+      properties:
+        expanded:
+          description: The expanded field.
+          items:
+            additionalProperties: true
+            description: Contains an arbitrary serialized message along with a @type that describes the type of the serialized message.
+            properties:
+              '@type':
+                description: The type of the serialized message.
+                type: string
+            readOnly: false
+            type: object
+          nullable: true
+          readOnly: false
+          type: array
+        list:
+          description: The list field.
+          items:
+            $ref: '#/components/schemas/c1.api.app.v1.AppResourceView'
+          nullable: true
+          readOnly: false
+          type: array
+        nextPageToken:
+          description: The nextPageToken field.
+          readOnly: false
+          type: string
+      title: Search App Resources Response
+      type: object
+      x-speakeasy-name-override: SearchAppResourcesResponse
+    c1.api.app.v1.AppResourceRef:
+      description: The AppResourceRef message.
       properties:
         appId:
-          description: The app that this resource belongs to.
+          description: The appId field.
           readOnly: false
           type: string
         appResourceTypeId:
-          description: The resource type that this resource is.
-          readOnly: false
-          type: string
-        createdAt:
-          format: date-time
-          readOnly: true
-          type: string
-        customDescription:
-          description: A custom description that can be set for a resource.
-          readOnly: false
-          type: string
-        deletedAt:
-          format: date-time
-          readOnly: true
-          type: string
-        description:
-          description: The description set for the resource.
-          readOnly: false
-          type: string
-        displayName:
-          description: The display name for this resource.
-          readOnly: false
-          type: string
-        grantCount:
-          description: The number of grants to this resource.
-          format: int64
+          description: The appResourceTypeId field.
           readOnly: false
           type: string
         id:
-          description: The id of the resource.
+          description: The id field.
           readOnly: false
           type: string
-        matchBatonId:
-          description: The matchBatonId field.
-          readOnly: false
-          type: string
-        parentAppResourceId:
-          description: The parent resource id, if this resource is a child of another resource.
-          readOnly: false
-          type: string
-        parentAppResourceTypeId:
-          description: The parent resource type id, if this resource is a child of another resource.
-          readOnly: false
-          type: string
-        secretTrait:
-          $ref: '#/components/schemas/c1.api.app.v1.SecretTrait'
-        updatedAt:
-          format: date-time
-          readOnly: true
-          type: string
-      title: App Resource
+      title: App Resource Ref
       type: object
-      x-speakeasy-entity: App Resource
-      x-speakeasy-name-override: AppResource
+      x-speakeasy-name-override: AppResourceRef
     c1.api.app.v1.AppResourceType:
       description: The AppResourceType is referenced by an app entitlement defining its resource types. Commonly things like Group or Role.
       properties:
@@ -563,19 +681,11 @@ components:
       type: object
       x-speakeasy-entity: App Resource Type
       x-speakeasy-name-override: AppResourceType
-    c1.api.app.v1.DeleteManuallyManagedAppResourceResponse:
-      description: The DeleteManuallyManagedAppResourceResponse message.
-      title: Delete Manually Managed App Resource Response
+    c1.api.app.v1.DeleteManuallyManagedAppResourceRequestInput:
+      description: The DeleteManuallyManagedAppResourceRequest message.
+      title: Delete Manually Managed App Resource Request
       type: object
-      x-speakeasy-name-override: DeleteManuallyManagedAppResourceResponse
-    c1.api.app.v1.CreateManuallyManagedAppResourceResponse:
-      description: The CreateManuallyManagedAppResourceResponse message.
-      properties:
-        appResource:
-          $ref: '#/components/schemas/c1.api.app.v1.AppResource'
-      title: Create Manually Managed App Resource Response
-      type: object
-      x-speakeasy-name-override: CreateManuallyManagedAppResourceResponse
+      x-speakeasy-name-override: DeleteManuallyManagedAppResourceRequest
     c1.api.app.v1.SearchAppResourceTypesRequest:
       description: Search for app resources based on some filters.
       properties:
@@ -641,49 +751,13 @@ components:
       title: Search App Resource Types Request
       type: object
       x-speakeasy-name-override: SearchAppResourceTypesRequest
-    c1.api.app.v1.AppResourceServiceUpdateResponse:
-      description: The AppResourceServiceUpdateResponse message.
+    c1.api.app.v1.SearchAppResourceTypesResponse:
+      description: The SearchAppResourceTypesResponse message contains a list of results and a nextPageToken if applicable.
       properties:
-        appResourceView:
-          $ref: '#/components/schemas/c1.api.app.v1.AppResourceView'
-        expanded:
-          description: The expanded field.
-          items:
-            additionalProperties: true
-            description: Contains an arbitrary serialized message along with a @type that describes the type of the serialized message.
-            properties:
-              '@type':
-                description: The type of the serialized message.
-                type: string
-            readOnly: false
-            type: object
-          nullable: true
-          readOnly: false
-          type: array
-      title: App Resource Service Update Response
-      type: object
-      x-speakeasy-name-override: AppResourceServiceUpdateResponse
-    c1.api.app.v1.AppResourceServiceListResponse:
-      description: The AppResourceServiceListResponse message contains a list of results and a nextPageToken if applicable.
-      properties:
-        expanded:
-          description: List of serialized related objects.
-          items:
-            additionalProperties: true
-            description: Contains an arbitrary serialized message along with a @type that describes the type of the serialized message.
-            properties:
-              '@type':
-                description: The type of the serialized message.
-                type: string
-            readOnly: false
-            type: object
-          nullable: true
-          readOnly: false
-          type: array
         list:
           description: The list of results containing up to X results, where X is the page size defined in the request.
           items:
-            $ref: '#/components/schemas/c1.api.app.v1.AppResourceView'
+            $ref: '#/components/schemas/c1.api.app.v1.AppResourceType'
           nullable: true
           readOnly: false
           type: array
@@ -691,78 +765,9 @@ components:
           description: "The nextPageToken is shown for the next page if the number of results is larger than the max page size.\n The server returns one page of results and the nextPageToken until all results are retreived.\n To retrieve the next page, use the same request and append a pageToken field with the value of nextPageToken shown on the previous page."
           readOnly: false
           type: string
-      title: App Resource Service List Response
+      title: Search App Resource Types Response
       type: object
-      x-speakeasy-name-override: AppResourceServiceListResponse
-    c1.api.app.v1.AppResourceView:
-      description: The app resource view returns an app resource with paths for items in the expand mask filled in when this response is returned and a request expand mask has "*" or "app_id" or "resource_type_id".
-      properties:
-        appPath:
-          description: JSONPATH expression indicating the location of the App object in the array
-          readOnly: false
-          type: string
-        appResource:
-          $ref: '#/components/schemas/c1.api.app.v1.AppResource'
-        parentResourcePath:
-          description: JSONPATH expression indicating the location of the Parent Resource object in the array
-          readOnly: false
-          type: string
-        parentResourceTypePath:
-          description: JSONPATH expression indicating the location of the Parent Resource Type object in the array
-          readOnly: false
-          type: string
-        resourceTypePath:
-          description: JSONPATH expression indicating the location of the Resource Type object in the array
-          readOnly: false
-          type: string
-      title: App Resource View
-      type: object
-      x-speakeasy-name-override: AppResourceView
-    c1.api.app.v1.AppResourceServiceUpdateRequestInput:
-      description: The AppResourceServiceUpdateRequest message.
-      properties:
-        appResource:
-          $ref: '#/components/schemas/c1.api.app.v1.AppResource'
-        expandMask:
-          $ref: '#/components/schemas/c1.api.app.v1.AppResourceExpandMask'
-        updateMask:
-          nullable: true
-          readOnly: false
-          type: string
-      title: App Resource Service Update Request
-      type: object
-      x-speakeasy-name-override: AppResourceServiceUpdateRequest
-    c1.api.app.v1.AppResourceExpandMask:
-      description: The app resource expand mask lets you get information about related objects from the request.
-      properties:
-        paths:
-          description: The app resource expanded fields. Maybe be any combination of "*", "app_id", "app_resource_type_id".
-          items:
-            type: string
-          nullable: true
-          readOnly: false
-          type: array
-      title: App Resource Expand Mask
-      type: object
-      x-speakeasy-name-override: AppResourceExpandMask
-    c1.api.app.v1.AppResourceRef:
-      description: The AppResourceRef message.
-      properties:
-        appId:
-          description: The appId field.
-          readOnly: false
-          type: string
-        appResourceTypeId:
-          description: The appResourceTypeId field.
-          readOnly: false
-          type: string
-        id:
-          description: The id field.
-          readOnly: false
-          type: string
-      title: App Resource Ref
-      type: object
-      x-speakeasy-name-override: AppResourceRef
+      x-speakeasy-name-override: SearchAppResourceTypesResponse
     c1.api.app.v1.CreateManuallyManagedAppResourceRequestInput:
       description: The CreateManuallyManagedAppResourceRequest message.
       properties:
@@ -790,11 +795,6 @@ components:
       title: Create Manually Managed App Resource Request
       type: object
       x-speakeasy-name-override: CreateManuallyManagedAppResourceRequest
-    c1.api.app.v1.DeleteManuallyManagedAppResourceRequestInput:
-      description: The DeleteManuallyManagedAppResourceRequest message.
-      title: Delete Manually Managed App Resource Request
-      type: object
-      x-speakeasy-name-override: DeleteManuallyManagedAppResourceRequest
   securitySchemes:
     bearerAuth:
       scheme: bearer
