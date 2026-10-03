@@ -189,14 +189,6 @@ paths:
       x-speakeasy-name-override: Search
 components:
   schemas:
-    c1.api.functions.v1.FunctionsServiceGetFunctionResponse:
-      description: The FunctionsServiceGetFunctionResponse message.
-      properties:
-        function:
-          $ref: '#/components/schemas/c1.api.functions.v1.Function'
-      title: Functions Service Get Function Response
-      type: object
-      x-speakeasy-name-override: FunctionsServiceGetFunctionResponse
     c1.api.functions.v1.FunctionsServiceCreateFunctionResponse:
       description: The FunctionsServiceCreateFunctionResponse message.
       properties:
@@ -207,6 +199,16 @@ components:
       title: Functions Service Create Function Response
       type: object
       x-speakeasy-name-override: FunctionsServiceCreateFunctionResponse
+    c1.api.functions.v1.FunctionsServiceDeleteFunctionRequestInput:
+      description: The FunctionsServiceDeleteFunctionRequest message.
+      title: Functions Service Delete Function Request
+      type: object
+      x-speakeasy-name-override: FunctionsServiceDeleteFunctionRequest
+    c1.api.functions.v1.FunctionsServiceDeleteFunctionResponse:
+      description: The FunctionsServiceDeleteFunctionResponse message.
+      title: Functions Service Delete Function Response
+      type: object
+      x-speakeasy-name-override: FunctionsServiceDeleteFunctionResponse
     c1.api.functions.v1.FunctionsServiceInvokeRequestInput:
       description: "The FunctionsServiceInvokeRequest message.\n\nThis message contains a oneof named arg. Only a single field of the following list may be set at a time:\n  - json\n"
       properties:
@@ -227,6 +229,23 @@ components:
       title: Functions Service Invoke Request
       type: object
       x-speakeasy-name-override: FunctionsServiceInvokeRequest
+    c1.api.functions.v1.FunctionsSearchResponse:
+      description: The FunctionsSearchResponse message.
+      properties:
+        list:
+          description: The list field.
+          items:
+            $ref: '#/components/schemas/c1.api.functions.v1.Function'
+          nullable: true
+          readOnly: false
+          type: array
+        nextPageToken:
+          description: The nextPageToken field.
+          readOnly: false
+          type: string
+      title: Functions Search Response
+      type: object
+      x-speakeasy-name-override: FunctionsSearchResponse
     c1.api.functions.v1.FunctionsSearchRequest:
       description: The FunctionsSearchRequest message.
       properties:
@@ -257,14 +276,6 @@ components:
       title: Functions Search Request
       type: object
       x-speakeasy-name-override: FunctionsSearchRequest
-    c1.api.functions.v1.FunctionsServiceUpdateFunctionResponse:
-      description: The FunctionsServiceUpdateFunctionResponse message.
-      properties:
-        function:
-          $ref: '#/components/schemas/c1.api.functions.v1.Function'
-      title: Functions Service Update Function Response
-      type: object
-      x-speakeasy-name-override: FunctionsServiceUpdateFunctionResponse
     c1.api.functions.v1.Function:
       description: Function represents a customer-provided code extension in the API
       properties:
@@ -316,6 +327,44 @@ components:
       type: object
       x-speakeasy-entity: Function
       x-speakeasy-name-override: Function
+    c1.api.functions.v1.FunctionsServiceUpdateFunctionRequest:
+      description: The FunctionsServiceUpdateFunctionRequest message.
+      properties:
+        function:
+          $ref: '#/components/schemas/c1.api.functions.v1.Function'
+        updateMask:
+          nullable: true
+          readOnly: false
+          type: string
+      title: Functions Service Update Function Request
+      type: object
+      x-speakeasy-name-override: FunctionsServiceUpdateFunctionRequest
+    c1.api.functions.v1.FunctionCommit:
+      description: FunctionCommit represents a single commit in a function's history
+      properties:
+        author:
+          description: The author field.
+          readOnly: false
+          type: string
+        createdAt:
+          format: date-time
+          readOnly: false
+          type: string
+        functionId:
+          description: The functionId field.
+          readOnly: false
+          type: string
+        id:
+          description: The id field.
+          readOnly: false
+          type: string
+        message:
+          description: The message field.
+          readOnly: false
+          type: string
+      title: Function Commit
+      type: object
+      x-speakeasy-name-override: FunctionCommit
     c1.api.functions.v1.FunctionsServiceCreateFunctionRequest:
       description: The FunctionsServiceCreateFunctionRequest message.
       properties:
@@ -349,6 +398,30 @@ components:
       title: Functions Service Create Function Request
       type: object
       x-speakeasy-name-override: FunctionsServiceCreateFunctionRequest
+    c1.api.functions.v1.FunctionsServiceGetFunctionResponse:
+      description: The FunctionsServiceGetFunctionResponse message.
+      properties:
+        function:
+          $ref: '#/components/schemas/c1.api.functions.v1.Function'
+      title: Functions Service Get Function Response
+      type: object
+      x-speakeasy-name-override: FunctionsServiceGetFunctionResponse
+    c1.api.functions.v1.FunctionsServiceInvokeResponse:
+      description: "The FunctionsServiceInvokeResponse message.\n\nThis message contains a oneof named resp. Only a single field of the following list may be set at a time:\n  - json\n"
+      properties:
+        json:
+          description: 'The json field.
+
+            This field is part of the `resp` oneof.
+
+            See the documentation for `c1.api.functions.v1.FunctionsServiceInvokeResponse` for more details.'
+          format: base64
+          nullable: true
+          readOnly: false
+          type: string
+      title: Functions Service Invoke Response
+      type: object
+      x-speakeasy-name-override: FunctionsServiceInvokeResponse
     c1.api.functions.v1.FunctionsServiceListFunctionsResponse:
       description: The FunctionsServiceListFunctionsResponse message.
       properties:
@@ -366,87 +439,14 @@ components:
       title: Functions Service List Functions Response
       type: object
       x-speakeasy-name-override: FunctionsServiceListFunctionsResponse
-    c1.api.functions.v1.FunctionCommit:
-      description: FunctionCommit represents a single commit in a function's history
-      properties:
-        author:
-          description: The author field.
-          readOnly: false
-          type: string
-        createdAt:
-          format: date-time
-          readOnly: false
-          type: string
-        functionId:
-          description: The functionId field.
-          readOnly: false
-          type: string
-        id:
-          description: The id field.
-          readOnly: false
-          type: string
-        message:
-          description: The message field.
-          readOnly: false
-          type: string
-      title: Function Commit
-      type: object
-      x-speakeasy-name-override: FunctionCommit
-    c1.api.functions.v1.FunctionsServiceUpdateFunctionRequest:
-      description: The FunctionsServiceUpdateFunctionRequest message.
+    c1.api.functions.v1.FunctionsServiceUpdateFunctionResponse:
+      description: The FunctionsServiceUpdateFunctionResponse message.
       properties:
         function:
           $ref: '#/components/schemas/c1.api.functions.v1.Function'
-        updateMask:
-          nullable: true
-          readOnly: false
-          type: string
-      title: Functions Service Update Function Request
+      title: Functions Service Update Function Response
       type: object
-      x-speakeasy-name-override: FunctionsServiceUpdateFunctionRequest
-    c1.api.functions.v1.FunctionsServiceDeleteFunctionResponse:
-      description: The FunctionsServiceDeleteFunctionResponse message.
-      title: Functions Service Delete Function Response
-      type: object
-      x-speakeasy-name-override: FunctionsServiceDeleteFunctionResponse
-    c1.api.functions.v1.FunctionsServiceInvokeResponse:
-      description: "The FunctionsServiceInvokeResponse message.\n\nThis message contains a oneof named resp. Only a single field of the following list may be set at a time:\n  - json\n"
-      properties:
-        json:
-          description: 'The json field.
-
-            This field is part of the `resp` oneof.
-
-            See the documentation for `c1.api.functions.v1.FunctionsServiceInvokeResponse` for more details.'
-          format: base64
-          nullable: true
-          readOnly: false
-          type: string
-      title: Functions Service Invoke Response
-      type: object
-      x-speakeasy-name-override: FunctionsServiceInvokeResponse
-    c1.api.functions.v1.FunctionsServiceDeleteFunctionRequestInput:
-      description: The FunctionsServiceDeleteFunctionRequest message.
-      title: Functions Service Delete Function Request
-      type: object
-      x-speakeasy-name-override: FunctionsServiceDeleteFunctionRequest
-    c1.api.functions.v1.FunctionsSearchResponse:
-      description: The FunctionsSearchResponse message.
-      properties:
-        list:
-          description: The list field.
-          items:
-            $ref: '#/components/schemas/c1.api.functions.v1.Function'
-          nullable: true
-          readOnly: false
-          type: array
-        nextPageToken:
-          description: The nextPageToken field.
-          readOnly: false
-          type: string
-      title: Functions Search Response
-      type: object
-      x-speakeasy-name-override: FunctionsSearchResponse
+      x-speakeasy-name-override: FunctionsServiceUpdateFunctionResponse
   securitySchemes:
     bearerAuth:
       scheme: bearer
