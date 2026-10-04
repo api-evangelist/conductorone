@@ -68,32 +68,19 @@ paths:
       x-speakeasy-name-override: Update
 components:
   schemas:
-    c1.api.settings.v1.OrgDomain:
-      description: The OrgDomain message.
+    c1.api.settings.v1.UpdateOrgDomainResponse:
+      description: The UpdateOrgDomainResponse message.
       properties:
-        createdAt:
-          format: date-time
-          readOnly: true
-          type: string
-        deletedAt:
-          format: date-time
-          readOnly: true
-          type: string
-        domain:
-          description: The domain field.
+        list:
+          description: The list field.
+          items:
+            $ref: '#/components/schemas/c1.api.settings.v1.OrgDomain'
+          nullable: true
           readOnly: false
-          type: string
-        id:
-          description: The id field.
-          readOnly: false
-          type: string
-        updatedAt:
-          format: date-time
-          readOnly: true
-          type: string
-      title: Org Domain
+          type: array
+      title: Update Org Domain Response
       type: object
-      x-speakeasy-name-override: OrgDomain
+      x-speakeasy-name-override: UpdateOrgDomainResponse
     c1.api.settings.v1.ListOrgDomainsResponse:
       description: The ListOrgDomainsResponse message.
       properties:
@@ -124,19 +111,32 @@ components:
       title: Update Org Domain Request
       type: object
       x-speakeasy-name-override: UpdateOrgDomainRequest
-    c1.api.settings.v1.UpdateOrgDomainResponse:
-      description: The UpdateOrgDomainResponse message.
+    c1.api.settings.v1.OrgDomain:
+      description: The OrgDomain message.
       properties:
-        list:
-          description: The list field.
-          items:
-            $ref: '#/components/schemas/c1.api.settings.v1.OrgDomain'
-          nullable: true
+        createdAt:
+          format: date-time
+          readOnly: true
+          type: string
+        deletedAt:
+          format: date-time
+          readOnly: true
+          type: string
+        domain:
+          description: The domain field.
           readOnly: false
-          type: array
-      title: Update Org Domain Response
+          type: string
+        id:
+          description: The id field.
+          readOnly: false
+          type: string
+        updatedAt:
+          format: date-time
+          readOnly: true
+          type: string
+      title: Org Domain
       type: object
-      x-speakeasy-name-override: UpdateOrgDomainResponse
+      x-speakeasy-name-override: OrgDomain
   securitySchemes:
     bearerAuth:
       scheme: bearer

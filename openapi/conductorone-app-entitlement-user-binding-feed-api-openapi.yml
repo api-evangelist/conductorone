@@ -39,30 +39,6 @@ paths:
       x-speakeasy-name-override: SearchGrantFeed
 components:
   schemas:
-    c1.api.app.v1.AppEntitlementRef:
-      description: The AppEntitlementRef message.
-      properties:
-        appId:
-          description: The appId field.
-          readOnly: false
-          type: string
-        id:
-          description: The id field.
-          readOnly: false
-          type: string
-      title: App Entitlement Ref
-      type: object
-      x-speakeasy-name-override: AppEntitlementRef
-    c1.api.app.v1.AppRef:
-      description: The AppRef message.
-      properties:
-        id:
-          description: The id field.
-          readOnly: false
-          type: string
-      title: App Ref
-      type: object
-      x-speakeasy-name-override: AppRef
     c1.api.app.v1.SearchGrantFeedRequest:
       description: The SearchGrantFeedRequest message.
       properties:
@@ -116,19 +92,6 @@ components:
       title: Search Grant Feed Request
       type: object
       x-speakeasy-name-override: SearchGrantFeedRequest
-    c1.api.app.v1.AppEntitlementUserBindingExpandHistoryMask:
-      description: The AppEntitlementUserBindingExpandHistoryMask message.
-      properties:
-        paths:
-          description: The paths field.
-          items:
-            type: string
-          nullable: true
-          readOnly: false
-          type: array
-      title: App Entitlement User Binding Expand History Mask
-      type: object
-      x-speakeasy-name-override: AppEntitlementUserBindingExpandHistoryMask
     c1.api.user.v1.UserRef:
       description: A reference to a user.
       properties:
@@ -139,55 +102,6 @@ components:
       title: User Ref
       type: object
       x-speakeasy-name-override: UserRef
-    c1.api.app.v1.AppEntitlementUserBindingFeed:
-      description: The AppEntitlementUserBindingFeed message.
-      properties:
-        appEntitlementId:
-          description: The ID of the app entitlement that the app user has access to
-          readOnly: false
-          type: string
-        appId:
-          description: The ID of the app associated with the app entitlement
-          readOnly: false
-          type: string
-        appUserId:
-          description: The ID of the app user that has access to the app entitlement
-          readOnly: false
-          type: string
-        date:
-          format: date-time
-          readOnly: false
-          type: string
-        eventType:
-          description: The eventType field.
-          enum:
-          - GRANT_EVENT_TYPE_UNSPECIFIED
-          - GRANT_EVENT_TYPE_ADDED
-          - GRANT_EVENT_TYPE_REMOVED
-          readOnly: false
-          type: string
-          x-speakeasy-unknown-values: allow
-        ticketId:
-          description: The ticketId field.
-          readOnly: false
-          type: string
-      title: App Entitlement User Binding Feed
-      type: object
-      x-speakeasy-name-override: AppEntitlementUserBindingFeed
-    c1.api.app.v1.AppUserRef:
-      description: The AppUserRef message.
-      properties:
-        appId:
-          description: The ID of the application.
-          readOnly: false
-          type: string
-        id:
-          description: The ID of the app user.
-          readOnly: false
-          type: string
-      title: App User Ref
-      type: object
-      x-speakeasy-name-override: AppUserRef
     c1.api.app.v1.AppEntitlementUserBindingFeedView:
       description: The AppEntitlementUserBindingFeedView message.
       properties:
@@ -243,6 +157,92 @@ components:
       title: Search Grant Feed Response
       type: object
       x-speakeasy-name-override: SearchGrantFeedResponse
+    c1.api.app.v1.AppUserRef:
+      description: The AppUserRef message.
+      properties:
+        appId:
+          description: The ID of the application.
+          readOnly: false
+          type: string
+        id:
+          description: The ID of the app user.
+          readOnly: false
+          type: string
+      title: App User Ref
+      type: object
+      x-speakeasy-name-override: AppUserRef
+    c1.api.app.v1.AppEntitlementRef:
+      description: The AppEntitlementRef message.
+      properties:
+        appId:
+          description: The appId field.
+          readOnly: false
+          type: string
+        id:
+          description: The id field.
+          readOnly: false
+          type: string
+      title: App Entitlement Ref
+      type: object
+      x-speakeasy-name-override: AppEntitlementRef
+    c1.api.app.v1.AppRef:
+      description: The AppRef message.
+      properties:
+        id:
+          description: The id field.
+          readOnly: false
+          type: string
+      title: App Ref
+      type: object
+      x-speakeasy-name-override: AppRef
+    c1.api.app.v1.AppEntitlementUserBindingFeed:
+      description: The AppEntitlementUserBindingFeed message.
+      properties:
+        appEntitlementId:
+          description: The ID of the app entitlement that the app user has access to
+          readOnly: false
+          type: string
+        appId:
+          description: The ID of the app associated with the app entitlement
+          readOnly: false
+          type: string
+        appUserId:
+          description: The ID of the app user that has access to the app entitlement
+          readOnly: false
+          type: string
+        date:
+          format: date-time
+          readOnly: false
+          type: string
+        eventType:
+          description: The eventType field.
+          enum:
+          - GRANT_EVENT_TYPE_UNSPECIFIED
+          - GRANT_EVENT_TYPE_ADDED
+          - GRANT_EVENT_TYPE_REMOVED
+          readOnly: false
+          type: string
+          x-speakeasy-unknown-values: allow
+        ticketId:
+          description: The ticketId field.
+          readOnly: false
+          type: string
+      title: App Entitlement User Binding Feed
+      type: object
+      x-speakeasy-name-override: AppEntitlementUserBindingFeed
+    c1.api.app.v1.AppEntitlementUserBindingExpandHistoryMask:
+      description: The AppEntitlementUserBindingExpandHistoryMask message.
+      properties:
+        paths:
+          description: The paths field.
+          items:
+            type: string
+          nullable: true
+          readOnly: false
+          type: array
+      title: App Entitlement User Binding Expand History Mask
+      type: object
+      x-speakeasy-name-override: AppEntitlementUserBindingExpandHistoryMask
   securitySchemes:
     bearerAuth:
       scheme: bearer

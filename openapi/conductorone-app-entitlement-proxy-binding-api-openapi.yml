@@ -212,30 +212,6 @@ components:
       type: object
       x-speakeasy-entity: App Entitlement Proxy Binding
       x-speakeasy-name-override: AppEntitlementProxy
-    c1.api.app.v1.AppEntitlementProxyView:
-      description: The AppEntitlementProxyView message.
-      properties:
-        appProxyEntitlement:
-          $ref: '#/components/schemas/c1.api.app.v1.AppEntitlementProxy'
-        dstAppEntitlementPath:
-          description: The dstAppEntitlementPath field.
-          readOnly: false
-          type: string
-        dstAppPath:
-          description: The dstAppPath field.
-          readOnly: false
-          type: string
-        srcAppEntitlementPath:
-          description: The srcAppEntitlementPath field.
-          readOnly: false
-          type: string
-        srcAppPath:
-          description: The srcAppPath field.
-          readOnly: false
-          type: string
-      title: App Entitlement Proxy View
-      type: object
-      x-speakeasy-name-override: AppEntitlementProxyView
     c1.api.app.v1.AppEntitlementProxyExpandMask:
       description: The AppEntitlementProxyExpandMask message.
       properties:
@@ -311,6 +287,30 @@ components:
       title: Delete App Entitlement Proxy Request
       type: object
       x-speakeasy-name-override: DeleteAppEntitlementProxyRequest
+    c1.api.app.v1.AppEntitlementProxyView:
+      description: The AppEntitlementProxyView message.
+      properties:
+        appProxyEntitlement:
+          $ref: '#/components/schemas/c1.api.app.v1.AppEntitlementProxy'
+        dstAppEntitlementPath:
+          description: The dstAppEntitlementPath field.
+          readOnly: false
+          type: string
+        dstAppPath:
+          description: The dstAppPath field.
+          readOnly: false
+          type: string
+        srcAppEntitlementPath:
+          description: The srcAppEntitlementPath field.
+          readOnly: false
+          type: string
+        srcAppPath:
+          description: The srcAppPath field.
+          readOnly: false
+          type: string
+      title: App Entitlement Proxy View
+      type: object
+      x-speakeasy-name-override: AppEntitlementProxyView
   securitySchemes:
     bearerAuth:
       scheme: bearer

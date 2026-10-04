@@ -142,6 +142,14 @@ paths:
       x-speakeasy-name-override: ListAppUsersForIdentityWithGrant
 components:
   schemas:
+    c1.api.app.v1.RemoveGrantDurationResponse:
+      description: The RemoveGrantDurationResponse message.
+      properties:
+        binding:
+          $ref: '#/components/schemas/c1.api.app.v1.AppEntitlementUserBinding'
+      title: Remove Grant Duration Response
+      type: object
+      x-speakeasy-name-override: RemoveGrantDurationResponse
     c1.api.app.v1.UpdateGrantDurationResponse:
       description: The UpdateGrantDurationResponse message.
       properties:
@@ -187,6 +195,11 @@ components:
       title: App Entitlement User Binding
       type: object
       x-speakeasy-name-override: AppEntitlementUserBinding
+    c1.api.app.v1.RemoveGrantDurationRequestInput:
+      description: The RemoveGrantDurationRequest message.
+      title: Remove Grant Duration Request
+      type: object
+      x-speakeasy-name-override: RemoveGrantDurationRequest
     c1.api.app.v1.AppEntitlementRef:
       description: The AppEntitlementRef message.
       properties:
@@ -201,14 +214,16 @@ components:
       title: App Entitlement Ref
       type: object
       x-speakeasy-name-override: AppEntitlementRef
-    c1.api.app.v1.RemoveGrantDurationResponse:
-      description: The RemoveGrantDurationResponse message.
+    c1.api.app.v1.UpdateGrantDurationRequestInput:
+      description: The UpdateGrantDurationRequest message.
       properties:
-        binding:
-          $ref: '#/components/schemas/c1.api.app.v1.AppEntitlementUserBinding'
-      title: Remove Grant Duration Response
+        newDeprovisionAt:
+          format: date-time
+          readOnly: false
+          type: string
+      title: Update Grant Duration Request
       type: object
-      x-speakeasy-name-override: RemoveGrantDurationResponse
+      x-speakeasy-name-override: UpdateGrantDurationRequest
     c1.api.app.v1.ListAppUsersForIdentityWithGrantResponse:
       description: The ListAppUsersForIdentityWithGrantResponse message.
       properties:
@@ -222,21 +237,6 @@ components:
       title: List App Users For Identity With Grant Response
       type: object
       x-speakeasy-name-override: ListAppUsersForIdentityWithGrantResponse
-    c1.api.app.v1.RemoveGrantDurationRequestInput:
-      description: The RemoveGrantDurationRequest message.
-      title: Remove Grant Duration Request
-      type: object
-      x-speakeasy-name-override: RemoveGrantDurationRequest
-    c1.api.app.v1.UpdateGrantDurationRequestInput:
-      description: The UpdateGrantDurationRequest message.
-      properties:
-        newDeprovisionAt:
-          format: date-time
-          readOnly: false
-          type: string
-      title: Update Grant Duration Request
-      type: object
-      x-speakeasy-name-override: UpdateGrantDurationRequest
   securitySchemes:
     bearerAuth:
       scheme: bearer
