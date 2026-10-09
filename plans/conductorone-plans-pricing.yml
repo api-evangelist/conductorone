@@ -30,3 +30,27 @@ plans:
   period: month
   unit: C1 Tokens
   included_quota: Billable events consume C1 Tokens; billing occurs monthly
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - metered
+  units:
+  - token
+  plans:
+  - name: Platform pricing
+    access: other
+    model: unstated
+    model_how: derived
+    units:
+    - other
+    periods:
+    - none
+  - name: Flex pricing
+    access: other
+    model: metered
+    model_how: derived
+    units:
+    - token
+    periods:
+    - month
