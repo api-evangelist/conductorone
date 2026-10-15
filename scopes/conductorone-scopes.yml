@@ -1,9 +1,436 @@
-generated: '2026-07-18'
-method: derived
-source: openapi/conductorone-openapi-original.yml
+generated: '2026-10-14'
+method: none
+source: openapi/conductorone-access-conflict-api-openapi.yml, openapi/conductorone-app-api-openapi.yml,
+  openapi/conductorone-app-entitlement-api-openapi.yml, openapi/conductorone-app-entitlement-automation-api-openapi.yml,
+  openapi/conductorone-app-entitlement-automation-exclusion-api-openapi.yml, openapi/conductorone-app-entitlement-monitor-binding-api-openapi.yml,
+  openapi/conductorone-app-entitlement-owner-api-openapi.yml, openapi/conductorone-app-entitlement-proxy-binding-api-openapi.yml,
+  openapi/conductorone-app-entitlement-user-binding-api-openapi.yml, openapi/conductorone-app-entitlement-user-binding-feed-api-openapi.yml,
+  openapi/conductorone-app-entitlement-user-binding-history-api-openapi.yml, openapi/conductorone-app-owner-api-openapi.yml,
+  openapi/conductorone-app-reports-api-openapi.yml, openapi/conductorone-app-resource-api-openapi.yml,
+  openapi/conductorone-app-resource-owner-api-openapi.yml, openapi/conductorone-app-resource-type-api-openapi.yml,
+  openapi/conductorone-app-usage-controls-api-openapi.yml, openapi/conductorone-app-users-api-openapi.yml,
+  openapi/conductorone-appaccessrequestdefaults-api-openapi.yml, openapi/conductorone-attribute-api-openapi.yml,
+  openapi/conductorone-auth-api-openapi.yml, openapi/conductorone-automations-api-openapi.yml,
+  openapi/conductorone-aws-external-id-settings-api-openapi.yml, openapi/conductorone-compliance-framework-api-openapi.yml,
+  openapi/conductorone-connector-api-openapi.yml, openapi/conductorone-connector-catalog-api-openapi.yml,
+  openapi/conductorone-directory-api-openapi.yml, openapi/conductorone-function-api-openapi.yml,
+  openapi/conductorone-function-commit-api-openapi.yml, openapi/conductorone-function-tag-api-openapi.yml,
+  openapi/conductorone-org-domain-api-openapi.yml, openapi/conductorone-personal-client-api-openapi.yml,
+  openapi/conductorone-policy-api-openapi.yml, openapi/conductorone-request-catalog-api-openapi.yml,
+  openapi/conductorone-request-schema-api-openapi.yml, openapi/conductorone-request-schema-entitlement-binding-api-openapi.yml,
+  openapi/conductorone-risk-level-api-openapi.yml, openapi/conductorone-role-api-openapi.yml,
+  openapi/conductorone-session-settings-api-openapi.yml, openapi/conductorone-step-up-authentication-providers-api-openapi.yml,
+  openapi/conductorone-step-up-authentication-transactions-api-openapi.yml, openapi/conductorone-system-log-api-openapi.yml,
+  openapi/conductorone-system-log-exporter-api-openapi.yml, openapi/conductorone-task-api-openapi.yml,
+  openapi/conductorone-user-api-openapi.yml, openapi/conductorone-webhook-api-openapi.yml
 schemes:
 - name: oauth
-  source: openapi/conductorone-openapi-original.yml
+  source: openapi/conductorone-access-conflict-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-app-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-app-entitlement-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-app-entitlement-automation-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-app-entitlement-automation-exclusion-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-app-entitlement-monitor-binding-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-app-entitlement-owner-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-app-entitlement-proxy-binding-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-app-entitlement-user-binding-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-app-entitlement-user-binding-feed-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-app-entitlement-user-binding-history-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-app-owner-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-app-reports-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-app-resource-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-app-resource-owner-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-app-resource-type-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-app-usage-controls-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-app-users-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-appaccessrequestdefaults-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-attribute-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-auth-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-automations-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-aws-external-id-settings-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-compliance-framework-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-connector-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-connector-catalog-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-directory-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-function-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-function-commit-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-function-tag-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-org-domain-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-personal-client-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-policy-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-request-catalog-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-request-schema-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-request-schema-entitlement-binding-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-risk-level-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-role-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-session-settings-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-step-up-authentication-providers-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-step-up-authentication-transactions-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-system-log-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-system-log-exporter-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-task-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-user-api-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /auth/v1/token
+  description: |-
+    This API uses OAuth2 with the Client Credential flow.
+    Client Credentials must be sent in the BODY, not the headers.
+    For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
+- name: oauth
+  source: openapi/conductorone-webhook-api-openapi.yml
   flows:
   - flow: clientCredentials
     tokenUrl: /auth/v1/token
@@ -12,3 +439,5 @@ schemes:
     Client Credentials must be sent in the BODY, not the headers.
     For an example of how to implement this, refer to the [c1TokenSource.Token()](https://github.com/ConductorOne/conductorone-sdk-go/blob/3375fe7c0126d17e7ec4e711693dee7b791023aa/token_source.go#L101-L187) function.
 scopes: []
+note: The OAuth2 security scheme(s) in the OpenAPI declare no scopes, and no security requirement
+  references one.
