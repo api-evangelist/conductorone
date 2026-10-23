@@ -544,6 +544,8 @@ apis:
   - type: OpenAPI
     url: openapi/conductorone-app-users-api-openapi.yml
 common:
+- type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/conductorone/overview
 - type: Plans
   url: plans/conductorone-plans-pricing.yml
 - type: CapabilityMap
