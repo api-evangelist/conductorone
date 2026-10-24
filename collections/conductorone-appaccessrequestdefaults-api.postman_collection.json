@@ -1,418 +1,408 @@
 {
+  "info": {
+    "_postman_id": "91330995-6d43-477f-9a51-1f99245f158c",
+    "name": "ConductorOne App Access Request Defaults API",
+    "description": "The ConductorOne API is a HTTP API for managing ConductorOne resources.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-21T20:46:20.000Z",
+    "updatedAt": "2026-10-21T20:46:20.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-91330995-6d43-477f-9a51-1f99245f158c"
+  },
   "item": [
     {
-      "id": "9e5e38bd-49ea-4808-a7e4-f712633dd44e",
-      "name": "AppAccessRequestDefaults",
-      "description": {
-        "content": "",
-        "type": "text/plain"
-      },
+      "name": "api",
       "item": [
         {
-          "id": "4e2d943c-c47a-4ddb-9935-ea26d15cc26b",
-          "name": "Get App Access Requests Defaults",
-          "request": {
-            "name": "Get App Access Requests Defaults",
-            "description": {
-              "content": "Invokes the c1.api.app.v1.AppAccessRequestsDefaultsService.GetAppAccessRequestsDefaults method.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "apps",
-                ":app_id",
-                "access_request_defaults"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "app_id",
-                  "description": "(Required) "
-                },
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
+          "name": "v1",
+          "item": [
             {
-              "id": "d10cafa1-ec0a-44ef-a0ff-4cccacf81fe6",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "apps",
-                    ":app_id",
-                    "access_request_defaults"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "app_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
+              "name": "apps",
+              "item": [
                 {
-                  "key": "Content-Type",
-                  "value": "application/json"
+                  "name": "{app_id}",
+                  "item": [
+                    {
+                      "name": "access_request_defaults",
+                      "item": [
+                        {
+                          "name": "cancel",
+                          "item": [
+                            {
+                              "name": "Cancel App Access Requests Defaults",
+                              "id": "a05184c2-eb5f-46ef-a6da-28bb32c9c322",
+                              "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                              },
+                              "request": {
+                                "method": "POST",
+                                "header": [
+                                  {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "body": {
+                                  "mode": "raw",
+                                  "raw": "{}",
+                                  "options": {
+                                    "raw": {
+                                      "headerFamily": "json",
+                                      "language": "json"
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v1/apps/:app_id/access_request_defaults/cancel",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v1",
+                                    "apps",
+                                    ":app_id",
+                                    "access_request_defaults",
+                                    "cancel"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "id": "f19aac20-7356-4458-a567-e435411dd403",
+                                      "key": "app_id",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    }
+                                  ]
+                                },
+                                "description": "Invokes the c1.api.app.v1.AppAccessRequestsDefaultsService.CancelAppAccessRequestsDefaults method."
+                              },
+                              "response": [
+                                {
+                                  "id": "f8e17bf0-6282-4b09-beee-f64216a8c98c",
+                                  "name": "Successful response",
+                                  "originalRequest": {
+                                    "method": "POST",
+                                    "header": [
+                                      {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                      },
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      },
+                                      {
+                                        "description": "Added as a part of security scheme: bearer",
+                                        "key": "Authorization",
+                                        "value": "Bearer <token>"
+                                      }
+                                    ],
+                                    "body": {
+                                      "mode": "raw",
+                                      "raw": "{}",
+                                      "options": {
+                                        "raw": {
+                                          "headerFamily": "json",
+                                          "language": "json"
+                                        }
+                                      }
+                                    },
+                                    "url": {
+                                      "raw": "{{baseUrl}}/api/v1/apps/:app_id/access_request_defaults/cancel",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "api",
+                                        "v1",
+                                        "apps",
+                                        ":app_id",
+                                        "access_request_defaults",
+                                        "cancel"
+                                      ],
+                                      "variable": [
+                                        {
+                                          "key": "app_id"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "status": "OK",
+                                  "code": 200,
+                                  "_postman_previewlanguage": "json",
+                                  "header": [
+                                    {
+                                      "key": "Content-Type",
+                                      "value": "application/json"
+                                    }
+                                  ],
+                                  "cookie": [],
+                                  "responseTime": null,
+                                  "body": "{\n  \"appId\": \"<string>\",\n  \"catalogIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"defaultsEnabled\": \"<boolean>\",\n  \"durationGrant\": \"<string>\",\n  \"durationUnset\": {},\n  \"emergencyGrantEnabled\": \"<boolean>\",\n  \"emergencyGrantPolicyId\": \"<string>\",\n  \"requestPolicyId\": \"<string>\",\n  \"resourceTypeIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"state\": \"APP_ACCESS_REQUEST_DEFAULTS_LAST_APPLY_STATE_RUNNING\"\n}",
+                                  "createdAt": "2026-10-21T20:46:20.000Z",
+                                  "updatedAt": "2026-10-21T20:46:20.000Z",
+                                  "uid": "35240-f8e17bf0-6282-4b09-beee-f64216a8c98c"
+                                }
+                              ],
+                              "createdAt": "2026-10-21T20:46:20.000Z",
+                              "updatedAt": "2026-10-21T20:46:20.000Z",
+                              "uid": "35240-a05184c2-eb5f-46ef-a6da-28bb32c9c322"
+                            }
+                          ],
+                          "id": "5fffbf34-4247-4dc9-8afc-e171a126a05e",
+                          "createdAt": "2026-10-21T20:46:20.000Z",
+                          "updatedAt": "2026-10-21T20:46:20.000Z",
+                          "uid": "35240-5fffbf34-4247-4dc9-8afc-e171a126a05e"
+                        },
+                        {
+                          "name": "Get App Access Requests Defaults",
+                          "id": "698b0223-b6ae-41a1-bd03-f8d751a3a103",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/apps/:app_id/access_request_defaults",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "apps",
+                                ":app_id",
+                                "access_request_defaults"
+                              ],
+                              "variable": [
+                                {
+                                  "id": "296232cb-0f68-461e-a0f7-19cec9a908e7",
+                                  "key": "app_id",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                }
+                              ]
+                            },
+                            "description": "Invokes the c1.api.app.v1.AppAccessRequestsDefaultsService.GetAppAccessRequestsDefaults method."
+                          },
+                          "response": [
+                            {
+                              "id": "2c4a2354-d11c-413c-a448-904019cd8650",
+                              "name": "Successful response",
+                              "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: bearer",
+                                    "key": "Authorization",
+                                    "value": "Bearer <token>"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v1/apps/:app_id/access_request_defaults",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v1",
+                                    "apps",
+                                    ":app_id",
+                                    "access_request_defaults"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "app_id"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{\n  \"appId\": \"<string>\",\n  \"catalogIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"defaultsEnabled\": \"<boolean>\",\n  \"durationGrant\": \"<string>\",\n  \"durationUnset\": {},\n  \"emergencyGrantEnabled\": \"<boolean>\",\n  \"emergencyGrantPolicyId\": \"<string>\",\n  \"requestPolicyId\": \"<string>\",\n  \"resourceTypeIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"state\": \"APP_ACCESS_REQUEST_DEFAULTS_LAST_APPLY_STATE_RUNNING\"\n}",
+                              "createdAt": "2026-10-21T20:46:20.000Z",
+                              "updatedAt": "2026-10-21T20:46:20.000Z",
+                              "uid": "35240-2c4a2354-d11c-413c-a448-904019cd8650"
+                            }
+                          ],
+                          "createdAt": "2026-10-21T20:46:20.000Z",
+                          "updatedAt": "2026-10-21T20:46:20.000Z",
+                          "uid": "35240-698b0223-b6ae-41a1-bd03-f8d751a3a103"
+                        },
+                        {
+                          "name": "Create App Access Requests Defaults",
+                          "id": "9c499be1-ac50-409c-aa30-3960bd82f77c",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n  \"catalogIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"defaultsEnabled\": \"<boolean>\",\n  \"durationGrant\": \"<string>\",\n  \"durationUnset\": {},\n  \"emergencyGrantEnabled\": \"<boolean>\",\n  \"emergencyGrantPolicyId\": \"<string>\",\n  \"requestPolicyId\": \"<string>\",\n  \"resourceTypeIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"state\": \"APP_ACCESS_REQUEST_DEFAULTS_LAST_APPLY_STATE_CANCEL_ERROR\"\n}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/apps/:app_id/access_request_defaults",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "apps",
+                                ":app_id",
+                                "access_request_defaults"
+                              ],
+                              "variable": [
+                                {
+                                  "id": "cb6a3dc9-f5e3-4576-b9e9-5157db3ea049",
+                                  "key": "app_id",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                }
+                              ]
+                            },
+                            "description": "Invokes the c1.api.app.v1.AppAccessRequestsDefaultsService.CreateAppAccessRequestsDefaults method."
+                          },
+                          "response": [
+                            {
+                              "id": "6b669b81-0f20-4140-ab52-e4bce29b1923",
+                              "name": "Successful response",
+                              "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                  {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: bearer",
+                                    "key": "Authorization",
+                                    "value": "Bearer <token>"
+                                  }
+                                ],
+                                "body": {
+                                  "mode": "raw",
+                                  "raw": "{\n  \"catalogIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"defaultsEnabled\": \"<boolean>\",\n  \"durationGrant\": \"<string>\",\n  \"durationUnset\": {},\n  \"emergencyGrantEnabled\": \"<boolean>\",\n  \"emergencyGrantPolicyId\": \"<string>\",\n  \"requestPolicyId\": \"<string>\",\n  \"resourceTypeIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"state\": \"APP_ACCESS_REQUEST_DEFAULTS_LAST_APPLY_STATE_CANCEL_ERROR\"\n}",
+                                  "options": {
+                                    "raw": {
+                                      "headerFamily": "json",
+                                      "language": "json"
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v1/apps/:app_id/access_request_defaults",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v1",
+                                    "apps",
+                                    ":app_id",
+                                    "access_request_defaults"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "app_id"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{\n  \"appId\": \"<string>\",\n  \"catalogIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"defaultsEnabled\": \"<boolean>\",\n  \"durationGrant\": \"<string>\",\n  \"durationUnset\": {},\n  \"emergencyGrantEnabled\": \"<boolean>\",\n  \"emergencyGrantPolicyId\": \"<string>\",\n  \"requestPolicyId\": \"<string>\",\n  \"resourceTypeIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"state\": \"APP_ACCESS_REQUEST_DEFAULTS_LAST_APPLY_STATE_RUNNING\"\n}",
+                              "createdAt": "2026-10-21T20:46:20.000Z",
+                              "updatedAt": "2026-10-21T20:46:20.000Z",
+                              "uid": "35240-6b669b81-0f20-4140-ab52-e4bce29b1923"
+                            }
+                          ],
+                          "createdAt": "2026-10-21T20:46:20.000Z",
+                          "updatedAt": "2026-10-21T20:46:20.000Z",
+                          "uid": "35240-9c499be1-ac50-409c-aa30-3960bd82f77c"
+                        }
+                      ],
+                      "id": "aa0746ca-10b2-4a78-83f4-d6812e449a48",
+                      "createdAt": "2026-10-21T20:46:20.000Z",
+                      "updatedAt": "2026-10-21T20:46:20.000Z",
+                      "uid": "35240-aa0746ca-10b2-4a78-83f4-d6812e449a48"
+                    }
+                  ],
+                  "id": "bffc0c87-fb1e-401d-a123-56a16276811b",
+                  "createdAt": "2026-10-21T20:46:20.000Z",
+                  "updatedAt": "2026-10-21T20:46:20.000Z",
+                  "uid": "35240-bffc0c87-fb1e-401d-a123-56a16276811b"
                 }
               ],
-              "body": "{\n  \"appId\": \"string\",\n  \"catalogIds\": [\n    \"string\",\n    \"string\"\n  ],\n  \"defaultsEnabled\": true,\n  \"durationGrant\": \"string\",\n  \"durationUnset\": {},\n  \"emergencyGrantEnabled\": false,\n  \"emergencyGrantPolicyId\": \"string\",\n  \"requestPolicyId\": \"string\",\n  \"resourceTypeIds\": [\n    \"string\",\n    \"string\"\n  ],\n  \"state\": \"APP_ACCESS_REQUEST_DEFAULTS_LAST_APPLY_STATE_CANCEL_SUCCESS\"\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
+              "id": "7be697af-c762-4ad5-9169-86a015e8177e",
+              "createdAt": "2026-10-21T20:46:20.000Z",
+              "updatedAt": "2026-10-21T20:46:20.000Z",
+              "uid": "35240-7be697af-c762-4ad5-9169-86a015e8177e"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "19e4230a-4475-44f8-86cd-c5dcf9853c30",
-          "name": "Create App Access Requests Defaults",
-          "request": {
-            "name": "Create App Access Requests Defaults",
-            "description": {
-              "content": "Invokes the c1.api.app.v1.AppAccessRequestsDefaultsService.CreateAppAccessRequestsDefaults method.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "apps",
-                ":app_id",
-                "access_request_defaults"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "app_id",
-                  "description": "(Required) "
-                },
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "POST",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"catalogIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"defaultsEnabled\": \"<boolean>\",\n  \"durationGrant\": \"<duration>\",\n  \"durationUnset\": \"<object>\",\n  \"emergencyGrantEnabled\": \"<boolean>\",\n  \"emergencyGrantPolicyId\": \"<string>\",\n  \"requestPolicyId\": \"<string>\",\n  \"resourceTypeIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"state\": \"<string>\"\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
-            {
-              "id": "d9ea0a7d-a641-4c0f-9c79-46c58a1d74ad",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "apps",
-                    ":app_id",
-                    "access_request_defaults"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "app_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"catalogIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"defaultsEnabled\": \"<boolean>\",\n  \"durationGrant\": \"<duration>\",\n  \"durationUnset\": \"<object>\",\n  \"emergencyGrantEnabled\": \"<boolean>\",\n  \"emergencyGrantPolicyId\": \"<string>\",\n  \"requestPolicyId\": \"<string>\",\n  \"resourceTypeIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"state\": \"<string>\"\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"appId\": \"string\",\n  \"catalogIds\": [\n    \"string\",\n    \"string\"\n  ],\n  \"defaultsEnabled\": true,\n  \"durationGrant\": \"string\",\n  \"durationUnset\": {},\n  \"emergencyGrantEnabled\": false,\n  \"emergencyGrantPolicyId\": \"string\",\n  \"requestPolicyId\": \"string\",\n  \"resourceTypeIds\": [\n    \"string\",\n    \"string\"\n  ],\n  \"state\": \"APP_ACCESS_REQUEST_DEFAULTS_LAST_APPLY_STATE_CANCEL_SUCCESS\"\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "6b5002c5-1ca1-4383-8bfd-4a8e639a2750",
-          "name": "Cancel App Access Requests Defaults",
-          "request": {
-            "name": "Cancel App Access Requests Defaults",
-            "description": {
-              "content": "Invokes the c1.api.app.v1.AppAccessRequestsDefaultsService.CancelAppAccessRequestsDefaults method.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "apps",
-                ":app_id",
-                "access_request_defaults",
-                "cancel"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "app_id",
-                  "description": "(Required) "
-                },
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "POST",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "<object>",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
-            {
-              "id": "eece5faf-51ee-4753-b40e-1abd033e5075",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "apps",
-                    ":app_id",
-                    "access_request_defaults",
-                    "cancel"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "app_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "<object>",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"appId\": \"string\",\n  \"catalogIds\": [\n    \"string\",\n    \"string\"\n  ],\n  \"defaultsEnabled\": true,\n  \"durationGrant\": \"string\",\n  \"durationUnset\": {},\n  \"emergencyGrantEnabled\": false,\n  \"emergencyGrantPolicyId\": \"string\",\n  \"requestPolicyId\": \"string\",\n  \"resourceTypeIds\": [\n    \"string\",\n    \"string\"\n  ],\n  \"state\": \"APP_ACCESS_REQUEST_DEFAULTS_LAST_APPLY_STATE_CANCEL_SUCCESS\"\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "id": "843cc2d9-1645-4c38-ac88-bbf899a00bd4",
+          "createdAt": "2026-10-21T20:46:20.000Z",
+          "updatedAt": "2026-10-21T20:46:20.000Z",
+          "uid": "35240-843cc2d9-1645-4c38-ac88-bbf899a00bd4"
         }
       ],
-      "event": []
-    }
-  ],
-  "event": [],
-  "variable": [
-    {
-      "description": {
-        "content": "The domain of the tenant to use for this request.",
-        "type": "text/plain"
-      },
-      "type": "any",
-      "value": "example",
-      "key": "tenantDomain"
-    },
-    {
-      "type": "string",
-      "value": "https://{{tenantDomain}}.conductor.one",
-      "key": "baseUrl"
+      "id": "018295eb-0955-45d3-a016-051a674850dc",
+      "createdAt": "2026-10-21T20:46:20.000Z",
+      "updatedAt": "2026-10-21T20:46:20.000Z",
+      "uid": "35240-018295eb-0955-45d3-a016-051a674850dc"
     }
   ],
   "auth": {
@@ -420,17 +410,19 @@
     "bearer": [
       {
         "key": "token",
-        "value": "{{bearerToken}}"
+        "value": "{{bearerToken}}",
+        "type": "string"
       }
     ]
   },
-  "info": {
-    "_postman_id": "f0a6f6cf-2b9e-469e-8049-282342139c81",
-    "name": "ConductorOne Access Conflict AppAccessRequestDefaults API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "description": {
-      "content": "The ConductorOne API is a HTTP API for managing ConductorOne resources.",
-      "type": "text/plain"
+  "variable": [
+    {
+      "key": "tenantDomain",
+      "value": "example"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://{{tenantDomain}}.conductor.one"
     }
-  }
+  ]
 }

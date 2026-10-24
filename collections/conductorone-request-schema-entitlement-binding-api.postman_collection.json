@@ -1,383 +1,356 @@
 {
+  "info": {
+    "_postman_id": "9b45247f-104e-449e-a2b3-c9870164656e",
+    "name": "ConductorOne Request Schema Entitlement Binding API",
+    "description": "The ConductorOne API is a HTTP API for managing ConductorOne resources.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-21T20:49:44.000Z",
+    "updatedAt": "2026-10-21T20:49:44.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-9b45247f-104e-449e-a2b3-c9870164656e"
+  },
   "item": [
     {
-      "id": "372adc2b-74e1-48f8-b0a1-ec007c12ffbe",
-      "name": "Request Schema Entitlement Binding",
-      "description": {
-        "content": "",
-        "type": "text/plain"
-      },
+      "name": "api",
       "item": [
         {
-          "id": "366757ce-892b-4033-a46c-31890f7bb944",
-          "name": "Remove Entitlement Binding",
-          "request": {
-            "name": "Remove Entitlement Binding",
-            "description": {
-              "content": "Invokes the c1.api.request_schema.v1.RequestSchemaService.RemoveEntitlementBinding method.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "request_schema_entitlement_binding"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "DELETE",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"entitlementRef\": {\n    \"appId\": \"<string>\",\n    \"id\": \"<string>\"\n  },\n  \"requestSchemaId\": \"<string>\"\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
+          "name": "v1",
+          "item": [
             {
-              "id": "b0975a64-fb0f-4e8a-b996-594585c6fee1",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "request_schema_entitlement_binding"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "DELETE",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"entitlementRef\": {\n    \"appId\": \"string\",\n    \"id\": \"string\"\n  },\n  \"requestSchemaId\": \"<string>\"\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
+              "name": "request_schema_entitlement_binding",
+              "item": [
                 {
-                  "key": "Content-Type",
-                  "value": "application/json"
+                  "name": "Remove Entitlement Binding",
+                  "id": "daa12bdd-af42-4be9-b751-181b051c8100",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"entitlementRef\": {\n    \"appId\": \"<string>\",\n    \"id\": \"<string>\"\n  },\n  \"requestSchemaId\": \"<string>\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/v1/request_schema_entitlement_binding",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "request_schema_entitlement_binding"
+                      ]
+                    },
+                    "description": "Invokes the c1.api.request_schema.v1.RequestSchemaService.RemoveEntitlementBinding method."
+                  },
+                  "response": [
+                    {
+                      "id": "66a6df1e-8127-4350-a43e-42a700675055",
+                      "name": "Successful response",
+                      "originalRequest": {
+                        "method": "DELETE",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"entitlementRef\": {\n    \"appId\": \"<string>\",\n    \"id\": \"<string>\"\n  },\n  \"requestSchemaId\": \"<string>\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/request_schema_entitlement_binding",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "request_schema_entitlement_binding"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{}",
+                      "createdAt": "2026-10-21T20:49:44.000Z",
+                      "updatedAt": "2026-10-21T20:49:44.000Z",
+                      "uid": "35240-66a6df1e-8127-4350-a43e-42a700675055"
+                    }
+                  ],
+                  "createdAt": "2026-10-21T20:49:44.000Z",
+                  "updatedAt": "2026-10-21T20:49:44.000Z",
+                  "uid": "35240-daa12bdd-af42-4be9-b751-181b051c8100"
+                },
+                {
+                  "name": "Create Entitlement Binding",
+                  "id": "ba295964-1176-4333-8199-6825a85774d3",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"entitlementRef\": {\n    \"appId\": \"<string>\",\n    \"id\": \"<string>\"\n  },\n  \"requestSchemaId\": \"<string>\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/v1/request_schema_entitlement_binding",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "request_schema_entitlement_binding"
+                      ]
+                    },
+                    "description": "Invokes the c1.api.request_schema.v1.RequestSchemaService.CreateEntitlementBinding method."
+                  },
+                  "response": [
+                    {
+                      "id": "00036d1d-6f7d-4140-93cb-7a7c352f9f75",
+                      "name": "Successful response",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"entitlementRef\": {\n    \"appId\": \"<string>\",\n    \"id\": \"<string>\"\n  },\n  \"requestSchemaId\": \"<string>\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/request_schema_entitlement_binding",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "request_schema_entitlement_binding"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"entitlementRef\": {\n    \"appId\": \"<string>\",\n    \"id\": \"<string>\"\n  },\n  \"requestSchemaId\": \"<string>\"\n}",
+                      "createdAt": "2026-10-21T20:49:44.000Z",
+                      "updatedAt": "2026-10-21T20:49:44.000Z",
+                      "uid": "35240-00036d1d-6f7d-4140-93cb-7a7c352f9f75"
+                    }
+                  ],
+                  "createdAt": "2026-10-21T20:49:44.000Z",
+                  "updatedAt": "2026-10-21T20:49:44.000Z",
+                  "uid": "35240-ba295964-1176-4333-8199-6825a85774d3"
+                },
+                {
+                  "name": "Find Binding For App Entitlement",
+                  "id": "17cb749b-6d6c-406c-ad27-5b753e4df954",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"entitlementRef\": {\n    \"appId\": \"<string>\",\n    \"id\": \"<string>\"\n  }\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/v1/request_schema_entitlement_binding",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "request_schema_entitlement_binding"
+                      ]
+                    },
+                    "description": "Invokes the c1.api.request_schema.v1.RequestSchemaService.FindBindingForAppEntitlement method."
+                  },
+                  "response": [
+                    {
+                      "id": "b0c104f5-0b28-44e1-9d77-e1d4372937ff",
+                      "name": "Successful response",
+                      "originalRequest": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"entitlementRef\": {\n    \"appId\": \"<string>\",\n    \"id\": \"<string>\"\n  }\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/request_schema_entitlement_binding",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "request_schema_entitlement_binding"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"entitlementRef\": {\n    \"appId\": \"<string>\",\n    \"id\": \"<string>\"\n  },\n  \"requestSchemaId\": \"<string>\"\n}",
+                      "createdAt": "2026-10-21T20:49:44.000Z",
+                      "updatedAt": "2026-10-21T20:49:44.000Z",
+                      "uid": "35240-b0c104f5-0b28-44e1-9d77-e1d4372937ff"
+                    }
+                  ],
+                  "createdAt": "2026-10-21T20:49:44.000Z",
+                  "updatedAt": "2026-10-21T20:49:44.000Z",
+                  "uid": "35240-17cb749b-6d6c-406c-ad27-5b753e4df954"
                 }
               ],
-              "body": "{}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
+              "id": "efedf8d6-5c1e-4b12-ac2a-b471b358da39",
+              "createdAt": "2026-10-21T20:49:44.000Z",
+              "updatedAt": "2026-10-21T20:49:44.000Z",
+              "uid": "35240-efedf8d6-5c1e-4b12-ac2a-b471b358da39"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "291351bd-9854-4f1a-93b5-b53575fb2b49",
-          "name": "Create Entitlement Binding",
-          "request": {
-            "name": "Create Entitlement Binding",
-            "description": {
-              "content": "Invokes the c1.api.request_schema.v1.RequestSchemaService.CreateEntitlementBinding method.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "request_schema_entitlement_binding"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "POST",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"entitlementRef\": {\n    \"appId\": \"<string>\",\n    \"id\": \"<string>\"\n  },\n  \"requestSchemaId\": \"<string>\"\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
-            {
-              "id": "96d058c9-9819-467e-ab9b-377767ea9256",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "request_schema_entitlement_binding"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"entitlementRef\": {\n    \"appId\": \"string\",\n    \"id\": \"string\"\n  },\n  \"requestSchemaId\": \"<string>\"\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"entitlementRef\": {\n    \"appId\": \"string\",\n    \"id\": \"string\"\n  },\n  \"requestSchemaId\": \"string\"\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "48894e37-3274-4d4f-8951-4caa21d95a65",
-          "name": "Find Binding For App Entitlement",
-          "request": {
-            "name": "Find Binding For App Entitlement",
-            "description": {
-              "content": "Invokes the c1.api.request_schema.v1.RequestSchemaService.FindBindingForAppEntitlement method.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "request_schema_entitlement_binding"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "PUT",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"entitlementRef\": {\n    \"appId\": \"<string>\",\n    \"id\": \"<string>\"\n  }\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
-            {
-              "id": "4b1f145a-b43b-41ae-8b9e-b66bfb53c092",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "request_schema_entitlement_binding"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "PUT",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"entitlementRef\": {\n    \"appId\": \"string\",\n    \"id\": \"string\"\n  }\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"entitlementRef\": {\n    \"appId\": \"string\",\n    \"id\": \"string\"\n  },\n  \"requestSchemaId\": \"string\"\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "id": "09dc4c37-dbe5-46bb-a115-6a827ad4f389",
+          "createdAt": "2026-10-21T20:49:44.000Z",
+          "updatedAt": "2026-10-21T20:49:44.000Z",
+          "uid": "35240-09dc4c37-dbe5-46bb-a115-6a827ad4f389"
         }
       ],
-      "event": []
-    }
-  ],
-  "event": [],
-  "variable": [
-    {
-      "description": {
-        "content": "The domain of the tenant to use for this request.",
-        "type": "text/plain"
-      },
-      "type": "any",
-      "value": "example",
-      "key": "tenantDomain"
-    },
-    {
-      "type": "string",
-      "value": "https://{{tenantDomain}}.conductor.one",
-      "key": "baseUrl"
+      "id": "629f2bc0-ac9f-4cb6-9a49-5866b14cf5f2",
+      "createdAt": "2026-10-21T20:49:44.000Z",
+      "updatedAt": "2026-10-21T20:49:44.000Z",
+      "uid": "35240-629f2bc0-ac9f-4cb6-9a49-5866b14cf5f2"
     }
   ],
   "auth": {
@@ -385,17 +358,19 @@
     "bearer": [
       {
         "key": "token",
-        "value": "{{bearerToken}}"
+        "value": "{{bearerToken}}",
+        "type": "string"
       }
     ]
   },
-  "info": {
-    "_postman_id": "da595982-ab1f-48b6-b1a5-c4fe62834ef6",
-    "name": "ConductorOne Access Conflict Request Schema Entitlement Binding API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "description": {
-      "content": "The ConductorOne API is a HTTP API for managing ConductorOne resources.",
-      "type": "text/plain"
+  "variable": [
+    {
+      "key": "tenantDomain",
+      "value": "example"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://{{tenantDomain}}.conductor.one"
     }
-  }
+  ]
 }

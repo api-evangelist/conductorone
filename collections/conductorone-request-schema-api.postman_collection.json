@@ -1,527 +1,487 @@
 {
+  "info": {
+    "_postman_id": "de6e4b9f-7be8-45ca-9f65-ee03d7178cb5",
+    "name": "ConductorOne Request Schema API",
+    "description": "The ConductorOne API is a HTTP API for managing ConductorOne resources.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-21T20:49:38.000Z",
+    "updatedAt": "2026-10-21T20:49:38.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-de6e4b9f-7be8-45ca-9f65-ee03d7178cb5"
+  },
   "item": [
     {
-      "id": "9a27dc70-041a-4cc8-a587-83154439c8b0",
-      "name": "Request Schema",
-      "description": {
-        "content": "",
-        "type": "text/plain"
-      },
+      "name": "api",
       "item": [
         {
-          "id": "66de1c5b-00fe-43d0-ad99-e08cfa19a796",
-          "name": "Create",
-          "request": {
-            "name": "Create",
-            "description": {
-              "content": "Invokes the c1.api.request_schema.v1.RequestSchemaService.Create method.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "request_schemas"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "POST",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"description\": \"<string>\",\n  \"fields\": [\n    {\n      \"boolField\": {\n        \"checkboxField\": \"<object>\",\n        \"defaultValue\": \"<boolean>\",\n        \"rules\": {\n          \"const\": \"<boolean>\"\n        }\n      },\n      \"description\": \"<string>\",\n      \"displayName\": \"<string>\",\n      \"fileField\": {\n        \"acceptedFileTypes\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"fileInputField\": \"<object>\",\n        \"maxFileSize\": \"<int64>\"\n      },\n      \"int64Field\": {\n        \"defaultValue\": \"<int64>\",\n        \"numberField\": {\n          \"maxValue\": \"<int64>\",\n          \"minValue\": \"<int64>\",\n          \"step\": \"<int64>\"\n        },\n        \"placeholder\": \"<string>\",\n        \"rules\": {\n          \"const\": \"<int64>\",\n          \"gt\": \"<int64>\",\n          \"gte\": \"<int64>\",\n          \"ignoreEmpty\": \"<boolean>\",\n          \"in\": [\n            \"<int64>\",\n            \"<int64>\"\n          ],\n          \"lt\": \"<int64>\",\n          \"lte\": \"<int64>\",\n          \"notIn\": [\n            \"<int64>\",\n            \"<int64>\"\n          ]\n        }\n      },\n      \"name\": \"<string>\",\n      \"stringField\": {\n        \"defaultValue\": \"<string>\",\n        \"passwordField\": \"<object>\",\n        \"placeholder\": \"<string>\",\n        \"rules\": {\n          \"address\": \"<boolean>\",\n          \"const\": \"<string>\",\n          \"contains\": \"<string>\",\n          \"email\": \"<boolean>\",\n          \"hostname\": \"<boolean>\",\n          \"ignoreEmpty\": \"<boolean>\",\n          \"in\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"ip\": \"<boolean>\",\n          \"ipv4\": \"<boolean>\",\n          \"ipv6\": \"<boolean>\",\n          \"len\": \"<uint64>\",\n          \"lenBytes\": \"<uint64>\",\n          \"maxBytes\": \"<uint64>\",\n          \"maxLen\": \"<uint64>\",\n          \"minBytes\": \"<uint64>\",\n          \"minLen\": \"<uint64>\",\n          \"notContains\": \"<string>\",\n          \"notIn\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"pattern\": \"<string>\",\n          \"prefix\": \"<string>\",\n          \"strict\": \"<boolean>\",\n          \"suffix\": \"<string>\",\n          \"uri\": \"<boolean>\",\n          \"uriRef\": \"<boolean>\",\n          \"uuid\": \"<boolean>\",\n          \"wellKnownRegex\": \"<string>\"\n        },\n        \"selectField\": {\n          \"options\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        \"textField\": {\n          \"multiline\": \"<boolean>\"\n        }\n      },\n      \"stringSliceField\": {\n        \"chipsField\": \"<object>\",\n        \"defaultValues\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"placeholder\": \"<string>\",\n        \"rules\": {\n          \"ignoreEmpty\": \"<boolean>\",\n          \"items\": {\n            \"any\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"bool\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"bytes\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"double\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"duration\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"enum\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"fixed32\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"fixed64\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"float\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"int32\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"int64\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"map\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"message\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"repeated\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"sfixed32\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"sfixed64\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"sint32\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"sint64\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"string\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"timestamp\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"uint32\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"uint64\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"maxItems\": \"<uint64>\",\n          \"minItems\": \"<uint64>\",\n          \"unique\": \"<boolean>\"\n        }\n      }\n    },\n    {\n      \"boolField\": {\n        \"checkboxField\": \"<object>\",\n        \"defaultValue\": \"<boolean>\",\n        \"rules\": {\n          \"const\": \"<boolean>\"\n        }\n      },\n      \"description\": \"<string>\",\n      \"displayName\": \"<string>\",\n      \"fileField\": {\n        \"acceptedFileTypes\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"fileInputField\": \"<object>\",\n        \"maxFileSize\": \"<int64>\"\n      },\n      \"int64Field\": {\n        \"defaultValue\": \"<int64>\",\n        \"numberField\": {\n          \"maxValue\": \"<int64>\",\n          \"minValue\": \"<int64>\",\n          \"step\": \"<int64>\"\n        },\n        \"placeholder\": \"<string>\",\n        \"rules\": {\n          \"const\": \"<int64>\",\n          \"gt\": \"<int64>\",\n          \"gte\": \"<int64>\",\n          \"ignoreEmpty\": \"<boolean>\",\n          \"in\": [\n            \"<int64>\",\n            \"<int64>\"\n          ],\n          \"lt\": \"<int64>\",\n          \"lte\": \"<int64>\",\n          \"notIn\": [\n            \"<int64>\",\n            \"<int64>\"\n          ]\n        }\n      },\n      \"name\": \"<string>\",\n      \"stringField\": {\n        \"defaultValue\": \"<string>\",\n        \"passwordField\": \"<object>\",\n        \"placeholder\": \"<string>\",\n        \"rules\": {\n          \"address\": \"<boolean>\",\n          \"const\": \"<string>\",\n          \"contains\": \"<string>\",\n          \"email\": \"<boolean>\",\n          \"hostname\": \"<boolean>\",\n          \"ignoreEmpty\": \"<boolean>\",\n          \"in\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"ip\": \"<boolean>\",\n          \"ipv4\": \"<boolean>\",\n          \"ipv6\": \"<boolean>\",\n          \"len\": \"<uint64>\",\n          \"lenBytes\": \"<uint64>\",\n          \"maxBytes\": \"<uint64>\",\n          \"maxLen\": \"<uint64>\",\n          \"minBytes\": \"<uint64>\",\n          \"minLen\": \"<uint64>\",\n          \"notContains\": \"<string>\",\n          \"notIn\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"pattern\": \"<string>\",\n          \"prefix\": \"<string>\",\n          \"strict\": \"<boolean>\",\n          \"suffix\": \"<string>\",\n          \"uri\": \"<boolean>\",\n          \"uriRef\": \"<boolean>\",\n          \"uuid\": \"<boolean>\",\n          \"wellKnownRegex\": \"<string>\"\n        },\n        \"selectField\": {\n          \"options\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        \"textField\": {\n          \"multiline\": \"<boolean>\"\n        }\n      },\n      \"stringSliceField\": {\n        \"chipsField\": \"<object>\",\n        \"defaultValues\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"placeholder\": \"<string>\",\n        \"rules\": {\n          \"ignoreEmpty\": \"<boolean>\",\n          \"items\": {\n            \"any\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"bool\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"bytes\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"double\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"duration\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"enum\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"fixed32\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"fixed64\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"float\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"int32\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"int64\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"map\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"message\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"repeated\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"sfixed32\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"sfixed64\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"sint32\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"sint64\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"string\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"timestamp\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"uint32\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"uint64\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"maxItems\": \"<uint64>\",\n          \"minItems\": \"<uint64>\",\n          \"unique\": \"<boolean>\"\n        }\n      }\n    }\n  ],\n  \"name\": \"<string>\"\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
+          "name": "v1",
+          "item": [
             {
-              "id": "97b65d9d-a1bb-43ae-a383-2251fc17b83c",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "request_schemas"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"description\": \"<string>\",\n  \"fields\": [\n    {\n      \"boolField\": {\n        \"checkboxField\": {},\n        \"defaultValue\": false,\n        \"rules\": {\n          \"const\": true\n        }\n      },\n      \"description\": \"string\",\n      \"displayName\": \"string\",\n      \"fileField\": {\n        \"acceptedFileTypes\": [\n          \"string\",\n          \"string\"\n        ],\n        \"fileInputField\": {},\n        \"maxFileSize\": \"string\"\n      },\n      \"int64Field\": {\n        \"defaultValue\": \"string\",\n        \"numberField\": {\n          \"maxValue\": \"string\",\n          \"minValue\": \"string\",\n          \"step\": \"string\"\n        },\n        \"placeholder\": \"string\",\n        \"rules\": {\n          \"const\": \"string\",\n          \"gt\": \"string\",\n          \"gte\": \"string\",\n          \"ignoreEmpty\": false,\n          \"in\": [\n            \"string\",\n            \"string\"\n          ],\n          \"lt\": \"string\",\n          \"lte\": \"string\",\n          \"notIn\": [\n            \"string\",\n            \"string\"\n          ]\n        }\n      },\n      \"name\": \"string\",\n      \"stringField\": {\n        \"defaultValue\": \"string\",\n        \"passwordField\": {},\n        \"placeholder\": \"string\",\n        \"rules\": {\n          \"address\": false,\n          \"const\": \"string\",\n          \"contains\": \"string\",\n          \"email\": false,\n          \"hostname\": false,\n          \"ignoreEmpty\": false,\n          \"in\": [\n            \"string\",\n            \"string\"\n          ],\n          \"ip\": false,\n          \"ipv4\": false,\n          \"ipv6\": false,\n          \"len\": \"string\",\n          \"lenBytes\": \"string\",\n          \"maxBytes\": \"string\",\n          \"maxLen\": \"string\",\n          \"minBytes\": \"string\",\n          \"minLen\": \"string\",\n          \"notContains\": \"string\",\n          \"notIn\": [\n            \"string\",\n            \"string\"\n          ],\n          \"pattern\": \"string\",\n          \"prefix\": \"string\",\n          \"strict\": false,\n          \"suffix\": \"string\",\n          \"uri\": true,\n          \"uriRef\": true,\n          \"uuid\": true,\n          \"wellKnownRegex\": \"HTTP_HEADER_VALUE\"\n        },\n        \"selectField\": {\n          \"options\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        \"textField\": {\n          \"multiline\": true\n        }\n      },\n      \"stringSliceField\": {\n        \"chipsField\": {},\n        \"defaultValues\": [\n          \"string\",\n          \"string\"\n        ],\n        \"placeholder\": \"string\",\n        \"rules\": {\n          \"ignoreEmpty\": false,\n          \"items\": {\n            \"any\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"bool\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"bytes\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"double\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"duration\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"enum\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"fixed32\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"fixed64\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"float\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"int32\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"int64\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"map\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"message\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"repeated\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"sfixed32\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"sfixed64\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"sint32\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"sint64\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"string\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"timestamp\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"uint32\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"uint64\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"maxItems\": \"string\",\n          \"minItems\": \"string\",\n          \"unique\": false\n        }\n      }\n    },\n    {\n      \"boolField\": {\n        \"checkboxField\": {},\n        \"defaultValue\": false,\n        \"rules\": {\n          \"const\": true\n        }\n      },\n      \"description\": \"string\",\n      \"displayName\": \"string\",\n      \"fileField\": {\n        \"acceptedFileTypes\": [\n          \"string\",\n          \"string\"\n        ],\n        \"fileInputField\": {},\n        \"maxFileSize\": \"string\"\n      },\n      \"int64Field\": {\n        \"defaultValue\": \"string\",\n        \"numberField\": {\n          \"maxValue\": \"string\",\n          \"minValue\": \"string\",\n          \"step\": \"string\"\n        },\n        \"placeholder\": \"string\",\n        \"rules\": {\n          \"const\": \"string\",\n          \"gt\": \"string\",\n          \"gte\": \"string\",\n          \"ignoreEmpty\": false,\n          \"in\": [\n            \"string\",\n            \"string\"\n          ],\n          \"lt\": \"string\",\n          \"lte\": \"string\",\n          \"notIn\": [\n            \"string\",\n            \"string\"\n          ]\n        }\n      },\n      \"name\": \"string\",\n      \"stringField\": {\n        \"defaultValue\": \"string\",\n        \"passwordField\": {},\n        \"placeholder\": \"string\",\n        \"rules\": {\n          \"address\": true,\n          \"const\": \"string\",\n          \"contains\": \"string\",\n          \"email\": false,\n          \"hostname\": true,\n          \"ignoreEmpty\": false,\n          \"in\": [\n            \"string\",\n            \"string\"\n          ],\n          \"ip\": true,\n          \"ipv4\": false,\n          \"ipv6\": false,\n          \"len\": \"string\",\n          \"lenBytes\": \"string\",\n          \"maxBytes\": \"string\",\n          \"maxLen\": \"string\",\n          \"minBytes\": \"string\",\n          \"minLen\": \"string\",\n          \"notContains\": \"string\",\n          \"notIn\": [\n            \"string\",\n            \"string\"\n          ],\n          \"pattern\": \"string\",\n          \"prefix\": \"string\",\n          \"strict\": true,\n          \"suffix\": \"string\",\n          \"uri\": true,\n          \"uriRef\": true,\n          \"uuid\": true,\n          \"wellKnownRegex\": \"HTTP_HEADER_VALUE\"\n        },\n        \"selectField\": {\n          \"options\": [\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          ]\n        },\n        \"textField\": {\n          \"multiline\": false\n        }\n      },\n      \"stringSliceField\": {\n        \"chipsField\": {},\n        \"defaultValues\": [\n          \"string\",\n          \"string\"\n        ],\n        \"placeholder\": \"string\",\n        \"rules\": {\n          \"ignoreEmpty\": true,\n          \"items\": {\n            \"any\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"bool\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"bytes\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"double\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"duration\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"enum\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"fixed32\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"fixed64\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"float\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"int32\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"int64\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"map\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"message\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"repeated\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"sfixed32\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"sfixed64\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"sint32\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"sint64\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"string\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"timestamp\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"uint32\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"uint64\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"maxItems\": \"string\",\n          \"minItems\": \"string\",\n          \"unique\": false\n        }\n      }\n    }\n  ],\n  \"name\": \"<string>\"\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
+              "name": "request_schemas",
+              "item": [
                 {
-                  "key": "Content-Type",
-                  "value": "application/json"
+                  "name": "{request_schema_id}",
+                  "item": [
+                    {
+                      "name": "Delete",
+                      "id": "b0ea2d87-0f33-42fb-8153-b8c9ce878b56",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "DELETE",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/request_schemas/:request_schema_id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "request_schemas",
+                            ":request_schema_id"
+                          ],
+                          "variable": [
+                            {
+                              "id": "b95dd0f8-7115-4b91-a125-57d08eb4713f",
+                              "key": "request_schema_id",
+                              "value": "<string>",
+                              "description": "(Required) "
+                            }
+                          ]
+                        },
+                        "description": "Invokes the c1.api.request_schema.v1.RequestSchemaService.Delete method."
+                      },
+                      "response": [
+                        {
+                          "id": "2bde8929-3781-46d5-b566-d8d6dbf60547",
+                          "name": "Successful response",
+                          "originalRequest": {
+                            "method": "DELETE",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/request_schemas/:request_schema_id",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "request_schemas",
+                                ":request_schema_id"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "request_schema_id"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{}",
+                          "createdAt": "2026-10-21T20:49:38.000Z",
+                          "updatedAt": "2026-10-21T20:49:38.000Z",
+                          "uid": "35240-2bde8929-3781-46d5-b566-d8d6dbf60547"
+                        }
+                      ],
+                      "createdAt": "2026-10-21T20:49:38.000Z",
+                      "updatedAt": "2026-10-21T20:49:38.000Z",
+                      "uid": "35240-b0ea2d87-0f33-42fb-8153-b8c9ce878b56"
+                    },
+                    {
+                      "name": "Get",
+                      "id": "45fb04d9-cba8-4e3d-97c4-302dbcbd9583",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/request_schemas/:request_schema_id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "request_schemas",
+                            ":request_schema_id"
+                          ],
+                          "variable": [
+                            {
+                              "id": "ae9e2464-be3b-4fea-b449-6a00fc8c1a4d",
+                              "key": "request_schema_id",
+                              "value": "<string>",
+                              "description": "(Required) "
+                            }
+                          ]
+                        },
+                        "description": "Invokes the c1.api.request_schema.v1.RequestSchemaService.Get method."
+                      },
+                      "response": [
+                        {
+                          "id": "6fbcdfd5-de3a-45ae-ad13-f24a7efcc801",
+                          "name": "Successful response",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/request_schemas/:request_schema_id",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "request_schemas",
+                                ":request_schema_id"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "request_schema_id"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"requestSchema\": {\n    \"createdAt\": \"<dateTime>\",\n    \"deletedAt\": \"<dateTime>\",\n    \"form\": {\n      \"description\": \"<string>\",\n      \"displayName\": \"<string>\",\n      \"fieldRelationships\": [\n        {\n          \"atLeastOne\": {},\n          \"fieldNames\": [\n            \"<string>\"\n          ],\n          \"mutuallyExclusive\": {},\n          \"requiredTogether\": {}\n        }\n      ],\n      \"fields\": [\n        {\n          \"boolField\": {\n            \"checkboxField\": {},\n            \"defaultValue\": \"<boolean>\",\n            \"rules\": {\n              \"const\": \"<boolean>\"\n            }\n          },\n          \"description\": \"<string>\",\n          \"displayName\": \"<string>\",\n          \"fileField\": {\n            \"acceptedFileTypes\": [\n              \"<string>\"\n            ],\n            \"fileInputField\": {},\n            \"maxFileSize\": \"<int64>\"\n          },\n          \"int64Field\": {\n            \"defaultValue\": \"<int64>\",\n            \"numberField\": {\n              \"maxValue\": \"<int64>\",\n              \"minValue\": \"<int64>\",\n              \"step\": \"<int64>\"\n            },\n            \"placeholder\": \"<string>\",\n            \"rules\": {\n              \"const\": \"<int64>\",\n              \"gt\": \"<int64>\",\n              \"gte\": \"<int64>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<int64>\"\n              ],\n              \"lt\": \"<int64>\",\n              \"lte\": \"<int64>\",\n              \"notIn\": [\n                \"<int64>\"\n              ]\n            }\n          },\n          \"name\": \"<string>\",\n          \"stringField\": {\n            \"defaultValue\": \"<string>\",\n            \"passwordField\": {},\n            \"placeholder\": \"<string>\",\n            \"rules\": {\n              \"address\": \"<boolean>\",\n              \"const\": \"<string>\",\n              \"contains\": \"<string>\",\n              \"email\": \"<boolean>\",\n              \"hostname\": \"<boolean>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<string>\"\n              ],\n              \"ip\": \"<boolean>\",\n              \"ipv4\": \"<boolean>\",\n              \"ipv6\": \"<boolean>\",\n              \"len\": \"<string>\",\n              \"lenBytes\": \"<string>\",\n              \"maxBytes\": \"<string>\",\n              \"maxLen\": \"<string>\",\n              \"minBytes\": \"<string>\",\n              \"minLen\": \"<string>\",\n              \"notContains\": \"<string>\",\n              \"notIn\": [\n                \"<string>\"\n              ],\n              \"pattern\": \"<string>\",\n              \"prefix\": \"<string>\",\n              \"strict\": \"<boolean>\",\n              \"suffix\": \"<string>\",\n              \"uri\": \"<boolean>\",\n              \"uriRef\": \"<boolean>\",\n              \"uuid\": \"<boolean>\",\n              \"wellKnownRegex\": \"HTTP_HEADER_NAME\"\n            },\n            \"selectField\": {\n              \"options\": [\n                {\n                  \"displayName\": \"<string>\",\n                  \"value\": \"<string>\"\n                }\n              ]\n            },\n            \"textField\": {\n              \"multiline\": \"<boolean>\"\n            }\n          },\n          \"stringSliceField\": {\n            \"chipsField\": {},\n            \"defaultValues\": [\n              \"<string>\"\n            ],\n            \"placeholder\": \"<string>\",\n            \"rules\": {\n              \"ignoreEmpty\": \"<boolean>\",\n              \"items\": {\n                \"any\": {\n                  \"in\": [\n                    \"<string>\"\n                  ],\n                  \"notIn\": [\n                    \"<string>\"\n                  ],\n                  \"required\": \"<boolean>\"\n                },\n                \"bool\": {\n                  \"const\": \"<boolean>\"\n                },\n                \"bytes\": {\n                  \"const\": \"<string>\",\n                  \"contains\": \"<string>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<string>\"\n                  ],\n                  \"ip\": \"<boolean>\",\n                  \"ipv4\": \"<boolean>\",\n                  \"ipv6\": \"<boolean>\",\n                  \"len\": \"<string>\",\n                  \"maxLen\": \"<string>\",\n                  \"minLen\": \"<string>\",\n                  \"notIn\": [\n                    \"<string>\"\n                  ],\n                  \"pattern\": \"<string>\",\n                  \"prefix\": \"<string>\",\n                  \"suffix\": \"<string>\"\n                },\n                \"double\": {\n                  \"const\": \"<number>\",\n                  \"gt\": \"<number>\",\n                  \"gte\": \"<number>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<number>\"\n                  ],\n                  \"lt\": \"<number>\",\n                  \"lte\": \"<number>\",\n                  \"notIn\": [\n                    \"<number>\"\n                  ]\n                },\n                \"duration\": {\n                  \"const\": \"<string>\",\n                  \"gt\": \"<string>\",\n                  \"gte\": \"<string>\",\n                  \"in\": [\n                    \"<string>\"\n                  ],\n                  \"lt\": \"<string>\",\n                  \"lte\": \"<string>\",\n                  \"notIn\": [\n                    \"<string>\"\n                  ],\n                  \"required\": \"<boolean>\"\n                },\n                \"enum\": {\n                  \"const\": \"<integer>\",\n                  \"definedOnly\": \"<boolean>\",\n                  \"in\": [\n                    \"<integer>\"\n                  ],\n                  \"notIn\": [\n                    \"<integer>\"\n                  ]\n                },\n                \"fixed32\": {\n                  \"const\": \"<integer>\",\n                  \"gt\": \"<integer>\",\n                  \"gte\": \"<integer>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<integer>\"\n                  ],\n                  \"lt\": \"<integer>\",\n                  \"lte\": \"<integer>\",\n                  \"notIn\": [\n                    \"<integer>\"\n                  ]\n                },\n                \"fixed64\": {\n                  \"const\": \"<string>\",\n                  \"gt\": \"<string>\",\n                  \"gte\": \"<string>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<string>\"\n                  ],\n                  \"lt\": \"<string>\",\n                  \"lte\": \"<string>\",\n                  \"notIn\": [\n                    \"<string>\"\n                  ]\n                },\n                \"float\": {\n                  \"const\": \"<number>\",\n                  \"gt\": \"<number>\",\n                  \"gte\": \"<number>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<number>\"\n                  ],\n                  \"lt\": \"<number>\",\n                  \"lte\": \"<number>\",\n                  \"notIn\": [\n                    \"<number>\"\n                  ]\n                },\n                \"int32\": {\n                  \"const\": \"<integer>\",\n                  \"gt\": \"<integer>\",\n                  \"gte\": \"<integer>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<integer>\"\n                  ],\n                  \"lt\": \"<integer>\",\n                  \"lte\": \"<integer>\",\n                  \"notIn\": [\n                    \"<integer>\"\n                  ]\n                },\n                \"int64\": {\n                  \"const\": \"<int64>\",\n                  \"gt\": \"<int64>\",\n                  \"gte\": \"<int64>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<int64>\"\n                  ],\n                  \"lt\": \"<int64>\",\n                  \"lte\": \"<int64>\",\n                  \"notIn\": [\n                    \"<int64>\"\n                  ]\n                },\n                \"map\": {\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"keys\": {\n                    \"value\": \"<Circular reference to #/components/schemas/validate.FieldRules detected>\"\n                  },\n                  \"maxPairs\": \"<string>\",\n                  \"minPairs\": \"<string>\",\n                  \"noSparse\": \"<boolean>\",\n                  \"values\": {\n                    \"value\": \"<Circular reference to #/components/schemas/validate.FieldRules detected>\"\n                  }\n                },\n                \"message\": {\n                  \"required\": \"<boolean>\",\n                  \"skip\": \"<boolean>\"\n                },\n                \"repeated\": {\n                  \"value\": \"<Circular reference to #/components/schemas/validate.RepeatedRules detected>\"\n                },\n                \"sfixed32\": {\n                  \"const\": \"<integer>\",\n                  \"gt\": \"<integer>\",\n                  \"gte\": \"<integer>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<integer>\"\n                  ],\n                  \"lt\": \"<integer>\",\n                  \"lte\": \"<integer>\",\n                  \"notIn\": [\n                    \"<integer>\"\n                  ]\n                },\n                \"sfixed64\": {\n                  \"const\": \"<int64>\",\n                  \"gt\": \"<int64>\",\n                  \"gte\": \"<int64>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<int64>\"\n                  ],\n                  \"lt\": \"<int64>\",\n                  \"lte\": \"<int64>\",\n                  \"notIn\": [\n                    \"<int64>\"\n                  ]\n                },\n                \"sint32\": {\n                  \"const\": \"<integer>\",\n                  \"gt\": \"<integer>\",\n                  \"gte\": \"<integer>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<integer>\"\n                  ],\n                  \"lt\": \"<integer>\",\n                  \"lte\": \"<integer>\",\n                  \"notIn\": [\n                    \"<integer>\"\n                  ]\n                },\n                \"sint64\": {\n                  \"const\": \"<int64>\",\n                  \"gt\": \"<int64>\",\n                  \"gte\": \"<int64>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<int64>\"\n                  ],\n                  \"lt\": \"<int64>\",\n                  \"lte\": \"<int64>\",\n                  \"notIn\": [\n                    \"<int64>\"\n                  ]\n                },\n                \"string\": {\n                  \"address\": \"<boolean>\",\n                  \"const\": \"<string>\",\n                  \"contains\": \"<string>\",\n                  \"email\": \"<boolean>\",\n                  \"hostname\": \"<boolean>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<string>\"\n                  ],\n                  \"ip\": \"<boolean>\",\n                  \"ipv4\": \"<boolean>\",\n                  \"ipv6\": \"<boolean>\",\n                  \"len\": \"<string>\",\n                  \"lenBytes\": \"<string>\",\n                  \"maxBytes\": \"<string>\",\n                  \"maxLen\": \"<string>\",\n                  \"minBytes\": \"<string>\",\n                  \"minLen\": \"<string>\",\n                  \"notContains\": \"<string>\",\n                  \"notIn\": [\n                    \"<string>\"\n                  ],\n                  \"pattern\": \"<string>\",\n                  \"prefix\": \"<string>\",\n                  \"strict\": \"<boolean>\",\n                  \"suffix\": \"<string>\",\n                  \"uri\": \"<boolean>\",\n                  \"uriRef\": \"<boolean>\",\n                  \"uuid\": \"<boolean>\",\n                  \"wellKnownRegex\": \"HTTP_HEADER_VALUE\"\n                },\n                \"timestamp\": {\n                  \"const\": \"<dateTime>\",\n                  \"gt\": \"<dateTime>\",\n                  \"gtNow\": \"<boolean>\",\n                  \"gte\": \"<dateTime>\",\n                  \"lt\": \"<dateTime>\",\n                  \"ltNow\": \"<boolean>\",\n                  \"lte\": \"<dateTime>\",\n                  \"required\": \"<boolean>\",\n                  \"within\": \"<string>\"\n                },\n                \"uint32\": {\n                  \"const\": \"<integer>\",\n                  \"gt\": \"<integer>\",\n                  \"gte\": \"<integer>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<integer>\"\n                  ],\n                  \"lt\": \"<integer>\",\n                  \"lte\": \"<integer>\",\n                  \"notIn\": [\n                    \"<integer>\"\n                  ]\n                },\n                \"uint64\": {\n                  \"const\": \"<string>\",\n                  \"gt\": \"<string>\",\n                  \"gte\": \"<string>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<string>\"\n                  ],\n                  \"lt\": \"<string>\",\n                  \"lte\": \"<string>\",\n                  \"notIn\": [\n                    \"<string>\"\n                  ]\n                }\n              },\n              \"maxItems\": \"<string>\",\n              \"minItems\": \"<string>\",\n              \"unique\": \"<boolean>\"\n            }\n          }\n        }\n      ],\n      \"id\": \"<string>\"\n    },\n    \"id\": \"<string>\",\n    \"modifiedAt\": \"<dateTime>\"\n  }\n}",
+                          "createdAt": "2026-10-21T20:49:38.000Z",
+                          "updatedAt": "2026-10-21T20:49:38.000Z",
+                          "uid": "35240-6fbcdfd5-de3a-45ae-ad13-f24a7efcc801"
+                        }
+                      ],
+                      "createdAt": "2026-10-21T20:49:38.000Z",
+                      "updatedAt": "2026-10-21T20:49:38.000Z",
+                      "uid": "35240-45fb04d9-cba8-4e3d-97c4-302dbcbd9583"
+                    },
+                    {
+                      "name": "Update",
+                      "id": "e754b897-c03e-482a-b577-09e9ef512c7c",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"requestSchema\": {\n    \"createdAt\": \"<dateTime>\",\n    \"deletedAt\": \"<dateTime>\",\n    \"form\": {\n      \"description\": \"<string>\",\n      \"displayName\": \"<string>\",\n      \"fieldRelationships\": [\n        {\n          \"atLeastOne\": {},\n          \"fieldNames\": [\n            \"<string>\"\n          ],\n          \"mutuallyExclusive\": {},\n          \"requiredTogether\": {}\n        }\n      ],\n      \"fields\": [\n        {\n          \"boolField\": {\n            \"checkboxField\": {},\n            \"defaultValue\": \"<boolean>\",\n            \"rules\": {\n              \"const\": \"<boolean>\"\n            }\n          },\n          \"description\": \"<string>\",\n          \"displayName\": \"<string>\",\n          \"fileField\": {\n            \"acceptedFileTypes\": [\n              \"<string>\"\n            ],\n            \"fileInputField\": {},\n            \"maxFileSize\": \"<int64>\"\n          },\n          \"int64Field\": {\n            \"defaultValue\": \"<int64>\",\n            \"numberField\": {\n              \"maxValue\": \"<int64>\",\n              \"minValue\": \"<int64>\",\n              \"step\": \"<int64>\"\n            },\n            \"placeholder\": \"<string>\",\n            \"rules\": {\n              \"const\": \"<int64>\",\n              \"gt\": \"<int64>\",\n              \"gte\": \"<int64>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<int64>\"\n              ],\n              \"lt\": \"<int64>\",\n              \"lte\": \"<int64>\",\n              \"notIn\": [\n                \"<int64>\"\n              ]\n            }\n          },\n          \"name\": \"<string>\",\n          \"stringField\": {\n            \"defaultValue\": \"<string>\",\n            \"passwordField\": {},\n            \"placeholder\": \"<string>\",\n            \"rules\": {\n              \"address\": \"<boolean>\",\n              \"const\": \"<string>\",\n              \"contains\": \"<string>\",\n              \"email\": \"<boolean>\",\n              \"hostname\": \"<boolean>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<string>\"\n              ],\n              \"ip\": \"<boolean>\",\n              \"ipv4\": \"<boolean>\",\n              \"ipv6\": \"<boolean>\",\n              \"len\": \"<string>\",\n              \"lenBytes\": \"<string>\",\n              \"maxBytes\": \"<string>\",\n              \"maxLen\": \"<string>\",\n              \"minBytes\": \"<string>\",\n              \"minLen\": \"<string>\",\n              \"notContains\": \"<string>\",\n              \"notIn\": [\n                \"<string>\"\n              ],\n              \"pattern\": \"<string>\",\n              \"prefix\": \"<string>\",\n              \"strict\": \"<boolean>\",\n              \"suffix\": \"<string>\",\n              \"uri\": \"<boolean>\",\n              \"uriRef\": \"<boolean>\",\n              \"uuid\": \"<boolean>\",\n              \"wellKnownRegex\": \"UNKNOWN\"\n            },\n            \"selectField\": {\n              \"options\": [\n                {\n                  \"displayName\": \"<string>\",\n                  \"value\": \"<string>\"\n                }\n              ]\n            },\n            \"textField\": {\n              \"multiline\": \"<boolean>\"\n            }\n          },\n          \"stringSliceField\": {\n            \"chipsField\": {},\n            \"defaultValues\": [\n              \"<string>\"\n            ],\n            \"placeholder\": \"<string>\",\n            \"rules\": {\n              \"ignoreEmpty\": \"<boolean>\",\n              \"items\": {\n                \"any\": {\n                  \"in\": [\n                    \"<string>\"\n                  ],\n                  \"notIn\": [\n                    \"<string>\"\n                  ],\n                  \"required\": \"<boolean>\"\n                },\n                \"bool\": {\n                  \"const\": \"<boolean>\"\n                },\n                \"bytes\": {\n                  \"const\": \"<string>\",\n                  \"contains\": \"<string>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<string>\"\n                  ],\n                  \"ip\": \"<boolean>\",\n                  \"ipv4\": \"<boolean>\",\n                  \"ipv6\": \"<boolean>\",\n                  \"len\": \"<string>\",\n                  \"maxLen\": \"<string>\",\n                  \"minLen\": \"<string>\",\n                  \"notIn\": [\n                    \"<string>\"\n                  ],\n                  \"pattern\": \"<string>\",\n                  \"prefix\": \"<string>\",\n                  \"suffix\": \"<string>\"\n                },\n                \"double\": {\n                  \"const\": \"<number>\",\n                  \"gt\": \"<number>\",\n                  \"gte\": \"<number>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<number>\"\n                  ],\n                  \"lt\": \"<number>\",\n                  \"lte\": \"<number>\",\n                  \"notIn\": [\n                    \"<number>\"\n                  ]\n                },\n                \"duration\": {\n                  \"const\": \"<string>\",\n                  \"gt\": \"<string>\",\n                  \"gte\": \"<string>\",\n                  \"in\": [\n                    \"<string>\"\n                  ],\n                  \"lt\": \"<string>\",\n                  \"lte\": \"<string>\",\n                  \"notIn\": [\n                    \"<string>\"\n                  ],\n                  \"required\": \"<boolean>\"\n                },\n                \"enum\": {\n                  \"const\": \"<integer>\",\n                  \"definedOnly\": \"<boolean>\",\n                  \"in\": [\n                    \"<integer>\"\n                  ],\n                  \"notIn\": [\n                    \"<integer>\"\n                  ]\n                },\n                \"fixed32\": {\n                  \"const\": \"<integer>\",\n                  \"gt\": \"<integer>\",\n                  \"gte\": \"<integer>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<integer>\"\n                  ],\n                  \"lt\": \"<integer>\",\n                  \"lte\": \"<integer>\",\n                  \"notIn\": [\n                    \"<integer>\"\n                  ]\n                },\n                \"fixed64\": {\n                  \"const\": \"<string>\",\n                  \"gt\": \"<string>\",\n                  \"gte\": \"<string>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<string>\"\n                  ],\n                  \"lt\": \"<string>\",\n                  \"lte\": \"<string>\",\n                  \"notIn\": [\n                    \"<string>\"\n                  ]\n                },\n                \"float\": {\n                  \"const\": \"<number>\",\n                  \"gt\": \"<number>\",\n                  \"gte\": \"<number>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<number>\"\n                  ],\n                  \"lt\": \"<number>\",\n                  \"lte\": \"<number>\",\n                  \"notIn\": [\n                    \"<number>\"\n                  ]\n                },\n                \"int32\": {\n                  \"const\": \"<integer>\",\n                  \"gt\": \"<integer>\",\n                  \"gte\": \"<integer>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<integer>\"\n                  ],\n                  \"lt\": \"<integer>\",\n                  \"lte\": \"<integer>\",\n                  \"notIn\": [\n                    \"<integer>\"\n                  ]\n                },\n                \"int64\": {\n                  \"const\": \"<int64>\",\n                  \"gt\": \"<int64>\",\n                  \"gte\": \"<int64>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<int64>\"\n                  ],\n                  \"lt\": \"<int64>\",\n                  \"lte\": \"<int64>\",\n                  \"notIn\": [\n                    \"<int64>\"\n                  ]\n                },\n                \"map\": {\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"keys\": {\n                    \"value\": \"<Circular reference to #/components/schemas/validate.FieldRules detected>\"\n                  },\n                  \"maxPairs\": \"<string>\",\n                  \"minPairs\": \"<string>\",\n                  \"noSparse\": \"<boolean>\",\n                  \"values\": {\n                    \"value\": \"<Circular reference to #/components/schemas/validate.FieldRules detected>\"\n                  }\n                },\n                \"message\": {\n                  \"required\": \"<boolean>\",\n                  \"skip\": \"<boolean>\"\n                },\n                \"repeated\": {\n                  \"value\": \"<Circular reference to #/components/schemas/validate.RepeatedRules detected>\"\n                },\n                \"sfixed32\": {\n                  \"const\": \"<integer>\",\n                  \"gt\": \"<integer>\",\n                  \"gte\": \"<integer>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<integer>\"\n                  ],\n                  \"lt\": \"<integer>\",\n                  \"lte\": \"<integer>\",\n                  \"notIn\": [\n                    \"<integer>\"\n                  ]\n                },\n                \"sfixed64\": {\n                  \"const\": \"<int64>\",\n                  \"gt\": \"<int64>\",\n                  \"gte\": \"<int64>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<int64>\"\n                  ],\n                  \"lt\": \"<int64>\",\n                  \"lte\": \"<int64>\",\n                  \"notIn\": [\n                    \"<int64>\"\n                  ]\n                },\n                \"sint32\": {\n                  \"const\": \"<integer>\",\n                  \"gt\": \"<integer>\",\n                  \"gte\": \"<integer>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<integer>\"\n                  ],\n                  \"lt\": \"<integer>\",\n                  \"lte\": \"<integer>\",\n                  \"notIn\": [\n                    \"<integer>\"\n                  ]\n                },\n                \"sint64\": {\n                  \"const\": \"<int64>\",\n                  \"gt\": \"<int64>\",\n                  \"gte\": \"<int64>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<int64>\"\n                  ],\n                  \"lt\": \"<int64>\",\n                  \"lte\": \"<int64>\",\n                  \"notIn\": [\n                    \"<int64>\"\n                  ]\n                },\n                \"string\": {\n                  \"address\": \"<boolean>\",\n                  \"const\": \"<string>\",\n                  \"contains\": \"<string>\",\n                  \"email\": \"<boolean>\",\n                  \"hostname\": \"<boolean>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<string>\"\n                  ],\n                  \"ip\": \"<boolean>\",\n                  \"ipv4\": \"<boolean>\",\n                  \"ipv6\": \"<boolean>\",\n                  \"len\": \"<string>\",\n                  \"lenBytes\": \"<string>\",\n                  \"maxBytes\": \"<string>\",\n                  \"maxLen\": \"<string>\",\n                  \"minBytes\": \"<string>\",\n                  \"minLen\": \"<string>\",\n                  \"notContains\": \"<string>\",\n                  \"notIn\": [\n                    \"<string>\"\n                  ],\n                  \"pattern\": \"<string>\",\n                  \"prefix\": \"<string>\",\n                  \"strict\": \"<boolean>\",\n                  \"suffix\": \"<string>\",\n                  \"uri\": \"<boolean>\",\n                  \"uriRef\": \"<boolean>\",\n                  \"uuid\": \"<boolean>\",\n                  \"wellKnownRegex\": \"UNKNOWN\"\n                },\n                \"timestamp\": {\n                  \"const\": \"<dateTime>\",\n                  \"gt\": \"<dateTime>\",\n                  \"gtNow\": \"<boolean>\",\n                  \"gte\": \"<dateTime>\",\n                  \"lt\": \"<dateTime>\",\n                  \"ltNow\": \"<boolean>\",\n                  \"lte\": \"<dateTime>\",\n                  \"required\": \"<boolean>\",\n                  \"within\": \"<string>\"\n                },\n                \"uint32\": {\n                  \"const\": \"<integer>\",\n                  \"gt\": \"<integer>\",\n                  \"gte\": \"<integer>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<integer>\"\n                  ],\n                  \"lt\": \"<integer>\",\n                  \"lte\": \"<integer>\",\n                  \"notIn\": [\n                    \"<integer>\"\n                  ]\n                },\n                \"uint64\": {\n                  \"const\": \"<string>\",\n                  \"gt\": \"<string>\",\n                  \"gte\": \"<string>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<string>\"\n                  ],\n                  \"lt\": \"<string>\",\n                  \"lte\": \"<string>\",\n                  \"notIn\": [\n                    \"<string>\"\n                  ]\n                }\n              },\n              \"maxItems\": \"<string>\",\n              \"minItems\": \"<string>\",\n              \"unique\": \"<boolean>\"\n            }\n          }\n        }\n      ],\n      \"id\": \"<string>\"\n    },\n    \"id\": \"<string>\",\n    \"modifiedAt\": \"<dateTime>\"\n  },\n  \"updateMask\": \"<string>\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/request_schemas/:request_schema_id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "request_schemas",
+                            ":request_schema_id"
+                          ],
+                          "variable": [
+                            {
+                              "id": "5d1d14d7-7ea2-44f7-9a8e-e1f96d77ae2d",
+                              "key": "request_schema_id",
+                              "value": "<string>",
+                              "description": "(Required) "
+                            }
+                          ]
+                        },
+                        "description": "Invokes the c1.api.request_schema.v1.RequestSchemaService.Update method."
+                      },
+                      "response": [
+                        {
+                          "id": "c0a639c8-b01e-4e54-aef2-ba0e40b5bb95",
+                          "name": "Successful response",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n  \"requestSchema\": {\n    \"createdAt\": \"<dateTime>\",\n    \"deletedAt\": \"<dateTime>\",\n    \"form\": {\n      \"description\": \"<string>\",\n      \"displayName\": \"<string>\",\n      \"fieldRelationships\": [\n        {\n          \"atLeastOne\": {},\n          \"fieldNames\": [\n            \"<string>\"\n          ],\n          \"mutuallyExclusive\": {},\n          \"requiredTogether\": {}\n        }\n      ],\n      \"fields\": [\n        {\n          \"boolField\": {\n            \"checkboxField\": {},\n            \"defaultValue\": \"<boolean>\",\n            \"rules\": {\n              \"const\": \"<boolean>\"\n            }\n          },\n          \"description\": \"<string>\",\n          \"displayName\": \"<string>\",\n          \"fileField\": {\n            \"acceptedFileTypes\": [\n              \"<string>\"\n            ],\n            \"fileInputField\": {},\n            \"maxFileSize\": \"<int64>\"\n          },\n          \"int64Field\": {\n            \"defaultValue\": \"<int64>\",\n            \"numberField\": {\n              \"maxValue\": \"<int64>\",\n              \"minValue\": \"<int64>\",\n              \"step\": \"<int64>\"\n            },\n            \"placeholder\": \"<string>\",\n            \"rules\": {\n              \"const\": \"<int64>\",\n              \"gt\": \"<int64>\",\n              \"gte\": \"<int64>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<int64>\"\n              ],\n              \"lt\": \"<int64>\",\n              \"lte\": \"<int64>\",\n              \"notIn\": [\n                \"<int64>\"\n              ]\n            }\n          },\n          \"name\": \"<string>\",\n          \"stringField\": {\n            \"defaultValue\": \"<string>\",\n            \"passwordField\": {},\n            \"placeholder\": \"<string>\",\n            \"rules\": {\n              \"address\": \"<boolean>\",\n              \"const\": \"<string>\",\n              \"contains\": \"<string>\",\n              \"email\": \"<boolean>\",\n              \"hostname\": \"<boolean>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<string>\"\n              ],\n              \"ip\": \"<boolean>\",\n              \"ipv4\": \"<boolean>\",\n              \"ipv6\": \"<boolean>\",\n              \"len\": \"<string>\",\n              \"lenBytes\": \"<string>\",\n              \"maxBytes\": \"<string>\",\n              \"maxLen\": \"<string>\",\n              \"minBytes\": \"<string>\",\n              \"minLen\": \"<string>\",\n              \"notContains\": \"<string>\",\n              \"notIn\": [\n                \"<string>\"\n              ],\n              \"pattern\": \"<string>\",\n              \"prefix\": \"<string>\",\n              \"strict\": \"<boolean>\",\n              \"suffix\": \"<string>\",\n              \"uri\": \"<boolean>\",\n              \"uriRef\": \"<boolean>\",\n              \"uuid\": \"<boolean>\",\n              \"wellKnownRegex\": \"UNKNOWN\"\n            },\n            \"selectField\": {\n              \"options\": [\n                {\n                  \"displayName\": \"<string>\",\n                  \"value\": \"<string>\"\n                }\n              ]\n            },\n            \"textField\": {\n              \"multiline\": \"<boolean>\"\n            }\n          },\n          \"stringSliceField\": {\n            \"chipsField\": {},\n            \"defaultValues\": [\n              \"<string>\"\n            ],\n            \"placeholder\": \"<string>\",\n            \"rules\": {\n              \"ignoreEmpty\": \"<boolean>\",\n              \"items\": {\n                \"any\": {\n                  \"in\": [\n                    \"<string>\"\n                  ],\n                  \"notIn\": [\n                    \"<string>\"\n                  ],\n                  \"required\": \"<boolean>\"\n                },\n                \"bool\": {\n                  \"const\": \"<boolean>\"\n                },\n                \"bytes\": {\n                  \"const\": \"<string>\",\n                  \"contains\": \"<string>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<string>\"\n                  ],\n                  \"ip\": \"<boolean>\",\n                  \"ipv4\": \"<boolean>\",\n                  \"ipv6\": \"<boolean>\",\n                  \"len\": \"<string>\",\n                  \"maxLen\": \"<string>\",\n                  \"minLen\": \"<string>\",\n                  \"notIn\": [\n                    \"<string>\"\n                  ],\n                  \"pattern\": \"<string>\",\n                  \"prefix\": \"<string>\",\n                  \"suffix\": \"<string>\"\n                },\n                \"double\": {\n                  \"const\": \"<number>\",\n                  \"gt\": \"<number>\",\n                  \"gte\": \"<number>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<number>\"\n                  ],\n                  \"lt\": \"<number>\",\n                  \"lte\": \"<number>\",\n                  \"notIn\": [\n                    \"<number>\"\n                  ]\n                },\n                \"duration\": {\n                  \"const\": \"<string>\",\n                  \"gt\": \"<string>\",\n                  \"gte\": \"<string>\",\n                  \"in\": [\n                    \"<string>\"\n                  ],\n                  \"lt\": \"<string>\",\n                  \"lte\": \"<string>\",\n                  \"notIn\": [\n                    \"<string>\"\n                  ],\n                  \"required\": \"<boolean>\"\n                },\n                \"enum\": {\n                  \"const\": \"<integer>\",\n                  \"definedOnly\": \"<boolean>\",\n                  \"in\": [\n                    \"<integer>\"\n                  ],\n                  \"notIn\": [\n                    \"<integer>\"\n                  ]\n                },\n                \"fixed32\": {\n                  \"const\": \"<integer>\",\n                  \"gt\": \"<integer>\",\n                  \"gte\": \"<integer>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<integer>\"\n                  ],\n                  \"lt\": \"<integer>\",\n                  \"lte\": \"<integer>\",\n                  \"notIn\": [\n                    \"<integer>\"\n                  ]\n                },\n                \"fixed64\": {\n                  \"const\": \"<string>\",\n                  \"gt\": \"<string>\",\n                  \"gte\": \"<string>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<string>\"\n                  ],\n                  \"lt\": \"<string>\",\n                  \"lte\": \"<string>\",\n                  \"notIn\": [\n                    \"<string>\"\n                  ]\n                },\n                \"float\": {\n                  \"const\": \"<number>\",\n                  \"gt\": \"<number>\",\n                  \"gte\": \"<number>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<number>\"\n                  ],\n                  \"lt\": \"<number>\",\n                  \"lte\": \"<number>\",\n                  \"notIn\": [\n                    \"<number>\"\n                  ]\n                },\n                \"int32\": {\n                  \"const\": \"<integer>\",\n                  \"gt\": \"<integer>\",\n                  \"gte\": \"<integer>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<integer>\"\n                  ],\n                  \"lt\": \"<integer>\",\n                  \"lte\": \"<integer>\",\n                  \"notIn\": [\n                    \"<integer>\"\n                  ]\n                },\n                \"int64\": {\n                  \"const\": \"<int64>\",\n                  \"gt\": \"<int64>\",\n                  \"gte\": \"<int64>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<int64>\"\n                  ],\n                  \"lt\": \"<int64>\",\n                  \"lte\": \"<int64>\",\n                  \"notIn\": [\n                    \"<int64>\"\n                  ]\n                },\n                \"map\": {\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"keys\": {\n                    \"value\": \"<Circular reference to #/components/schemas/validate.FieldRules detected>\"\n                  },\n                  \"maxPairs\": \"<string>\",\n                  \"minPairs\": \"<string>\",\n                  \"noSparse\": \"<boolean>\",\n                  \"values\": {\n                    \"value\": \"<Circular reference to #/components/schemas/validate.FieldRules detected>\"\n                  }\n                },\n                \"message\": {\n                  \"required\": \"<boolean>\",\n                  \"skip\": \"<boolean>\"\n                },\n                \"repeated\": {\n                  \"value\": \"<Circular reference to #/components/schemas/validate.RepeatedRules detected>\"\n                },\n                \"sfixed32\": {\n                  \"const\": \"<integer>\",\n                  \"gt\": \"<integer>\",\n                  \"gte\": \"<integer>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<integer>\"\n                  ],\n                  \"lt\": \"<integer>\",\n                  \"lte\": \"<integer>\",\n                  \"notIn\": [\n                    \"<integer>\"\n                  ]\n                },\n                \"sfixed64\": {\n                  \"const\": \"<int64>\",\n                  \"gt\": \"<int64>\",\n                  \"gte\": \"<int64>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<int64>\"\n                  ],\n                  \"lt\": \"<int64>\",\n                  \"lte\": \"<int64>\",\n                  \"notIn\": [\n                    \"<int64>\"\n                  ]\n                },\n                \"sint32\": {\n                  \"const\": \"<integer>\",\n                  \"gt\": \"<integer>\",\n                  \"gte\": \"<integer>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<integer>\"\n                  ],\n                  \"lt\": \"<integer>\",\n                  \"lte\": \"<integer>\",\n                  \"notIn\": [\n                    \"<integer>\"\n                  ]\n                },\n                \"sint64\": {\n                  \"const\": \"<int64>\",\n                  \"gt\": \"<int64>\",\n                  \"gte\": \"<int64>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<int64>\"\n                  ],\n                  \"lt\": \"<int64>\",\n                  \"lte\": \"<int64>\",\n                  \"notIn\": [\n                    \"<int64>\"\n                  ]\n                },\n                \"string\": {\n                  \"address\": \"<boolean>\",\n                  \"const\": \"<string>\",\n                  \"contains\": \"<string>\",\n                  \"email\": \"<boolean>\",\n                  \"hostname\": \"<boolean>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<string>\"\n                  ],\n                  \"ip\": \"<boolean>\",\n                  \"ipv4\": \"<boolean>\",\n                  \"ipv6\": \"<boolean>\",\n                  \"len\": \"<string>\",\n                  \"lenBytes\": \"<string>\",\n                  \"maxBytes\": \"<string>\",\n                  \"maxLen\": \"<string>\",\n                  \"minBytes\": \"<string>\",\n                  \"minLen\": \"<string>\",\n                  \"notContains\": \"<string>\",\n                  \"notIn\": [\n                    \"<string>\"\n                  ],\n                  \"pattern\": \"<string>\",\n                  \"prefix\": \"<string>\",\n                  \"strict\": \"<boolean>\",\n                  \"suffix\": \"<string>\",\n                  \"uri\": \"<boolean>\",\n                  \"uriRef\": \"<boolean>\",\n                  \"uuid\": \"<boolean>\",\n                  \"wellKnownRegex\": \"UNKNOWN\"\n                },\n                \"timestamp\": {\n                  \"const\": \"<dateTime>\",\n                  \"gt\": \"<dateTime>\",\n                  \"gtNow\": \"<boolean>\",\n                  \"gte\": \"<dateTime>\",\n                  \"lt\": \"<dateTime>\",\n                  \"ltNow\": \"<boolean>\",\n                  \"lte\": \"<dateTime>\",\n                  \"required\": \"<boolean>\",\n                  \"within\": \"<string>\"\n                },\n                \"uint32\": {\n                  \"const\": \"<integer>\",\n                  \"gt\": \"<integer>\",\n                  \"gte\": \"<integer>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<integer>\"\n                  ],\n                  \"lt\": \"<integer>\",\n                  \"lte\": \"<integer>\",\n                  \"notIn\": [\n                    \"<integer>\"\n                  ]\n                },\n                \"uint64\": {\n                  \"const\": \"<string>\",\n                  \"gt\": \"<string>\",\n                  \"gte\": \"<string>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<string>\"\n                  ],\n                  \"lt\": \"<string>\",\n                  \"lte\": \"<string>\",\n                  \"notIn\": [\n                    \"<string>\"\n                  ]\n                }\n              },\n              \"maxItems\": \"<string>\",\n              \"minItems\": \"<string>\",\n              \"unique\": \"<boolean>\"\n            }\n          }\n        }\n      ],\n      \"id\": \"<string>\"\n    },\n    \"id\": \"<string>\",\n    \"modifiedAt\": \"<dateTime>\"\n  },\n  \"updateMask\": \"<string>\"\n}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/request_schemas/:request_schema_id",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "request_schemas",
+                                ":request_schema_id"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "request_schema_id"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"requestSchema\": {\n    \"createdAt\": \"<dateTime>\",\n    \"deletedAt\": \"<dateTime>\",\n    \"form\": {\n      \"description\": \"<string>\",\n      \"displayName\": \"<string>\",\n      \"fieldRelationships\": [\n        {\n          \"atLeastOne\": {},\n          \"fieldNames\": [\n            \"<string>\"\n          ],\n          \"mutuallyExclusive\": {},\n          \"requiredTogether\": {}\n        }\n      ],\n      \"fields\": [\n        {\n          \"boolField\": {\n            \"checkboxField\": {},\n            \"defaultValue\": \"<boolean>\",\n            \"rules\": {\n              \"const\": \"<boolean>\"\n            }\n          },\n          \"description\": \"<string>\",\n          \"displayName\": \"<string>\",\n          \"fileField\": {\n            \"acceptedFileTypes\": [\n              \"<string>\"\n            ],\n            \"fileInputField\": {},\n            \"maxFileSize\": \"<int64>\"\n          },\n          \"int64Field\": {\n            \"defaultValue\": \"<int64>\",\n            \"numberField\": {\n              \"maxValue\": \"<int64>\",\n              \"minValue\": \"<int64>\",\n              \"step\": \"<int64>\"\n            },\n            \"placeholder\": \"<string>\",\n            \"rules\": {\n              \"const\": \"<int64>\",\n              \"gt\": \"<int64>\",\n              \"gte\": \"<int64>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<int64>\"\n              ],\n              \"lt\": \"<int64>\",\n              \"lte\": \"<int64>\",\n              \"notIn\": [\n                \"<int64>\"\n              ]\n            }\n          },\n          \"name\": \"<string>\",\n          \"stringField\": {\n            \"defaultValue\": \"<string>\",\n            \"passwordField\": {},\n            \"placeholder\": \"<string>\",\n            \"rules\": {\n              \"address\": \"<boolean>\",\n              \"const\": \"<string>\",\n              \"contains\": \"<string>\",\n              \"email\": \"<boolean>\",\n              \"hostname\": \"<boolean>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<string>\"\n              ],\n              \"ip\": \"<boolean>\",\n              \"ipv4\": \"<boolean>\",\n              \"ipv6\": \"<boolean>\",\n              \"len\": \"<string>\",\n              \"lenBytes\": \"<string>\",\n              \"maxBytes\": \"<string>\",\n              \"maxLen\": \"<string>\",\n              \"minBytes\": \"<string>\",\n              \"minLen\": \"<string>\",\n              \"notContains\": \"<string>\",\n              \"notIn\": [\n                \"<string>\"\n              ],\n              \"pattern\": \"<string>\",\n              \"prefix\": \"<string>\",\n              \"strict\": \"<boolean>\",\n              \"suffix\": \"<string>\",\n              \"uri\": \"<boolean>\",\n              \"uriRef\": \"<boolean>\",\n              \"uuid\": \"<boolean>\",\n              \"wellKnownRegex\": \"HTTP_HEADER_NAME\"\n            },\n            \"selectField\": {\n              \"options\": [\n                {\n                  \"displayName\": \"<string>\",\n                  \"value\": \"<string>\"\n                }\n              ]\n            },\n            \"textField\": {\n              \"multiline\": \"<boolean>\"\n            }\n          },\n          \"stringSliceField\": {\n            \"chipsField\": {},\n            \"defaultValues\": [\n              \"<string>\"\n            ],\n            \"placeholder\": \"<string>\",\n            \"rules\": {\n              \"ignoreEmpty\": \"<boolean>\",\n              \"items\": {\n                \"any\": {\n                  \"in\": [\n                    \"<string>\"\n                  ],\n                  \"notIn\": [\n                    \"<string>\"\n                  ],\n                  \"required\": \"<boolean>\"\n                },\n                \"bool\": {\n                  \"const\": \"<boolean>\"\n                },\n                \"bytes\": {\n                  \"const\": \"<string>\",\n                  \"contains\": \"<string>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<string>\"\n                  ],\n                  \"ip\": \"<boolean>\",\n                  \"ipv4\": \"<boolean>\",\n                  \"ipv6\": \"<boolean>\",\n                  \"len\": \"<string>\",\n                  \"maxLen\": \"<string>\",\n                  \"minLen\": \"<string>\",\n                  \"notIn\": [\n                    \"<string>\"\n                  ],\n                  \"pattern\": \"<string>\",\n                  \"prefix\": \"<string>\",\n                  \"suffix\": \"<string>\"\n                },\n                \"double\": {\n                  \"const\": \"<number>\",\n                  \"gt\": \"<number>\",\n                  \"gte\": \"<number>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<number>\"\n                  ],\n                  \"lt\": \"<number>\",\n                  \"lte\": \"<number>\",\n                  \"notIn\": [\n                    \"<number>\"\n                  ]\n                },\n                \"duration\": {\n                  \"const\": \"<string>\",\n                  \"gt\": \"<string>\",\n                  \"gte\": \"<string>\",\n                  \"in\": [\n                    \"<string>\"\n                  ],\n                  \"lt\": \"<string>\",\n                  \"lte\": \"<string>\",\n                  \"notIn\": [\n                    \"<string>\"\n                  ],\n                  \"required\": \"<boolean>\"\n                },\n                \"enum\": {\n                  \"const\": \"<integer>\",\n                  \"definedOnly\": \"<boolean>\",\n                  \"in\": [\n                    \"<integer>\"\n                  ],\n                  \"notIn\": [\n                    \"<integer>\"\n                  ]\n                },\n                \"fixed32\": {\n                  \"const\": \"<integer>\",\n                  \"gt\": \"<integer>\",\n                  \"gte\": \"<integer>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<integer>\"\n                  ],\n                  \"lt\": \"<integer>\",\n                  \"lte\": \"<integer>\",\n                  \"notIn\": [\n                    \"<integer>\"\n                  ]\n                },\n                \"fixed64\": {\n                  \"const\": \"<string>\",\n                  \"gt\": \"<string>\",\n                  \"gte\": \"<string>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<string>\"\n                  ],\n                  \"lt\": \"<string>\",\n                  \"lte\": \"<string>\",\n                  \"notIn\": [\n                    \"<string>\"\n                  ]\n                },\n                \"float\": {\n                  \"const\": \"<number>\",\n                  \"gt\": \"<number>\",\n                  \"gte\": \"<number>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<number>\"\n                  ],\n                  \"lt\": \"<number>\",\n                  \"lte\": \"<number>\",\n                  \"notIn\": [\n                    \"<number>\"\n                  ]\n                },\n                \"int32\": {\n                  \"const\": \"<integer>\",\n                  \"gt\": \"<integer>\",\n                  \"gte\": \"<integer>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<integer>\"\n                  ],\n                  \"lt\": \"<integer>\",\n                  \"lte\": \"<integer>\",\n                  \"notIn\": [\n                    \"<integer>\"\n                  ]\n                },\n                \"int64\": {\n                  \"const\": \"<int64>\",\n                  \"gt\": \"<int64>\",\n                  \"gte\": \"<int64>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<int64>\"\n                  ],\n                  \"lt\": \"<int64>\",\n                  \"lte\": \"<int64>\",\n                  \"notIn\": [\n                    \"<int64>\"\n                  ]\n                },\n                \"map\": {\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"keys\": {\n                    \"value\": \"<Circular reference to #/components/schemas/validate.FieldRules detected>\"\n                  },\n                  \"maxPairs\": \"<string>\",\n                  \"minPairs\": \"<string>\",\n                  \"noSparse\": \"<boolean>\",\n                  \"values\": {\n                    \"value\": \"<Circular reference to #/components/schemas/validate.FieldRules detected>\"\n                  }\n                },\n                \"message\": {\n                  \"required\": \"<boolean>\",\n                  \"skip\": \"<boolean>\"\n                },\n                \"repeated\": {\n                  \"value\": \"<Circular reference to #/components/schemas/validate.RepeatedRules detected>\"\n                },\n                \"sfixed32\": {\n                  \"const\": \"<integer>\",\n                  \"gt\": \"<integer>\",\n                  \"gte\": \"<integer>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<integer>\"\n                  ],\n                  \"lt\": \"<integer>\",\n                  \"lte\": \"<integer>\",\n                  \"notIn\": [\n                    \"<integer>\"\n                  ]\n                },\n                \"sfixed64\": {\n                  \"const\": \"<int64>\",\n                  \"gt\": \"<int64>\",\n                  \"gte\": \"<int64>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<int64>\"\n                  ],\n                  \"lt\": \"<int64>\",\n                  \"lte\": \"<int64>\",\n                  \"notIn\": [\n                    \"<int64>\"\n                  ]\n                },\n                \"sint32\": {\n                  \"const\": \"<integer>\",\n                  \"gt\": \"<integer>\",\n                  \"gte\": \"<integer>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<integer>\"\n                  ],\n                  \"lt\": \"<integer>\",\n                  \"lte\": \"<integer>\",\n                  \"notIn\": [\n                    \"<integer>\"\n                  ]\n                },\n                \"sint64\": {\n                  \"const\": \"<int64>\",\n                  \"gt\": \"<int64>\",\n                  \"gte\": \"<int64>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<int64>\"\n                  ],\n                  \"lt\": \"<int64>\",\n                  \"lte\": \"<int64>\",\n                  \"notIn\": [\n                    \"<int64>\"\n                  ]\n                },\n                \"string\": {\n                  \"address\": \"<boolean>\",\n                  \"const\": \"<string>\",\n                  \"contains\": \"<string>\",\n                  \"email\": \"<boolean>\",\n                  \"hostname\": \"<boolean>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<string>\"\n                  ],\n                  \"ip\": \"<boolean>\",\n                  \"ipv4\": \"<boolean>\",\n                  \"ipv6\": \"<boolean>\",\n                  \"len\": \"<string>\",\n                  \"lenBytes\": \"<string>\",\n                  \"maxBytes\": \"<string>\",\n                  \"maxLen\": \"<string>\",\n                  \"minBytes\": \"<string>\",\n                  \"minLen\": \"<string>\",\n                  \"notContains\": \"<string>\",\n                  \"notIn\": [\n                    \"<string>\"\n                  ],\n                  \"pattern\": \"<string>\",\n                  \"prefix\": \"<string>\",\n                  \"strict\": \"<boolean>\",\n                  \"suffix\": \"<string>\",\n                  \"uri\": \"<boolean>\",\n                  \"uriRef\": \"<boolean>\",\n                  \"uuid\": \"<boolean>\",\n                  \"wellKnownRegex\": \"HTTP_HEADER_NAME\"\n                },\n                \"timestamp\": {\n                  \"const\": \"<dateTime>\",\n                  \"gt\": \"<dateTime>\",\n                  \"gtNow\": \"<boolean>\",\n                  \"gte\": \"<dateTime>\",\n                  \"lt\": \"<dateTime>\",\n                  \"ltNow\": \"<boolean>\",\n                  \"lte\": \"<dateTime>\",\n                  \"required\": \"<boolean>\",\n                  \"within\": \"<string>\"\n                },\n                \"uint32\": {\n                  \"const\": \"<integer>\",\n                  \"gt\": \"<integer>\",\n                  \"gte\": \"<integer>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<integer>\"\n                  ],\n                  \"lt\": \"<integer>\",\n                  \"lte\": \"<integer>\",\n                  \"notIn\": [\n                    \"<integer>\"\n                  ]\n                },\n                \"uint64\": {\n                  \"const\": \"<string>\",\n                  \"gt\": \"<string>\",\n                  \"gte\": \"<string>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<string>\"\n                  ],\n                  \"lt\": \"<string>\",\n                  \"lte\": \"<string>\",\n                  \"notIn\": [\n                    \"<string>\"\n                  ]\n                }\n              },\n              \"maxItems\": \"<string>\",\n              \"minItems\": \"<string>\",\n              \"unique\": \"<boolean>\"\n            }\n          }\n        }\n      ],\n      \"id\": \"<string>\"\n    },\n    \"id\": \"<string>\",\n    \"modifiedAt\": \"<dateTime>\"\n  }\n}",
+                          "createdAt": "2026-10-21T20:49:38.000Z",
+                          "updatedAt": "2026-10-21T20:49:38.000Z",
+                          "uid": "35240-c0a639c8-b01e-4e54-aef2-ba0e40b5bb95"
+                        }
+                      ],
+                      "createdAt": "2026-10-21T20:49:38.000Z",
+                      "updatedAt": "2026-10-21T20:49:38.000Z",
+                      "uid": "35240-e754b897-c03e-482a-b577-09e9ef512c7c"
+                    }
+                  ],
+                  "id": "5dfac3b3-642c-41f2-a3f7-9a0c0df56444",
+                  "createdAt": "2026-10-21T20:49:38.000Z",
+                  "updatedAt": "2026-10-21T20:49:38.000Z",
+                  "uid": "35240-5dfac3b3-642c-41f2-a3f7-9a0c0df56444"
+                },
+                {
+                  "name": "Create",
+                  "id": "0ddafdb5-2bd4-4468-a244-a2568466e120",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"description\": \"<string>\",\n  \"fields\": [\n    {\n      \"boolField\": {\n        \"checkboxField\": {},\n        \"defaultValue\": \"<boolean>\",\n        \"rules\": {\n          \"const\": \"<boolean>\"\n        }\n      },\n      \"description\": \"<string>\",\n      \"displayName\": \"<string>\",\n      \"fileField\": {\n        \"acceptedFileTypes\": [\n          \"<string>\"\n        ],\n        \"fileInputField\": {},\n        \"maxFileSize\": \"<int64>\"\n      },\n      \"int64Field\": {\n        \"defaultValue\": \"<int64>\",\n        \"numberField\": {\n          \"maxValue\": \"<int64>\",\n          \"minValue\": \"<int64>\",\n          \"step\": \"<int64>\"\n        },\n        \"placeholder\": \"<string>\",\n        \"rules\": {\n          \"const\": \"<int64>\",\n          \"gt\": \"<int64>\",\n          \"gte\": \"<int64>\",\n          \"ignoreEmpty\": \"<boolean>\",\n          \"in\": [\n            \"<int64>\"\n          ],\n          \"lt\": \"<int64>\",\n          \"lte\": \"<int64>\",\n          \"notIn\": [\n            \"<int64>\"\n          ]\n        }\n      },\n      \"name\": \"<string>\",\n      \"stringField\": {\n        \"defaultValue\": \"<string>\",\n        \"passwordField\": {},\n        \"placeholder\": \"<string>\",\n        \"rules\": {\n          \"address\": \"<boolean>\",\n          \"const\": \"<string>\",\n          \"contains\": \"<string>\",\n          \"email\": \"<boolean>\",\n          \"hostname\": \"<boolean>\",\n          \"ignoreEmpty\": \"<boolean>\",\n          \"in\": [\n            \"<string>\"\n          ],\n          \"ip\": \"<boolean>\",\n          \"ipv4\": \"<boolean>\",\n          \"ipv6\": \"<boolean>\",\n          \"len\": \"<string>\",\n          \"lenBytes\": \"<string>\",\n          \"maxBytes\": \"<string>\",\n          \"maxLen\": \"<string>\",\n          \"minBytes\": \"<string>\",\n          \"minLen\": \"<string>\",\n          \"notContains\": \"<string>\",\n          \"notIn\": [\n            \"<string>\"\n          ],\n          \"pattern\": \"<string>\",\n          \"prefix\": \"<string>\",\n          \"strict\": \"<boolean>\",\n          \"suffix\": \"<string>\",\n          \"uri\": \"<boolean>\",\n          \"uriRef\": \"<boolean>\",\n          \"uuid\": \"<boolean>\",\n          \"wellKnownRegex\": \"UNKNOWN\"\n        },\n        \"selectField\": {\n          \"options\": [\n            {\n              \"displayName\": \"<string>\",\n              \"value\": \"<string>\"\n            }\n          ]\n        },\n        \"textField\": {\n          \"multiline\": \"<boolean>\"\n        }\n      },\n      \"stringSliceField\": {\n        \"chipsField\": {},\n        \"defaultValues\": [\n          \"<string>\"\n        ],\n        \"placeholder\": \"<string>\",\n        \"rules\": {\n          \"ignoreEmpty\": \"<boolean>\",\n          \"items\": {\n            \"any\": {\n              \"in\": [\n                \"<string>\"\n              ],\n              \"notIn\": [\n                \"<string>\"\n              ],\n              \"required\": \"<boolean>\"\n            },\n            \"bool\": {\n              \"const\": \"<boolean>\"\n            },\n            \"bytes\": {\n              \"const\": \"<string>\",\n              \"contains\": \"<string>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<string>\"\n              ],\n              \"ip\": \"<boolean>\",\n              \"ipv4\": \"<boolean>\",\n              \"ipv6\": \"<boolean>\",\n              \"len\": \"<string>\",\n              \"maxLen\": \"<string>\",\n              \"minLen\": \"<string>\",\n              \"notIn\": [\n                \"<string>\"\n              ],\n              \"pattern\": \"<string>\",\n              \"prefix\": \"<string>\",\n              \"suffix\": \"<string>\"\n            },\n            \"double\": {\n              \"const\": \"<number>\",\n              \"gt\": \"<number>\",\n              \"gte\": \"<number>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<number>\"\n              ],\n              \"lt\": \"<number>\",\n              \"lte\": \"<number>\",\n              \"notIn\": [\n                \"<number>\"\n              ]\n            },\n            \"duration\": {\n              \"const\": \"<string>\",\n              \"gt\": \"<string>\",\n              \"gte\": \"<string>\",\n              \"in\": [\n                \"<string>\"\n              ],\n              \"lt\": \"<string>\",\n              \"lte\": \"<string>\",\n              \"notIn\": [\n                \"<string>\"\n              ],\n              \"required\": \"<boolean>\"\n            },\n            \"enum\": {\n              \"const\": \"<integer>\",\n              \"definedOnly\": \"<boolean>\",\n              \"in\": [\n                \"<integer>\"\n              ],\n              \"notIn\": [\n                \"<integer>\"\n              ]\n            },\n            \"fixed32\": {\n              \"const\": \"<integer>\",\n              \"gt\": \"<integer>\",\n              \"gte\": \"<integer>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<integer>\"\n              ],\n              \"lt\": \"<integer>\",\n              \"lte\": \"<integer>\",\n              \"notIn\": [\n                \"<integer>\"\n              ]\n            },\n            \"fixed64\": {\n              \"const\": \"<string>\",\n              \"gt\": \"<string>\",\n              \"gte\": \"<string>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<string>\"\n              ],\n              \"lt\": \"<string>\",\n              \"lte\": \"<string>\",\n              \"notIn\": [\n                \"<string>\"\n              ]\n            },\n            \"float\": {\n              \"const\": \"<number>\",\n              \"gt\": \"<number>\",\n              \"gte\": \"<number>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<number>\"\n              ],\n              \"lt\": \"<number>\",\n              \"lte\": \"<number>\",\n              \"notIn\": [\n                \"<number>\"\n              ]\n            },\n            \"int32\": {\n              \"const\": \"<integer>\",\n              \"gt\": \"<integer>\",\n              \"gte\": \"<integer>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<integer>\"\n              ],\n              \"lt\": \"<integer>\",\n              \"lte\": \"<integer>\",\n              \"notIn\": [\n                \"<integer>\"\n              ]\n            },\n            \"int64\": {\n              \"const\": \"<int64>\",\n              \"gt\": \"<int64>\",\n              \"gte\": \"<int64>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<int64>\"\n              ],\n              \"lt\": \"<int64>\",\n              \"lte\": \"<int64>\",\n              \"notIn\": [\n                \"<int64>\"\n              ]\n            },\n            \"map\": {\n              \"ignoreEmpty\": \"<boolean>\",\n              \"keys\": {\n                \"value\": \"<Circular reference to #/components/schemas/validate.FieldRules detected>\"\n              },\n              \"maxPairs\": \"<string>\",\n              \"minPairs\": \"<string>\",\n              \"noSparse\": \"<boolean>\",\n              \"values\": {\n                \"value\": \"<Circular reference to #/components/schemas/validate.FieldRules detected>\"\n              }\n            },\n            \"message\": {\n              \"required\": \"<boolean>\",\n              \"skip\": \"<boolean>\"\n            },\n            \"repeated\": {\n              \"value\": \"<Circular reference to #/components/schemas/validate.RepeatedRules detected>\"\n            },\n            \"sfixed32\": {\n              \"const\": \"<integer>\",\n              \"gt\": \"<integer>\",\n              \"gte\": \"<integer>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<integer>\"\n              ],\n              \"lt\": \"<integer>\",\n              \"lte\": \"<integer>\",\n              \"notIn\": [\n                \"<integer>\"\n              ]\n            },\n            \"sfixed64\": {\n              \"const\": \"<int64>\",\n              \"gt\": \"<int64>\",\n              \"gte\": \"<int64>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<int64>\"\n              ],\n              \"lt\": \"<int64>\",\n              \"lte\": \"<int64>\",\n              \"notIn\": [\n                \"<int64>\"\n              ]\n            },\n            \"sint32\": {\n              \"const\": \"<integer>\",\n              \"gt\": \"<integer>\",\n              \"gte\": \"<integer>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<integer>\"\n              ],\n              \"lt\": \"<integer>\",\n              \"lte\": \"<integer>\",\n              \"notIn\": [\n                \"<integer>\"\n              ]\n            },\n            \"sint64\": {\n              \"const\": \"<int64>\",\n              \"gt\": \"<int64>\",\n              \"gte\": \"<int64>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<int64>\"\n              ],\n              \"lt\": \"<int64>\",\n              \"lte\": \"<int64>\",\n              \"notIn\": [\n                \"<int64>\"\n              ]\n            },\n            \"string\": {\n              \"address\": \"<boolean>\",\n              \"const\": \"<string>\",\n              \"contains\": \"<string>\",\n              \"email\": \"<boolean>\",\n              \"hostname\": \"<boolean>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<string>\"\n              ],\n              \"ip\": \"<boolean>\",\n              \"ipv4\": \"<boolean>\",\n              \"ipv6\": \"<boolean>\",\n              \"len\": \"<string>\",\n              \"lenBytes\": \"<string>\",\n              \"maxBytes\": \"<string>\",\n              \"maxLen\": \"<string>\",\n              \"minBytes\": \"<string>\",\n              \"minLen\": \"<string>\",\n              \"notContains\": \"<string>\",\n              \"notIn\": [\n                \"<string>\"\n              ],\n              \"pattern\": \"<string>\",\n              \"prefix\": \"<string>\",\n              \"strict\": \"<boolean>\",\n              \"suffix\": \"<string>\",\n              \"uri\": \"<boolean>\",\n              \"uriRef\": \"<boolean>\",\n              \"uuid\": \"<boolean>\",\n              \"wellKnownRegex\": \"HTTP_HEADER_VALUE\"\n            },\n            \"timestamp\": {\n              \"const\": \"<dateTime>\",\n              \"gt\": \"<dateTime>\",\n              \"gtNow\": \"<boolean>\",\n              \"gte\": \"<dateTime>\",\n              \"lt\": \"<dateTime>\",\n              \"ltNow\": \"<boolean>\",\n              \"lte\": \"<dateTime>\",\n              \"required\": \"<boolean>\",\n              \"within\": \"<string>\"\n            },\n            \"uint32\": {\n              \"const\": \"<integer>\",\n              \"gt\": \"<integer>\",\n              \"gte\": \"<integer>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<integer>\"\n              ],\n              \"lt\": \"<integer>\",\n              \"lte\": \"<integer>\",\n              \"notIn\": [\n                \"<integer>\"\n              ]\n            },\n            \"uint64\": {\n              \"const\": \"<string>\",\n              \"gt\": \"<string>\",\n              \"gte\": \"<string>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<string>\"\n              ],\n              \"lt\": \"<string>\",\n              \"lte\": \"<string>\",\n              \"notIn\": [\n                \"<string>\"\n              ]\n            }\n          },\n          \"maxItems\": \"<string>\",\n          \"minItems\": \"<string>\",\n          \"unique\": \"<boolean>\"\n        }\n      }\n    }\n  ],\n  \"name\": \"<string>\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/v1/request_schemas",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "request_schemas"
+                      ]
+                    },
+                    "description": "Invokes the c1.api.request_schema.v1.RequestSchemaService.Create method."
+                  },
+                  "response": [
+                    {
+                      "id": "e66b187d-ce84-459e-8b6e-3a26ccce85fd",
+                      "name": "Successful response",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"description\": \"<string>\",\n  \"fields\": [\n    {\n      \"boolField\": {\n        \"checkboxField\": {},\n        \"defaultValue\": \"<boolean>\",\n        \"rules\": {\n          \"const\": \"<boolean>\"\n        }\n      },\n      \"description\": \"<string>\",\n      \"displayName\": \"<string>\",\n      \"fileField\": {\n        \"acceptedFileTypes\": [\n          \"<string>\"\n        ],\n        \"fileInputField\": {},\n        \"maxFileSize\": \"<int64>\"\n      },\n      \"int64Field\": {\n        \"defaultValue\": \"<int64>\",\n        \"numberField\": {\n          \"maxValue\": \"<int64>\",\n          \"minValue\": \"<int64>\",\n          \"step\": \"<int64>\"\n        },\n        \"placeholder\": \"<string>\",\n        \"rules\": {\n          \"const\": \"<int64>\",\n          \"gt\": \"<int64>\",\n          \"gte\": \"<int64>\",\n          \"ignoreEmpty\": \"<boolean>\",\n          \"in\": [\n            \"<int64>\"\n          ],\n          \"lt\": \"<int64>\",\n          \"lte\": \"<int64>\",\n          \"notIn\": [\n            \"<int64>\"\n          ]\n        }\n      },\n      \"name\": \"<string>\",\n      \"stringField\": {\n        \"defaultValue\": \"<string>\",\n        \"passwordField\": {},\n        \"placeholder\": \"<string>\",\n        \"rules\": {\n          \"address\": \"<boolean>\",\n          \"const\": \"<string>\",\n          \"contains\": \"<string>\",\n          \"email\": \"<boolean>\",\n          \"hostname\": \"<boolean>\",\n          \"ignoreEmpty\": \"<boolean>\",\n          \"in\": [\n            \"<string>\"\n          ],\n          \"ip\": \"<boolean>\",\n          \"ipv4\": \"<boolean>\",\n          \"ipv6\": \"<boolean>\",\n          \"len\": \"<string>\",\n          \"lenBytes\": \"<string>\",\n          \"maxBytes\": \"<string>\",\n          \"maxLen\": \"<string>\",\n          \"minBytes\": \"<string>\",\n          \"minLen\": \"<string>\",\n          \"notContains\": \"<string>\",\n          \"notIn\": [\n            \"<string>\"\n          ],\n          \"pattern\": \"<string>\",\n          \"prefix\": \"<string>\",\n          \"strict\": \"<boolean>\",\n          \"suffix\": \"<string>\",\n          \"uri\": \"<boolean>\",\n          \"uriRef\": \"<boolean>\",\n          \"uuid\": \"<boolean>\",\n          \"wellKnownRegex\": \"UNKNOWN\"\n        },\n        \"selectField\": {\n          \"options\": [\n            {\n              \"displayName\": \"<string>\",\n              \"value\": \"<string>\"\n            }\n          ]\n        },\n        \"textField\": {\n          \"multiline\": \"<boolean>\"\n        }\n      },\n      \"stringSliceField\": {\n        \"chipsField\": {},\n        \"defaultValues\": [\n          \"<string>\"\n        ],\n        \"placeholder\": \"<string>\",\n        \"rules\": {\n          \"ignoreEmpty\": \"<boolean>\",\n          \"items\": {\n            \"any\": {\n              \"in\": [\n                \"<string>\"\n              ],\n              \"notIn\": [\n                \"<string>\"\n              ],\n              \"required\": \"<boolean>\"\n            },\n            \"bool\": {\n              \"const\": \"<boolean>\"\n            },\n            \"bytes\": {\n              \"const\": \"<string>\",\n              \"contains\": \"<string>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<string>\"\n              ],\n              \"ip\": \"<boolean>\",\n              \"ipv4\": \"<boolean>\",\n              \"ipv6\": \"<boolean>\",\n              \"len\": \"<string>\",\n              \"maxLen\": \"<string>\",\n              \"minLen\": \"<string>\",\n              \"notIn\": [\n                \"<string>\"\n              ],\n              \"pattern\": \"<string>\",\n              \"prefix\": \"<string>\",\n              \"suffix\": \"<string>\"\n            },\n            \"double\": {\n              \"const\": \"<number>\",\n              \"gt\": \"<number>\",\n              \"gte\": \"<number>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<number>\"\n              ],\n              \"lt\": \"<number>\",\n              \"lte\": \"<number>\",\n              \"notIn\": [\n                \"<number>\"\n              ]\n            },\n            \"duration\": {\n              \"const\": \"<string>\",\n              \"gt\": \"<string>\",\n              \"gte\": \"<string>\",\n              \"in\": [\n                \"<string>\"\n              ],\n              \"lt\": \"<string>\",\n              \"lte\": \"<string>\",\n              \"notIn\": [\n                \"<string>\"\n              ],\n              \"required\": \"<boolean>\"\n            },\n            \"enum\": {\n              \"const\": \"<integer>\",\n              \"definedOnly\": \"<boolean>\",\n              \"in\": [\n                \"<integer>\"\n              ],\n              \"notIn\": [\n                \"<integer>\"\n              ]\n            },\n            \"fixed32\": {\n              \"const\": \"<integer>\",\n              \"gt\": \"<integer>\",\n              \"gte\": \"<integer>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<integer>\"\n              ],\n              \"lt\": \"<integer>\",\n              \"lte\": \"<integer>\",\n              \"notIn\": [\n                \"<integer>\"\n              ]\n            },\n            \"fixed64\": {\n              \"const\": \"<string>\",\n              \"gt\": \"<string>\",\n              \"gte\": \"<string>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<string>\"\n              ],\n              \"lt\": \"<string>\",\n              \"lte\": \"<string>\",\n              \"notIn\": [\n                \"<string>\"\n              ]\n            },\n            \"float\": {\n              \"const\": \"<number>\",\n              \"gt\": \"<number>\",\n              \"gte\": \"<number>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<number>\"\n              ],\n              \"lt\": \"<number>\",\n              \"lte\": \"<number>\",\n              \"notIn\": [\n                \"<number>\"\n              ]\n            },\n            \"int32\": {\n              \"const\": \"<integer>\",\n              \"gt\": \"<integer>\",\n              \"gte\": \"<integer>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<integer>\"\n              ],\n              \"lt\": \"<integer>\",\n              \"lte\": \"<integer>\",\n              \"notIn\": [\n                \"<integer>\"\n              ]\n            },\n            \"int64\": {\n              \"const\": \"<int64>\",\n              \"gt\": \"<int64>\",\n              \"gte\": \"<int64>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<int64>\"\n              ],\n              \"lt\": \"<int64>\",\n              \"lte\": \"<int64>\",\n              \"notIn\": [\n                \"<int64>\"\n              ]\n            },\n            \"map\": {\n              \"ignoreEmpty\": \"<boolean>\",\n              \"keys\": {\n                \"value\": \"<Circular reference to #/components/schemas/validate.FieldRules detected>\"\n              },\n              \"maxPairs\": \"<string>\",\n              \"minPairs\": \"<string>\",\n              \"noSparse\": \"<boolean>\",\n              \"values\": {\n                \"value\": \"<Circular reference to #/components/schemas/validate.FieldRules detected>\"\n              }\n            },\n            \"message\": {\n              \"required\": \"<boolean>\",\n              \"skip\": \"<boolean>\"\n            },\n            \"repeated\": {\n              \"value\": \"<Circular reference to #/components/schemas/validate.RepeatedRules detected>\"\n            },\n            \"sfixed32\": {\n              \"const\": \"<integer>\",\n              \"gt\": \"<integer>\",\n              \"gte\": \"<integer>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<integer>\"\n              ],\n              \"lt\": \"<integer>\",\n              \"lte\": \"<integer>\",\n              \"notIn\": [\n                \"<integer>\"\n              ]\n            },\n            \"sfixed64\": {\n              \"const\": \"<int64>\",\n              \"gt\": \"<int64>\",\n              \"gte\": \"<int64>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<int64>\"\n              ],\n              \"lt\": \"<int64>\",\n              \"lte\": \"<int64>\",\n              \"notIn\": [\n                \"<int64>\"\n              ]\n            },\n            \"sint32\": {\n              \"const\": \"<integer>\",\n              \"gt\": \"<integer>\",\n              \"gte\": \"<integer>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<integer>\"\n              ],\n              \"lt\": \"<integer>\",\n              \"lte\": \"<integer>\",\n              \"notIn\": [\n                \"<integer>\"\n              ]\n            },\n            \"sint64\": {\n              \"const\": \"<int64>\",\n              \"gt\": \"<int64>\",\n              \"gte\": \"<int64>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<int64>\"\n              ],\n              \"lt\": \"<int64>\",\n              \"lte\": \"<int64>\",\n              \"notIn\": [\n                \"<int64>\"\n              ]\n            },\n            \"string\": {\n              \"address\": \"<boolean>\",\n              \"const\": \"<string>\",\n              \"contains\": \"<string>\",\n              \"email\": \"<boolean>\",\n              \"hostname\": \"<boolean>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<string>\"\n              ],\n              \"ip\": \"<boolean>\",\n              \"ipv4\": \"<boolean>\",\n              \"ipv6\": \"<boolean>\",\n              \"len\": \"<string>\",\n              \"lenBytes\": \"<string>\",\n              \"maxBytes\": \"<string>\",\n              \"maxLen\": \"<string>\",\n              \"minBytes\": \"<string>\",\n              \"minLen\": \"<string>\",\n              \"notContains\": \"<string>\",\n              \"notIn\": [\n                \"<string>\"\n              ],\n              \"pattern\": \"<string>\",\n              \"prefix\": \"<string>\",\n              \"strict\": \"<boolean>\",\n              \"suffix\": \"<string>\",\n              \"uri\": \"<boolean>\",\n              \"uriRef\": \"<boolean>\",\n              \"uuid\": \"<boolean>\",\n              \"wellKnownRegex\": \"HTTP_HEADER_VALUE\"\n            },\n            \"timestamp\": {\n              \"const\": \"<dateTime>\",\n              \"gt\": \"<dateTime>\",\n              \"gtNow\": \"<boolean>\",\n              \"gte\": \"<dateTime>\",\n              \"lt\": \"<dateTime>\",\n              \"ltNow\": \"<boolean>\",\n              \"lte\": \"<dateTime>\",\n              \"required\": \"<boolean>\",\n              \"within\": \"<string>\"\n            },\n            \"uint32\": {\n              \"const\": \"<integer>\",\n              \"gt\": \"<integer>\",\n              \"gte\": \"<integer>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<integer>\"\n              ],\n              \"lt\": \"<integer>\",\n              \"lte\": \"<integer>\",\n              \"notIn\": [\n                \"<integer>\"\n              ]\n            },\n            \"uint64\": {\n              \"const\": \"<string>\",\n              \"gt\": \"<string>\",\n              \"gte\": \"<string>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<string>\"\n              ],\n              \"lt\": \"<string>\",\n              \"lte\": \"<string>\",\n              \"notIn\": [\n                \"<string>\"\n              ]\n            }\n          },\n          \"maxItems\": \"<string>\",\n          \"minItems\": \"<string>\",\n          \"unique\": \"<boolean>\"\n        }\n      }\n    }\n  ],\n  \"name\": \"<string>\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/request_schemas",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "request_schemas"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"requestSchema\": {\n    \"createdAt\": \"<dateTime>\",\n    \"deletedAt\": \"<dateTime>\",\n    \"form\": {\n      \"description\": \"<string>\",\n      \"displayName\": \"<string>\",\n      \"fieldRelationships\": [\n        {\n          \"atLeastOne\": {},\n          \"fieldNames\": [\n            \"<string>\"\n          ],\n          \"mutuallyExclusive\": {},\n          \"requiredTogether\": {}\n        }\n      ],\n      \"fields\": [\n        {\n          \"boolField\": {\n            \"checkboxField\": {},\n            \"defaultValue\": \"<boolean>\",\n            \"rules\": {\n              \"const\": \"<boolean>\"\n            }\n          },\n          \"description\": \"<string>\",\n          \"displayName\": \"<string>\",\n          \"fileField\": {\n            \"acceptedFileTypes\": [\n              \"<string>\"\n            ],\n            \"fileInputField\": {},\n            \"maxFileSize\": \"<int64>\"\n          },\n          \"int64Field\": {\n            \"defaultValue\": \"<int64>\",\n            \"numberField\": {\n              \"maxValue\": \"<int64>\",\n              \"minValue\": \"<int64>\",\n              \"step\": \"<int64>\"\n            },\n            \"placeholder\": \"<string>\",\n            \"rules\": {\n              \"const\": \"<int64>\",\n              \"gt\": \"<int64>\",\n              \"gte\": \"<int64>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<int64>\"\n              ],\n              \"lt\": \"<int64>\",\n              \"lte\": \"<int64>\",\n              \"notIn\": [\n                \"<int64>\"\n              ]\n            }\n          },\n          \"name\": \"<string>\",\n          \"stringField\": {\n            \"defaultValue\": \"<string>\",\n            \"passwordField\": {},\n            \"placeholder\": \"<string>\",\n            \"rules\": {\n              \"address\": \"<boolean>\",\n              \"const\": \"<string>\",\n              \"contains\": \"<string>\",\n              \"email\": \"<boolean>\",\n              \"hostname\": \"<boolean>\",\n              \"ignoreEmpty\": \"<boolean>\",\n              \"in\": [\n                \"<string>\"\n              ],\n              \"ip\": \"<boolean>\",\n              \"ipv4\": \"<boolean>\",\n              \"ipv6\": \"<boolean>\",\n              \"len\": \"<string>\",\n              \"lenBytes\": \"<string>\",\n              \"maxBytes\": \"<string>\",\n              \"maxLen\": \"<string>\",\n              \"minBytes\": \"<string>\",\n              \"minLen\": \"<string>\",\n              \"notContains\": \"<string>\",\n              \"notIn\": [\n                \"<string>\"\n              ],\n              \"pattern\": \"<string>\",\n              \"prefix\": \"<string>\",\n              \"strict\": \"<boolean>\",\n              \"suffix\": \"<string>\",\n              \"uri\": \"<boolean>\",\n              \"uriRef\": \"<boolean>\",\n              \"uuid\": \"<boolean>\",\n              \"wellKnownRegex\": \"UNKNOWN\"\n            },\n            \"selectField\": {\n              \"options\": [\n                {\n                  \"displayName\": \"<string>\",\n                  \"value\": \"<string>\"\n                }\n              ]\n            },\n            \"textField\": {\n              \"multiline\": \"<boolean>\"\n            }\n          },\n          \"stringSliceField\": {\n            \"chipsField\": {},\n            \"defaultValues\": [\n              \"<string>\"\n            ],\n            \"placeholder\": \"<string>\",\n            \"rules\": {\n              \"ignoreEmpty\": \"<boolean>\",\n              \"items\": {\n                \"any\": {\n                  \"in\": [\n                    \"<string>\"\n                  ],\n                  \"notIn\": [\n                    \"<string>\"\n                  ],\n                  \"required\": \"<boolean>\"\n                },\n                \"bool\": {\n                  \"const\": \"<boolean>\"\n                },\n                \"bytes\": {\n                  \"const\": \"<string>\",\n                  \"contains\": \"<string>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<string>\"\n                  ],\n                  \"ip\": \"<boolean>\",\n                  \"ipv4\": \"<boolean>\",\n                  \"ipv6\": \"<boolean>\",\n                  \"len\": \"<string>\",\n                  \"maxLen\": \"<string>\",\n                  \"minLen\": \"<string>\",\n                  \"notIn\": [\n                    \"<string>\"\n                  ],\n                  \"pattern\": \"<string>\",\n                  \"prefix\": \"<string>\",\n                  \"suffix\": \"<string>\"\n                },\n                \"double\": {\n                  \"const\": \"<number>\",\n                  \"gt\": \"<number>\",\n                  \"gte\": \"<number>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<number>\"\n                  ],\n                  \"lt\": \"<number>\",\n                  \"lte\": \"<number>\",\n                  \"notIn\": [\n                    \"<number>\"\n                  ]\n                },\n                \"duration\": {\n                  \"const\": \"<string>\",\n                  \"gt\": \"<string>\",\n                  \"gte\": \"<string>\",\n                  \"in\": [\n                    \"<string>\"\n                  ],\n                  \"lt\": \"<string>\",\n                  \"lte\": \"<string>\",\n                  \"notIn\": [\n                    \"<string>\"\n                  ],\n                  \"required\": \"<boolean>\"\n                },\n                \"enum\": {\n                  \"const\": \"<integer>\",\n                  \"definedOnly\": \"<boolean>\",\n                  \"in\": [\n                    \"<integer>\"\n                  ],\n                  \"notIn\": [\n                    \"<integer>\"\n                  ]\n                },\n                \"fixed32\": {\n                  \"const\": \"<integer>\",\n                  \"gt\": \"<integer>\",\n                  \"gte\": \"<integer>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<integer>\"\n                  ],\n                  \"lt\": \"<integer>\",\n                  \"lte\": \"<integer>\",\n                  \"notIn\": [\n                    \"<integer>\"\n                  ]\n                },\n                \"fixed64\": {\n                  \"const\": \"<string>\",\n                  \"gt\": \"<string>\",\n                  \"gte\": \"<string>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<string>\"\n                  ],\n                  \"lt\": \"<string>\",\n                  \"lte\": \"<string>\",\n                  \"notIn\": [\n                    \"<string>\"\n                  ]\n                },\n                \"float\": {\n                  \"const\": \"<number>\",\n                  \"gt\": \"<number>\",\n                  \"gte\": \"<number>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<number>\"\n                  ],\n                  \"lt\": \"<number>\",\n                  \"lte\": \"<number>\",\n                  \"notIn\": [\n                    \"<number>\"\n                  ]\n                },\n                \"int32\": {\n                  \"const\": \"<integer>\",\n                  \"gt\": \"<integer>\",\n                  \"gte\": \"<integer>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<integer>\"\n                  ],\n                  \"lt\": \"<integer>\",\n                  \"lte\": \"<integer>\",\n                  \"notIn\": [\n                    \"<integer>\"\n                  ]\n                },\n                \"int64\": {\n                  \"const\": \"<int64>\",\n                  \"gt\": \"<int64>\",\n                  \"gte\": \"<int64>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<int64>\"\n                  ],\n                  \"lt\": \"<int64>\",\n                  \"lte\": \"<int64>\",\n                  \"notIn\": [\n                    \"<int64>\"\n                  ]\n                },\n                \"map\": {\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"keys\": {\n                    \"value\": \"<Circular reference to #/components/schemas/validate.FieldRules detected>\"\n                  },\n                  \"maxPairs\": \"<string>\",\n                  \"minPairs\": \"<string>\",\n                  \"noSparse\": \"<boolean>\",\n                  \"values\": {\n                    \"value\": \"<Circular reference to #/components/schemas/validate.FieldRules detected>\"\n                  }\n                },\n                \"message\": {\n                  \"required\": \"<boolean>\",\n                  \"skip\": \"<boolean>\"\n                },\n                \"repeated\": {\n                  \"value\": \"<Circular reference to #/components/schemas/validate.RepeatedRules detected>\"\n                },\n                \"sfixed32\": {\n                  \"const\": \"<integer>\",\n                  \"gt\": \"<integer>\",\n                  \"gte\": \"<integer>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<integer>\"\n                  ],\n                  \"lt\": \"<integer>\",\n                  \"lte\": \"<integer>\",\n                  \"notIn\": [\n                    \"<integer>\"\n                  ]\n                },\n                \"sfixed64\": {\n                  \"const\": \"<int64>\",\n                  \"gt\": \"<int64>\",\n                  \"gte\": \"<int64>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<int64>\"\n                  ],\n                  \"lt\": \"<int64>\",\n                  \"lte\": \"<int64>\",\n                  \"notIn\": [\n                    \"<int64>\"\n                  ]\n                },\n                \"sint32\": {\n                  \"const\": \"<integer>\",\n                  \"gt\": \"<integer>\",\n                  \"gte\": \"<integer>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<integer>\"\n                  ],\n                  \"lt\": \"<integer>\",\n                  \"lte\": \"<integer>\",\n                  \"notIn\": [\n                    \"<integer>\"\n                  ]\n                },\n                \"sint64\": {\n                  \"const\": \"<int64>\",\n                  \"gt\": \"<int64>\",\n                  \"gte\": \"<int64>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<int64>\"\n                  ],\n                  \"lt\": \"<int64>\",\n                  \"lte\": \"<int64>\",\n                  \"notIn\": [\n                    \"<int64>\"\n                  ]\n                },\n                \"string\": {\n                  \"address\": \"<boolean>\",\n                  \"const\": \"<string>\",\n                  \"contains\": \"<string>\",\n                  \"email\": \"<boolean>\",\n                  \"hostname\": \"<boolean>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<string>\"\n                  ],\n                  \"ip\": \"<boolean>\",\n                  \"ipv4\": \"<boolean>\",\n                  \"ipv6\": \"<boolean>\",\n                  \"len\": \"<string>\",\n                  \"lenBytes\": \"<string>\",\n                  \"maxBytes\": \"<string>\",\n                  \"maxLen\": \"<string>\",\n                  \"minBytes\": \"<string>\",\n                  \"minLen\": \"<string>\",\n                  \"notContains\": \"<string>\",\n                  \"notIn\": [\n                    \"<string>\"\n                  ],\n                  \"pattern\": \"<string>\",\n                  \"prefix\": \"<string>\",\n                  \"strict\": \"<boolean>\",\n                  \"suffix\": \"<string>\",\n                  \"uri\": \"<boolean>\",\n                  \"uriRef\": \"<boolean>\",\n                  \"uuid\": \"<boolean>\",\n                  \"wellKnownRegex\": \"UNKNOWN\"\n                },\n                \"timestamp\": {\n                  \"const\": \"<dateTime>\",\n                  \"gt\": \"<dateTime>\",\n                  \"gtNow\": \"<boolean>\",\n                  \"gte\": \"<dateTime>\",\n                  \"lt\": \"<dateTime>\",\n                  \"ltNow\": \"<boolean>\",\n                  \"lte\": \"<dateTime>\",\n                  \"required\": \"<boolean>\",\n                  \"within\": \"<string>\"\n                },\n                \"uint32\": {\n                  \"const\": \"<integer>\",\n                  \"gt\": \"<integer>\",\n                  \"gte\": \"<integer>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<integer>\"\n                  ],\n                  \"lt\": \"<integer>\",\n                  \"lte\": \"<integer>\",\n                  \"notIn\": [\n                    \"<integer>\"\n                  ]\n                },\n                \"uint64\": {\n                  \"const\": \"<string>\",\n                  \"gt\": \"<string>\",\n                  \"gte\": \"<string>\",\n                  \"ignoreEmpty\": \"<boolean>\",\n                  \"in\": [\n                    \"<string>\"\n                  ],\n                  \"lt\": \"<string>\",\n                  \"lte\": \"<string>\",\n                  \"notIn\": [\n                    \"<string>\"\n                  ]\n                }\n              },\n              \"maxItems\": \"<string>\",\n              \"minItems\": \"<string>\",\n              \"unique\": \"<boolean>\"\n            }\n          }\n        }\n      ],\n      \"id\": \"<string>\"\n    },\n    \"id\": \"<string>\",\n    \"modifiedAt\": \"<dateTime>\"\n  }\n}",
+                      "createdAt": "2026-10-21T20:49:38.000Z",
+                      "updatedAt": "2026-10-21T20:49:38.000Z",
+                      "uid": "35240-e66b187d-ce84-459e-8b6e-3a26ccce85fd"
+                    }
+                  ],
+                  "createdAt": "2026-10-21T20:49:38.000Z",
+                  "updatedAt": "2026-10-21T20:49:38.000Z",
+                  "uid": "35240-0ddafdb5-2bd4-4468-a244-a2568466e120"
                 }
               ],
-              "body": "{\n  \"requestSchema\": {\n    \"createdAt\": \"1976-03-25T05:04:14.579Z\",\n    \"deletedAt\": \"1971-05-15T12:49:25.342Z\",\n    \"form\": {\n      \"description\": \"string\",\n      \"displayName\": \"string\",\n      \"fieldRelationships\": [\n        {\n          \"atLeastOne\": {},\n          \"fieldNames\": [\n            \"string\",\n            \"string\"\n          ],\n          \"mutuallyExclusive\": {},\n          \"requiredTogether\": {}\n        },\n        {\n          \"atLeastOne\": {},\n          \"fieldNames\": [\n            \"string\",\n            \"string\"\n          ],\n          \"mutuallyExclusive\": {},\n          \"requiredTogether\": {}\n        }\n      ],\n      \"fields\": [\n        {\n          \"boolField\": {\n            \"checkboxField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultValue\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"description\": \"string\",\n          \"displayName\": \"string\",\n          \"fileField\": {\n            \"acceptedFileTypes\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"fileInputField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxFileSize\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"int64Field\": {\n            \"defaultValue\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"numberField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"placeholder\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"name\": \"string\",\n          \"stringField\": {\n            \"defaultValue\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"passwordField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"placeholder\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"selectField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"textField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"stringSliceField\": {\n            \"chipsField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultValues\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"placeholder\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        {\n          \"boolField\": {\n            \"checkboxField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultValue\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"description\": \"string\",\n          \"displayName\": \"string\",\n          \"fileField\": {\n            \"acceptedFileTypes\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"fileInputField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxFileSize\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"int64Field\": {\n            \"defaultValue\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"numberField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"placeholder\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"name\": \"string\",\n          \"stringField\": {\n            \"defaultValue\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"passwordField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"placeholder\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"selectField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"textField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"stringSliceField\": {\n            \"chipsField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultValues\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"placeholder\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        }\n      ],\n      \"id\": \"string\"\n    },\n    \"id\": \"string\",\n    \"modifiedAt\": \"1992-10-10T12:29:25.008Z\"\n  }\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
+              "id": "c04259bf-9032-4ab2-93b7-9a0010b33f4a",
+              "createdAt": "2026-10-21T20:49:38.000Z",
+              "updatedAt": "2026-10-21T20:49:38.000Z",
+              "uid": "35240-c04259bf-9032-4ab2-93b7-9a0010b33f4a"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "159ceeae-5de8-4a2c-8d33-6097eccb4d45",
-          "name": "Delete",
-          "request": {
-            "name": "Delete",
-            "description": {
-              "content": "Invokes the c1.api.request_schema.v1.RequestSchemaService.Delete method.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "request_schemas",
-                ":request_schema_id"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "request_schema_id",
-                  "description": "(Required) "
-                },
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "DELETE",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "<object>",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
-            {
-              "id": "5166a1d0-8b58-426b-b9b5-00177aded436",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "request_schemas",
-                    ":request_schema_id"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "request_schema_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "DELETE",
-                "body": {
-                  "mode": "raw",
-                  "raw": "<object>",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "8d8ccdc9-20ce-46f7-ba6f-cc875ad389c1",
-          "name": "Get",
-          "request": {
-            "name": "Get",
-            "description": {
-              "content": "Invokes the c1.api.request_schema.v1.RequestSchemaService.Get method.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "request_schemas",
-                ":request_schema_id"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "request_schema_id",
-                  "description": "(Required) "
-                },
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "7e089c55-3eab-47ac-9fe6-0f9090d1cd35",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "request_schemas",
-                    ":request_schema_id"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "request_schema_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"requestSchema\": {\n    \"createdAt\": \"2010-02-11T15:09:35.770Z\",\n    \"deletedAt\": \"1962-04-26T00:35:16.486Z\",\n    \"form\": {\n      \"description\": \"string\",\n      \"displayName\": \"string\",\n      \"fieldRelationships\": [\n        {\n          \"atLeastOne\": {},\n          \"fieldNames\": [\n            \"string\",\n            \"string\"\n          ],\n          \"mutuallyExclusive\": {},\n          \"requiredTogether\": {}\n        },\n        {\n          \"atLeastOne\": {},\n          \"fieldNames\": [\n            \"string\",\n            \"string\"\n          ],\n          \"mutuallyExclusive\": {},\n          \"requiredTogether\": {}\n        }\n      ],\n      \"fields\": [\n        {\n          \"boolField\": {\n            \"checkboxField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultValue\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"description\": \"string\",\n          \"displayName\": \"string\",\n          \"fileField\": {\n            \"acceptedFileTypes\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"fileInputField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxFileSize\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"int64Field\": {\n            \"defaultValue\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"numberField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"placeholder\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"name\": \"string\",\n          \"stringField\": {\n            \"defaultValue\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"passwordField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"placeholder\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"selectField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"textField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"stringSliceField\": {\n            \"chipsField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultValues\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"placeholder\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        {\n          \"boolField\": {\n            \"checkboxField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultValue\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"description\": \"string\",\n          \"displayName\": \"string\",\n          \"fileField\": {\n            \"acceptedFileTypes\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"fileInputField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxFileSize\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"int64Field\": {\n            \"defaultValue\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"numberField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"placeholder\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"name\": \"string\",\n          \"stringField\": {\n            \"defaultValue\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"passwordField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"placeholder\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"selectField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"textField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"stringSliceField\": {\n            \"chipsField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultValues\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"placeholder\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        }\n      ],\n      \"id\": \"string\"\n    },\n    \"id\": \"string\",\n    \"modifiedAt\": \"1984-07-27T17:56:30.736Z\"\n  }\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "aa0deee2-4e38-4c30-bde8-9f003bc17fb6",
-          "name": "Update",
-          "request": {
-            "name": "Update",
-            "description": {
-              "content": "Invokes the c1.api.request_schema.v1.RequestSchemaService.Update method.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "request_schemas",
-                ":request_schema_id"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "request_schema_id",
-                  "description": "(Required) "
-                },
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "POST",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"requestSchema\": {\n    \"createdAt\": \"<dateTime>\",\n    \"deletedAt\": \"<dateTime>\",\n    \"form\": {\n      \"description\": \"<string>\",\n      \"displayName\": \"<string>\",\n      \"fieldRelationships\": [\n        {\n          \"atLeastOne\": \"<object>\",\n          \"fieldNames\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"mutuallyExclusive\": \"<object>\",\n          \"requiredTogether\": \"<object>\"\n        },\n        {\n          \"atLeastOne\": \"<object>\",\n          \"fieldNames\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"mutuallyExclusive\": \"<object>\",\n          \"requiredTogether\": \"<object>\"\n        }\n      ],\n      \"fields\": [\n        {\n          \"boolField\": {\n            \"checkboxField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultValue\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"description\": \"<string>\",\n          \"displayName\": \"<string>\",\n          \"fileField\": {\n            \"acceptedFileTypes\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"fileInputField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxFileSize\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"int64Field\": {\n            \"defaultValue\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"numberField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"placeholder\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"name\": \"<string>\",\n          \"stringField\": {\n            \"defaultValue\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"passwordField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"placeholder\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"selectField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"textField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"stringSliceField\": {\n            \"chipsField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultValues\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"placeholder\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        {\n          \"boolField\": {\n            \"checkboxField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultValue\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"description\": \"<string>\",\n          \"displayName\": \"<string>\",\n          \"fileField\": {\n            \"acceptedFileTypes\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"fileInputField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxFileSize\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"int64Field\": {\n            \"defaultValue\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"numberField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"placeholder\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"name\": \"<string>\",\n          \"stringField\": {\n            \"defaultValue\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"passwordField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"placeholder\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"selectField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"textField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"stringSliceField\": {\n            \"chipsField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultValues\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"placeholder\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        }\n      ],\n      \"id\": \"<string>\"\n    },\n    \"id\": \"<string>\",\n    \"modifiedAt\": \"<dateTime>\"\n  },\n  \"updateMask\": \"<string>\"\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
-            {
-              "id": "b19f8915-7890-4a59-a21f-683ae17b8f27",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "request_schemas",
-                    ":request_schema_id"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "request_schema_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"requestSchema\": {\n    \"createdAt\": \"1975-05-02T09:53:13.838Z\",\n    \"deletedAt\": \"1971-03-12T12:17:21.683Z\",\n    \"form\": {\n      \"description\": \"string\",\n      \"displayName\": \"string\",\n      \"fieldRelationships\": [\n        {\n          \"atLeastOne\": {},\n          \"fieldNames\": [\n            \"string\",\n            \"string\"\n          ],\n          \"mutuallyExclusive\": {},\n          \"requiredTogether\": {}\n        },\n        {\n          \"atLeastOne\": {},\n          \"fieldNames\": [\n            \"string\",\n            \"string\"\n          ],\n          \"mutuallyExclusive\": {},\n          \"requiredTogether\": {}\n        }\n      ],\n      \"fields\": [\n        {\n          \"boolField\": {\n            \"checkboxField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultValue\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"description\": \"string\",\n          \"displayName\": \"string\",\n          \"fileField\": {\n            \"acceptedFileTypes\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"fileInputField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxFileSize\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"int64Field\": {\n            \"defaultValue\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"numberField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"placeholder\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"name\": \"string\",\n          \"stringField\": {\n            \"defaultValue\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"passwordField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"placeholder\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"selectField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"textField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"stringSliceField\": {\n            \"chipsField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultValues\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"placeholder\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        {\n          \"boolField\": {\n            \"checkboxField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultValue\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"description\": \"string\",\n          \"displayName\": \"string\",\n          \"fileField\": {\n            \"acceptedFileTypes\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"fileInputField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxFileSize\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"int64Field\": {\n            \"defaultValue\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"numberField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"placeholder\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"name\": \"string\",\n          \"stringField\": {\n            \"defaultValue\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"passwordField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"placeholder\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"selectField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"textField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"stringSliceField\": {\n            \"chipsField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultValues\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"placeholder\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        }\n      ],\n      \"id\": \"string\"\n    },\n    \"id\": \"string\",\n    \"modifiedAt\": \"1977-05-06T07:04:10.058Z\"\n  },\n  \"updateMask\": \"<string>\"\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"requestSchema\": {\n    \"createdAt\": \"2004-03-11T05:32:18.832Z\",\n    \"deletedAt\": \"2009-07-13T21:22:17.580Z\",\n    \"form\": {\n      \"description\": \"string\",\n      \"displayName\": \"string\",\n      \"fieldRelationships\": [\n        {\n          \"atLeastOne\": {},\n          \"fieldNames\": [\n            \"string\",\n            \"string\"\n          ],\n          \"mutuallyExclusive\": {},\n          \"requiredTogether\": {}\n        },\n        {\n          \"atLeastOne\": {},\n          \"fieldNames\": [\n            \"string\",\n            \"string\"\n          ],\n          \"mutuallyExclusive\": {},\n          \"requiredTogether\": {}\n        }\n      ],\n      \"fields\": [\n        {\n          \"boolField\": {\n            \"checkboxField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultValue\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"description\": \"string\",\n          \"displayName\": \"string\",\n          \"fileField\": {\n            \"acceptedFileTypes\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"fileInputField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxFileSize\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"int64Field\": {\n            \"defaultValue\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"numberField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"placeholder\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"name\": \"string\",\n          \"stringField\": {\n            \"defaultValue\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"passwordField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"placeholder\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"selectField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"textField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"stringSliceField\": {\n            \"chipsField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultValues\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"placeholder\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        {\n          \"boolField\": {\n            \"checkboxField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultValue\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"description\": \"string\",\n          \"displayName\": \"string\",\n          \"fileField\": {\n            \"acceptedFileTypes\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"fileInputField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"maxFileSize\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"int64Field\": {\n            \"defaultValue\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"numberField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"placeholder\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"name\": \"string\",\n          \"stringField\": {\n            \"defaultValue\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"passwordField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"placeholder\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"selectField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"textField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"stringSliceField\": {\n            \"chipsField\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"defaultValues\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"placeholder\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"rules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        }\n      ],\n      \"id\": \"string\"\n    },\n    \"id\": \"string\",\n    \"modifiedAt\": \"1969-09-23T04:40:54.415Z\"\n  }\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "id": "879b3223-d48a-42d2-a5cc-62690dcf03fe",
+          "createdAt": "2026-10-21T20:49:38.000Z",
+          "updatedAt": "2026-10-21T20:49:38.000Z",
+          "uid": "35240-879b3223-d48a-42d2-a5cc-62690dcf03fe"
         }
       ],
-      "event": []
-    }
-  ],
-  "event": [],
-  "variable": [
-    {
-      "description": {
-        "content": "The domain of the tenant to use for this request.",
-        "type": "text/plain"
-      },
-      "type": "any",
-      "value": "example",
-      "key": "tenantDomain"
-    },
-    {
-      "type": "string",
-      "value": "https://{{tenantDomain}}.conductor.one",
-      "key": "baseUrl"
+      "id": "020c49d1-0625-457c-b60c-ca1a7c2de71a",
+      "createdAt": "2026-10-21T20:49:38.000Z",
+      "updatedAt": "2026-10-21T20:49:38.000Z",
+      "uid": "35240-020c49d1-0625-457c-b60c-ca1a7c2de71a"
     }
   ],
   "auth": {
@@ -529,17 +489,19 @@
     "bearer": [
       {
         "key": "token",
-        "value": "{{bearerToken}}"
+        "value": "{{bearerToken}}",
+        "type": "string"
       }
     ]
   },
-  "info": {
-    "_postman_id": "e7db0a05-b1ec-4534-8d6b-97c72785b410",
-    "name": "ConductorOne Access Conflict Request Schema API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "description": {
-      "content": "The ConductorOne API is a HTTP API for managing ConductorOne resources.",
-      "type": "text/plain"
+  "variable": [
+    {
+      "key": "tenantDomain",
+      "value": "example"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://{{tenantDomain}}.conductor.one"
     }
-  }
+  ]
 }

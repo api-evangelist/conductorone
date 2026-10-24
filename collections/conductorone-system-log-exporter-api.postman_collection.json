@@ -1,911 +1,872 @@
 {
+  "info": {
+    "_postman_id": "3bc554d0-603d-45ea-ac53-88874db550b3",
+    "name": "ConductorOne System Log Exporter API",
+    "description": "The ConductorOne API is a HTTP API for managing ConductorOne resources.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-21T20:50:38.000Z",
+    "updatedAt": "2026-10-21T20:50:39.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-3bc554d0-603d-45ea-ac53-88874db550b3"
+  },
   "item": [
     {
-      "id": "4c067a6f-f595-4238-bb38-32a265e77005",
-      "name": "System Log Exporter",
-      "description": {
-        "content": "",
-        "type": "text/plain"
-      },
+      "name": "api",
       "item": [
         {
-          "id": "efe2ee1f-8f41-4bc3-abdf-9493d398879b",
-          "name": "Search",
-          "request": {
-            "name": "Search",
-            "description": {
-              "content": "Invokes the c1.api.systemlog.v1.ExportsSearchService.Search method.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "search",
-                "systemlog",
-                "exports"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "POST",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"displayName\": \"<string>\",\n  \"pageSize\": \"<integer>\",\n  \"pageToken\": \"<string>\",\n  \"query\": \"<string>\",\n  \"refs\": [\n    {\n      \"exportId\": \"<string>\"\n    },\n    {\n      \"exportId\": \"<string>\"\n    }\n  ]\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
+          "name": "v1",
+          "item": [
             {
-              "id": "24d4c458-fb36-4d2c-ab9a-e5ec6f66e0fd",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "search",
-                    "systemlog",
-                    "exports"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"displayName\": \"<string>\",\n  \"pageSize\": \"<integer>\",\n  \"pageToken\": \"<string>\",\n  \"query\": \"<string>\",\n  \"refs\": [\n    {\n      \"exportId\": \"string\"\n    },\n    {\n      \"exportId\": \"string\"\n    }\n  ]\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
+              "name": "search",
+              "item": [
                 {
-                  "key": "Content-Type",
-                  "value": "application/json"
+                  "name": "systemlog",
+                  "item": [
+                    {
+                      "name": "exports",
+                      "item": [
+                        {
+                          "name": "Search",
+                          "id": "c9ae13f1-fc70-4a64-b628-1ae1012e4ebc",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n  \"displayName\": \"<string>\",\n  \"pageSize\": \"<integer>\",\n  \"pageToken\": \"<string>\",\n  \"query\": \"<string>\",\n  \"refs\": [\n    {\n      \"exportId\": \"<string>\"\n    },\n    {\n      \"exportId\": \"<string>\"\n    }\n  ]\n}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/search/systemlog/exports",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "search",
+                                "systemlog",
+                                "exports"
+                              ]
+                            },
+                            "description": "Invokes the c1.api.systemlog.v1.ExportsSearchService.Search method."
+                          },
+                          "response": [
+                            {
+                              "id": "9c6d4e2c-e9db-4a42-b4f8-6dcce4e3c926",
+                              "name": "Successful response",
+                              "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                  {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: bearer",
+                                    "key": "Authorization",
+                                    "value": "Bearer <token>"
+                                  }
+                                ],
+                                "body": {
+                                  "mode": "raw",
+                                  "raw": "{\n  \"displayName\": \"<string>\",\n  \"pageSize\": \"<integer>\",\n  \"pageToken\": \"<string>\",\n  \"query\": \"<string>\",\n  \"refs\": [\n    {\n      \"exportId\": \"<string>\"\n    },\n    {\n      \"exportId\": \"<string>\"\n    }\n  ]\n}",
+                                  "options": {
+                                    "raw": {
+                                      "headerFamily": "json",
+                                      "language": "json"
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v1/search/systemlog/exports",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v1",
+                                    "search",
+                                    "systemlog",
+                                    "exports"
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{\n  \"list\": [\n    {\n      \"createdAt\": \"<dateTime>\",\n      \"datasource\": {\n        \"datasourceId\": \"<string>\",\n        \"format\": \"EXPORT_FORMAT_OCSF_JSON_GZIP\",\n        \"prefix\": \"<string>\"\n      },\n      \"deletedAt\": \"<dateTime>\",\n      \"displayName\": \"<string>\",\n      \"exportId\": \"<string>\",\n      \"state\": \"EXPORT_STATE_ERROR\",\n      \"updatedAt\": \"<dateTime>\",\n      \"watermarkEventId\": \"<string>\"\n    },\n    {\n      \"createdAt\": \"<dateTime>\",\n      \"datasource\": {\n        \"datasourceId\": \"<string>\",\n        \"format\": \"EXPORT_FORMAT_UNSPECIFIED\",\n        \"prefix\": \"<string>\"\n      },\n      \"deletedAt\": \"<dateTime>\",\n      \"displayName\": \"<string>\",\n      \"exportId\": \"<string>\",\n      \"state\": \"EXPORT_STATE_EXPORTING\",\n      \"updatedAt\": \"<dateTime>\",\n      \"watermarkEventId\": \"<string>\"\n    }\n  ],\n  \"nextPageToken\": \"<string>\"\n}",
+                              "createdAt": "2026-10-21T20:50:39.000Z",
+                              "updatedAt": "2026-10-21T20:50:39.000Z",
+                              "uid": "35240-9c6d4e2c-e9db-4a42-b4f8-6dcce4e3c926"
+                            }
+                          ],
+                          "createdAt": "2026-10-21T20:50:39.000Z",
+                          "updatedAt": "2026-10-21T20:50:39.000Z",
+                          "uid": "35240-c9ae13f1-fc70-4a64-b628-1ae1012e4ebc"
+                        }
+                      ],
+                      "id": "f0571898-4e66-4be2-be8e-41e441d1fc21",
+                      "createdAt": "2026-10-21T20:50:39.000Z",
+                      "updatedAt": "2026-10-21T20:50:39.000Z",
+                      "uid": "35240-f0571898-4e66-4be2-be8e-41e441d1fc21"
+                    }
+                  ],
+                  "id": "1338d272-a9db-4579-bd81-93b3990f6660",
+                  "createdAt": "2026-10-21T20:50:39.000Z",
+                  "updatedAt": "2026-10-21T20:50:39.000Z",
+                  "uid": "35240-1338d272-a9db-4579-bd81-93b3990f6660"
                 }
               ],
-              "body": "{\n  \"list\": [\n    {\n      \"createdAt\": \"1952-04-20T12:34:22.433Z\",\n      \"datasource\": {\n        \"datasourceId\": \"string\",\n        \"format\": \"EXPORT_FORMAT_UNSPECIFIED\",\n        \"prefix\": \"string\"\n      },\n      \"deletedAt\": \"1961-01-20T02:56:06.417Z\",\n      \"displayName\": \"string\",\n      \"exportId\": \"string\",\n      \"state\": \"EXPORT_STATE_WAITING\",\n      \"updatedAt\": \"1977-08-01T10:19:20.899Z\",\n      \"watermarkEventId\": \"string\"\n    },\n    {\n      \"createdAt\": \"2025-12-01T14:43:23.647Z\",\n      \"datasource\": {\n        \"datasourceId\": \"string\",\n        \"format\": \"EXPORT_FORMAT_OCSF_JSON_GZIP\",\n        \"prefix\": \"string\"\n      },\n      \"deletedAt\": \"2025-07-11T13:11:20.958Z\",\n      \"displayName\": \"string\",\n      \"exportId\": \"string\",\n      \"state\": \"EXPORT_STATE_WAITING\",\n      \"updatedAt\": \"1959-11-15T20:28:31.180Z\",\n      \"watermarkEventId\": \"string\"\n    }\n  ],\n  \"nextPageToken\": \"string\"\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
+              "id": "7da5cb92-e9a1-4630-add4-9d38d39f757c",
+              "createdAt": "2026-10-21T20:50:39.000Z",
+              "updatedAt": "2026-10-21T20:50:39.000Z",
+              "uid": "35240-7da5cb92-e9a1-4630-add4-9d38d39f757c"
+            },
+            {
+              "name": "systemlog",
+              "item": [
+                {
+                  "name": "exports",
+                  "item": [
+                    {
+                      "name": "{export_id}",
+                      "item": [
+                        {
+                          "name": "events",
+                          "item": [
+                            {
+                              "name": "List Events",
+                              "id": "43d3e8d0-d7ce-4187-a248-73c4aa1b45ff",
+                              "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                              },
+                              "request": {
+                                "method": "POST",
+                                "header": [
+                                  {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "body": {
+                                  "mode": "raw",
+                                  "raw": "{\n  \"pageSize\": \"<integer>\",\n  \"pageToken\": \"<string>\"\n}",
+                                  "options": {
+                                    "raw": {
+                                      "headerFamily": "json",
+                                      "language": "json"
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v1/systemlog/exports/:export_id/events",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v1",
+                                    "systemlog",
+                                    "exports",
+                                    ":export_id",
+                                    "events"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "id": "a996cb8b-fef4-4fc6-a39e-6892ebb1eb55",
+                                      "key": "export_id",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    }
+                                  ]
+                                },
+                                "description": "Invokes the c1.api.systemlog.v1.ExportService.ListEvents method."
+                              },
+                              "response": [
+                                {
+                                  "id": "cad816f9-c840-4b1a-9bd7-23d0b6ca7dff",
+                                  "name": "Successful response",
+                                  "originalRequest": {
+                                    "method": "POST",
+                                    "header": [
+                                      {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                      },
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      },
+                                      {
+                                        "description": "Added as a part of security scheme: bearer",
+                                        "key": "Authorization",
+                                        "value": "Bearer <token>"
+                                      }
+                                    ],
+                                    "body": {
+                                      "mode": "raw",
+                                      "raw": "{\n  \"pageSize\": \"<integer>\",\n  \"pageToken\": \"<string>\"\n}",
+                                      "options": {
+                                        "raw": {
+                                          "headerFamily": "json",
+                                          "language": "json"
+                                        }
+                                      }
+                                    },
+                                    "url": {
+                                      "raw": "{{baseUrl}}/api/v1/systemlog/exports/:export_id/events",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "api",
+                                        "v1",
+                                        "systemlog",
+                                        "exports",
+                                        ":export_id",
+                                        "events"
+                                      ],
+                                      "variable": [
+                                        {
+                                          "key": "export_id"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "status": "OK",
+                                  "code": 200,
+                                  "_postman_previewlanguage": "json",
+                                  "header": [
+                                    {
+                                      "key": "Content-Type",
+                                      "value": "application/json"
+                                    }
+                                  ],
+                                  "cookie": [],
+                                  "responseTime": null,
+                                  "body": "{\n  \"list\": [\n    {\n      \"incididunt_37c\": 42541136.6760028\n    },\n    {\n      \"add\": \"proident dolor est elit magna\"\n    }\n  ],\n  \"nextPageToken\": \"<string>\"\n}",
+                                  "createdAt": "2026-10-21T20:50:39.000Z",
+                                  "updatedAt": "2026-10-21T20:50:39.000Z",
+                                  "uid": "35240-cad816f9-c840-4b1a-9bd7-23d0b6ca7dff"
+                                }
+                              ],
+                              "createdAt": "2026-10-21T20:50:39.000Z",
+                              "updatedAt": "2026-10-21T20:50:39.000Z",
+                              "uid": "35240-43d3e8d0-d7ce-4187-a248-73c4aa1b45ff"
+                            }
+                          ],
+                          "id": "c215e7af-b926-4f05-967e-9da7b2dac021",
+                          "createdAt": "2026-10-21T20:50:39.000Z",
+                          "updatedAt": "2026-10-21T20:50:39.000Z",
+                          "uid": "35240-c215e7af-b926-4f05-967e-9da7b2dac021"
+                        },
+                        {
+                          "name": "Delete",
+                          "id": "762cad38-ef42-497e-be70-f372a1dd029b",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "DELETE",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/systemlog/exports/:export_id",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "systemlog",
+                                "exports",
+                                ":export_id"
+                              ],
+                              "variable": [
+                                {
+                                  "id": "2f4d80c6-36f4-4f72-9879-21d080dab101",
+                                  "key": "export_id",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                }
+                              ]
+                            },
+                            "description": "Delete a policy by ID."
+                          },
+                          "response": [
+                            {
+                              "id": "a3e073a9-f17d-422f-a124-de25cd301d56",
+                              "name": "Successful response",
+                              "originalRequest": {
+                                "method": "DELETE",
+                                "header": [
+                                  {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: bearer",
+                                    "key": "Authorization",
+                                    "value": "Bearer <token>"
+                                  }
+                                ],
+                                "body": {
+                                  "mode": "raw",
+                                  "raw": "{}",
+                                  "options": {
+                                    "raw": {
+                                      "headerFamily": "json",
+                                      "language": "json"
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v1/systemlog/exports/:export_id",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v1",
+                                    "systemlog",
+                                    "exports",
+                                    ":export_id"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "export_id"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{}",
+                              "createdAt": "2026-10-21T20:50:39.000Z",
+                              "updatedAt": "2026-10-21T20:50:39.000Z",
+                              "uid": "35240-a3e073a9-f17d-422f-a124-de25cd301d56"
+                            }
+                          ],
+                          "createdAt": "2026-10-21T20:50:39.000Z",
+                          "updatedAt": "2026-10-21T20:50:39.000Z",
+                          "uid": "35240-762cad38-ef42-497e-be70-f372a1dd029b"
+                        },
+                        {
+                          "name": "Get",
+                          "id": "68e7fc36-9480-4c37-9291-1049960e3a23",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/systemlog/exports/:export_id",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "systemlog",
+                                "exports",
+                                ":export_id"
+                              ],
+                              "variable": [
+                                {
+                                  "id": "8545c349-5ce8-497e-b16f-0777fbcf8dcf",
+                                  "key": "export_id",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                }
+                              ]
+                            },
+                            "description": "Get a system log export by ID"
+                          },
+                          "response": [
+                            {
+                              "id": "9d749e8c-e3ee-4d7e-9a70-3544a06829f7",
+                              "name": "The ExportServiceGetResponse message contains the system log exporter object.",
+                              "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: bearer",
+                                    "key": "Authorization",
+                                    "value": "Bearer <token>"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v1/systemlog/exports/:export_id",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v1",
+                                    "systemlog",
+                                    "exports",
+                                    ":export_id"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "export_id"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{\n  \"exporter\": {\n    \"createdAt\": \"<dateTime>\",\n    \"datasource\": {\n      \"datasourceId\": \"<string>\",\n      \"format\": \"EXPORT_FORMAT_OCSF_JSON_GZIP\",\n      \"prefix\": \"<string>\"\n    },\n    \"deletedAt\": \"<dateTime>\",\n    \"displayName\": \"<string>\",\n    \"exportId\": \"<string>\",\n    \"state\": \"EXPORT_STATE_UNSPECIFIED\",\n    \"updatedAt\": \"<dateTime>\",\n    \"watermarkEventId\": \"<string>\"\n  }\n}",
+                              "createdAt": "2026-10-21T20:50:39.000Z",
+                              "updatedAt": "2026-10-21T20:50:39.000Z",
+                              "uid": "35240-9d749e8c-e3ee-4d7e-9a70-3544a06829f7"
+                            }
+                          ],
+                          "createdAt": "2026-10-21T20:50:39.000Z",
+                          "updatedAt": "2026-10-21T20:50:39.000Z",
+                          "uid": "35240-68e7fc36-9480-4c37-9291-1049960e3a23"
+                        },
+                        {
+                          "name": "Update",
+                          "id": "aa86b3ac-b8a4-4473-8a7d-8f1e6350a53e",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n  \"exporter\": {\n    \"createdAt\": \"<dateTime>\",\n    \"datasource\": {\n      \"datasourceId\": \"<string>\",\n      \"format\": \"EXPORT_FORMAT_OCSF_JSON_ZSTD\",\n      \"prefix\": \"<string>\"\n    },\n    \"deletedAt\": \"<dateTime>\",\n    \"displayName\": \"<string>\",\n    \"exportId\": \"<string>\",\n    \"state\": \"EXPORT_STATE_ERROR\",\n    \"updatedAt\": \"<dateTime>\",\n    \"watermarkEventId\": \"<string>\"\n  },\n  \"updateMask\": \"<string>\"\n}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/systemlog/exports/:export_id",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "systemlog",
+                                "exports",
+                                ":export_id"
+                              ],
+                              "variable": [
+                                {
+                                  "id": "665456d3-0921-436c-b70e-fb7d10d72ed6",
+                                  "key": "export_id",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                }
+                              ]
+                            },
+                            "description": "Update a system log export by providing a policy object and an update mask."
+                          },
+                          "response": [
+                            {
+                              "id": "8c957521-81c0-4c4f-ae4c-9ac683150661",
+                              "name": "Successful response",
+                              "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                  {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: bearer",
+                                    "key": "Authorization",
+                                    "value": "Bearer <token>"
+                                  }
+                                ],
+                                "body": {
+                                  "mode": "raw",
+                                  "raw": "{\n  \"exporter\": {\n    \"createdAt\": \"<dateTime>\",\n    \"datasource\": {\n      \"datasourceId\": \"<string>\",\n      \"format\": \"EXPORT_FORMAT_OCSF_JSON_ZSTD\",\n      \"prefix\": \"<string>\"\n    },\n    \"deletedAt\": \"<dateTime>\",\n    \"displayName\": \"<string>\",\n    \"exportId\": \"<string>\",\n    \"state\": \"EXPORT_STATE_ERROR\",\n    \"updatedAt\": \"<dateTime>\",\n    \"watermarkEventId\": \"<string>\"\n  },\n  \"updateMask\": \"<string>\"\n}",
+                                  "options": {
+                                    "raw": {
+                                      "headerFamily": "json",
+                                      "language": "json"
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v1/systemlog/exports/:export_id",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v1",
+                                    "systemlog",
+                                    "exports",
+                                    ":export_id"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "export_id"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{\n  \"exporter\": {\n    \"createdAt\": \"<dateTime>\",\n    \"datasource\": {\n      \"datasourceId\": \"<string>\",\n      \"format\": \"EXPORT_FORMAT_UNSPECIFIED\",\n      \"prefix\": \"<string>\"\n    },\n    \"deletedAt\": \"<dateTime>\",\n    \"displayName\": \"<string>\",\n    \"exportId\": \"<string>\",\n    \"state\": \"EXPORT_STATE_UNSPECIFIED\",\n    \"updatedAt\": \"<dateTime>\",\n    \"watermarkEventId\": \"<string>\"\n  }\n}",
+                              "createdAt": "2026-10-21T20:50:39.000Z",
+                              "updatedAt": "2026-10-21T20:50:39.000Z",
+                              "uid": "35240-8c957521-81c0-4c4f-ae4c-9ac683150661"
+                            }
+                          ],
+                          "createdAt": "2026-10-21T20:50:39.000Z",
+                          "updatedAt": "2026-10-21T20:50:39.000Z",
+                          "uid": "35240-aa86b3ac-b8a4-4473-8a7d-8f1e6350a53e"
+                        }
+                      ],
+                      "id": "5deb8b40-b756-407a-be85-2485da297228",
+                      "createdAt": "2026-10-21T20:50:39.000Z",
+                      "updatedAt": "2026-10-21T20:50:39.000Z",
+                      "uid": "35240-5deb8b40-b756-407a-be85-2485da297228"
+                    },
+                    {
+                      "name": "List",
+                      "id": "b55d9b0a-f5cd-4196-944e-5160762ffd9d",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/systemlog/exports?page_size=<integer>&page_token=<string>",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "systemlog",
+                            "exports"
+                          ],
+                          "query": [
+                            {
+                              "key": "page_size",
+                              "value": "<integer>"
+                            },
+                            {
+                              "key": "page_token",
+                              "value": "<string>"
+                            }
+                          ]
+                        },
+                        "description": "List Exports."
+                      },
+                      "response": [
+                        {
+                          "id": "e5223c50-0a2a-48b2-b00b-ef21a011685f",
+                          "name": "Successful response",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/systemlog/exports?page_size=<integer>&page_token=<string>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "systemlog",
+                                "exports"
+                              ],
+                              "query": [
+                                {
+                                  "key": "page_size",
+                                  "value": "<integer>"
+                                },
+                                {
+                                  "key": "page_token",
+                                  "value": "<string>"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"list\": [\n    {\n      \"createdAt\": \"<dateTime>\",\n      \"datasource\": {\n        \"datasourceId\": \"<string>\",\n        \"format\": \"EXPORT_FORMAT_OCSF_JSON_GZIP\",\n        \"prefix\": \"<string>\"\n      },\n      \"deletedAt\": \"<dateTime>\",\n      \"displayName\": \"<string>\",\n      \"exportId\": \"<string>\",\n      \"state\": \"EXPORT_STATE_EXPORTING\",\n      \"updatedAt\": \"<dateTime>\",\n      \"watermarkEventId\": \"<string>\"\n    },\n    {\n      \"createdAt\": \"<dateTime>\",\n      \"datasource\": {\n        \"datasourceId\": \"<string>\",\n        \"format\": \"EXPORT_FORMAT_UNSPECIFIED\",\n        \"prefix\": \"<string>\"\n      },\n      \"deletedAt\": \"<dateTime>\",\n      \"displayName\": \"<string>\",\n      \"exportId\": \"<string>\",\n      \"state\": \"EXPORT_STATE_UNSPECIFIED\",\n      \"updatedAt\": \"<dateTime>\",\n      \"watermarkEventId\": \"<string>\"\n    }\n  ],\n  \"nextPageToken\": \"<string>\"\n}",
+                          "createdAt": "2026-10-21T20:50:39.000Z",
+                          "updatedAt": "2026-10-21T20:50:39.000Z",
+                          "uid": "35240-e5223c50-0a2a-48b2-b00b-ef21a011685f"
+                        }
+                      ],
+                      "createdAt": "2026-10-21T20:50:39.000Z",
+                      "updatedAt": "2026-10-21T20:50:39.000Z",
+                      "uid": "35240-b55d9b0a-f5cd-4196-944e-5160762ffd9d"
+                    },
+                    {
+                      "name": "Create",
+                      "id": "7f86e0c5-99ea-4f7d-a9f2-798a25e583ab",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"datasource\": {\n    \"datasourceId\": \"<string>\",\n    \"format\": \"EXPORT_FORMAT_OCSF_JSON_ZSTD\",\n    \"prefix\": \"<string>\"\n  },\n  \"displayName\": \"<string>\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/systemlog/exports",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "systemlog",
+                            "exports"
+                          ]
+                        },
+                        "description": "Create a system log export."
+                      },
+                      "response": [
+                        {
+                          "id": "048b9691-d600-4c85-9df7-a4c3c7517f55",
+                          "name": "Successful response",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n  \"datasource\": {\n    \"datasourceId\": \"<string>\",\n    \"format\": \"EXPORT_FORMAT_OCSF_JSON_ZSTD\",\n    \"prefix\": \"<string>\"\n  },\n  \"displayName\": \"<string>\"\n}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/systemlog/exports",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "systemlog",
+                                "exports"
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"exporter\": {\n    \"createdAt\": \"<dateTime>\",\n    \"datasource\": {\n      \"datasourceId\": \"<string>\",\n      \"format\": \"EXPORT_FORMAT_UNSPECIFIED\",\n      \"prefix\": \"<string>\"\n    },\n    \"deletedAt\": \"<dateTime>\",\n    \"displayName\": \"<string>\",\n    \"exportId\": \"<string>\",\n    \"state\": \"EXPORT_STATE_WAITING\",\n    \"updatedAt\": \"<dateTime>\",\n    \"watermarkEventId\": \"<string>\"\n  }\n}",
+                          "createdAt": "2026-10-21T20:50:39.000Z",
+                          "updatedAt": "2026-10-21T20:50:39.000Z",
+                          "uid": "35240-048b9691-d600-4c85-9df7-a4c3c7517f55"
+                        }
+                      ],
+                      "createdAt": "2026-10-21T20:50:39.000Z",
+                      "updatedAt": "2026-10-21T20:50:39.000Z",
+                      "uid": "35240-7f86e0c5-99ea-4f7d-a9f2-798a25e583ab"
+                    }
+                  ],
+                  "id": "a25e2f3f-d96a-4413-8e14-e532b16d6a7a",
+                  "createdAt": "2026-10-21T20:50:39.000Z",
+                  "updatedAt": "2026-10-21T20:50:39.000Z",
+                  "uid": "35240-a25e2f3f-d96a-4413-8e14-e532b16d6a7a"
+                }
+              ],
+              "id": "b9913cf8-4730-4cac-a5bc-4e7d3a78572d",
+              "createdAt": "2026-10-21T20:50:39.000Z",
+              "updatedAt": "2026-10-21T20:50:39.000Z",
+              "uid": "35240-b9913cf8-4730-4cac-a5bc-4e7d3a78572d"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "d138bd11-6b7a-473a-af73-e003e8dd0f94",
-          "name": "List",
-          "request": {
-            "name": "List",
-            "description": {
-              "content": "List Exports.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "systemlog",
-                "exports"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [
-                {
-                  "disabled": false,
-                  "key": "page_size",
-                  "value": "<integer>"
-                },
-                {
-                  "disabled": false,
-                  "key": "page_token",
-                  "value": "<string>"
-                }
-              ],
-              "variable": [
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "d8f06f80-b2ee-4ae3-95e5-1186ca69dd1d",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "systemlog",
-                    "exports"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [
-                    {
-                      "key": "page_size",
-                      "value": "<integer>"
-                    },
-                    {
-                      "key": "page_token",
-                      "value": "<string>"
-                    }
-                  ],
-                  "variable": [
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"list\": [\n    {\n      \"createdAt\": \"1961-02-13T02:00:26.617Z\",\n      \"datasource\": {\n        \"datasourceId\": \"string\",\n        \"format\": \"EXPORT_FORMAT_UNSPECIFIED\",\n        \"prefix\": \"string\"\n      },\n      \"deletedAt\": \"2023-03-04T04:02:31.634Z\",\n      \"displayName\": \"string\",\n      \"exportId\": \"string\",\n      \"state\": \"EXPORT_STATE_WAITING\",\n      \"updatedAt\": \"1991-11-16T02:46:40.363Z\",\n      \"watermarkEventId\": \"string\"\n    },\n    {\n      \"createdAt\": \"2025-05-21T02:55:06.587Z\",\n      \"datasource\": {\n        \"datasourceId\": \"string\",\n        \"format\": \"EXPORT_FORMAT_OCSF_JSON_ZSTD\",\n        \"prefix\": \"string\"\n      },\n      \"deletedAt\": \"1986-11-16T19:06:55.528Z\",\n      \"displayName\": \"string\",\n      \"exportId\": \"string\",\n      \"state\": \"EXPORT_STATE_EXPORTING\",\n      \"updatedAt\": \"2021-01-21T20:13:55.590Z\",\n      \"watermarkEventId\": \"string\"\n    }\n  ],\n  \"nextPageToken\": \"string\"\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "b7bb0f48-f2aa-43a9-ac2d-21c097ad01e1",
-          "name": "Create",
-          "request": {
-            "name": "Create",
-            "description": {
-              "content": "Create a system log export.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "systemlog",
-                "exports"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "POST",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"datasource\": {\n    \"datasourceId\": \"<string>\",\n    \"format\": \"<string>\",\n    \"prefix\": \"<string>\"\n  },\n  \"displayName\": \"<string>\"\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
-            {
-              "id": "3e8b87b6-98be-4c55-9ef9-c0ef26972ee1",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "systemlog",
-                    "exports"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"datasource\": {\n    \"datasourceId\": \"string\",\n    \"format\": \"EXPORT_FORMAT_OCSF_JSON_ZSTD\",\n    \"prefix\": \"string\"\n  },\n  \"displayName\": \"<string>\"\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"exporter\": {\n    \"createdAt\": \"2002-11-05T14:25:32.371Z\",\n    \"datasource\": {\n      \"datasourceId\": \"string\",\n      \"format\": \"EXPORT_FORMAT_UNSPECIFIED\",\n      \"prefix\": \"string\"\n    },\n    \"deletedAt\": \"1978-04-23T06:37:40.196Z\",\n    \"displayName\": \"string\",\n    \"exportId\": \"string\",\n    \"state\": \"EXPORT_STATE_UNSPECIFIED\",\n    \"updatedAt\": \"1971-07-14T06:55:17.776Z\",\n    \"watermarkEventId\": \"string\"\n  }\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "1a8a2eb7-3f21-471e-b0ec-3afaa2d972f2",
-          "name": "Delete",
-          "request": {
-            "name": "Delete",
-            "description": {
-              "content": "Delete a policy by ID.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "systemlog",
-                "exports",
-                ":export_id"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "export_id",
-                  "description": "(Required) "
-                },
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "DELETE",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "<object>",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
-            {
-              "id": "9c26bbe9-b347-4615-96cb-a3e21c3b9dd7",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "systemlog",
-                    "exports",
-                    ":export_id"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "export_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "DELETE",
-                "body": {
-                  "mode": "raw",
-                  "raw": "<object>",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "1eab0b1e-7907-4312-a2bd-23b80c42aa83",
-          "name": "Get",
-          "request": {
-            "name": "Get",
-            "description": {
-              "content": "Get a system log export by ID",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "systemlog",
-                "exports",
-                ":export_id"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "export_id",
-                  "description": "(Required) "
-                },
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "972bd22f-5b13-4c89-8381-761019b5147c",
-              "name": "The ExportServiceGetResponse message contains the system log exporter object.",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "systemlog",
-                    "exports",
-                    ":export_id"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "export_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"exporter\": {\n    \"createdAt\": \"1980-12-26T10:16:30.568Z\",\n    \"datasource\": {\n      \"datasourceId\": \"string\",\n      \"format\": \"EXPORT_FORMAT_OCSF_JSON_ZSTD\",\n      \"prefix\": \"string\"\n    },\n    \"deletedAt\": \"1975-06-22T15:18:57.669Z\",\n    \"displayName\": \"string\",\n    \"exportId\": \"string\",\n    \"state\": \"EXPORT_STATE_WAITING\",\n    \"updatedAt\": \"1955-01-03T00:49:16.893Z\",\n    \"watermarkEventId\": \"string\"\n  }\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "6da375e6-2742-4f29-b856-89d5616ab030",
-          "name": "Update",
-          "request": {
-            "name": "Update",
-            "description": {
-              "content": "Update a system log export by providing a policy object and an update mask.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "systemlog",
-                "exports",
-                ":export_id"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "export_id",
-                  "description": "(Required) "
-                },
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "POST",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"exporter\": {\n    \"datasource\": {\n      \"datasourceId\": \"<string>\",\n      \"format\": \"<string>\",\n      \"prefix\": \"<string>\"\n    },\n    \"displayName\": \"<string>\"\n  },\n  \"updateMask\": \"<string>\"\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
-            {
-              "id": "a7e1311a-8926-4ffb-9aee-d648f33cf420",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "systemlog",
-                    "exports",
-                    ":export_id"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "export_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"exporter\": {\n    \"datasource\": {\n      \"datasourceId\": \"string\",\n      \"format\": \"EXPORT_FORMAT_OCSF_JSON_ZSTD\",\n      \"prefix\": \"string\"\n    },\n    \"displayName\": \"string\"\n  },\n  \"updateMask\": \"<string>\"\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"exporter\": {\n    \"createdAt\": \"1953-03-28T03:12:44.808Z\",\n    \"datasource\": {\n      \"datasourceId\": \"string\",\n      \"format\": \"EXPORT_FORMAT_OCSF_JSON_ZSTD\",\n      \"prefix\": \"string\"\n    },\n    \"deletedAt\": \"1986-07-11T11:01:21.443Z\",\n    \"displayName\": \"string\",\n    \"exportId\": \"string\",\n    \"state\": \"EXPORT_STATE_WAITING\",\n    \"updatedAt\": \"1974-12-11T07:32:57.221Z\",\n    \"watermarkEventId\": \"string\"\n  }\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "b323e0e7-db62-42b2-b20b-dc2e1ce52991",
-          "name": "List Events",
-          "request": {
-            "name": "List Events",
-            "description": {
-              "content": "Invokes the c1.api.systemlog.v1.ExportService.ListEvents method.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "systemlog",
-                "exports",
-                ":export_id",
-                "events"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "export_id",
-                  "description": "(Required) "
-                },
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "POST",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"pageSize\": \"<integer>\",\n  \"pageToken\": \"<string>\"\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
-            {
-              "id": "9a94e4f8-d8c8-4045-981e-b29648165980",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "systemlog",
-                    "exports",
-                    ":export_id",
-                    "events"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "export_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"pageSize\": \"<integer>\",\n  \"pageToken\": \"<string>\"\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"list\": [\n    {\n      \"key_0\": \"string\",\n      \"key_1\": \"string\"\n    },\n    {\n      \"key_0\": 731,\n      \"key_1\": true,\n      \"key_2\": \"string\",\n      \"key_3\": 8776.844731659161\n    }\n  ],\n  \"nextPageToken\": \"string\"\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "id": "09a6a9b4-d080-44e1-8c96-81cf50c64615",
+          "createdAt": "2026-10-21T20:50:39.000Z",
+          "updatedAt": "2026-10-21T20:50:39.000Z",
+          "uid": "35240-09a6a9b4-d080-44e1-8c96-81cf50c64615"
         }
       ],
-      "event": []
-    }
-  ],
-  "event": [],
-  "variable": [
-    {
-      "description": {
-        "content": "The domain of the tenant to use for this request.",
-        "type": "text/plain"
-      },
-      "type": "any",
-      "value": "example",
-      "key": "tenantDomain"
-    },
-    {
-      "type": "string",
-      "value": "https://{{tenantDomain}}.conductor.one",
-      "key": "baseUrl"
+      "id": "953bdd9a-68e3-4910-942b-06319b05af8e",
+      "createdAt": "2026-10-21T20:50:39.000Z",
+      "updatedAt": "2026-10-21T20:50:39.000Z",
+      "uid": "35240-953bdd9a-68e3-4910-942b-06319b05af8e"
     }
   ],
   "auth": {
@@ -913,17 +874,19 @@
     "bearer": [
       {
         "key": "token",
-        "value": "{{bearerToken}}"
+        "value": "{{bearerToken}}",
+        "type": "string"
       }
     ]
   },
-  "info": {
-    "_postman_id": "5ed7a0da-0fc3-4ec5-a241-573b32d52ce3",
-    "name": "ConductorOne Access Conflict System Log Exporter API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "description": {
-      "content": "The ConductorOne API is a HTTP API for managing ConductorOne resources.",
-      "type": "text/plain"
+  "variable": [
+    {
+      "key": "tenantDomain",
+      "value": "example"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://{{tenantDomain}}.conductor.one"
     }
-  }
+  ]
 }

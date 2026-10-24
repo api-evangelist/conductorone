@@ -1,0 +1,777 @@
+{
+  "info": {
+    "_postman_id": "210b1cc5-089c-4bd5-a09e-e95cbcf0b846",
+    "name": "ConductorOne App Users API",
+    "description": "The ConductorOne API is a HTTP API for managing ConductorOne resources.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-21T20:51:09.000Z",
+    "updatedAt": "2026-10-21T20:51:09.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-210b1cc5-089c-4bd5-a09e-e95cbcf0b846"
+  },
+  "item": [
+    {
+      "name": "api",
+      "item": [
+        {
+          "name": "v1",
+          "item": [
+            {
+              "name": "apps",
+              "item": [
+                {
+                  "name": "{app_id}",
+                  "item": [
+                    {
+                      "name": "app_users",
+                      "item": [
+                        {
+                          "name": "{app_user_id}",
+                          "item": [
+                            {
+                              "name": "credentials",
+                              "item": [
+                                {
+                                  "name": "List App User Credentials",
+                                  "id": "b6caabde-4bdf-4d38-8714-8931dc78c819",
+                                  "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                  },
+                                  "request": {
+                                    "method": "GET",
+                                    "header": [
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      }
+                                    ],
+                                    "url": {
+                                      "raw": "{{baseUrl}}/api/v1/apps/:app_id/app_users/:app_user_id/credentials?page_size=<integer>&page_token=<string>",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "api",
+                                        "v1",
+                                        "apps",
+                                        ":app_id",
+                                        "app_users",
+                                        ":app_user_id",
+                                        "credentials"
+                                      ],
+                                      "query": [
+                                        {
+                                          "key": "page_size",
+                                          "value": "<integer>"
+                                        },
+                                        {
+                                          "key": "page_token",
+                                          "value": "<string>"
+                                        }
+                                      ],
+                                      "variable": [
+                                        {
+                                          "id": "a275a42a-2f44-4fc1-9ba1-2fe217f8e395",
+                                          "key": "app_id",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        },
+                                        {
+                                          "id": "4a4a702a-042a-4bcd-b9a6-0b4530d0fa04",
+                                          "key": "app_user_id",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        }
+                                      ]
+                                    },
+                                    "description": "Invokes the c1.api.app.v1.AppUserService.ListAppUserCredentials method."
+                                  },
+                                  "response": [
+                                    {
+                                      "id": "c7bbecfb-1835-4058-9912-138a61ccaf8a",
+                                      "name": "Successful response",
+                                      "originalRequest": {
+                                        "method": "GET",
+                                        "header": [
+                                          {
+                                            "key": "Accept",
+                                            "value": "application/json"
+                                          },
+                                          {
+                                            "description": "Added as a part of security scheme: bearer",
+                                            "key": "Authorization",
+                                            "value": "Bearer <token>"
+                                          }
+                                        ],
+                                        "url": {
+                                          "raw": "{{baseUrl}}/api/v1/apps/:app_id/app_users/:app_user_id/credentials?page_size=<integer>&page_token=<string>",
+                                          "host": [
+                                            "{{baseUrl}}"
+                                          ],
+                                          "path": [
+                                            "api",
+                                            "v1",
+                                            "apps",
+                                            ":app_id",
+                                            "app_users",
+                                            ":app_user_id",
+                                            "credentials"
+                                          ],
+                                          "query": [
+                                            {
+                                              "key": "page_size",
+                                              "value": "<integer>"
+                                            },
+                                            {
+                                              "key": "page_token",
+                                              "value": "<string>"
+                                            }
+                                          ],
+                                          "variable": [
+                                            {
+                                              "key": "app_id"
+                                            },
+                                            {
+                                              "key": "app_user_id"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "status": "OK",
+                                      "code": 200,
+                                      "_postman_previewlanguage": "json",
+                                      "header": [
+                                        {
+                                          "key": "Content-Type",
+                                          "value": "application/json"
+                                        }
+                                      ],
+                                      "cookie": [],
+                                      "responseTime": null,
+                                      "body": "{\n  \"list\": [\n    {\n      \"appId\": \"<string>\",\n      \"appUserId\": \"<string>\",\n      \"createdAt\": \"<dateTime>\",\n      \"deletedAt\": \"<dateTime>\",\n      \"encryptedData\": {\n        \"description\": \"<string>\",\n        \"encryptedBytes\": \"<string>\",\n        \"keyId\": \"<string>\",\n        \"name\": \"<string>\",\n        \"provider\": \"<string>\",\n        \"schema\": \"<string>\"\n      },\n      \"expiresAt\": \"<dateTime>\",\n      \"id\": \"<string>\",\n      \"updatedAt\": \"<dateTime>\"\n    },\n    {\n      \"appId\": \"<string>\",\n      \"appUserId\": \"<string>\",\n      \"createdAt\": \"<dateTime>\",\n      \"deletedAt\": \"<dateTime>\",\n      \"encryptedData\": {\n        \"description\": \"<string>\",\n        \"encryptedBytes\": \"<string>\",\n        \"keyId\": \"<string>\",\n        \"name\": \"<string>\",\n        \"provider\": \"<string>\",\n        \"schema\": \"<string>\"\n      },\n      \"expiresAt\": \"<dateTime>\",\n      \"id\": \"<string>\",\n      \"updatedAt\": \"<dateTime>\"\n    }\n  ],\n  \"nextPageToken\": \"<string>\"\n}",
+                                      "createdAt": "2026-10-21T20:51:09.000Z",
+                                      "updatedAt": "2026-10-21T20:51:09.000Z",
+                                      "uid": "35240-c7bbecfb-1835-4058-9912-138a61ccaf8a"
+                                    }
+                                  ],
+                                  "createdAt": "2026-10-21T20:51:09.000Z",
+                                  "updatedAt": "2026-10-21T20:51:09.000Z",
+                                  "uid": "35240-b6caabde-4bdf-4d38-8714-8931dc78c819"
+                                }
+                              ],
+                              "id": "4631cf16-d0d0-4bf2-8379-2d0b1f5adc65",
+                              "createdAt": "2026-10-21T20:51:09.000Z",
+                              "updatedAt": "2026-10-21T20:51:09.000Z",
+                              "uid": "35240-4631cf16-d0d0-4bf2-8379-2d0b1f5adc65"
+                            }
+                          ],
+                          "id": "eee54e98-2946-45e8-a572-8847ee3bb554",
+                          "createdAt": "2026-10-21T20:51:09.000Z",
+                          "updatedAt": "2026-10-21T20:51:09.000Z",
+                          "uid": "35240-eee54e98-2946-45e8-a572-8847ee3bb554"
+                        },
+                        {
+                          "name": "List",
+                          "id": "fbcce944-c8b4-4d72-a489-4298dc5be34e",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/apps/:app_id/app_users?page_size=<integer>&page_token=<string>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "apps",
+                                ":app_id",
+                                "app_users"
+                              ],
+                              "query": [
+                                {
+                                  "key": "page_size",
+                                  "value": "<integer>"
+                                },
+                                {
+                                  "key": "page_token",
+                                  "value": "<string>"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "id": "ddb31f46-83d1-431e-a629-cde817a60564",
+                                  "key": "app_id",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                }
+                              ]
+                            },
+                            "description": "Invokes the c1.api.app.v1.AppUserService.List method."
+                          },
+                          "response": [
+                            {
+                              "id": "83d57f0f-98e6-4164-86f9-5f34bdc2fb02",
+                              "name": "Successful response",
+                              "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: bearer",
+                                    "key": "Authorization",
+                                    "value": "Bearer <token>"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v1/apps/:app_id/app_users?page_size=<integer>&page_token=<string>",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v1",
+                                    "apps",
+                                    ":app_id",
+                                    "app_users"
+                                  ],
+                                  "query": [
+                                    {
+                                      "key": "page_size",
+                                      "value": "<integer>"
+                                    },
+                                    {
+                                      "key": "page_token",
+                                      "value": "<string>"
+                                    }
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "app_id"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{\n  \"expanded\": [\n    {\n      \"@type\": \"<string>\",\n      \"dolore__\": \"in sint\"\n    },\n    {\n      \"@type\": \"<string>\",\n      \"esse752\": true,\n      \"ea_0\": \"amet sed sunt qui\"\n    }\n  ],\n  \"list\": [\n    {\n      \"appPath\": \"<string>\",\n      \"appUser\": {\n        \"appId\": \"<string>\",\n        \"appUserType\": \"APP_USER_TYPE_SYSTEM_ACCOUNT\",\n        \"createdAt\": \"<dateTime>\",\n        \"deletedAt\": \"<dateTime>\",\n        \"displayName\": \"<string>\",\n        \"email\": \"<string>\",\n        \"emails\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"employeeIds\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"id\": \"<string>\",\n        \"identityUserId\": \"<string>\",\n        \"isExternal\": \"<boolean>\",\n        \"profile\": {\n          \"pariatur_9\": true\n        },\n        \"status\": {\n          \"details\": \"<string>\",\n          \"status\": \"STATUS_UNSPECIFIED\"\n        },\n        \"updatedAt\": \"<dateTime>\",\n        \"username\": \"<string>\",\n        \"usernames\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      \"identityUserPath\": \"<string>\",\n      \"lastUsagePath\": \"<string>\"\n    },\n    {\n      \"appPath\": \"<string>\",\n      \"appUser\": {\n        \"appId\": \"<string>\",\n        \"appUserType\": \"APP_USER_TYPE_SERVICE_ACCOUNT\",\n        \"createdAt\": \"<dateTime>\",\n        \"deletedAt\": \"<dateTime>\",\n        \"displayName\": \"<string>\",\n        \"email\": \"<string>\",\n        \"emails\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"employeeIds\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"id\": \"<string>\",\n        \"identityUserId\": \"<string>\",\n        \"isExternal\": \"<boolean>\",\n        \"profile\": {\n          \"nostrud_530\": \"adipisicing\",\n          \"Lorem19d\": 82394921,\n          \"dolore7e\": -25275700.541068062,\n          \"in118\": -21845602,\n          \"adipisicing75\": \"tempor Lorem com\"\n        },\n        \"status\": {\n          \"details\": \"<string>\",\n          \"status\": \"STATUS_UNSPECIFIED\"\n        },\n        \"updatedAt\": \"<dateTime>\",\n        \"username\": \"<string>\",\n        \"usernames\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      \"identityUserPath\": \"<string>\",\n      \"lastUsagePath\": \"<string>\"\n    }\n  ],\n  \"nextPageToken\": \"<string>\"\n}",
+                              "createdAt": "2026-10-21T20:51:09.000Z",
+                              "updatedAt": "2026-10-21T20:51:09.000Z",
+                              "uid": "35240-83d57f0f-98e6-4164-86f9-5f34bdc2fb02"
+                            }
+                          ],
+                          "createdAt": "2026-10-21T20:51:09.000Z",
+                          "updatedAt": "2026-10-21T20:51:09.000Z",
+                          "uid": "35240-fbcce944-c8b4-4d72-a489-4298dc5be34e"
+                        }
+                      ],
+                      "id": "8b2a6f9a-1483-4b4a-99d7-2eb9155e1dd1",
+                      "createdAt": "2026-10-21T20:51:09.000Z",
+                      "updatedAt": "2026-10-21T20:51:09.000Z",
+                      "uid": "35240-8b2a6f9a-1483-4b4a-99d7-2eb9155e1dd1"
+                    },
+                    {
+                      "name": "users",
+                      "item": [
+                        {
+                          "name": "{user_id}",
+                          "item": [
+                            {
+                              "name": "app_users",
+                              "item": [
+                                {
+                                  "name": "List App Users For User",
+                                  "id": "f110651e-c233-4223-9775-086d3dc2924c",
+                                  "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                  },
+                                  "request": {
+                                    "method": "GET",
+                                    "header": [
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      }
+                                    ],
+                                    "url": {
+                                      "raw": "{{baseUrl}}/api/v1/apps/:app_id/users/:user_id/app_users?page_size=<integer>&page_token=<string>",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "api",
+                                        "v1",
+                                        "apps",
+                                        ":app_id",
+                                        "users",
+                                        ":user_id",
+                                        "app_users"
+                                      ],
+                                      "query": [
+                                        {
+                                          "key": "page_size",
+                                          "value": "<integer>"
+                                        },
+                                        {
+                                          "key": "page_token",
+                                          "value": "<string>"
+                                        }
+                                      ],
+                                      "variable": [
+                                        {
+                                          "id": "2a38ca73-e7da-4c82-8013-b09cc9ece1d5",
+                                          "key": "app_id",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        },
+                                        {
+                                          "id": "695e6d73-0974-45be-aacb-b94b98ac48c0",
+                                          "key": "user_id",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        }
+                                      ]
+                                    },
+                                    "description": "Invokes the c1.api.app.v1.AppUserService.ListAppUsersForUser method."
+                                  },
+                                  "response": [
+                                    {
+                                      "id": "1f1b13c8-d04e-401f-b24a-67d795db5643",
+                                      "name": "Successful response",
+                                      "originalRequest": {
+                                        "method": "GET",
+                                        "header": [
+                                          {
+                                            "key": "Accept",
+                                            "value": "application/json"
+                                          },
+                                          {
+                                            "description": "Added as a part of security scheme: bearer",
+                                            "key": "Authorization",
+                                            "value": "Bearer <token>"
+                                          }
+                                        ],
+                                        "url": {
+                                          "raw": "{{baseUrl}}/api/v1/apps/:app_id/users/:user_id/app_users?page_size=<integer>&page_token=<string>",
+                                          "host": [
+                                            "{{baseUrl}}"
+                                          ],
+                                          "path": [
+                                            "api",
+                                            "v1",
+                                            "apps",
+                                            ":app_id",
+                                            "users",
+                                            ":user_id",
+                                            "app_users"
+                                          ],
+                                          "query": [
+                                            {
+                                              "key": "page_size",
+                                              "value": "<integer>"
+                                            },
+                                            {
+                                              "key": "page_token",
+                                              "value": "<string>"
+                                            }
+                                          ],
+                                          "variable": [
+                                            {
+                                              "key": "app_id"
+                                            },
+                                            {
+                                              "key": "user_id"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "status": "OK",
+                                      "code": 200,
+                                      "_postman_previewlanguage": "json",
+                                      "header": [
+                                        {
+                                          "key": "Content-Type",
+                                          "value": "application/json"
+                                        }
+                                      ],
+                                      "cookie": [],
+                                      "responseTime": null,
+                                      "body": "{\n  \"expanded\": [\n    {\n      \"@type\": \"<string>\"\n    },\n    {\n      \"@type\": \"<string>\"\n    }\n  ],\n  \"list\": [\n    {\n      \"appPath\": \"<string>\",\n      \"appUser\": {\n        \"appId\": \"<string>\",\n        \"appUserType\": \"APP_USER_TYPE_UNSPECIFIED\",\n        \"createdAt\": \"<dateTime>\",\n        \"deletedAt\": \"<dateTime>\",\n        \"displayName\": \"<string>\",\n        \"email\": \"<string>\",\n        \"emails\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"employeeIds\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"id\": \"<string>\",\n        \"identityUserId\": \"<string>\",\n        \"isExternal\": \"<boolean>\",\n        \"profile\": {\n          \"nullad\": 47215440.14717072,\n          \"est_c9\": -78205376.27938586,\n          \"labore3df\": -512780.711317569,\n          \"ad__\": -34782481.801629394\n        },\n        \"status\": {\n          \"details\": \"<string>\",\n          \"status\": \"STATUS_DISABLED\"\n        },\n        \"updatedAt\": \"<dateTime>\",\n        \"username\": \"<string>\",\n        \"usernames\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      \"identityUserPath\": \"<string>\",\n      \"lastUsagePath\": \"<string>\"\n    },\n    {\n      \"appPath\": \"<string>\",\n      \"appUser\": {\n        \"appId\": \"<string>\",\n        \"appUserType\": \"APP_USER_TYPE_SERVICE_ACCOUNT\",\n        \"createdAt\": \"<dateTime>\",\n        \"deletedAt\": \"<dateTime>\",\n        \"displayName\": \"<string>\",\n        \"email\": \"<string>\",\n        \"emails\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"employeeIds\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"id\": \"<string>\",\n        \"identityUserId\": \"<string>\",\n        \"isExternal\": \"<boolean>\",\n        \"profile\": {\n          \"qui_e\": 78335774.06813613\n        },\n        \"status\": {\n          \"details\": \"<string>\",\n          \"status\": \"STATUS_DISABLED\"\n        },\n        \"updatedAt\": \"<dateTime>\",\n        \"username\": \"<string>\",\n        \"usernames\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      \"identityUserPath\": \"<string>\",\n      \"lastUsagePath\": \"<string>\"\n    }\n  ],\n  \"nextPageToken\": \"<string>\"\n}",
+                                      "createdAt": "2026-10-21T20:51:09.000Z",
+                                      "updatedAt": "2026-10-21T20:51:09.000Z",
+                                      "uid": "35240-1f1b13c8-d04e-401f-b24a-67d795db5643"
+                                    }
+                                  ],
+                                  "createdAt": "2026-10-21T20:51:09.000Z",
+                                  "updatedAt": "2026-10-21T20:51:09.000Z",
+                                  "uid": "35240-f110651e-c233-4223-9775-086d3dc2924c"
+                                }
+                              ],
+                              "id": "0e23c475-5667-465e-8ebe-719e1381f121",
+                              "createdAt": "2026-10-21T20:51:09.000Z",
+                              "updatedAt": "2026-10-21T20:51:09.000Z",
+                              "uid": "35240-0e23c475-5667-465e-8ebe-719e1381f121"
+                            }
+                          ],
+                          "id": "2b19a11e-a38f-4bf3-9267-30a7ddd2106d",
+                          "createdAt": "2026-10-21T20:51:09.000Z",
+                          "updatedAt": "2026-10-21T20:51:09.000Z",
+                          "uid": "35240-2b19a11e-a38f-4bf3-9267-30a7ddd2106d"
+                        }
+                      ],
+                      "id": "008e50ae-af92-4c60-b075-d9ba9e6fcf04",
+                      "createdAt": "2026-10-21T20:51:09.000Z",
+                      "updatedAt": "2026-10-21T20:51:09.000Z",
+                      "uid": "35240-008e50ae-af92-4c60-b075-d9ba9e6fcf04"
+                    }
+                  ],
+                  "id": "486ee8fa-c90c-41ff-af91-cc4f9a992508",
+                  "createdAt": "2026-10-21T20:51:09.000Z",
+                  "updatedAt": "2026-10-21T20:51:09.000Z",
+                  "uid": "35240-486ee8fa-c90c-41ff-af91-cc4f9a992508"
+                },
+                {
+                  "name": "{app_user_app_id}",
+                  "item": [
+                    {
+                      "name": "app_users",
+                      "item": [
+                        {
+                          "name": "{app_user_id}",
+                          "item": [
+                            {
+                              "name": "Update",
+                              "id": "5ee220a3-7489-4930-af04-96ee98fd063e",
+                              "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                              },
+                              "request": {
+                                "method": "POST",
+                                "header": [
+                                  {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "body": {
+                                  "mode": "raw",
+                                  "raw": "{\n  \"appUser\": {\n    \"appId\": \"<string>\",\n    \"appUserType\": \"APP_USER_TYPE_USER\",\n    \"createdAt\": \"<dateTime>\",\n    \"deletedAt\": \"<dateTime>\",\n    \"displayName\": \"<string>\",\n    \"email\": \"<string>\",\n    \"emails\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"employeeIds\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"id\": \"<string>\",\n    \"identityUserId\": \"<string>\",\n    \"isExternal\": \"<boolean>\",\n    \"profile\": {\n      \"labore_a\": false\n    },\n    \"status\": {\n      \"details\": \"<string>\",\n      \"status\": \"STATUS_DISABLED\"\n    },\n    \"updatedAt\": \"<dateTime>\",\n    \"username\": \"<string>\",\n    \"usernames\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"expandMask\": {\n    \"paths\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"updateMask\": \"<string>\"\n}",
+                                  "options": {
+                                    "raw": {
+                                      "headerFamily": "json",
+                                      "language": "json"
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v1/apps/:app_user_app_id/app_users/:app_user_id",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v1",
+                                    "apps",
+                                    ":app_user_app_id",
+                                    "app_users",
+                                    ":app_user_id"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "id": "874b6f6e-a750-4263-970e-f3c2af45b011",
+                                      "key": "app_user_app_id",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    },
+                                    {
+                                      "id": "7df89d10-53d5-4af0-9b05-0441a23f71e4",
+                                      "key": "app_user_id",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    }
+                                  ]
+                                },
+                                "description": "Update an app user by ID. Only the fields specified in the update mask are updated.\nCurrently, only the appUserType, and identityUserId fields can be updated."
+                              },
+                              "response": [
+                                {
+                                  "id": "e7e6394c-27f6-4209-9252-530fde66fa3a",
+                                  "name": "Successful response",
+                                  "originalRequest": {
+                                    "method": "POST",
+                                    "header": [
+                                      {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                      },
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      },
+                                      {
+                                        "description": "Added as a part of security scheme: bearer",
+                                        "key": "Authorization",
+                                        "value": "Bearer <token>"
+                                      }
+                                    ],
+                                    "body": {
+                                      "mode": "raw",
+                                      "raw": "{\n  \"appUser\": {\n    \"appId\": \"<string>\",\n    \"appUserType\": \"APP_USER_TYPE_USER\",\n    \"createdAt\": \"<dateTime>\",\n    \"deletedAt\": \"<dateTime>\",\n    \"displayName\": \"<string>\",\n    \"email\": \"<string>\",\n    \"emails\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"employeeIds\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"id\": \"<string>\",\n    \"identityUserId\": \"<string>\",\n    \"isExternal\": \"<boolean>\",\n    \"profile\": {\n      \"labore_a\": false\n    },\n    \"status\": {\n      \"details\": \"<string>\",\n      \"status\": \"STATUS_DISABLED\"\n    },\n    \"updatedAt\": \"<dateTime>\",\n    \"username\": \"<string>\",\n    \"usernames\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"expandMask\": {\n    \"paths\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"updateMask\": \"<string>\"\n}",
+                                      "options": {
+                                        "raw": {
+                                          "headerFamily": "json",
+                                          "language": "json"
+                                        }
+                                      }
+                                    },
+                                    "url": {
+                                      "raw": "{{baseUrl}}/api/v1/apps/:app_user_app_id/app_users/:app_user_id",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "api",
+                                        "v1",
+                                        "apps",
+                                        ":app_user_app_id",
+                                        "app_users",
+                                        ":app_user_id"
+                                      ],
+                                      "variable": [
+                                        {
+                                          "key": "app_user_app_id"
+                                        },
+                                        {
+                                          "key": "app_user_id"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "status": "OK",
+                                  "code": 200,
+                                  "_postman_previewlanguage": "json",
+                                  "header": [
+                                    {
+                                      "key": "Content-Type",
+                                      "value": "application/json"
+                                    }
+                                  ],
+                                  "cookie": [],
+                                  "responseTime": null,
+                                  "body": "{\n  \"appUserView\": {\n    \"appPath\": \"<string>\",\n    \"appUser\": {\n      \"appId\": \"<string>\",\n      \"appUserType\": \"APP_USER_TYPE_USER\",\n      \"createdAt\": \"<dateTime>\",\n      \"deletedAt\": \"<dateTime>\",\n      \"displayName\": \"<string>\",\n      \"email\": \"<string>\",\n      \"emails\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"employeeIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"id\": \"<string>\",\n      \"identityUserId\": \"<string>\",\n      \"isExternal\": \"<boolean>\",\n      \"profile\": {\n        \"qui0fe\": -25331798\n      },\n      \"status\": {\n        \"details\": \"<string>\",\n        \"status\": \"STATUS_DELETED\"\n      },\n      \"updatedAt\": \"<dateTime>\",\n      \"username\": \"<string>\",\n      \"usernames\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    },\n    \"identityUserPath\": \"<string>\",\n    \"lastUsagePath\": \"<string>\"\n  },\n  \"expanded\": [\n    {\n      \"@type\": \"<string>\"\n    },\n    {\n      \"@type\": \"<string>\",\n      \"quia\": false,\n      \"voluptatef6\": \"ipsum Ut ut\"\n    }\n  ]\n}",
+                                  "createdAt": "2026-10-21T20:51:09.000Z",
+                                  "updatedAt": "2026-10-21T20:51:09.000Z",
+                                  "uid": "35240-e7e6394c-27f6-4209-9252-530fde66fa3a"
+                                }
+                              ],
+                              "createdAt": "2026-10-21T20:51:09.000Z",
+                              "updatedAt": "2026-10-21T20:51:09.000Z",
+                              "uid": "35240-5ee220a3-7489-4930-af04-96ee98fd063e"
+                            }
+                          ],
+                          "id": "f3b0d2e4-4402-41d4-be24-779e10a791f4",
+                          "createdAt": "2026-10-21T20:51:09.000Z",
+                          "updatedAt": "2026-10-21T20:51:09.000Z",
+                          "uid": "35240-f3b0d2e4-4402-41d4-be24-779e10a791f4"
+                        }
+                      ],
+                      "id": "25236f97-3084-4dbb-a0a1-0e39cc0d9c5a",
+                      "createdAt": "2026-10-21T20:51:09.000Z",
+                      "updatedAt": "2026-10-21T20:51:09.000Z",
+                      "uid": "35240-25236f97-3084-4dbb-a0a1-0e39cc0d9c5a"
+                    }
+                  ],
+                  "id": "2446f1f3-a555-4f88-89d4-734c013a8391",
+                  "createdAt": "2026-10-21T20:51:09.000Z",
+                  "updatedAt": "2026-10-21T20:51:09.000Z",
+                  "uid": "35240-2446f1f3-a555-4f88-89d4-734c013a8391"
+                }
+              ],
+              "id": "acab6fb9-d58a-4826-8098-a10471f6dda9",
+              "createdAt": "2026-10-21T20:51:09.000Z",
+              "updatedAt": "2026-10-21T20:51:09.000Z",
+              "uid": "35240-acab6fb9-d58a-4826-8098-a10471f6dda9"
+            },
+            {
+              "name": "search",
+              "item": [
+                {
+                  "name": "app_users",
+                  "item": [
+                    {
+                      "name": "Search",
+                      "id": "0c5948ec-2795-440d-99ee-8d97bfd950db",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"appId\": \"<string>\",\n  \"appUserDomains\": [\n    \"APP_USER_DOMAIN_TRUSTED\",\n    \"APP_USER_DOMAIN_EXTERNAL\"\n  ],\n  \"appUserIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"appUserStatusDetails\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"appUserStatuses\": [\n    \"STATUS_UNSPECIFIED\",\n    \"STATUS_ENABLED\"\n  ],\n  \"appUserTypes\": [\n    \"APP_USER_TYPE_SERVICE_ACCOUNT\",\n    \"APP_USER_TYPE_SERVICE_ACCOUNT\"\n  ],\n  \"excludeAppUserIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"expandMask\": {\n    \"paths\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"pageSize\": \"<integer>\",\n  \"pageToken\": \"<string>\",\n  \"query\": \"<string>\",\n  \"refs\": [\n    {\n      \"appId\": \"<string>\",\n      \"id\": \"<string>\"\n    },\n    {\n      \"appId\": \"<string>\",\n      \"id\": \"<string>\"\n    }\n  ],\n  \"userIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/search/app_users",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "search",
+                            "app_users"
+                          ]
+                        },
+                        "description": "Search app users based on filters specified in the request body."
+                      },
+                      "response": [
+                        {
+                          "id": "ebc7897d-27e4-4180-b5e4-98a58b44d92e",
+                          "name": "Successful response",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n  \"appId\": \"<string>\",\n  \"appUserDomains\": [\n    \"APP_USER_DOMAIN_TRUSTED\",\n    \"APP_USER_DOMAIN_EXTERNAL\"\n  ],\n  \"appUserIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"appUserStatusDetails\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"appUserStatuses\": [\n    \"STATUS_UNSPECIFIED\",\n    \"STATUS_ENABLED\"\n  ],\n  \"appUserTypes\": [\n    \"APP_USER_TYPE_SERVICE_ACCOUNT\",\n    \"APP_USER_TYPE_SERVICE_ACCOUNT\"\n  ],\n  \"excludeAppUserIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"expandMask\": {\n    \"paths\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"pageSize\": \"<integer>\",\n  \"pageToken\": \"<string>\",\n  \"query\": \"<string>\",\n  \"refs\": [\n    {\n      \"appId\": \"<string>\",\n      \"id\": \"<string>\"\n    },\n    {\n      \"appId\": \"<string>\",\n      \"id\": \"<string>\"\n    }\n  ],\n  \"userIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/search/app_users",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "search",
+                                "app_users"
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"expanded\": [\n    {\n      \"@type\": \"<string>\",\n      \"doloref9\": true,\n      \"nostrud_956\": 37766570.24154222,\n      \"ad_2\": \"sunt in\"\n    },\n    {\n      \"@type\": \"<string>\",\n      \"sunt03\": \"sunt reprehenderit non\",\n      \"dolor_964\": \"commodo et\"\n    }\n  ],\n  \"list\": [\n    {\n      \"appPath\": \"<string>\",\n      \"appUser\": {\n        \"appId\": \"<string>\",\n        \"appUserType\": \"APP_USER_TYPE_UNSPECIFIED\",\n        \"createdAt\": \"<dateTime>\",\n        \"deletedAt\": \"<dateTime>\",\n        \"displayName\": \"<string>\",\n        \"email\": \"<string>\",\n        \"emails\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"employeeIds\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"id\": \"<string>\",\n        \"identityUserId\": \"<string>\",\n        \"isExternal\": \"<boolean>\",\n        \"profile\": {\n          \"irure_c4\": -82481882,\n          \"in4\": \"ut do esse Lorem\",\n          \"eiusmod_bc4\": \"in sit\"\n        },\n        \"status\": {\n          \"details\": \"<string>\",\n          \"status\": \"STATUS_ENABLED\"\n        },\n        \"updatedAt\": \"<dateTime>\",\n        \"username\": \"<string>\",\n        \"usernames\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      \"identityUserPath\": \"<string>\",\n      \"lastUsagePath\": \"<string>\"\n    },\n    {\n      \"appPath\": \"<string>\",\n      \"appUser\": {\n        \"appId\": \"<string>\",\n        \"appUserType\": \"APP_USER_TYPE_UNSPECIFIED\",\n        \"createdAt\": \"<dateTime>\",\n        \"deletedAt\": \"<dateTime>\",\n        \"displayName\": \"<string>\",\n        \"email\": \"<string>\",\n        \"emails\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"employeeIds\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"id\": \"<string>\",\n        \"identityUserId\": \"<string>\",\n        \"isExternal\": \"<boolean>\",\n        \"profile\": {\n          \"cillum196\": -19554860,\n          \"irurec94\": -3304255.740208626,\n          \"mollit_3c2\": \"incididunt est\"\n        },\n        \"status\": {\n          \"details\": \"<string>\",\n          \"status\": \"STATUS_DELETED\"\n        },\n        \"updatedAt\": \"<dateTime>\",\n        \"username\": \"<string>\",\n        \"usernames\": [\n          \"<string>\",\n          \"<string>\"\n        ]\n      },\n      \"identityUserPath\": \"<string>\",\n      \"lastUsagePath\": \"<string>\"\n    }\n  ],\n  \"nextPageToken\": \"<string>\"\n}",
+                          "createdAt": "2026-10-21T20:51:09.000Z",
+                          "updatedAt": "2026-10-21T20:51:09.000Z",
+                          "uid": "35240-ebc7897d-27e4-4180-b5e4-98a58b44d92e"
+                        }
+                      ],
+                      "createdAt": "2026-10-21T20:51:09.000Z",
+                      "updatedAt": "2026-10-21T20:51:09.000Z",
+                      "uid": "35240-0c5948ec-2795-440d-99ee-8d97bfd950db"
+                    }
+                  ],
+                  "id": "03dcc89a-478d-4ec2-972e-3504dcd9528a",
+                  "createdAt": "2026-10-21T20:51:09.000Z",
+                  "updatedAt": "2026-10-21T20:51:09.000Z",
+                  "uid": "35240-03dcc89a-478d-4ec2-972e-3504dcd9528a"
+                }
+              ],
+              "id": "421f735d-a18c-480b-a920-dd6e4418f9c7",
+              "createdAt": "2026-10-21T20:51:09.000Z",
+              "updatedAt": "2026-10-21T20:51:09.000Z",
+              "uid": "35240-421f735d-a18c-480b-a920-dd6e4418f9c7"
+            }
+          ],
+          "id": "55f55b2f-2eed-4b89-8dc0-c3df335749b5",
+          "createdAt": "2026-10-21T20:51:09.000Z",
+          "updatedAt": "2026-10-21T20:51:09.000Z",
+          "uid": "35240-55f55b2f-2eed-4b89-8dc0-c3df335749b5"
+        }
+      ],
+      "id": "17437f35-cd7b-4d5e-bee1-820426fd4473",
+      "createdAt": "2026-10-21T20:51:09.000Z",
+      "updatedAt": "2026-10-21T20:51:09.000Z",
+      "uid": "35240-17437f35-cd7b-4d5e-bee1-820426fd4473"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "tenantDomain",
+      "value": "example"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://{{tenantDomain}}.conductor.one"
+    }
+  ]
+}

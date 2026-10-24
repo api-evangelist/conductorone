@@ -1,269 +1,256 @@
 {
+  "info": {
+    "_postman_id": "5584ed91-5e37-4c01-9c1a-11d0da4ba83b",
+    "name": "ConductorOne Org Domain API",
+    "description": "The ConductorOne API is a HTTP API for managing ConductorOne resources.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-21T20:47:40.000Z",
+    "updatedAt": "2026-10-21T20:47:41.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-5584ed91-5e37-4c01-9c1a-11d0da4ba83b"
+  },
   "item": [
     {
-      "id": "d5b9aa2e-2c75-43c2-85c2-b23ac25da532",
-      "name": "Org Domain",
-      "description": {
-        "content": "",
-        "type": "text/plain"
-      },
+      "name": "api",
       "item": [
         {
-          "id": "a93946a2-33a4-4e18-88f6-28648404cc92",
-          "name": "List",
-          "request": {
-            "name": "List",
-            "description": {
-              "content": "Invokes the c1.api.settings.v1.OrgDomainService.List method.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "settings",
-                "domains"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [
-                {
-                  "disabled": false,
-                  "key": "page_size",
-                  "value": "<integer>"
-                },
-                {
-                  "disabled": false,
-                  "key": "page_token",
-                  "value": "<string>"
-                }
-              ],
-              "variable": [
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
+          "name": "v1",
+          "item": [
             {
-              "id": "4a37e7bd-82d6-4f5c-be71-e65152d66143",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "settings",
-                    "domains"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [
-                    {
-                      "key": "page_size",
-                      "value": "<integer>"
-                    },
-                    {
-                      "key": "page_token",
-                      "value": "<string>"
-                    }
-                  ],
-                  "variable": [
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
+              "name": "settings",
+              "item": [
                 {
-                  "key": "Content-Type",
-                  "value": "application/json"
+                  "name": "domains",
+                  "item": [
+                    {
+                      "name": "List",
+                      "id": "14af3bdd-b544-4afb-9410-407e295933ac",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/settings/domains?page_size=<integer>&page_token=<string>",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "settings",
+                            "domains"
+                          ],
+                          "query": [
+                            {
+                              "key": "page_size",
+                              "value": "<integer>"
+                            },
+                            {
+                              "key": "page_token",
+                              "value": "<string>"
+                            }
+                          ]
+                        },
+                        "description": "Invokes the c1.api.settings.v1.OrgDomainService.List method."
+                      },
+                      "response": [
+                        {
+                          "id": "b123113c-fd4d-4f75-9bfa-3493cf638096",
+                          "name": "Successful response",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/settings/domains?page_size=<integer>&page_token=<string>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "settings",
+                                "domains"
+                              ],
+                              "query": [
+                                {
+                                  "key": "page_size",
+                                  "value": "<integer>"
+                                },
+                                {
+                                  "key": "page_token",
+                                  "value": "<string>"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"list\": [\n    {\n      \"createdAt\": \"<dateTime>\",\n      \"deletedAt\": \"<dateTime>\",\n      \"domain\": \"<string>\",\n      \"id\": \"<string>\",\n      \"updatedAt\": \"<dateTime>\"\n    },\n    {\n      \"createdAt\": \"<dateTime>\",\n      \"deletedAt\": \"<dateTime>\",\n      \"domain\": \"<string>\",\n      \"id\": \"<string>\",\n      \"updatedAt\": \"<dateTime>\"\n    }\n  ],\n  \"nextPageToken\": \"<string>\"\n}",
+                          "createdAt": "2026-10-21T20:47:41.000Z",
+                          "updatedAt": "2026-10-21T20:47:41.000Z",
+                          "uid": "35240-b123113c-fd4d-4f75-9bfa-3493cf638096"
+                        }
+                      ],
+                      "createdAt": "2026-10-21T20:47:41.000Z",
+                      "updatedAt": "2026-10-21T20:47:41.000Z",
+                      "uid": "35240-14af3bdd-b544-4afb-9410-407e295933ac"
+                    },
+                    {
+                      "name": "Update",
+                      "id": "e77c6e50-e495-46be-9ea5-8b0c8ffde8ef",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"newDomains\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/settings/domains",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "settings",
+                            "domains"
+                          ]
+                        },
+                        "description": "Invokes the c1.api.settings.v1.OrgDomainService.Update method."
+                      },
+                      "response": [
+                        {
+                          "id": "7dce13b3-5171-471a-9525-b1f40351f19c",
+                          "name": "Successful response",
+                          "originalRequest": {
+                            "method": "PUT",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n  \"newDomains\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/settings/domains",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "settings",
+                                "domains"
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"list\": [\n    {\n      \"createdAt\": \"<dateTime>\",\n      \"deletedAt\": \"<dateTime>\",\n      \"domain\": \"<string>\",\n      \"id\": \"<string>\",\n      \"updatedAt\": \"<dateTime>\"\n    },\n    {\n      \"createdAt\": \"<dateTime>\",\n      \"deletedAt\": \"<dateTime>\",\n      \"domain\": \"<string>\",\n      \"id\": \"<string>\",\n      \"updatedAt\": \"<dateTime>\"\n    }\n  ]\n}",
+                          "createdAt": "2026-10-21T20:47:41.000Z",
+                          "updatedAt": "2026-10-21T20:47:41.000Z",
+                          "uid": "35240-7dce13b3-5171-471a-9525-b1f40351f19c"
+                        }
+                      ],
+                      "createdAt": "2026-10-21T20:47:41.000Z",
+                      "updatedAt": "2026-10-21T20:47:41.000Z",
+                      "uid": "35240-e77c6e50-e495-46be-9ea5-8b0c8ffde8ef"
+                    }
+                  ],
+                  "id": "f31b9cbe-1142-4075-994c-9f0878b479cd",
+                  "createdAt": "2026-10-21T20:47:41.000Z",
+                  "updatedAt": "2026-10-21T20:47:41.000Z",
+                  "uid": "35240-f31b9cbe-1142-4075-994c-9f0878b479cd"
                 }
               ],
-              "body": "{\n  \"list\": [\n    {\n      \"createdAt\": \"1992-02-24T20:45:16.355Z\",\n      \"deletedAt\": \"1959-10-09T21:17:01.632Z\",\n      \"domain\": \"string\",\n      \"id\": \"string\",\n      \"updatedAt\": \"1949-08-09T12:24:49.353Z\"\n    },\n    {\n      \"createdAt\": \"2014-08-24T12:17:22.756Z\",\n      \"deletedAt\": \"1992-06-03T17:00:52.428Z\",\n      \"domain\": \"string\",\n      \"id\": \"string\",\n      \"updatedAt\": \"1976-03-21T23:34:14.798Z\"\n    }\n  ],\n  \"nextPageToken\": \"string\"\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
+              "id": "b9b6ac49-b153-47a0-9879-2ff669fd8b5f",
+              "createdAt": "2026-10-21T20:47:41.000Z",
+              "updatedAt": "2026-10-21T20:47:41.000Z",
+              "uid": "35240-b9b6ac49-b153-47a0-9879-2ff669fd8b5f"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "51ba4715-3adf-4e8c-8e9a-cbd34439bb3d",
-          "name": "Update",
-          "request": {
-            "name": "Update",
-            "description": {
-              "content": "Invokes the c1.api.settings.v1.OrgDomainService.Update method.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "settings",
-                "domains"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "PUT",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"newDomains\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
-            {
-              "id": "dafa0bec-cfba-409a-92db-1c7f64d7bfab",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "settings",
-                    "domains"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "PUT",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"newDomains\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"list\": [\n    {\n      \"createdAt\": \"2006-08-28T03:34:17.699Z\",\n      \"deletedAt\": \"2020-10-18T07:02:09.953Z\",\n      \"domain\": \"string\",\n      \"id\": \"string\",\n      \"updatedAt\": \"1958-01-26T21:00:59.557Z\"\n    },\n    {\n      \"createdAt\": \"1996-10-29T07:23:17.546Z\",\n      \"deletedAt\": \"1963-06-18T09:54:03.858Z\",\n      \"domain\": \"string\",\n      \"id\": \"string\",\n      \"updatedAt\": \"1983-10-18T19:02:29.069Z\"\n    }\n  ]\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "id": "183d479f-d4f7-42fb-8bbb-179d4e2275d3",
+          "createdAt": "2026-10-21T20:47:41.000Z",
+          "updatedAt": "2026-10-21T20:47:41.000Z",
+          "uid": "35240-183d479f-d4f7-42fb-8bbb-179d4e2275d3"
         }
       ],
-      "event": []
-    }
-  ],
-  "event": [],
-  "variable": [
-    {
-      "description": {
-        "content": "The domain of the tenant to use for this request.",
-        "type": "text/plain"
-      },
-      "type": "any",
-      "value": "example",
-      "key": "tenantDomain"
-    },
-    {
-      "type": "string",
-      "value": "https://{{tenantDomain}}.conductor.one",
-      "key": "baseUrl"
+      "id": "39343854-639d-49c6-a381-1ddecbbc571d",
+      "createdAt": "2026-10-21T20:47:41.000Z",
+      "updatedAt": "2026-10-21T20:47:41.000Z",
+      "uid": "35240-39343854-639d-49c6-a381-1ddecbbc571d"
     }
   ],
   "auth": {
@@ -271,17 +258,19 @@
     "bearer": [
       {
         "key": "token",
-        "value": "{{bearerToken}}"
+        "value": "{{bearerToken}}",
+        "type": "string"
       }
     ]
   },
-  "info": {
-    "_postman_id": "8208eb37-d445-4f73-8e34-c690acf9c424",
-    "name": "ConductorOne Access Conflict Org Domain API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "description": {
-      "content": "The ConductorOne API is a HTTP API for managing ConductorOne resources.",
-      "type": "text/plain"
+  "variable": [
+    {
+      "key": "tenantDomain",
+      "value": "example"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://{{tenantDomain}}.conductor.one"
     }
-  }
+  ]
 }

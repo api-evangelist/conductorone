@@ -1,767 +1,752 @@
 {
+  "info": {
+    "_postman_id": "4dbb9b43-4fd4-43c3-b89e-a02990fd2d78",
+    "name": "ConductorOne Attribute API",
+    "description": "The ConductorOne API is a HTTP API for managing ConductorOne resources.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-21T20:46:24.000Z",
+    "updatedAt": "2026-10-21T20:46:24.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-4dbb9b43-4fd4-43c3-b89e-a02990fd2d78"
+  },
   "item": [
     {
-      "id": "ce61554c-6e17-4783-89dd-9695119e4b61",
-      "name": "Attribute",
-      "description": {
-        "content": "",
-        "type": "text/plain"
-      },
+      "name": "api",
       "item": [
         {
-          "id": "1c71e3e8-e5f3-4c6c-b6da-c7d07b4fc09a",
-          "name": "Delete Attribute Value",
-          "request": {
-            "name": "Delete Attribute Value",
-            "description": {
-              "content": "Delete an attribute value by id.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "attribute",
-                ":id"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "id",
-                  "description": "(Required) "
-                },
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "DELETE",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "<object>",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
+          "name": "v1",
+          "item": [
             {
-              "id": "4afdfe89-b1b9-4bf0-8c64-2f4944a1baa7",
-              "name": "DeleteAttributeValueResponse is the empty response for deleting an attribute value.",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "attribute",
-                    ":id"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "DELETE",
-                "body": {
-                  "mode": "raw",
-                  "raw": "<object>",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
+              "name": "attribute",
+              "item": [
                 {
-                  "key": "Content-Type",
-                  "value": "application/json"
+                  "name": "{id}",
+                  "item": [
+                    {
+                      "name": "Delete Attribute Value",
+                      "id": "60bb1fe8-2181-4b11-8fe2-3278b823cebe",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "DELETE",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/attribute/:id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "attribute",
+                            ":id"
+                          ],
+                          "variable": [
+                            {
+                              "id": "6ca0cc2b-09bc-43a5-8279-7dc8fef0e9b2",
+                              "key": "id",
+                              "value": "<string>",
+                              "description": "(Required) "
+                            }
+                          ]
+                        },
+                        "description": "Delete an attribute value by id."
+                      },
+                      "response": [
+                        {
+                          "id": "ee37015f-e552-4d96-98c0-9f95b8e7cf03",
+                          "name": "DeleteAttributeValueResponse is the empty response for deleting an attribute value.",
+                          "originalRequest": {
+                            "method": "DELETE",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/attribute/:id",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "attribute",
+                                ":id"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "id"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{}",
+                          "createdAt": "2026-10-21T20:46:24.000Z",
+                          "updatedAt": "2026-10-21T20:46:24.000Z",
+                          "uid": "35240-ee37015f-e552-4d96-98c0-9f95b8e7cf03"
+                        }
+                      ],
+                      "createdAt": "2026-10-21T20:46:24.000Z",
+                      "updatedAt": "2026-10-21T20:46:24.000Z",
+                      "uid": "35240-60bb1fe8-2181-4b11-8fe2-3278b823cebe"
+                    }
+                  ],
+                  "id": "9aa68133-9d4a-4cc6-8b0a-335c24787352",
+                  "createdAt": "2026-10-21T20:46:24.000Z",
+                  "updatedAt": "2026-10-21T20:46:24.000Z",
+                  "uid": "35240-9aa68133-9d4a-4cc6-8b0a-335c24787352"
                 }
               ],
-              "body": "{}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
+              "id": "9cafd4ac-d8bc-4447-9cbf-c5e26e09ccd0",
+              "createdAt": "2026-10-21T20:46:24.000Z",
+              "updatedAt": "2026-10-21T20:46:24.000Z",
+              "uid": "35240-9cafd4ac-d8bc-4447-9cbf-c5e26e09ccd0"
+            },
+            {
+              "name": "attributes",
+              "item": [
+                {
+                  "name": "{id}",
+                  "item": [
+                    {
+                      "name": "Get Attribute Value",
+                      "id": "245e243c-cb59-4802-bfde-a1f45dd36c3d",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/attributes/:id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "attributes",
+                            ":id"
+                          ],
+                          "variable": [
+                            {
+                              "id": "9ba4b73d-09c5-4800-bfe9-7cefd867cdbb",
+                              "key": "id",
+                              "value": "<string>",
+                              "description": "(Required) "
+                            }
+                          ]
+                        },
+                        "description": "Get an attribute value by id."
+                      },
+                      "response": [
+                        {
+                          "id": "3bfaed33-7bcb-422b-88ce-c1f0720832d5",
+                          "name": "GetAttributeValueResponse is the response for getting an attribute value by id.",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/attributes/:id",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "attributes",
+                                ":id"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "id"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"value\": {\n    \"attributeTypeId\": \"<string>\",\n    \"createdAt\": \"<dateTime>\",\n    \"deletedAt\": \"<dateTime>\",\n    \"id\": \"<string>\",\n    \"updatedAt\": \"<dateTime>\",\n    \"value\": \"<string>\"\n  }\n}",
+                          "createdAt": "2026-10-21T20:46:24.000Z",
+                          "updatedAt": "2026-10-21T20:46:24.000Z",
+                          "uid": "35240-3bfaed33-7bcb-422b-88ce-c1f0720832d5"
+                        }
+                      ],
+                      "createdAt": "2026-10-21T20:46:24.000Z",
+                      "updatedAt": "2026-10-21T20:46:24.000Z",
+                      "uid": "35240-245e243c-cb59-4802-bfde-a1f45dd36c3d"
+                    }
+                  ],
+                  "id": "fe61a86d-83eb-44ce-bca3-719735ff7e74",
+                  "createdAt": "2026-10-21T20:46:24.000Z",
+                  "updatedAt": "2026-10-21T20:46:24.000Z",
+                  "uid": "35240-fe61a86d-83eb-44ce-bca3-719735ff7e74"
+                },
+                {
+                  "name": "types",
+                  "item": [
+                    {
+                      "name": "{attribute_type_id}",
+                      "item": [
+                        {
+                          "name": "values",
+                          "item": [
+                            {
+                              "name": "List Attribute Values",
+                              "id": "54f7c69e-05a2-4ba2-b742-7926b513c608",
+                              "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                              },
+                              "request": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v1/attributes/types/:attribute_type_id/values?page_size=<integer>&page_token=<string>",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v1",
+                                    "attributes",
+                                    "types",
+                                    ":attribute_type_id",
+                                    "values"
+                                  ],
+                                  "query": [
+                                    {
+                                      "key": "page_size",
+                                      "value": "<integer>"
+                                    },
+                                    {
+                                      "key": "page_token",
+                                      "value": "<string>"
+                                    }
+                                  ],
+                                  "variable": [
+                                    {
+                                      "id": "e617fc71-874a-4dfb-a5c9-377476aac524",
+                                      "key": "attribute_type_id",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    }
+                                  ]
+                                },
+                                "description": "List all attribute values for a given attribute type."
+                              },
+                              "response": [
+                                {
+                                  "id": "db276b49-eb64-4a24-9549-d9157df29c80",
+                                  "name": "ListAttributeValuesResponse is the response for listing attribute values for a given AttributeType.",
+                                  "originalRequest": {
+                                    "method": "GET",
+                                    "header": [
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      },
+                                      {
+                                        "description": "Added as a part of security scheme: bearer",
+                                        "key": "Authorization",
+                                        "value": "Bearer <token>"
+                                      }
+                                    ],
+                                    "url": {
+                                      "raw": "{{baseUrl}}/api/v1/attributes/types/:attribute_type_id/values?page_size=<integer>&page_token=<string>",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "api",
+                                        "v1",
+                                        "attributes",
+                                        "types",
+                                        ":attribute_type_id",
+                                        "values"
+                                      ],
+                                      "query": [
+                                        {
+                                          "key": "page_size",
+                                          "value": "<integer>"
+                                        },
+                                        {
+                                          "key": "page_token",
+                                          "value": "<string>"
+                                        }
+                                      ],
+                                      "variable": [
+                                        {
+                                          "key": "attribute_type_id"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "status": "OK",
+                                  "code": 200,
+                                  "_postman_previewlanguage": "json",
+                                  "header": [
+                                    {
+                                      "key": "Content-Type",
+                                      "value": "application/json"
+                                    }
+                                  ],
+                                  "cookie": [],
+                                  "responseTime": null,
+                                  "body": "{\n  \"list\": [\n    {\n      \"attributeTypeId\": \"<string>\",\n      \"createdAt\": \"<dateTime>\",\n      \"deletedAt\": \"<dateTime>\",\n      \"id\": \"<string>\",\n      \"updatedAt\": \"<dateTime>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"attributeTypeId\": \"<string>\",\n      \"createdAt\": \"<dateTime>\",\n      \"deletedAt\": \"<dateTime>\",\n      \"id\": \"<string>\",\n      \"updatedAt\": \"<dateTime>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"nextPageToken\": \"<string>\"\n}",
+                                  "createdAt": "2026-10-21T20:46:24.000Z",
+                                  "updatedAt": "2026-10-21T20:46:24.000Z",
+                                  "uid": "35240-db276b49-eb64-4a24-9549-d9157df29c80"
+                                }
+                              ],
+                              "createdAt": "2026-10-21T20:46:24.000Z",
+                              "updatedAt": "2026-10-21T20:46:24.000Z",
+                              "uid": "35240-54f7c69e-05a2-4ba2-b742-7926b513c608"
+                            }
+                          ],
+                          "id": "1dffdc90-4879-4911-8884-51300dd95708",
+                          "createdAt": "2026-10-21T20:46:24.000Z",
+                          "updatedAt": "2026-10-21T20:46:24.000Z",
+                          "uid": "35240-1dffdc90-4879-4911-8884-51300dd95708"
+                        }
+                      ],
+                      "id": "f45ad228-58a6-4a7b-8055-4ac920a09943",
+                      "createdAt": "2026-10-21T20:46:24.000Z",
+                      "updatedAt": "2026-10-21T20:46:24.000Z",
+                      "uid": "35240-f45ad228-58a6-4a7b-8055-4ac920a09943"
+                    },
+                    {
+                      "name": "List Attribute Types",
+                      "id": "1ee4a281-9b8d-405a-b699-7eb266245633",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/attributes/types?page_size=<integer>&page_token=<string>",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "attributes",
+                            "types"
+                          ],
+                          "query": [
+                            {
+                              "key": "page_size",
+                              "value": "<integer>"
+                            },
+                            {
+                              "key": "page_token",
+                              "value": "<string>"
+                            }
+                          ]
+                        },
+                        "description": "List all attribute types."
+                      },
+                      "response": [
+                        {
+                          "id": "0c553716-d6b3-4fa6-8c59-c29e8b556fcf",
+                          "name": "ListAttributeTypesResponse is the response for listing attribute types.",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/attributes/types?page_size=<integer>&page_token=<string>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "attributes",
+                                "types"
+                              ],
+                              "query": [
+                                {
+                                  "key": "page_size",
+                                  "value": "<integer>"
+                                },
+                                {
+                                  "key": "page_token",
+                                  "value": "<string>"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"list\": [\n    {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"name\": \"<string>\"\n    }\n  ],\n  \"nextPageToken\": \"<string>\"\n}",
+                          "createdAt": "2026-10-21T20:46:24.000Z",
+                          "updatedAt": "2026-10-21T20:46:24.000Z",
+                          "uid": "35240-0c553716-d6b3-4fa6-8c59-c29e8b556fcf"
+                        }
+                      ],
+                      "createdAt": "2026-10-21T20:46:24.000Z",
+                      "updatedAt": "2026-10-21T20:46:24.000Z",
+                      "uid": "35240-1ee4a281-9b8d-405a-b699-7eb266245633"
+                    }
+                  ],
+                  "id": "9bd6816e-2c4f-4e3c-9304-b76a86c38879",
+                  "createdAt": "2026-10-21T20:46:24.000Z",
+                  "updatedAt": "2026-10-21T20:46:24.000Z",
+                  "uid": "35240-9bd6816e-2c4f-4e3c-9304-b76a86c38879"
+                },
+                {
+                  "name": "Create Attribute Value",
+                  "id": "1c16a859-563d-403c-8e70-e9b8a11bec7a",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"attributeTypeId\": \"<string>\",\n  \"value\": \"<string>\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/v1/attributes",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "attributes"
+                      ]
+                    },
+                    "description": "Create a new attribute value."
+                  },
+                  "response": [
+                    {
+                      "id": "be5cbde4-486a-47d6-99b3-d3f9e37231c6",
+                      "name": "CreateAttributeValueResponse is the response for creating an attribute value.",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"attributeTypeId\": \"<string>\",\n  \"value\": \"<string>\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/attributes",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "attributes"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"value\": {\n    \"attributeTypeId\": \"<string>\",\n    \"createdAt\": \"<dateTime>\",\n    \"deletedAt\": \"<dateTime>\",\n    \"id\": \"<string>\",\n    \"updatedAt\": \"<dateTime>\",\n    \"value\": \"<string>\"\n  }\n}",
+                      "createdAt": "2026-10-21T20:46:24.000Z",
+                      "updatedAt": "2026-10-21T20:46:24.000Z",
+                      "uid": "35240-be5cbde4-486a-47d6-99b3-d3f9e37231c6"
+                    }
+                  ],
+                  "createdAt": "2026-10-21T20:46:24.000Z",
+                  "updatedAt": "2026-10-21T20:46:24.000Z",
+                  "uid": "35240-1c16a859-563d-403c-8e70-e9b8a11bec7a"
+                }
+              ],
+              "id": "b130b3b5-4b1e-4da3-bf02-a4a369ea38e9",
+              "createdAt": "2026-10-21T20:46:24.000Z",
+              "updatedAt": "2026-10-21T20:46:24.000Z",
+              "uid": "35240-b130b3b5-4b1e-4da3-bf02-a4a369ea38e9"
+            },
+            {
+              "name": "search",
+              "item": [
+                {
+                  "name": "attributes",
+                  "item": [
+                    {
+                      "name": "Search Attribute Values",
+                      "id": "894b5213-0f5b-4687-a1da-b9b903dbdd45",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"attributeTypeIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"excludeIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"ids\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"pageSize\": \"<integer>\",\n  \"pageToken\": \"<string>\",\n  \"query\": \"<string>\",\n  \"value\": \"<string>\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/search/attributes",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "search",
+                            "attributes"
+                          ]
+                        },
+                        "description": "Search attributes based on filters specified in the request body."
+                      },
+                      "response": [
+                        {
+                          "id": "5a2608c2-b8cf-41f3-bb83-d4f37ae08029",
+                          "name": "SearchAttributeValuesResponse is the response for searching AttributeValues.",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: bearer",
+                                "key": "Authorization",
+                                "value": "Bearer <token>"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n  \"attributeTypeIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"excludeIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"ids\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"pageSize\": \"<integer>\",\n  \"pageToken\": \"<string>\",\n  \"query\": \"<string>\",\n  \"value\": \"<string>\"\n}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/search/attributes",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "search",
+                                "attributes"
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"list\": [\n    {\n      \"attributeTypeId\": \"<string>\",\n      \"createdAt\": \"<dateTime>\",\n      \"deletedAt\": \"<dateTime>\",\n      \"id\": \"<string>\",\n      \"updatedAt\": \"<dateTime>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"attributeTypeId\": \"<string>\",\n      \"createdAt\": \"<dateTime>\",\n      \"deletedAt\": \"<dateTime>\",\n      \"id\": \"<string>\",\n      \"updatedAt\": \"<dateTime>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"nextPageToken\": \"<string>\"\n}",
+                          "createdAt": "2026-10-21T20:46:24.000Z",
+                          "updatedAt": "2026-10-21T20:46:24.000Z",
+                          "uid": "35240-5a2608c2-b8cf-41f3-bb83-d4f37ae08029"
+                        }
+                      ],
+                      "createdAt": "2026-10-21T20:46:24.000Z",
+                      "updatedAt": "2026-10-21T20:46:24.000Z",
+                      "uid": "35240-894b5213-0f5b-4687-a1da-b9b903dbdd45"
+                    }
+                  ],
+                  "id": "8495f78a-6d30-4526-967a-31a64c5b6f4d",
+                  "createdAt": "2026-10-21T20:46:24.000Z",
+                  "updatedAt": "2026-10-21T20:46:24.000Z",
+                  "uid": "35240-8495f78a-6d30-4526-967a-31a64c5b6f4d"
+                }
+              ],
+              "id": "752410af-0438-4177-9569-cd057b4f4855",
+              "createdAt": "2026-10-21T20:46:24.000Z",
+              "updatedAt": "2026-10-21T20:46:24.000Z",
+              "uid": "35240-752410af-0438-4177-9569-cd057b4f4855"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "150a0b36-09dd-404e-94b9-74a942adc103",
-          "name": "Create Attribute Value",
-          "request": {
-            "name": "Create Attribute Value",
-            "description": {
-              "content": "Create a new attribute value.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "attributes"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "POST",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"attributeTypeId\": \"<string>\",\n  \"value\": \"<string>\"\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
-            {
-              "id": "80ccb82b-9328-4c29-8369-b884cb2a7cae",
-              "name": "CreateAttributeValueResponse is the response for creating an attribute value.",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "attributes"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"attributeTypeId\": \"<string>\",\n  \"value\": \"<string>\"\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"value\": {\n    \"attributeTypeId\": \"string\",\n    \"createdAt\": \"2008-12-23T23:51:26.000Z\",\n    \"deletedAt\": \"1948-01-02T02:30:07.092Z\",\n    \"id\": \"string\",\n    \"updatedAt\": \"1988-11-12T07:28:43.960Z\",\n    \"value\": \"string\"\n  }\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "a91bb937-ba79-4357-9068-de8767a1beaa",
-          "name": "Get Attribute Value",
-          "request": {
-            "name": "Get Attribute Value",
-            "description": {
-              "content": "Get an attribute value by id.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "attributes",
-                ":id"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "id",
-                  "description": "(Required) "
-                },
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "5e01f3f8-10fa-432c-9783-4542cff257fd",
-              "name": "GetAttributeValueResponse is the response for getting an attribute value by id.",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "attributes",
-                    ":id"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"value\": {\n    \"attributeTypeId\": \"string\",\n    \"createdAt\": \"1964-04-17T11:19:43.948Z\",\n    \"deletedAt\": \"1957-09-08T23:56:35.575Z\",\n    \"id\": \"string\",\n    \"updatedAt\": \"1996-03-25T14:57:50.854Z\",\n    \"value\": \"string\"\n  }\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "92d10a27-fd78-4310-89f0-2a23ce95d091",
-          "name": "List Attribute Types",
-          "request": {
-            "name": "List Attribute Types",
-            "description": {
-              "content": "List all attribute types.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "attributes",
-                "types"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [
-                {
-                  "disabled": false,
-                  "key": "page_size",
-                  "value": "<integer>"
-                },
-                {
-                  "disabled": false,
-                  "key": "page_token",
-                  "value": "<string>"
-                }
-              ],
-              "variable": [
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "914d5332-d1d5-48d4-9256-156768018972",
-              "name": "ListAttributeTypesResponse is the response for listing attribute types.",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "attributes",
-                    "types"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [
-                    {
-                      "key": "page_size",
-                      "value": "<integer>"
-                    },
-                    {
-                      "key": "page_token",
-                      "value": "<string>"
-                    }
-                  ],
-                  "variable": [
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"list\": [\n    {\n      \"id\": \"string\",\n      \"name\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"name\": \"string\"\n    }\n  ],\n  \"nextPageToken\": \"string\"\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "7c8c7e77-d119-4306-847d-fd68ca8d9440",
-          "name": "List Attribute Values",
-          "request": {
-            "name": "List Attribute Values",
-            "description": {
-              "content": "List all attribute values for a given attribute type.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "attributes",
-                "types",
-                ":attribute_type_id",
-                "values"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [
-                {
-                  "disabled": false,
-                  "key": "page_size",
-                  "value": "<integer>"
-                },
-                {
-                  "disabled": false,
-                  "key": "page_token",
-                  "value": "<string>"
-                }
-              ],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "attribute_type_id",
-                  "description": "(Required) "
-                },
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "5169004b-a1e4-40a7-bd81-c95bde78bdf0",
-              "name": "ListAttributeValuesResponse is the response for listing attribute values for a given AttributeType.",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "attributes",
-                    "types",
-                    ":attribute_type_id",
-                    "values"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [
-                    {
-                      "key": "page_size",
-                      "value": "<integer>"
-                    },
-                    {
-                      "key": "page_token",
-                      "value": "<string>"
-                    }
-                  ],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "attribute_type_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"list\": [\n    {\n      \"attributeTypeId\": \"string\",\n      \"createdAt\": \"1947-10-16T04:11:39.333Z\",\n      \"deletedAt\": \"2022-01-12T01:21:29.760Z\",\n      \"id\": \"string\",\n      \"updatedAt\": \"2013-01-12T16:02:41.521Z\",\n      \"value\": \"string\"\n    },\n    {\n      \"attributeTypeId\": \"string\",\n      \"createdAt\": \"1960-01-20T07:44:54.958Z\",\n      \"deletedAt\": \"1987-04-07T05:12:42.433Z\",\n      \"id\": \"string\",\n      \"updatedAt\": \"1988-08-07T18:39:51.532Z\",\n      \"value\": \"string\"\n    }\n  ],\n  \"nextPageToken\": \"string\"\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "031d6ec5-9770-4326-87d8-0981b5dcdd03",
-          "name": "Search Attribute Values",
-          "request": {
-            "name": "Search Attribute Values",
-            "description": {
-              "content": "Search attributes based on filters specified in the request body.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "search",
-                "attributes"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "POST",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"attributeTypeIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"excludeIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"ids\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"pageSize\": \"<integer>\",\n  \"pageToken\": \"<string>\",\n  \"query\": \"<string>\",\n  \"value\": \"<string>\"\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
-            {
-              "id": "2ef05d05-c59e-4f48-8646-bd233ddf0c8f",
-              "name": "SearchAttributeValuesResponse is the response for searching AttributeValues.",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "search",
-                    "attributes"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"attributeTypeIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"excludeIds\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"ids\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"pageSize\": \"<integer>\",\n  \"pageToken\": \"<string>\",\n  \"query\": \"<string>\",\n  \"value\": \"<string>\"\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"list\": [\n    {\n      \"attributeTypeId\": \"string\",\n      \"createdAt\": \"2015-07-19T21:34:32.678Z\",\n      \"deletedAt\": \"2008-11-23T16:53:39.977Z\",\n      \"id\": \"string\",\n      \"updatedAt\": \"1982-12-04T22:52:00.249Z\",\n      \"value\": \"string\"\n    },\n    {\n      \"attributeTypeId\": \"string\",\n      \"createdAt\": \"1960-11-15T14:40:57.720Z\",\n      \"deletedAt\": \"2022-01-24T13:01:47.457Z\",\n      \"id\": \"string\",\n      \"updatedAt\": \"1952-10-30T12:30:01.644Z\",\n      \"value\": \"string\"\n    }\n  ],\n  \"nextPageToken\": \"string\"\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "id": "44a81fa3-b558-434c-be97-3552389e8f4b",
+          "createdAt": "2026-10-21T20:46:24.000Z",
+          "updatedAt": "2026-10-21T20:46:24.000Z",
+          "uid": "35240-44a81fa3-b558-434c-be97-3552389e8f4b"
         }
       ],
-      "event": []
-    }
-  ],
-  "event": [],
-  "variable": [
-    {
-      "description": {
-        "content": "The domain of the tenant to use for this request.",
-        "type": "text/plain"
-      },
-      "type": "any",
-      "value": "example",
-      "key": "tenantDomain"
-    },
-    {
-      "type": "string",
-      "value": "https://{{tenantDomain}}.conductor.one",
-      "key": "baseUrl"
+      "id": "035cdf35-db2f-4e3b-b0c9-ec2144321d98",
+      "createdAt": "2026-10-21T20:46:24.000Z",
+      "updatedAt": "2026-10-21T20:46:24.000Z",
+      "uid": "35240-035cdf35-db2f-4e3b-b0c9-ec2144321d98"
     }
   ],
   "auth": {
@@ -769,17 +754,19 @@
     "bearer": [
       {
         "key": "token",
-        "value": "{{bearerToken}}"
+        "value": "{{bearerToken}}",
+        "type": "string"
       }
     ]
   },
-  "info": {
-    "_postman_id": "6e416937-d974-45da-bdc3-0fff48ca4bbd",
-    "name": "ConductorOne Access Conflict Attribute API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "description": {
-      "content": "The ConductorOne API is a HTTP API for managing ConductorOne resources.",
-      "type": "text/plain"
+  "variable": [
+    {
+      "key": "tenantDomain",
+      "value": "example"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://{{tenantDomain}}.conductor.one"
     }
-  }
+  ]
 }

@@ -1,301 +1,295 @@
 {
+  "info": {
+    "_postman_id": "c616cfe2-2e34-4fe6-92df-4ea16beeaa77",
+    "name": "ConductorOne App Reports API",
+    "description": "The ConductorOne API is a HTTP API for managing ConductorOne resources.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-21T20:45:42.000Z",
+    "updatedAt": "2026-10-21T20:45:42.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-c616cfe2-2e34-4fe6-92df-4ea16beeaa77"
+  },
   "item": [
     {
-      "id": "f44a8518-c40a-4aad-a477-e9fe12ac9dd2",
-      "name": "App Reports",
-      "description": {
-        "content": "",
-        "type": "text/plain"
-      },
+      "name": "api",
       "item": [
         {
-          "id": "586058b4-255c-4c54-a46b-2472c7c347aa",
-          "name": "List",
-          "request": {
-            "name": "List",
-            "description": {
-              "content": "Get a list of reports for the given app.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "apps",
-                ":app_id",
-                "report"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [
-                {
-                  "disabled": false,
-                  "key": "page_size",
-                  "value": "<integer>"
-                },
-                {
-                  "disabled": false,
-                  "key": "page_token",
-                  "value": "<string>"
-                }
-              ],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "app_id",
-                  "description": "(Required) "
-                },
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
+          "name": "v1",
+          "item": [
             {
-              "id": "7520cebf-5282-475f-a0d2-ab3c6662f87d",
-              "name": "The AppReportServiceListResponse message contains a list of results and a nextPageToken if applicable.",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "apps",
-                    ":app_id",
-                    "report"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [
-                    {
-                      "key": "page_size",
-                      "value": "<integer>"
-                    },
-                    {
-                      "key": "page_token",
-                      "value": "<string>"
-                    }
-                  ],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "app_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
+              "name": "apps",
+              "item": [
                 {
-                  "key": "Content-Type",
-                  "value": "application/json"
+                  "name": "{app_id}",
+                  "item": [
+                    {
+                      "name": "report",
+                      "item": [
+                        {
+                          "name": "List",
+                          "id": "b909bcf1-6c5e-4a54-96f2-0b6834962ced",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/apps/:app_id/report?page_size=<integer>&page_token=<string>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "apps",
+                                ":app_id",
+                                "report"
+                              ],
+                              "query": [
+                                {
+                                  "key": "page_size",
+                                  "value": "<integer>"
+                                },
+                                {
+                                  "key": "page_token",
+                                  "value": "<string>"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "id": "b4709c68-2b7d-4e20-ad46-2745baed0422",
+                                  "key": "app_id",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                }
+                              ]
+                            },
+                            "description": "Get a list of reports for the given app."
+                          },
+                          "response": [
+                            {
+                              "id": "41589b47-7ed9-404a-9102-13a613a23533",
+                              "name": "The AppReportServiceListResponse message contains a list of results and a nextPageToken if applicable.",
+                              "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: bearer",
+                                    "key": "Authorization",
+                                    "value": "Bearer <token>"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v1/apps/:app_id/report?page_size=<integer>&page_token=<string>",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v1",
+                                    "apps",
+                                    ":app_id",
+                                    "report"
+                                  ],
+                                  "query": [
+                                    {
+                                      "key": "page_size",
+                                      "value": "<integer>"
+                                    },
+                                    {
+                                      "key": "page_token",
+                                      "value": "<string>"
+                                    }
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "app_id"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{\n  \"list\": [\n    {\n      \"appId\": \"<string>\",\n      \"createdAt\": \"<dateTime>\",\n      \"downloadUrl\": \"<string>\",\n      \"hashes\": {\n        \"quis_6a2\": \"<string>\",\n        \"quis8d8\": \"<string>\"\n      },\n      \"id\": \"<string>\",\n      \"state\": \"REPORT_STATE_ERROR\"\n    },\n    {\n      \"appId\": \"<string>\",\n      \"createdAt\": \"<dateTime>\",\n      \"downloadUrl\": \"<string>\",\n      \"hashes\": {\n        \"laboris_c\": \"<string>\"\n      },\n      \"id\": \"<string>\",\n      \"state\": \"REPORT_STATE_ERROR\"\n    }\n  ],\n  \"nextPageToken\": \"<string>\"\n}",
+                              "createdAt": "2026-10-21T20:45:42.000Z",
+                              "updatedAt": "2026-10-21T20:45:42.000Z",
+                              "uid": "35240-41589b47-7ed9-404a-9102-13a613a23533"
+                            }
+                          ],
+                          "createdAt": "2026-10-21T20:45:42.000Z",
+                          "updatedAt": "2026-10-21T20:45:42.000Z",
+                          "uid": "35240-b909bcf1-6c5e-4a54-96f2-0b6834962ced"
+                        },
+                        {
+                          "name": "Generate Report",
+                          "id": "a3aab82e-3073-4913-9d7c-715a3fc2e677",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/api/v1/apps/:app_id/report",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "api",
+                                "v1",
+                                "apps",
+                                ":app_id",
+                                "report"
+                              ],
+                              "variable": [
+                                {
+                                  "id": "1c276993-0742-4f40-8912-71e53cf0983d",
+                                  "key": "app_id",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                }
+                              ]
+                            },
+                            "description": "Generate a report for the given app."
+                          },
+                          "response": [
+                            {
+                              "id": "73cf46e6-27a2-44e7-a07d-113c27e66c7c",
+                              "name": "Empty response body. Status code indicates success.",
+                              "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                  {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: bearer",
+                                    "key": "Authorization",
+                                    "value": "Bearer <token>"
+                                  }
+                                ],
+                                "body": {
+                                  "mode": "raw",
+                                  "raw": "{}",
+                                  "options": {
+                                    "raw": {
+                                      "headerFamily": "json",
+                                      "language": "json"
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "raw": "{{baseUrl}}/api/v1/apps/:app_id/report",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "api",
+                                    "v1",
+                                    "apps",
+                                    ":app_id",
+                                    "report"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "app_id"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{}",
+                              "createdAt": "2026-10-21T20:45:42.000Z",
+                              "updatedAt": "2026-10-21T20:45:42.000Z",
+                              "uid": "35240-73cf46e6-27a2-44e7-a07d-113c27e66c7c"
+                            }
+                          ],
+                          "createdAt": "2026-10-21T20:45:42.000Z",
+                          "updatedAt": "2026-10-21T20:45:42.000Z",
+                          "uid": "35240-a3aab82e-3073-4913-9d7c-715a3fc2e677"
+                        }
+                      ],
+                      "id": "fe728993-db7e-4c41-a0d4-6f4645bf1f2a",
+                      "createdAt": "2026-10-21T20:45:42.000Z",
+                      "updatedAt": "2026-10-21T20:45:42.000Z",
+                      "uid": "35240-fe728993-db7e-4c41-a0d4-6f4645bf1f2a"
+                    }
+                  ],
+                  "id": "e7587e30-f328-40ef-b1f3-667725946860",
+                  "createdAt": "2026-10-21T20:45:42.000Z",
+                  "updatedAt": "2026-10-21T20:45:42.000Z",
+                  "uid": "35240-e7587e30-f328-40ef-b1f3-667725946860"
                 }
               ],
-              "body": "{\n  \"list\": [\n    {\n      \"appId\": \"string\",\n      \"createdAt\": \"2003-02-10T13:32:35.371Z\",\n      \"downloadUrl\": \"string\",\n      \"hashes\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"id\": \"string\",\n      \"state\": \"REPORT_STATE_OK\"\n    },\n    {\n      \"appId\": \"string\",\n      \"createdAt\": \"1948-12-18T11:30:07.037Z\",\n      \"downloadUrl\": \"string\",\n      \"hashes\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"id\": \"string\",\n      \"state\": \"REPORT_STATE_PENDING\"\n    }\n  ],\n  \"nextPageToken\": \"string\"\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
+              "id": "79ea5733-ed6d-46f6-820f-27f9b5d99cce",
+              "createdAt": "2026-10-21T20:45:42.000Z",
+              "updatedAt": "2026-10-21T20:45:42.000Z",
+              "uid": "35240-79ea5733-ed6d-46f6-820f-27f9b5d99cce"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "20651464-23bf-488f-a3af-e9602728759a",
-          "name": "Generate Report",
-          "request": {
-            "name": "Generate Report",
-            "description": {
-              "content": "Generate a report for the given app.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "apps",
-                ":app_id",
-                "report"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "app_id",
-                  "description": "(Required) "
-                },
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "POST",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "<object>",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
-            {
-              "id": "e1c24948-c828-4188-a1a5-3c42b4727049",
-              "name": "Empty response body. Status code indicates success.",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "apps",
-                    ":app_id",
-                    "report"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "app_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "<object>",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "id": "c60e3b65-d02a-4f83-8d4a-f1512c67a1b1",
+          "createdAt": "2026-10-21T20:45:42.000Z",
+          "updatedAt": "2026-10-21T20:45:42.000Z",
+          "uid": "35240-c60e3b65-d02a-4f83-8d4a-f1512c67a1b1"
         }
       ],
-      "event": []
-    }
-  ],
-  "event": [],
-  "variable": [
-    {
-      "description": {
-        "content": "The domain of the tenant to use for this request.",
-        "type": "text/plain"
-      },
-      "type": "any",
-      "value": "example",
-      "key": "tenantDomain"
-    },
-    {
-      "type": "string",
-      "value": "https://{{tenantDomain}}.conductor.one",
-      "key": "baseUrl"
+      "id": "40abfa7d-3129-4e69-9a3b-2c4f225c1f32",
+      "createdAt": "2026-10-21T20:45:42.000Z",
+      "updatedAt": "2026-10-21T20:45:42.000Z",
+      "uid": "35240-40abfa7d-3129-4e69-9a3b-2c4f225c1f32"
     }
   ],
   "auth": {
@@ -303,17 +297,19 @@
     "bearer": [
       {
         "key": "token",
-        "value": "{{bearerToken}}"
+        "value": "{{bearerToken}}",
+        "type": "string"
       }
     ]
   },
-  "info": {
-    "_postman_id": "c3978e8e-2f5f-4e0b-90f0-033ba0c9e899",
-    "name": "ConductorOne Access Conflict App Reports API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "description": {
-      "content": "The ConductorOne API is a HTTP API for managing ConductorOne resources.",
-      "type": "text/plain"
+  "variable": [
+    {
+      "key": "tenantDomain",
+      "value": "example"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://{{tenantDomain}}.conductor.one"
     }
-  }
+  ]
 }

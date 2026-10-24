@@ -1,149 +1,146 @@
 {
+  "info": {
+    "_postman_id": "d109ddb1-15da-4f53-8eeb-73965efe2d9f",
+    "name": "ConductorOne Connector Catalog API",
+    "description": "The ConductorOne API is a HTTP API for managing ConductorOne resources.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-21T20:47:08.000Z",
+    "updatedAt": "2026-10-21T20:47:09.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-d109ddb1-15da-4f53-8eeb-73965efe2d9f"
+  },
   "item": [
     {
-      "id": "abc3be65-c364-4c11-8d37-37760a338303",
-      "name": "Connector Catalog",
-      "description": {
-        "content": "",
-        "type": "text/plain"
-      },
+      "name": "api",
       "item": [
         {
-          "id": "f8333c14-d11b-434a-9579-2b9c99298af3",
-          "name": "Configuration Schema",
-          "request": {
-            "name": "Configuration Schema",
-            "description": {
-              "content": "Invokes the c1.api.integration.connector.v1.ConnectorCatalogService.ConfigurationSchema method.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "connectorcatalog"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "POST",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"appId\": \"<string>\",\n  \"catalogId\": \"<string>\",\n  \"connectorId\": \"<string>\"\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
+          "name": "v1",
+          "item": [
             {
-              "id": "7339e2dc-9ae3-4bf3-879c-ab48c44b1a31",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "connectorcatalog"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"appId\": \"<string>\",\n  \"catalogId\": \"<string>\",\n  \"connectorId\": \"<string>\"\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
+              "name": "connectorcatalog",
+              "item": [
                 {
-                  "key": "Content-Type",
-                  "value": "application/json"
+                  "name": "Configuration Schema",
+                  "id": "3eb7ec05-9a5d-4996-ad05-bd8c885f13af",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"appId\": \"<string>\",\n  \"catalogId\": \"<string>\",\n  \"connectorId\": \"<string>\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/api/v1/connectorcatalog",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "api",
+                        "v1",
+                        "connectorcatalog"
+                      ]
+                    },
+                    "description": "Invokes the c1.api.integration.connector.v1.ConnectorCatalogService.ConfigurationSchema method."
+                  },
+                  "response": [
+                    {
+                      "id": "4c599fc3-0cba-4ec9-a5aa-bba2bfaf1d8f",
+                      "name": "Successful response",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"appId\": \"<string>\",\n  \"catalogId\": \"<string>\",\n  \"connectorId\": \"<string>\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/api/v1/connectorcatalog",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "api",
+                            "v1",
+                            "connectorcatalog"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"formSchema\": {\n    \"description\": \"<string>\",\n    \"displayName\": \"<string>\",\n    \"fieldRelationships\": [\n      {\n        \"atLeastOne\": {},\n        \"fieldNames\": [\n          \"<string>\"\n        ],\n        \"mutuallyExclusive\": {},\n        \"requiredTogether\": {}\n      }\n    ],\n    \"fields\": [\n      {\n        \"boolField\": {\n          \"checkboxField\": {},\n          \"defaultValue\": \"<boolean>\",\n          \"rules\": {\n            \"const\": \"<boolean>\"\n          }\n        },\n        \"description\": \"<string>\",\n        \"displayName\": \"<string>\",\n        \"fileField\": {\n          \"acceptedFileTypes\": [\n            \"<string>\"\n          ],\n          \"fileInputField\": {},\n          \"maxFileSize\": \"<int64>\"\n        },\n        \"int64Field\": {\n          \"defaultValue\": \"<int64>\",\n          \"numberField\": {\n            \"maxValue\": \"<int64>\",\n            \"minValue\": \"<int64>\",\n            \"step\": \"<int64>\"\n          },\n          \"placeholder\": \"<string>\",\n          \"rules\": {\n            \"const\": \"<int64>\",\n            \"gt\": \"<int64>\",\n            \"gte\": \"<int64>\",\n            \"ignoreEmpty\": \"<boolean>\",\n            \"in\": [\n              \"<int64>\"\n            ],\n            \"lt\": \"<int64>\",\n            \"lte\": \"<int64>\",\n            \"notIn\": [\n              \"<int64>\"\n            ]\n          }\n        },\n        \"name\": \"<string>\",\n        \"stringField\": {\n          \"defaultValue\": \"<string>\",\n          \"passwordField\": {},\n          \"placeholder\": \"<string>\",\n          \"rules\": {\n            \"address\": \"<boolean>\",\n            \"const\": \"<string>\",\n            \"contains\": \"<string>\",\n            \"email\": \"<boolean>\",\n            \"hostname\": \"<boolean>\",\n            \"ignoreEmpty\": \"<boolean>\",\n            \"in\": [\n              \"<string>\"\n            ],\n            \"ip\": \"<boolean>\",\n            \"ipv4\": \"<boolean>\",\n            \"ipv6\": \"<boolean>\",\n            \"len\": \"<string>\",\n            \"lenBytes\": \"<string>\",\n            \"maxBytes\": \"<string>\",\n            \"maxLen\": \"<string>\",\n            \"minBytes\": \"<string>\",\n            \"minLen\": \"<string>\",\n            \"notContains\": \"<string>\",\n            \"notIn\": [\n              \"<string>\"\n            ],\n            \"pattern\": \"<string>\",\n            \"prefix\": \"<string>\",\n            \"strict\": \"<boolean>\",\n            \"suffix\": \"<string>\",\n            \"uri\": \"<boolean>\",\n            \"uriRef\": \"<boolean>\",\n            \"uuid\": \"<boolean>\",\n            \"wellKnownRegex\": \"HTTP_HEADER_NAME\"\n          },\n          \"selectField\": {\n            \"options\": [\n              {\n                \"displayName\": \"<string>\",\n                \"value\": \"<string>\"\n              }\n            ]\n          },\n          \"textField\": {\n            \"multiline\": \"<boolean>\"\n          }\n        },\n        \"stringSliceField\": {\n          \"chipsField\": {},\n          \"defaultValues\": [\n            \"<string>\"\n          ],\n          \"placeholder\": \"<string>\",\n          \"rules\": {\n            \"ignoreEmpty\": \"<boolean>\",\n            \"items\": {\n              \"any\": {\n                \"in\": [\n                  \"<string>\"\n                ],\n                \"notIn\": [\n                  \"<string>\"\n                ],\n                \"required\": \"<boolean>\"\n              },\n              \"bool\": {\n                \"const\": \"<boolean>\"\n              },\n              \"bytes\": {\n                \"const\": \"<string>\",\n                \"contains\": \"<string>\",\n                \"ignoreEmpty\": \"<boolean>\",\n                \"in\": [\n                  \"<string>\"\n                ],\n                \"ip\": \"<boolean>\",\n                \"ipv4\": \"<boolean>\",\n                \"ipv6\": \"<boolean>\",\n                \"len\": \"<string>\",\n                \"maxLen\": \"<string>\",\n                \"minLen\": \"<string>\",\n                \"notIn\": [\n                  \"<string>\"\n                ],\n                \"pattern\": \"<string>\",\n                \"prefix\": \"<string>\",\n                \"suffix\": \"<string>\"\n              },\n              \"double\": {\n                \"const\": \"<number>\",\n                \"gt\": \"<number>\",\n                \"gte\": \"<number>\",\n                \"ignoreEmpty\": \"<boolean>\",\n                \"in\": [\n                  \"<number>\"\n                ],\n                \"lt\": \"<number>\",\n                \"lte\": \"<number>\",\n                \"notIn\": [\n                  \"<number>\"\n                ]\n              },\n              \"duration\": {\n                \"const\": \"<string>\",\n                \"gt\": \"<string>\",\n                \"gte\": \"<string>\",\n                \"in\": [\n                  \"<string>\"\n                ],\n                \"lt\": \"<string>\",\n                \"lte\": \"<string>\",\n                \"notIn\": [\n                  \"<string>\"\n                ],\n                \"required\": \"<boolean>\"\n              },\n              \"enum\": {\n                \"const\": \"<integer>\",\n                \"definedOnly\": \"<boolean>\",\n                \"in\": [\n                  \"<integer>\"\n                ],\n                \"notIn\": [\n                  \"<integer>\"\n                ]\n              },\n              \"fixed32\": {\n                \"const\": \"<integer>\",\n                \"gt\": \"<integer>\",\n                \"gte\": \"<integer>\",\n                \"ignoreEmpty\": \"<boolean>\",\n                \"in\": [\n                  \"<integer>\"\n                ],\n                \"lt\": \"<integer>\",\n                \"lte\": \"<integer>\",\n                \"notIn\": [\n                  \"<integer>\"\n                ]\n              },\n              \"fixed64\": {\n                \"const\": \"<string>\",\n                \"gt\": \"<string>\",\n                \"gte\": \"<string>\",\n                \"ignoreEmpty\": \"<boolean>\",\n                \"in\": [\n                  \"<string>\"\n                ],\n                \"lt\": \"<string>\",\n                \"lte\": \"<string>\",\n                \"notIn\": [\n                  \"<string>\"\n                ]\n              },\n              \"float\": {\n                \"const\": \"<number>\",\n                \"gt\": \"<number>\",\n                \"gte\": \"<number>\",\n                \"ignoreEmpty\": \"<boolean>\",\n                \"in\": [\n                  \"<number>\"\n                ],\n                \"lt\": \"<number>\",\n                \"lte\": \"<number>\",\n                \"notIn\": [\n                  \"<number>\"\n                ]\n              },\n              \"int32\": {\n                \"const\": \"<integer>\",\n                \"gt\": \"<integer>\",\n                \"gte\": \"<integer>\",\n                \"ignoreEmpty\": \"<boolean>\",\n                \"in\": [\n                  \"<integer>\"\n                ],\n                \"lt\": \"<integer>\",\n                \"lte\": \"<integer>\",\n                \"notIn\": [\n                  \"<integer>\"\n                ]\n              },\n              \"int64\": {\n                \"const\": \"<int64>\",\n                \"gt\": \"<int64>\",\n                \"gte\": \"<int64>\",\n                \"ignoreEmpty\": \"<boolean>\",\n                \"in\": [\n                  \"<int64>\"\n                ],\n                \"lt\": \"<int64>\",\n                \"lte\": \"<int64>\",\n                \"notIn\": [\n                  \"<int64>\"\n                ]\n              },\n              \"map\": {\n                \"ignoreEmpty\": \"<boolean>\",\n                \"keys\": {\n                  \"value\": \"<Circular reference to #/components/schemas/validate.FieldRules detected>\"\n                },\n                \"maxPairs\": \"<string>\",\n                \"minPairs\": \"<string>\",\n                \"noSparse\": \"<boolean>\",\n                \"values\": {\n                  \"value\": \"<Circular reference to #/components/schemas/validate.FieldRules detected>\"\n                }\n              },\n              \"message\": {\n                \"required\": \"<boolean>\",\n                \"skip\": \"<boolean>\"\n              },\n              \"repeated\": {\n                \"value\": \"<Circular reference to #/components/schemas/validate.RepeatedRules detected>\"\n              },\n              \"sfixed32\": {\n                \"const\": \"<integer>\",\n                \"gt\": \"<integer>\",\n                \"gte\": \"<integer>\",\n                \"ignoreEmpty\": \"<boolean>\",\n                \"in\": [\n                  \"<integer>\"\n                ],\n                \"lt\": \"<integer>\",\n                \"lte\": \"<integer>\",\n                \"notIn\": [\n                  \"<integer>\"\n                ]\n              },\n              \"sfixed64\": {\n                \"const\": \"<int64>\",\n                \"gt\": \"<int64>\",\n                \"gte\": \"<int64>\",\n                \"ignoreEmpty\": \"<boolean>\",\n                \"in\": [\n                  \"<int64>\"\n                ],\n                \"lt\": \"<int64>\",\n                \"lte\": \"<int64>\",\n                \"notIn\": [\n                  \"<int64>\"\n                ]\n              },\n              \"sint32\": {\n                \"const\": \"<integer>\",\n                \"gt\": \"<integer>\",\n                \"gte\": \"<integer>\",\n                \"ignoreEmpty\": \"<boolean>\",\n                \"in\": [\n                  \"<integer>\"\n                ],\n                \"lt\": \"<integer>\",\n                \"lte\": \"<integer>\",\n                \"notIn\": [\n                  \"<integer>\"\n                ]\n              },\n              \"sint64\": {\n                \"const\": \"<int64>\",\n                \"gt\": \"<int64>\",\n                \"gte\": \"<int64>\",\n                \"ignoreEmpty\": \"<boolean>\",\n                \"in\": [\n                  \"<int64>\"\n                ],\n                \"lt\": \"<int64>\",\n                \"lte\": \"<int64>\",\n                \"notIn\": [\n                  \"<int64>\"\n                ]\n              },\n              \"string\": {\n                \"address\": \"<boolean>\",\n                \"const\": \"<string>\",\n                \"contains\": \"<string>\",\n                \"email\": \"<boolean>\",\n                \"hostname\": \"<boolean>\",\n                \"ignoreEmpty\": \"<boolean>\",\n                \"in\": [\n                  \"<string>\"\n                ],\n                \"ip\": \"<boolean>\",\n                \"ipv4\": \"<boolean>\",\n                \"ipv6\": \"<boolean>\",\n                \"len\": \"<string>\",\n                \"lenBytes\": \"<string>\",\n                \"maxBytes\": \"<string>\",\n                \"maxLen\": \"<string>\",\n                \"minBytes\": \"<string>\",\n                \"minLen\": \"<string>\",\n                \"notContains\": \"<string>\",\n                \"notIn\": [\n                  \"<string>\"\n                ],\n                \"pattern\": \"<string>\",\n                \"prefix\": \"<string>\",\n                \"strict\": \"<boolean>\",\n                \"suffix\": \"<string>\",\n                \"uri\": \"<boolean>\",\n                \"uriRef\": \"<boolean>\",\n                \"uuid\": \"<boolean>\",\n                \"wellKnownRegex\": \"HTTP_HEADER_NAME\"\n              },\n              \"timestamp\": {\n                \"const\": \"<dateTime>\",\n                \"gt\": \"<dateTime>\",\n                \"gtNow\": \"<boolean>\",\n                \"gte\": \"<dateTime>\",\n                \"lt\": \"<dateTime>\",\n                \"ltNow\": \"<boolean>\",\n                \"lte\": \"<dateTime>\",\n                \"required\": \"<boolean>\",\n                \"within\": \"<string>\"\n              },\n              \"uint32\": {\n                \"const\": \"<integer>\",\n                \"gt\": \"<integer>\",\n                \"gte\": \"<integer>\",\n                \"ignoreEmpty\": \"<boolean>\",\n                \"in\": [\n                  \"<integer>\"\n                ],\n                \"lt\": \"<integer>\",\n                \"lte\": \"<integer>\",\n                \"notIn\": [\n                  \"<integer>\"\n                ]\n              },\n              \"uint64\": {\n                \"const\": \"<string>\",\n                \"gt\": \"<string>\",\n                \"gte\": \"<string>\",\n                \"ignoreEmpty\": \"<boolean>\",\n                \"in\": [\n                  \"<string>\"\n                ],\n                \"lt\": \"<string>\",\n                \"lte\": \"<string>\",\n                \"notIn\": [\n                  \"<string>\"\n                ]\n              }\n            },\n            \"maxItems\": \"<string>\",\n            \"minItems\": \"<string>\",\n            \"unique\": \"<boolean>\"\n          }\n        }\n      }\n    ],\n    \"id\": \"<string>\"\n  },\n  \"schema\": {\n    \"displayName\": \"<string>\",\n    \"fieldGroups\": [\n      {\n        \"displayName\": \"<string>\",\n        \"fieldNames\": [\n          \"<string>\"\n        ],\n        \"helpText\": \"<string>\",\n        \"name\": \"<string>\"\n      }\n    ],\n    \"fields\": [\n      {\n        \"additionalPlaceholder\": \"<string>\",\n        \"checkbox\": {\n          \"checked\": \"<boolean>\"\n        },\n        \"dependsOnFields\": [\n          \"<string>\"\n        ],\n        \"displayName\": \"<string>\",\n        \"helpUrl\": \"<string>\",\n        \"import\": {\n          \"allowedExtensions\": [\n            \"<string>\"\n          ],\n          \"secret\": \"<boolean>\",\n          \"valueValidator\": {\n            \"address\": \"<boolean>\",\n            \"const\": \"<string>\",\n            \"contains\": \"<string>\",\n            \"email\": \"<boolean>\",\n            \"hostname\": \"<boolean>\",\n            \"ignoreEmpty\": \"<boolean>\",\n            \"in\": [\n              \"<string>\"\n            ],\n            \"ip\": \"<boolean>\",\n            \"ipv4\": \"<boolean>\",\n            \"ipv6\": \"<boolean>\",\n            \"len\": \"<string>\",\n            \"lenBytes\": \"<string>\",\n            \"maxBytes\": \"<string>\",\n            \"maxLen\": \"<string>\",\n            \"minBytes\": \"<string>\",\n            \"minLen\": \"<string>\",\n            \"notContains\": \"<string>\",\n            \"notIn\": [\n              \"<string>\"\n            ],\n            \"pattern\": \"<string>\",\n            \"prefix\": \"<string>\",\n            \"strict\": \"<boolean>\",\n            \"suffix\": \"<string>\",\n            \"uri\": \"<boolean>\",\n            \"uriRef\": \"<boolean>\",\n            \"uuid\": \"<boolean>\",\n            \"wellKnownRegex\": \"HTTP_HEADER_VALUE\"\n          }\n        },\n        \"keyValue\": {\n          \"secret\": \"<boolean>\"\n        },\n        \"name\": \"<string>\",\n        \"oauth2\": {},\n        \"options\": {},\n        \"placeholder\": \"<string>\",\n        \"postCreate\": \"<boolean>\",\n        \"random\": {\n          \"length\": \"<integer>\"\n        },\n        \"readOnly\": {},\n        \"secret\": {},\n        \"select\": {\n          \"items\": [\n            {\n              \"displayName\": \"<string>\",\n              \"value\": \"<string>\"\n            }\n          ]\n        },\n        \"str\": {\n          \"secret\": \"<boolean>\",\n          \"valueValidator\": {\n            \"address\": \"<boolean>\",\n            \"const\": \"<string>\",\n            \"contains\": \"<string>\",\n            \"email\": \"<boolean>\",\n            \"hostname\": \"<boolean>\",\n            \"ignoreEmpty\": \"<boolean>\",\n            \"in\": [\n              \"<string>\"\n            ],\n            \"ip\": \"<boolean>\",\n            \"ipv4\": \"<boolean>\",\n            \"ipv6\": \"<boolean>\",\n            \"len\": \"<string>\",\n            \"lenBytes\": \"<string>\",\n            \"maxBytes\": \"<string>\",\n            \"maxLen\": \"<string>\",\n            \"minBytes\": \"<string>\",\n            \"minLen\": \"<string>\",\n            \"notContains\": \"<string>\",\n            \"notIn\": [\n              \"<string>\"\n            ],\n            \"pattern\": \"<string>\",\n            \"prefix\": \"<string>\",\n            \"strict\": \"<boolean>\",\n            \"suffix\": \"<string>\",\n            \"uri\": \"<boolean>\",\n            \"uriRef\": \"<boolean>\",\n            \"uuid\": \"<boolean>\",\n            \"wellKnownRegex\": \"HTTP_HEADER_VALUE\"\n          }\n        },\n        \"strList\": {\n          \"valueValidator\": {\n            \"address\": \"<boolean>\",\n            \"const\": \"<string>\",\n            \"contains\": \"<string>\",\n            \"email\": \"<boolean>\",\n            \"hostname\": \"<boolean>\",\n            \"ignoreEmpty\": \"<boolean>\",\n            \"in\": [\n              \"<string>\"\n            ],\n            \"ip\": \"<boolean>\",\n            \"ipv4\": \"<boolean>\",\n            \"ipv6\": \"<boolean>\",\n            \"len\": \"<string>\",\n            \"lenBytes\": \"<string>\",\n            \"maxBytes\": \"<string>\",\n            \"maxLen\": \"<string>\",\n            \"minBytes\": \"<string>\",\n            \"minLen\": \"<string>\",\n            \"notContains\": \"<string>\",\n            \"notIn\": [\n              \"<string>\"\n            ],\n            \"pattern\": \"<string>\",\n            \"prefix\": \"<string>\",\n            \"strict\": \"<boolean>\",\n            \"suffix\": \"<string>\",\n            \"uri\": \"<boolean>\",\n            \"uriRef\": \"<boolean>\",\n            \"uuid\": \"<boolean>\",\n            \"wellKnownRegex\": \"HTTP_HEADER_VALUE\"\n          }\n        },\n        \"stringMap\": {\n          \"optional\": \"<boolean>\"\n        },\n        \"text\": {\n          \"secret\": \"<boolean>\",\n          \"valueValidator\": {\n            \"address\": \"<boolean>\",\n            \"const\": \"<string>\",\n            \"contains\": \"<string>\",\n            \"email\": \"<boolean>\",\n            \"hostname\": \"<boolean>\",\n            \"ignoreEmpty\": \"<boolean>\",\n            \"in\": [\n              \"<string>\"\n            ],\n            \"ip\": \"<boolean>\",\n            \"ipv4\": \"<boolean>\",\n            \"ipv6\": \"<boolean>\",\n            \"len\": \"<string>\",\n            \"lenBytes\": \"<string>\",\n            \"maxBytes\": \"<string>\",\n            \"maxLen\": \"<string>\",\n            \"minBytes\": \"<string>\",\n            \"minLen\": \"<string>\",\n            \"notContains\": \"<string>\",\n            \"notIn\": [\n              \"<string>\"\n            ],\n            \"pattern\": \"<string>\",\n            \"prefix\": \"<string>\",\n            \"strict\": \"<boolean>\",\n            \"suffix\": \"<string>\",\n            \"uri\": \"<boolean>\",\n            \"uriRef\": \"<boolean>\",\n            \"uuid\": \"<boolean>\",\n            \"wellKnownRegex\": \"UNKNOWN\"\n          }\n        }\n      }\n    ],\n    \"helpUrl\": \"<string>\",\n    \"iconUrl\": \"<string>\",\n    \"isOauth2\": \"<boolean>\",\n    \"requiresExternalConnector\": \"<boolean>\",\n    \"supportsExternalResources\": \"<boolean>\"\n  }\n}",
+                      "createdAt": "2026-10-21T20:47:09.000Z",
+                      "updatedAt": "2026-10-21T20:47:09.000Z",
+                      "uid": "35240-4c599fc3-0cba-4ec9-a5aa-bba2bfaf1d8f"
+                    }
+                  ],
+                  "createdAt": "2026-10-21T20:47:09.000Z",
+                  "updatedAt": "2026-10-21T20:47:09.000Z",
+                  "uid": "35240-3eb7ec05-9a5d-4996-ad05-bd8c885f13af"
                 }
               ],
-              "body": "null",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
+              "id": "aef843e6-758d-4a90-a70d-8a2908739d3d",
+              "createdAt": "2026-10-21T20:47:09.000Z",
+              "updatedAt": "2026-10-21T20:47:09.000Z",
+              "uid": "35240-aef843e6-758d-4a90-a70d-8a2908739d3d"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "id": "a5b881e7-5812-408e-a8c9-d03fddea58c8",
+          "createdAt": "2026-10-21T20:47:09.000Z",
+          "updatedAt": "2026-10-21T20:47:09.000Z",
+          "uid": "35240-a5b881e7-5812-408e-a8c9-d03fddea58c8"
         }
       ],
-      "event": []
-    }
-  ],
-  "event": [],
-  "variable": [
-    {
-      "description": {
-        "content": "The domain of the tenant to use for this request.",
-        "type": "text/plain"
-      },
-      "type": "any",
-      "value": "example",
-      "key": "tenantDomain"
-    },
-    {
-      "type": "string",
-      "value": "https://{{tenantDomain}}.conductor.one",
-      "key": "baseUrl"
+      "id": "f66785b8-d6ac-47d8-ae19-6b82c370cf62",
+      "createdAt": "2026-10-21T20:47:09.000Z",
+      "updatedAt": "2026-10-21T20:47:09.000Z",
+      "uid": "35240-f66785b8-d6ac-47d8-ae19-6b82c370cf62"
     }
   ],
   "auth": {
@@ -151,17 +148,19 @@
     "bearer": [
       {
         "key": "token",
-        "value": "{{bearerToken}}"
+        "value": "{{bearerToken}}",
+        "type": "string"
       }
     ]
   },
-  "info": {
-    "_postman_id": "c991699a-d1d5-4fe4-9fa5-2bb0be3f2398",
-    "name": "ConductorOne Access Conflict Connector Catalog API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "description": {
-      "content": "The ConductorOne API is a HTTP API for managing ConductorOne resources.",
-      "type": "text/plain"
+  "variable": [
+    {
+      "key": "tenantDomain",
+      "value": "example"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://{{tenantDomain}}.conductor.one"
     }
-  }
+  ]
 }

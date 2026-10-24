@@ -1,1036 +1,956 @@
 {
+  "info": {
+    "_postman_id": "3304dc6e-9a48-4e5b-8576-f7abb3429ebf",
+    "name": "ConductorOne App Resource Owner API",
+    "description": "The ConductorOne API is a HTTP API for managing ConductorOne resources.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-21T20:45:58.000Z",
+    "updatedAt": "2026-10-21T20:45:59.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-3304dc6e-9a48-4e5b-8576-f7abb3429ebf"
+  },
   "item": [
     {
-      "id": "91ce65ef-ca4f-4f2d-9d2f-1e6ce5c2876a",
-      "name": "App Resource Owner",
-      "description": {
-        "content": "",
-        "type": "text/plain"
-      },
+      "name": "api",
       "item": [
         {
-          "id": "103c0b20-2a70-4b54-b362-da59fed38742",
-          "name": "Delete",
-          "request": {
-            "name": "Delete",
-            "description": {
-              "content": "Delete deletes the owners from a given app resource.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "apps",
-                ":app_id",
-                "resource_types",
-                ":resource_type_id",
-                "resource",
-                ":resource_id",
-                "ownerids"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "app_id",
-                  "description": "(Required) "
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "resource_type_id",
-                  "description": "(Required) "
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "resource_id",
-                  "description": "(Required) "
-                },
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "DELETE",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "<object>",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
+          "name": "v1",
+          "item": [
             {
-              "id": "8f490fcb-6808-4cb6-b7ba-92d352ba7383",
-              "name": "the empty response message for deleting app resource owners.",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "apps",
-                    ":app_id",
-                    "resource_types",
-                    ":resource_type_id",
-                    "resource",
-                    ":resource_id",
-                    "ownerids"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "app_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "resource_type_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "resource_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "DELETE",
-                "body": {
-                  "mode": "raw",
-                  "raw": "<object>",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
+              "name": "apps",
+              "item": [
                 {
-                  "key": "Content-Type",
-                  "value": "application/json"
+                  "name": "{app_id}",
+                  "item": [
+                    {
+                      "name": "resource_types",
+                      "item": [
+                        {
+                          "name": "{resource_type_id}",
+                          "item": [
+                            {
+                              "name": "resource",
+                              "item": [
+                                {
+                                  "name": "{resource_id}",
+                                  "item": [
+                                    {
+                                      "name": "ownerids",
+                                      "item": [
+                                        {
+                                          "name": "Delete",
+                                          "id": "353432ab-7546-4793-9b32-677f7aa552f1",
+                                          "protocolProfileBehavior": {
+                                            "disableBodyPruning": true
+                                          },
+                                          "request": {
+                                            "method": "DELETE",
+                                            "header": [
+                                              {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                              },
+                                              {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                              }
+                                            ],
+                                            "body": {
+                                              "mode": "raw",
+                                              "raw": "{}",
+                                              "options": {
+                                                "raw": {
+                                                  "headerFamily": "json",
+                                                  "language": "json"
+                                                }
+                                              }
+                                            },
+                                            "url": {
+                                              "raw": "{{baseUrl}}/api/v1/apps/:app_id/resource_types/:resource_type_id/resource/:resource_id/ownerids",
+                                              "host": [
+                                                "{{baseUrl}}"
+                                              ],
+                                              "path": [
+                                                "api",
+                                                "v1",
+                                                "apps",
+                                                ":app_id",
+                                                "resource_types",
+                                                ":resource_type_id",
+                                                "resource",
+                                                ":resource_id",
+                                                "ownerids"
+                                              ],
+                                              "variable": [
+                                                {
+                                                  "id": "0a5f3c9e-7fbc-40c8-957d-026e757bffe0",
+                                                  "key": "app_id",
+                                                  "value": "<string>",
+                                                  "description": "(Required) "
+                                                },
+                                                {
+                                                  "id": "aab86bff-48d5-4e63-9727-95eb76627ba7",
+                                                  "key": "resource_type_id",
+                                                  "value": "<string>",
+                                                  "description": "(Required) "
+                                                },
+                                                {
+                                                  "id": "ca875a5d-b48c-4511-9244-ab4f5f5d1aab",
+                                                  "key": "resource_id",
+                                                  "value": "<string>",
+                                                  "description": "(Required) "
+                                                }
+                                              ]
+                                            },
+                                            "description": "Delete deletes the owners from a given app resource."
+                                          },
+                                          "response": [
+                                            {
+                                              "id": "1ef6e4d4-12f2-4ac7-b6d8-652115d9ecb4",
+                                              "name": "the empty response message for deleting app resource owners.",
+                                              "originalRequest": {
+                                                "method": "DELETE",
+                                                "header": [
+                                                  {
+                                                    "key": "Content-Type",
+                                                    "value": "application/json"
+                                                  },
+                                                  {
+                                                    "key": "Accept",
+                                                    "value": "application/json"
+                                                  },
+                                                  {
+                                                    "description": "Added as a part of security scheme: bearer",
+                                                    "key": "Authorization",
+                                                    "value": "Bearer <token>"
+                                                  }
+                                                ],
+                                                "body": {
+                                                  "mode": "raw",
+                                                  "raw": "{}",
+                                                  "options": {
+                                                    "raw": {
+                                                      "headerFamily": "json",
+                                                      "language": "json"
+                                                    }
+                                                  }
+                                                },
+                                                "url": {
+                                                  "raw": "{{baseUrl}}/api/v1/apps/:app_id/resource_types/:resource_type_id/resource/:resource_id/ownerids",
+                                                  "host": [
+                                                    "{{baseUrl}}"
+                                                  ],
+                                                  "path": [
+                                                    "api",
+                                                    "v1",
+                                                    "apps",
+                                                    ":app_id",
+                                                    "resource_types",
+                                                    ":resource_type_id",
+                                                    "resource",
+                                                    ":resource_id",
+                                                    "ownerids"
+                                                  ],
+                                                  "variable": [
+                                                    {
+                                                      "key": "app_id"
+                                                    },
+                                                    {
+                                                      "key": "resource_type_id"
+                                                    },
+                                                    {
+                                                      "key": "resource_id"
+                                                    }
+                                                  ]
+                                                }
+                                              },
+                                              "status": "OK",
+                                              "code": 200,
+                                              "_postman_previewlanguage": "json",
+                                              "header": [
+                                                {
+                                                  "key": "Content-Type",
+                                                  "value": "application/json"
+                                                }
+                                              ],
+                                              "cookie": [],
+                                              "responseTime": null,
+                                              "body": "{}",
+                                              "createdAt": "2026-10-21T20:45:59.000Z",
+                                              "updatedAt": "2026-10-21T20:45:59.000Z",
+                                              "uid": "35240-1ef6e4d4-12f2-4ac7-b6d8-652115d9ecb4"
+                                            }
+                                          ],
+                                          "createdAt": "2026-10-21T20:45:59.000Z",
+                                          "updatedAt": "2026-10-21T20:45:59.000Z",
+                                          "uid": "35240-353432ab-7546-4793-9b32-677f7aa552f1"
+                                        },
+                                        {
+                                          "name": "List Owner I Ds",
+                                          "id": "65bf9071-273b-415b-9201-2019465a2745",
+                                          "protocolProfileBehavior": {
+                                            "disableBodyPruning": true
+                                          },
+                                          "request": {
+                                            "method": "GET",
+                                            "header": [
+                                              {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                              }
+                                            ],
+                                            "url": {
+                                              "raw": "{{baseUrl}}/api/v1/apps/:app_id/resource_types/:resource_type_id/resource/:resource_id/ownerids",
+                                              "host": [
+                                                "{{baseUrl}}"
+                                              ],
+                                              "path": [
+                                                "api",
+                                                "v1",
+                                                "apps",
+                                                ":app_id",
+                                                "resource_types",
+                                                ":resource_type_id",
+                                                "resource",
+                                                ":resource_id",
+                                                "ownerids"
+                                              ],
+                                              "variable": [
+                                                {
+                                                  "id": "67d1d4f2-3c6c-409e-a89b-32b4ddc74797",
+                                                  "key": "app_id",
+                                                  "value": "<string>",
+                                                  "description": "(Required) "
+                                                },
+                                                {
+                                                  "id": "a00ce717-788a-42d7-bcd0-5f633967f03f",
+                                                  "key": "resource_type_id",
+                                                  "value": "<string>",
+                                                  "description": "(Required) "
+                                                },
+                                                {
+                                                  "id": "6da8adc0-da2c-4ee1-883f-372d992d714f",
+                                                  "key": "resource_id",
+                                                  "value": "<string>",
+                                                  "description": "(Required) "
+                                                }
+                                              ]
+                                            },
+                                            "description": "ListOwnerIDs lists owner IDs for a given app resource."
+                                          },
+                                          "response": [
+                                            {
+                                              "id": "558628d8-623d-4623-b853-078f8d89223c",
+                                              "name": "The response message for listing app resource owners IDs.",
+                                              "originalRequest": {
+                                                "method": "GET",
+                                                "header": [
+                                                  {
+                                                    "key": "Accept",
+                                                    "value": "application/json"
+                                                  },
+                                                  {
+                                                    "description": "Added as a part of security scheme: bearer",
+                                                    "key": "Authorization",
+                                                    "value": "Bearer <token>"
+                                                  }
+                                                ],
+                                                "url": {
+                                                  "raw": "{{baseUrl}}/api/v1/apps/:app_id/resource_types/:resource_type_id/resource/:resource_id/ownerids",
+                                                  "host": [
+                                                    "{{baseUrl}}"
+                                                  ],
+                                                  "path": [
+                                                    "api",
+                                                    "v1",
+                                                    "apps",
+                                                    ":app_id",
+                                                    "resource_types",
+                                                    ":resource_type_id",
+                                                    "resource",
+                                                    ":resource_id",
+                                                    "ownerids"
+                                                  ],
+                                                  "variable": [
+                                                    {
+                                                      "key": "app_id"
+                                                    },
+                                                    {
+                                                      "key": "resource_type_id"
+                                                    },
+                                                    {
+                                                      "key": "resource_id"
+                                                    }
+                                                  ]
+                                                }
+                                              },
+                                              "status": "OK",
+                                              "code": 200,
+                                              "_postman_previewlanguage": "json",
+                                              "header": [
+                                                {
+                                                  "key": "Content-Type",
+                                                  "value": "application/json"
+                                                }
+                                              ],
+                                              "cookie": [],
+                                              "responseTime": null,
+                                              "body": "{\n  \"userIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                                              "createdAt": "2026-10-21T20:45:59.000Z",
+                                              "updatedAt": "2026-10-21T20:45:59.000Z",
+                                              "uid": "35240-558628d8-623d-4623-b853-078f8d89223c"
+                                            }
+                                          ],
+                                          "createdAt": "2026-10-21T20:45:59.000Z",
+                                          "updatedAt": "2026-10-21T20:45:59.000Z",
+                                          "uid": "35240-65bf9071-273b-415b-9201-2019465a2745"
+                                        }
+                                      ],
+                                      "id": "e1b9aeb3-246e-4a54-a239-b0ac3a94f37b",
+                                      "createdAt": "2026-10-21T20:45:59.000Z",
+                                      "updatedAt": "2026-10-21T20:45:59.000Z",
+                                      "uid": "35240-e1b9aeb3-246e-4a54-a239-b0ac3a94f37b"
+                                    },
+                                    {
+                                      "name": "owners",
+                                      "item": [
+                                        {
+                                          "name": "Remove",
+                                          "id": "6c393403-5334-41ea-8ffb-54e08070d060",
+                                          "protocolProfileBehavior": {
+                                            "disableBodyPruning": true
+                                          },
+                                          "request": {
+                                            "method": "DELETE",
+                                            "header": [
+                                              {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                              },
+                                              {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                              }
+                                            ],
+                                            "body": {
+                                              "mode": "raw",
+                                              "raw": "{\n  \"userId\": \"<string>\"\n}",
+                                              "options": {
+                                                "raw": {
+                                                  "headerFamily": "json",
+                                                  "language": "json"
+                                                }
+                                              }
+                                            },
+                                            "url": {
+                                              "raw": "{{baseUrl}}/api/v1/apps/:app_id/resource_types/:resource_type_id/resource/:resource_id/owners",
+                                              "host": [
+                                                "{{baseUrl}}"
+                                              ],
+                                              "path": [
+                                                "api",
+                                                "v1",
+                                                "apps",
+                                                ":app_id",
+                                                "resource_types",
+                                                ":resource_type_id",
+                                                "resource",
+                                                ":resource_id",
+                                                "owners"
+                                              ],
+                                              "variable": [
+                                                {
+                                                  "id": "158a784a-37c0-4386-9fce-b06fe23a0901",
+                                                  "key": "app_id",
+                                                  "value": "<string>",
+                                                  "description": "(Required) "
+                                                },
+                                                {
+                                                  "id": "773ef910-20ae-4d1e-8511-d6ea988644a2",
+                                                  "key": "resource_type_id",
+                                                  "value": "<string>",
+                                                  "description": "(Required) "
+                                                },
+                                                {
+                                                  "id": "649ec7fa-08b0-4183-a23d-62a4af6c9272",
+                                                  "key": "resource_id",
+                                                  "value": "<string>",
+                                                  "description": "(Required) "
+                                                }
+                                              ]
+                                            },
+                                            "description": "Invokes the c1.api.app.v1.AppResourceOwners.Remove method."
+                                          },
+                                          "response": [
+                                            {
+                                              "id": "7494adeb-4e8c-42f7-b41e-b331e20966c6",
+                                              "name": "Successful response",
+                                              "originalRequest": {
+                                                "method": "DELETE",
+                                                "header": [
+                                                  {
+                                                    "key": "Content-Type",
+                                                    "value": "application/json"
+                                                  },
+                                                  {
+                                                    "key": "Accept",
+                                                    "value": "application/json"
+                                                  },
+                                                  {
+                                                    "description": "Added as a part of security scheme: bearer",
+                                                    "key": "Authorization",
+                                                    "value": "Bearer <token>"
+                                                  }
+                                                ],
+                                                "body": {
+                                                  "mode": "raw",
+                                                  "raw": "{\n  \"userId\": \"<string>\"\n}",
+                                                  "options": {
+                                                    "raw": {
+                                                      "headerFamily": "json",
+                                                      "language": "json"
+                                                    }
+                                                  }
+                                                },
+                                                "url": {
+                                                  "raw": "{{baseUrl}}/api/v1/apps/:app_id/resource_types/:resource_type_id/resource/:resource_id/owners",
+                                                  "host": [
+                                                    "{{baseUrl}}"
+                                                  ],
+                                                  "path": [
+                                                    "api",
+                                                    "v1",
+                                                    "apps",
+                                                    ":app_id",
+                                                    "resource_types",
+                                                    ":resource_type_id",
+                                                    "resource",
+                                                    ":resource_id",
+                                                    "owners"
+                                                  ],
+                                                  "variable": [
+                                                    {
+                                                      "key": "app_id"
+                                                    },
+                                                    {
+                                                      "key": "resource_type_id"
+                                                    },
+                                                    {
+                                                      "key": "resource_id"
+                                                    }
+                                                  ]
+                                                }
+                                              },
+                                              "status": "OK",
+                                              "code": 200,
+                                              "_postman_previewlanguage": "json",
+                                              "header": [
+                                                {
+                                                  "key": "Content-Type",
+                                                  "value": "application/json"
+                                                }
+                                              ],
+                                              "cookie": [],
+                                              "responseTime": null,
+                                              "body": "{}",
+                                              "createdAt": "2026-10-21T20:45:59.000Z",
+                                              "updatedAt": "2026-10-21T20:45:59.000Z",
+                                              "uid": "35240-7494adeb-4e8c-42f7-b41e-b331e20966c6"
+                                            }
+                                          ],
+                                          "createdAt": "2026-10-21T20:45:59.000Z",
+                                          "updatedAt": "2026-10-21T20:45:59.000Z",
+                                          "uid": "35240-6c393403-5334-41ea-8ffb-54e08070d060"
+                                        },
+                                        {
+                                          "name": "List",
+                                          "id": "34292cad-6c0b-4593-8016-7528db46ed9d",
+                                          "protocolProfileBehavior": {
+                                            "disableBodyPruning": true
+                                          },
+                                          "request": {
+                                            "method": "GET",
+                                            "header": [
+                                              {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                              }
+                                            ],
+                                            "url": {
+                                              "raw": "{{baseUrl}}/api/v1/apps/:app_id/resource_types/:resource_type_id/resource/:resource_id/owners?page_size=<integer>&page_token=<string>",
+                                              "host": [
+                                                "{{baseUrl}}"
+                                              ],
+                                              "path": [
+                                                "api",
+                                                "v1",
+                                                "apps",
+                                                ":app_id",
+                                                "resource_types",
+                                                ":resource_type_id",
+                                                "resource",
+                                                ":resource_id",
+                                                "owners"
+                                              ],
+                                              "query": [
+                                                {
+                                                  "key": "page_size",
+                                                  "value": "<integer>"
+                                                },
+                                                {
+                                                  "key": "page_token",
+                                                  "value": "<string>"
+                                                }
+                                              ],
+                                              "variable": [
+                                                {
+                                                  "id": "4e224fb9-769c-4ff9-93d6-b319b2d136d5",
+                                                  "key": "app_id",
+                                                  "value": "<string>",
+                                                  "description": "(Required) "
+                                                },
+                                                {
+                                                  "id": "a6440590-c12b-4fa2-81e7-5d107b2e24ec",
+                                                  "key": "resource_type_id",
+                                                  "value": "<string>",
+                                                  "description": "(Required) "
+                                                },
+                                                {
+                                                  "id": "4ab57624-26a5-4d79-9938-5d40fa7c5b19",
+                                                  "key": "resource_id",
+                                                  "value": "<string>",
+                                                  "description": "(Required) "
+                                                }
+                                              ]
+                                            },
+                                            "description": "List all owners of an app resource."
+                                          },
+                                          "response": [
+                                            {
+                                              "id": "75e2cb0a-6443-41af-a744-bbb4eeb957ad",
+                                              "name": "The ListAppResourceOwnersResponse message contains a list of results and a nextPageToken if applicable",
+                                              "originalRequest": {
+                                                "method": "GET",
+                                                "header": [
+                                                  {
+                                                    "key": "Accept",
+                                                    "value": "application/json"
+                                                  },
+                                                  {
+                                                    "description": "Added as a part of security scheme: bearer",
+                                                    "key": "Authorization",
+                                                    "value": "Bearer <token>"
+                                                  }
+                                                ],
+                                                "url": {
+                                                  "raw": "{{baseUrl}}/api/v1/apps/:app_id/resource_types/:resource_type_id/resource/:resource_id/owners?page_size=<integer>&page_token=<string>",
+                                                  "host": [
+                                                    "{{baseUrl}}"
+                                                  ],
+                                                  "path": [
+                                                    "api",
+                                                    "v1",
+                                                    "apps",
+                                                    ":app_id",
+                                                    "resource_types",
+                                                    ":resource_type_id",
+                                                    "resource",
+                                                    ":resource_id",
+                                                    "owners"
+                                                  ],
+                                                  "query": [
+                                                    {
+                                                      "key": "page_size",
+                                                      "value": "<integer>"
+                                                    },
+                                                    {
+                                                      "key": "page_token",
+                                                      "value": "<string>"
+                                                    }
+                                                  ],
+                                                  "variable": [
+                                                    {
+                                                      "key": "app_id"
+                                                    },
+                                                    {
+                                                      "key": "resource_type_id"
+                                                    },
+                                                    {
+                                                      "key": "resource_id"
+                                                    }
+                                                  ]
+                                                }
+                                              },
+                                              "status": "OK",
+                                              "code": 200,
+                                              "_postman_previewlanguage": "json",
+                                              "header": [
+                                                {
+                                                  "key": "Content-Type",
+                                                  "value": "application/json"
+                                                }
+                                              ],
+                                              "cookie": [],
+                                              "responseTime": null,
+                                              "body": "{\n  \"list\": [\n    {\n      \"createdAt\": \"<dateTime>\",\n      \"delegatedUserId\": \"<string>\",\n      \"deletedAt\": \"<dateTime>\",\n      \"department\": \"<string>\",\n      \"departmentSources\": [\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ],\n      \"directoryIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"directoryStatus\": \"DELETED\",\n      \"directoryStatusSources\": [\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ],\n      \"displayName\": \"<string>\",\n      \"email\": \"<string>\",\n      \"emailSources\": [\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ],\n      \"emails\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"employeeIdSources\": [\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ],\n      \"employeeIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"employmentStatus\": \"<string>\",\n      \"employmentStatusSources\": [\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ],\n      \"employmentType\": \"<string>\",\n      \"employmentTypeSources\": [\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ],\n      \"id\": \"<string>\",\n      \"jobTitle\": \"<string>\",\n      \"jobTitleSources\": [\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ],\n      \"managerIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"managerSources\": [\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ],\n      \"profile\": {\n        \"cupidatat_4\": -43582926,\n        \"Duis_07\": false\n      },\n      \"roleIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"status\": \"ENABLED\",\n      \"type\": \"USER_TYPE_AGENT\",\n      \"updatedAt\": \"<dateTime>\",\n      \"username\": \"<string>\",\n      \"usernameSources\": [\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ],\n      \"usernames\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    },\n    {\n      \"createdAt\": \"<dateTime>\",\n      \"delegatedUserId\": \"<string>\",\n      \"deletedAt\": \"<dateTime>\",\n      \"department\": \"<string>\",\n      \"departmentSources\": [\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ],\n      \"directoryIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"directoryStatus\": \"ENABLED\",\n      \"directoryStatusSources\": [\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ],\n      \"displayName\": \"<string>\",\n      \"email\": \"<string>\",\n      \"emailSources\": [\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ],\n      \"emails\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"employeeIdSources\": [\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ],\n      \"employeeIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"employmentStatus\": \"<string>\",\n      \"employmentStatusSources\": [\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ],\n      \"employmentType\": \"<string>\",\n      \"employmentTypeSources\": [\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ],\n      \"id\": \"<string>\",\n      \"jobTitle\": \"<string>\",\n      \"jobTitleSources\": [\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ],\n      \"managerIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"managerSources\": [\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ],\n      \"profile\": {\n        \"laborum68\": \"consequat\"\n      },\n      \"roleIds\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"status\": \"DISABLED\",\n      \"type\": \"USER_TYPE_SYSTEM\",\n      \"updatedAt\": \"<dateTime>\",\n      \"username\": \"<string>\",\n      \"usernameSources\": [\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        },\n        {\n          \"appId\": \"<string>\",\n          \"appUserId\": \"<string>\",\n          \"appUserProfileAttributeKey\": \"<string>\",\n          \"userAttributeMappingId\": \"<string>\",\n          \"value\": \"<string>\"\n        }\n      ],\n      \"usernames\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  ],\n  \"nextPageToken\": \"<string>\"\n}",
+                                              "createdAt": "2026-10-21T20:45:59.000Z",
+                                              "updatedAt": "2026-10-21T20:45:59.000Z",
+                                              "uid": "35240-75e2cb0a-6443-41af-a744-bbb4eeb957ad"
+                                            }
+                                          ],
+                                          "createdAt": "2026-10-21T20:45:59.000Z",
+                                          "updatedAt": "2026-10-21T20:45:59.000Z",
+                                          "uid": "35240-34292cad-6c0b-4593-8016-7528db46ed9d"
+                                        },
+                                        {
+                                          "name": "Add",
+                                          "id": "8c67479a-86b9-4781-a599-d9f04083c23f",
+                                          "protocolProfileBehavior": {
+                                            "disableBodyPruning": true
+                                          },
+                                          "request": {
+                                            "method": "POST",
+                                            "header": [
+                                              {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                              },
+                                              {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                              }
+                                            ],
+                                            "body": {
+                                              "mode": "raw",
+                                              "raw": "{\n  \"userId\": \"<string>\"\n}",
+                                              "options": {
+                                                "raw": {
+                                                  "headerFamily": "json",
+                                                  "language": "json"
+                                                }
+                                              }
+                                            },
+                                            "url": {
+                                              "raw": "{{baseUrl}}/api/v1/apps/:app_id/resource_types/:resource_type_id/resource/:resource_id/owners",
+                                              "host": [
+                                                "{{baseUrl}}"
+                                              ],
+                                              "path": [
+                                                "api",
+                                                "v1",
+                                                "apps",
+                                                ":app_id",
+                                                "resource_types",
+                                                ":resource_type_id",
+                                                "resource",
+                                                ":resource_id",
+                                                "owners"
+                                              ],
+                                              "variable": [
+                                                {
+                                                  "id": "506e5715-778e-470e-b090-f081265a2911",
+                                                  "key": "app_id",
+                                                  "value": "<string>",
+                                                  "description": "(Required) "
+                                                },
+                                                {
+                                                  "id": "83f47be8-7a25-4c0b-bc49-76254ce6aad3",
+                                                  "key": "resource_type_id",
+                                                  "value": "<string>",
+                                                  "description": "(Required) "
+                                                },
+                                                {
+                                                  "id": "bc9385d4-6d90-4c02-802c-a1e1054c75e3",
+                                                  "key": "resource_id",
+                                                  "value": "<string>",
+                                                  "description": "(Required) "
+                                                }
+                                              ]
+                                            },
+                                            "description": "Invokes the c1.api.app.v1.AppResourceOwners.Add method."
+                                          },
+                                          "response": [
+                                            {
+                                              "id": "0d4656d1-c1c3-48d6-b08f-6a18a71c980d",
+                                              "name": "Successful response",
+                                              "originalRequest": {
+                                                "method": "POST",
+                                                "header": [
+                                                  {
+                                                    "key": "Content-Type",
+                                                    "value": "application/json"
+                                                  },
+                                                  {
+                                                    "key": "Accept",
+                                                    "value": "application/json"
+                                                  },
+                                                  {
+                                                    "description": "Added as a part of security scheme: bearer",
+                                                    "key": "Authorization",
+                                                    "value": "Bearer <token>"
+                                                  }
+                                                ],
+                                                "body": {
+                                                  "mode": "raw",
+                                                  "raw": "{\n  \"userId\": \"<string>\"\n}",
+                                                  "options": {
+                                                    "raw": {
+                                                      "headerFamily": "json",
+                                                      "language": "json"
+                                                    }
+                                                  }
+                                                },
+                                                "url": {
+                                                  "raw": "{{baseUrl}}/api/v1/apps/:app_id/resource_types/:resource_type_id/resource/:resource_id/owners",
+                                                  "host": [
+                                                    "{{baseUrl}}"
+                                                  ],
+                                                  "path": [
+                                                    "api",
+                                                    "v1",
+                                                    "apps",
+                                                    ":app_id",
+                                                    "resource_types",
+                                                    ":resource_type_id",
+                                                    "resource",
+                                                    ":resource_id",
+                                                    "owners"
+                                                  ],
+                                                  "variable": [
+                                                    {
+                                                      "key": "app_id"
+                                                    },
+                                                    {
+                                                      "key": "resource_type_id"
+                                                    },
+                                                    {
+                                                      "key": "resource_id"
+                                                    }
+                                                  ]
+                                                }
+                                              },
+                                              "status": "OK",
+                                              "code": 200,
+                                              "_postman_previewlanguage": "json",
+                                              "header": [
+                                                {
+                                                  "key": "Content-Type",
+                                                  "value": "application/json"
+                                                }
+                                              ],
+                                              "cookie": [],
+                                              "responseTime": null,
+                                              "body": "{}",
+                                              "createdAt": "2026-10-21T20:45:59.000Z",
+                                              "updatedAt": "2026-10-21T20:45:59.000Z",
+                                              "uid": "35240-0d4656d1-c1c3-48d6-b08f-6a18a71c980d"
+                                            }
+                                          ],
+                                          "createdAt": "2026-10-21T20:45:59.000Z",
+                                          "updatedAt": "2026-10-21T20:45:59.000Z",
+                                          "uid": "35240-8c67479a-86b9-4781-a599-d9f04083c23f"
+                                        },
+                                        {
+                                          "name": "Set",
+                                          "id": "b88bacac-9ad0-4121-ae08-c956b02c370d",
+                                          "protocolProfileBehavior": {
+                                            "disableBodyPruning": true
+                                          },
+                                          "request": {
+                                            "method": "PUT",
+                                            "header": [
+                                              {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                              },
+                                              {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                              }
+                                            ],
+                                            "body": {
+                                              "mode": "raw",
+                                              "raw": "{\n  \"userIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                                              "options": {
+                                                "raw": {
+                                                  "headerFamily": "json",
+                                                  "language": "json"
+                                                }
+                                              }
+                                            },
+                                            "url": {
+                                              "raw": "{{baseUrl}}/api/v1/apps/:app_id/resource_types/:resource_type_id/resource/:resource_id/owners",
+                                              "host": [
+                                                "{{baseUrl}}"
+                                              ],
+                                              "path": [
+                                                "api",
+                                                "v1",
+                                                "apps",
+                                                ":app_id",
+                                                "resource_types",
+                                                ":resource_type_id",
+                                                "resource",
+                                                ":resource_id",
+                                                "owners"
+                                              ],
+                                              "variable": [
+                                                {
+                                                  "id": "0f1e8d89-5fac-43ff-afcb-71fc00de045d",
+                                                  "key": "app_id",
+                                                  "value": "<string>",
+                                                  "description": "(Required) "
+                                                },
+                                                {
+                                                  "id": "a94d63af-e383-4a23-8d08-2dce909e4fd6",
+                                                  "key": "resource_type_id",
+                                                  "value": "<string>",
+                                                  "description": "(Required) "
+                                                },
+                                                {
+                                                  "id": "95767311-5716-498b-9c39-693187fe27db",
+                                                  "key": "resource_id",
+                                                  "value": "<string>",
+                                                  "description": "(Required) "
+                                                }
+                                              ]
+                                            },
+                                            "description": "Sets the owners for a given app resource to the specified list of users."
+                                          },
+                                          "response": [
+                                            {
+                                              "id": "0c183ceb-5f3e-405f-adf0-f9d8f03aa624",
+                                              "name": "The empty response message for setting the app resource owners.",
+                                              "originalRequest": {
+                                                "method": "PUT",
+                                                "header": [
+                                                  {
+                                                    "key": "Content-Type",
+                                                    "value": "application/json"
+                                                  },
+                                                  {
+                                                    "key": "Accept",
+                                                    "value": "application/json"
+                                                  },
+                                                  {
+                                                    "description": "Added as a part of security scheme: bearer",
+                                                    "key": "Authorization",
+                                                    "value": "Bearer <token>"
+                                                  }
+                                                ],
+                                                "body": {
+                                                  "mode": "raw",
+                                                  "raw": "{\n  \"userIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                                                  "options": {
+                                                    "raw": {
+                                                      "headerFamily": "json",
+                                                      "language": "json"
+                                                    }
+                                                  }
+                                                },
+                                                "url": {
+                                                  "raw": "{{baseUrl}}/api/v1/apps/:app_id/resource_types/:resource_type_id/resource/:resource_id/owners",
+                                                  "host": [
+                                                    "{{baseUrl}}"
+                                                  ],
+                                                  "path": [
+                                                    "api",
+                                                    "v1",
+                                                    "apps",
+                                                    ":app_id",
+                                                    "resource_types",
+                                                    ":resource_type_id",
+                                                    "resource",
+                                                    ":resource_id",
+                                                    "owners"
+                                                  ],
+                                                  "variable": [
+                                                    {
+                                                      "key": "app_id"
+                                                    },
+                                                    {
+                                                      "key": "resource_type_id"
+                                                    },
+                                                    {
+                                                      "key": "resource_id"
+                                                    }
+                                                  ]
+                                                }
+                                              },
+                                              "status": "OK",
+                                              "code": 200,
+                                              "_postman_previewlanguage": "json",
+                                              "header": [
+                                                {
+                                                  "key": "Content-Type",
+                                                  "value": "application/json"
+                                                }
+                                              ],
+                                              "cookie": [],
+                                              "responseTime": null,
+                                              "body": "{}",
+                                              "createdAt": "2026-10-21T20:45:59.000Z",
+                                              "updatedAt": "2026-10-21T20:45:59.000Z",
+                                              "uid": "35240-0c183ceb-5f3e-405f-adf0-f9d8f03aa624"
+                                            }
+                                          ],
+                                          "createdAt": "2026-10-21T20:45:59.000Z",
+                                          "updatedAt": "2026-10-21T20:45:59.000Z",
+                                          "uid": "35240-b88bacac-9ad0-4121-ae08-c956b02c370d"
+                                        }
+                                      ],
+                                      "id": "7780c9a1-2bd7-4531-a094-6e4334159b62",
+                                      "createdAt": "2026-10-21T20:45:59.000Z",
+                                      "updatedAt": "2026-10-21T20:45:59.000Z",
+                                      "uid": "35240-7780c9a1-2bd7-4531-a094-6e4334159b62"
+                                    }
+                                  ],
+                                  "id": "a215e4cd-5342-419b-95e6-6a7c640c0524",
+                                  "createdAt": "2026-10-21T20:45:59.000Z",
+                                  "updatedAt": "2026-10-21T20:45:59.000Z",
+                                  "uid": "35240-a215e4cd-5342-419b-95e6-6a7c640c0524"
+                                }
+                              ],
+                              "id": "d5a9eff9-bd78-451d-b2ae-6c83449c5b89",
+                              "createdAt": "2026-10-21T20:45:59.000Z",
+                              "updatedAt": "2026-10-21T20:45:59.000Z",
+                              "uid": "35240-d5a9eff9-bd78-451d-b2ae-6c83449c5b89"
+                            }
+                          ],
+                          "id": "4f6de971-aa1c-4e34-8cd2-5982e0c2433c",
+                          "createdAt": "2026-10-21T20:45:59.000Z",
+                          "updatedAt": "2026-10-21T20:45:59.000Z",
+                          "uid": "35240-4f6de971-aa1c-4e34-8cd2-5982e0c2433c"
+                        }
+                      ],
+                      "id": "49db9624-c920-41cf-b353-39b334bd317e",
+                      "createdAt": "2026-10-21T20:45:59.000Z",
+                      "updatedAt": "2026-10-21T20:45:59.000Z",
+                      "uid": "35240-49db9624-c920-41cf-b353-39b334bd317e"
+                    }
+                  ],
+                  "id": "0cf501ea-e2a1-4cc1-a56d-7e595f7f415e",
+                  "createdAt": "2026-10-21T20:45:59.000Z",
+                  "updatedAt": "2026-10-21T20:45:59.000Z",
+                  "uid": "35240-0cf501ea-e2a1-4cc1-a56d-7e595f7f415e"
                 }
               ],
-              "body": "{}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
+              "id": "f104bdd1-231a-45a1-94a8-32e91e59ec85",
+              "createdAt": "2026-10-21T20:45:59.000Z",
+              "updatedAt": "2026-10-21T20:45:59.000Z",
+              "uid": "35240-f104bdd1-231a-45a1-94a8-32e91e59ec85"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "79077d11-087c-4036-ac23-8b2e016e7263",
-          "name": "List Owner I Ds",
-          "request": {
-            "name": "List Owner I Ds",
-            "description": {
-              "content": "ListOwnerIDs lists owner IDs for a given app resource.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "apps",
-                ":app_id",
-                "resource_types",
-                ":resource_type_id",
-                "resource",
-                ":resource_id",
-                "ownerids"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "app_id",
-                  "description": "(Required) "
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "resource_type_id",
-                  "description": "(Required) "
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "resource_id",
-                  "description": "(Required) "
-                },
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "5fc0f312-fd94-47e1-bbb7-c69aae5e4589",
-              "name": "The response message for listing app resource owners IDs.",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "apps",
-                    ":app_id",
-                    "resource_types",
-                    ":resource_type_id",
-                    "resource",
-                    ":resource_id",
-                    "ownerids"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "app_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "resource_type_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "resource_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"userIds\": [\n    \"string\",\n    \"string\"\n  ]\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "0d10c3cd-21d4-4d28-8b51-fd7496fd0564",
-          "name": "Remove",
-          "request": {
-            "name": "Remove",
-            "description": {
-              "content": "Invokes the c1.api.app.v1.AppResourceOwners.Remove method.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "apps",
-                ":app_id",
-                "resource_types",
-                ":resource_type_id",
-                "resource",
-                ":resource_id",
-                "owners"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "app_id",
-                  "description": "(Required) "
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "resource_type_id",
-                  "description": "(Required) "
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "resource_id",
-                  "description": "(Required) "
-                },
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "DELETE",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"userId\": \"<string>\"\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
-            {
-              "id": "8966fd29-898b-4e37-9d40-960a368612fd",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "apps",
-                    ":app_id",
-                    "resource_types",
-                    ":resource_type_id",
-                    "resource",
-                    ":resource_id",
-                    "owners"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "app_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "resource_type_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "resource_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "DELETE",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"userId\": \"<string>\"\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "ac98b745-ad10-4ea0-9d9a-b9c4c66f46cc",
-          "name": "List",
-          "request": {
-            "name": "List",
-            "description": {
-              "content": "List all owners of an app resource.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "apps",
-                ":app_id",
-                "resource_types",
-                ":resource_type_id",
-                "resource",
-                ":resource_id",
-                "owners"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [
-                {
-                  "disabled": false,
-                  "key": "page_size",
-                  "value": "<integer>"
-                },
-                {
-                  "disabled": false,
-                  "key": "page_token",
-                  "value": "<string>"
-                }
-              ],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "app_id",
-                  "description": "(Required) "
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "resource_type_id",
-                  "description": "(Required) "
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "resource_id",
-                  "description": "(Required) "
-                },
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "e9e344bd-81d5-42eb-81d9-ea2410c99874",
-              "name": "The ListAppResourceOwnersResponse message contains a list of results and a nextPageToken if applicable",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "apps",
-                    ":app_id",
-                    "resource_types",
-                    ":resource_type_id",
-                    "resource",
-                    ":resource_id",
-                    "owners"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [
-                    {
-                      "key": "page_size",
-                      "value": "<integer>"
-                    },
-                    {
-                      "key": "page_token",
-                      "value": "<string>"
-                    }
-                  ],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "app_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "resource_type_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "resource_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"list\": [\n    {\n      \"createdAt\": \"1968-06-12T08:37:11.146Z\",\n      \"delegatedUserId\": \"string\",\n      \"deletedAt\": \"1996-07-01T01:14:28.617Z\",\n      \"department\": \"string\",\n      \"departmentSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"directoryIds\": [\n        \"string\",\n        \"string\"\n      ],\n      \"directoryStatus\": \"DELETED\",\n      \"directoryStatusSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"displayName\": \"string\",\n      \"email\": \"string\",\n      \"emailSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"emails\": [\n        \"string\",\n        \"string\"\n      ],\n      \"employeeIdSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"employeeIds\": [\n        \"string\",\n        \"string\"\n      ],\n      \"employmentStatus\": \"string\",\n      \"employmentStatusSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"employmentType\": \"string\",\n      \"employmentTypeSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"id\": \"string\",\n      \"jobTitle\": \"string\",\n      \"jobTitleSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"managerIds\": [\n        \"string\",\n        \"string\"\n      ],\n      \"managerSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"profile\": {\n        \"key_0\": 895\n      },\n      \"roleIds\": [\n        \"string\",\n        \"string\"\n      ],\n      \"status\": \"UNKNOWN\",\n      \"type\": \"USER_TYPE_HUMAN\",\n      \"updatedAt\": \"1948-06-01T20:53:44.011Z\",\n      \"username\": \"string\",\n      \"usernameSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"usernames\": [\n        \"string\",\n        \"string\"\n      ]\n    },\n    {\n      \"createdAt\": \"1984-09-08T08:13:15.498Z\",\n      \"delegatedUserId\": \"string\",\n      \"deletedAt\": \"1964-05-16T20:50:09.532Z\",\n      \"department\": \"string\",\n      \"departmentSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"directoryIds\": [\n        \"string\",\n        \"string\"\n      ],\n      \"directoryStatus\": \"UNKNOWN\",\n      \"directoryStatusSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"displayName\": \"string\",\n      \"email\": \"string\",\n      \"emailSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"emails\": [\n        \"string\",\n        \"string\"\n      ],\n      \"employeeIdSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"employeeIds\": [\n        \"string\",\n        \"string\"\n      ],\n      \"employmentStatus\": \"string\",\n      \"employmentStatusSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"employmentType\": \"string\",\n      \"employmentTypeSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"id\": \"string\",\n      \"jobTitle\": \"string\",\n      \"jobTitleSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"managerIds\": [\n        \"string\",\n        \"string\"\n      ],\n      \"managerSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"profile\": {\n        \"key_0\": 4334.3603478043215\n      },\n      \"roleIds\": [\n        \"string\",\n        \"string\"\n      ],\n      \"status\": \"ENABLED\",\n      \"type\": \"USER_TYPE_AGENT\",\n      \"updatedAt\": \"1978-01-31T00:06:34.399Z\",\n      \"username\": \"string\",\n      \"usernameSources\": [\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"appUserId\": \"string\",\n          \"appUserProfileAttributeKey\": \"string\",\n          \"userAttributeMappingId\": \"string\",\n          \"value\": \"string\"\n        }\n      ],\n      \"usernames\": [\n        \"string\",\n        \"string\"\n      ]\n    }\n  ],\n  \"nextPageToken\": \"string\"\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "655f238a-ce4a-40ed-a1f7-9fbe22ab50fa",
-          "name": "Add",
-          "request": {
-            "name": "Add",
-            "description": {
-              "content": "Invokes the c1.api.app.v1.AppResourceOwners.Add method.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "apps",
-                ":app_id",
-                "resource_types",
-                ":resource_type_id",
-                "resource",
-                ":resource_id",
-                "owners"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "app_id",
-                  "description": "(Required) "
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "resource_type_id",
-                  "description": "(Required) "
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "resource_id",
-                  "description": "(Required) "
-                },
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "POST",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"userId\": \"<string>\"\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
-            {
-              "id": "415f44d9-a9e1-412e-b7fd-2389d51a52d9",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "apps",
-                    ":app_id",
-                    "resource_types",
-                    ":resource_type_id",
-                    "resource",
-                    ":resource_id",
-                    "owners"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "app_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "resource_type_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "resource_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"userId\": \"<string>\"\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "7b22bdd6-b031-4ea1-b75c-665128383a1b",
-          "name": "Set",
-          "request": {
-            "name": "Set",
-            "description": {
-              "content": "Sets the owners for a given app resource to the specified list of users.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "apps",
-                ":app_id",
-                "resource_types",
-                ":resource_type_id",
-                "resource",
-                ":resource_id",
-                "owners"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "app_id",
-                  "description": "(Required) "
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "resource_type_id",
-                  "description": "(Required) "
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "resource_id",
-                  "description": "(Required) "
-                },
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "PUT",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"userIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
-            {
-              "id": "1dd630c9-e2de-4886-bada-1f20dbfa8928",
-              "name": "The empty response message for setting the app resource owners.",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "apps",
-                    ":app_id",
-                    "resource_types",
-                    ":resource_type_id",
-                    "resource",
-                    ":resource_id",
-                    "owners"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "app_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "resource_type_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "resource_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "PUT",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"userIds\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "id": "d1a9ddae-9788-40ae-b947-d3a4f8796309",
+          "createdAt": "2026-10-21T20:45:59.000Z",
+          "updatedAt": "2026-10-21T20:45:59.000Z",
+          "uid": "35240-d1a9ddae-9788-40ae-b947-d3a4f8796309"
         }
       ],
-      "event": []
-    }
-  ],
-  "event": [],
-  "variable": [
-    {
-      "description": {
-        "content": "The domain of the tenant to use for this request.",
-        "type": "text/plain"
-      },
-      "type": "any",
-      "value": "example",
-      "key": "tenantDomain"
-    },
-    {
-      "type": "string",
-      "value": "https://{{tenantDomain}}.conductor.one",
-      "key": "baseUrl"
+      "id": "7c300f8c-6a33-4c84-a502-00bf63c8d9af",
+      "createdAt": "2026-10-21T20:45:59.000Z",
+      "updatedAt": "2026-10-21T20:45:59.000Z",
+      "uid": "35240-7c300f8c-6a33-4c84-a502-00bf63c8d9af"
     }
   ],
   "auth": {
@@ -1038,17 +958,19 @@
     "bearer": [
       {
         "key": "token",
-        "value": "{{bearerToken}}"
+        "value": "{{bearerToken}}",
+        "type": "string"
       }
     ]
   },
-  "info": {
-    "_postman_id": "99dd04bd-589d-432a-8ff3-9630c50d7667",
-    "name": "ConductorOne Access Conflict App Resource Owner API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "description": {
-      "content": "The ConductorOne API is a HTTP API for managing ConductorOne resources.",
-      "type": "text/plain"
+  "variable": [
+    {
+      "key": "tenantDomain",
+      "value": "example"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://{{tenantDomain}}.conductor.one"
     }
-  }
+  ]
 }

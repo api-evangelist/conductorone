@@ -1,524 +1,538 @@
 {
+  "info": {
+    "_postman_id": "2a4d6eb0-87a6-4ad6-b5f7-c1f906081e91",
+    "name": "ConductorOne App Entitlement User Binding API",
+    "description": "The ConductorOne API is a HTTP API for managing ConductorOne resources.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-21T20:45:22.000Z",
+    "updatedAt": "2026-10-21T20:45:23.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-2a4d6eb0-87a6-4ad6-b5f7-c1f906081e91"
+  },
   "item": [
     {
-      "id": "84be86f8-bb78-4634-a08f-497ac929a95c",
-      "name": "App Entitlement User Binding",
-      "description": {
-        "content": "",
-        "type": "text/plain"
-      },
+      "name": "api",
       "item": [
         {
-          "id": "cc922a7b-3253-4554-9b6f-fc6ffef2c47e",
-          "name": "Remove Grant Duration",
-          "request": {
-            "name": "Remove Grant Duration",
-            "description": {
-              "content": "Invokes the c1.api.app.v1.AppEntitlementUserBindingService.RemoveGrantDuration method.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "apps",
-                ":app_id",
-                "entitlements",
-                ":app_entitlement_id",
-                "users",
-                ":app_user_id",
-                "remove-grant-duration"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "app_id",
-                  "description": "(Required) "
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "app_entitlement_id",
-                  "description": "(Required) "
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "app_user_id",
-                  "description": "(Required) "
-                },
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "POST",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "<object>",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
+          "name": "v1",
+          "item": [
             {
-              "id": "1331a934-a450-42c4-914f-26c16ce72aca",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "apps",
-                    ":app_id",
-                    "entitlements",
-                    ":app_entitlement_id",
-                    "users",
-                    ":app_user_id",
-                    "remove-grant-duration"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "app_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "app_entitlement_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "app_user_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "<object>",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
+              "name": "apps",
+              "item": [
                 {
-                  "key": "Content-Type",
-                  "value": "application/json"
+                  "name": "{app_id}",
+                  "item": [
+                    {
+                      "name": "entitlements",
+                      "item": [
+                        {
+                          "name": "{app_entitlement_id}",
+                          "item": [
+                            {
+                              "name": "users",
+                              "item": [
+                                {
+                                  "name": "{app_user_id}",
+                                  "item": [
+                                    {
+                                      "name": "remove-grant-duration",
+                                      "item": [
+                                        {
+                                          "name": "Remove Grant Duration",
+                                          "id": "ceb6c43d-32f1-4777-945c-6489cc926a1a",
+                                          "protocolProfileBehavior": {
+                                            "disableBodyPruning": true
+                                          },
+                                          "request": {
+                                            "method": "POST",
+                                            "header": [
+                                              {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                              },
+                                              {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                              }
+                                            ],
+                                            "body": {
+                                              "mode": "raw",
+                                              "raw": "{}",
+                                              "options": {
+                                                "raw": {
+                                                  "headerFamily": "json",
+                                                  "language": "json"
+                                                }
+                                              }
+                                            },
+                                            "url": {
+                                              "raw": "{{baseUrl}}/api/v1/apps/:app_id/entitlements/:app_entitlement_id/users/:app_user_id/remove-grant-duration",
+                                              "host": [
+                                                "{{baseUrl}}"
+                                              ],
+                                              "path": [
+                                                "api",
+                                                "v1",
+                                                "apps",
+                                                ":app_id",
+                                                "entitlements",
+                                                ":app_entitlement_id",
+                                                "users",
+                                                ":app_user_id",
+                                                "remove-grant-duration"
+                                              ],
+                                              "variable": [
+                                                {
+                                                  "id": "fc4c4fc5-de21-423f-a530-4b6bcab03db3",
+                                                  "key": "app_id",
+                                                  "value": "<string>",
+                                                  "description": "(Required) "
+                                                },
+                                                {
+                                                  "id": "b7c2699e-46b8-4626-9a8f-c1c16e396d6d",
+                                                  "key": "app_entitlement_id",
+                                                  "value": "<string>",
+                                                  "description": "(Required) "
+                                                },
+                                                {
+                                                  "id": "bb326f7e-9f9d-45a4-aaa4-2e182361ac6a",
+                                                  "key": "app_user_id",
+                                                  "value": "<string>",
+                                                  "description": "(Required) "
+                                                }
+                                              ]
+                                            },
+                                            "description": "Invokes the c1.api.app.v1.AppEntitlementUserBindingService.RemoveGrantDuration method."
+                                          },
+                                          "response": [
+                                            {
+                                              "id": "f35a6b26-244d-410a-a3db-13ee815db717",
+                                              "name": "Successful response",
+                                              "originalRequest": {
+                                                "method": "POST",
+                                                "header": [
+                                                  {
+                                                    "key": "Content-Type",
+                                                    "value": "application/json"
+                                                  },
+                                                  {
+                                                    "key": "Accept",
+                                                    "value": "application/json"
+                                                  },
+                                                  {
+                                                    "description": "Added as a part of security scheme: bearer",
+                                                    "key": "Authorization",
+                                                    "value": "Bearer <token>"
+                                                  }
+                                                ],
+                                                "body": {
+                                                  "mode": "raw",
+                                                  "raw": "{}",
+                                                  "options": {
+                                                    "raw": {
+                                                      "headerFamily": "json",
+                                                      "language": "json"
+                                                    }
+                                                  }
+                                                },
+                                                "url": {
+                                                  "raw": "{{baseUrl}}/api/v1/apps/:app_id/entitlements/:app_entitlement_id/users/:app_user_id/remove-grant-duration",
+                                                  "host": [
+                                                    "{{baseUrl}}"
+                                                  ],
+                                                  "path": [
+                                                    "api",
+                                                    "v1",
+                                                    "apps",
+                                                    ":app_id",
+                                                    "entitlements",
+                                                    ":app_entitlement_id",
+                                                    "users",
+                                                    ":app_user_id",
+                                                    "remove-grant-duration"
+                                                  ],
+                                                  "variable": [
+                                                    {
+                                                      "key": "app_id"
+                                                    },
+                                                    {
+                                                      "key": "app_entitlement_id"
+                                                    },
+                                                    {
+                                                      "key": "app_user_id"
+                                                    }
+                                                  ]
+                                                }
+                                              },
+                                              "status": "OK",
+                                              "code": 200,
+                                              "_postman_previewlanguage": "json",
+                                              "header": [
+                                                {
+                                                  "key": "Content-Type",
+                                                  "value": "application/json"
+                                                }
+                                              ],
+                                              "cookie": [],
+                                              "responseTime": null,
+                                              "body": "{\n  \"binding\": {\n    \"appEntitlementId\": \"<string>\",\n    \"appId\": \"<string>\",\n    \"appUserId\": \"<string>\",\n    \"createdAt\": \"<dateTime>\",\n    \"deletedAt\": \"<dateTime>\",\n    \"deprovisionAt\": \"<dateTime>\",\n    \"grantSources\": [\n      {\n        \"appId\": \"<string>\",\n        \"id\": \"<string>\"\n      },\n      {\n        \"appId\": \"<string>\",\n        \"id\": \"<string>\"\n      }\n    ]\n  }\n}",
+                                              "createdAt": "2026-10-21T20:45:23.000Z",
+                                              "updatedAt": "2026-10-21T20:45:23.000Z",
+                                              "uid": "35240-f35a6b26-244d-410a-a3db-13ee815db717"
+                                            }
+                                          ],
+                                          "createdAt": "2026-10-21T20:45:23.000Z",
+                                          "updatedAt": "2026-10-21T20:45:23.000Z",
+                                          "uid": "35240-ceb6c43d-32f1-4777-945c-6489cc926a1a"
+                                        }
+                                      ],
+                                      "id": "412aa8e4-9c64-421c-9a9c-18cb7571fd1f",
+                                      "createdAt": "2026-10-21T20:45:23.000Z",
+                                      "updatedAt": "2026-10-21T20:45:23.000Z",
+                                      "uid": "35240-412aa8e4-9c64-421c-9a9c-18cb7571fd1f"
+                                    },
+                                    {
+                                      "name": "update-grant-duration",
+                                      "item": [
+                                        {
+                                          "name": "Update Grant Duration",
+                                          "id": "7370a484-a432-4191-9918-03876a0e4d50",
+                                          "protocolProfileBehavior": {
+                                            "disableBodyPruning": true
+                                          },
+                                          "request": {
+                                            "method": "POST",
+                                            "header": [
+                                              {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                              },
+                                              {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                              }
+                                            ],
+                                            "body": {
+                                              "mode": "raw",
+                                              "raw": "{\n  \"newDeprovisionAt\": \"<dateTime>\"\n}",
+                                              "options": {
+                                                "raw": {
+                                                  "headerFamily": "json",
+                                                  "language": "json"
+                                                }
+                                              }
+                                            },
+                                            "url": {
+                                              "raw": "{{baseUrl}}/api/v1/apps/:app_id/entitlements/:app_entitlement_id/users/:app_user_id/update-grant-duration",
+                                              "host": [
+                                                "{{baseUrl}}"
+                                              ],
+                                              "path": [
+                                                "api",
+                                                "v1",
+                                                "apps",
+                                                ":app_id",
+                                                "entitlements",
+                                                ":app_entitlement_id",
+                                                "users",
+                                                ":app_user_id",
+                                                "update-grant-duration"
+                                              ],
+                                              "variable": [
+                                                {
+                                                  "id": "7d68a02d-6434-4741-897e-62d921b45bf6",
+                                                  "key": "app_id",
+                                                  "value": "<string>",
+                                                  "description": "(Required) "
+                                                },
+                                                {
+                                                  "id": "0ce8b056-7b97-4db2-8c3d-22d69b19b427",
+                                                  "key": "app_entitlement_id",
+                                                  "value": "<string>",
+                                                  "description": "(Required) "
+                                                },
+                                                {
+                                                  "id": "29adb2fd-c9c5-42bd-a3f8-9610836160b2",
+                                                  "key": "app_user_id",
+                                                  "value": "<string>",
+                                                  "description": "(Required) "
+                                                }
+                                              ]
+                                            },
+                                            "description": "Invokes the c1.api.app.v1.AppEntitlementUserBindingService.UpdateGrantDuration method."
+                                          },
+                                          "response": [
+                                            {
+                                              "id": "05c69f45-b358-4246-84d6-4903bd9e6cae",
+                                              "name": "Successful response",
+                                              "originalRequest": {
+                                                "method": "POST",
+                                                "header": [
+                                                  {
+                                                    "key": "Content-Type",
+                                                    "value": "application/json"
+                                                  },
+                                                  {
+                                                    "key": "Accept",
+                                                    "value": "application/json"
+                                                  },
+                                                  {
+                                                    "description": "Added as a part of security scheme: bearer",
+                                                    "key": "Authorization",
+                                                    "value": "Bearer <token>"
+                                                  }
+                                                ],
+                                                "body": {
+                                                  "mode": "raw",
+                                                  "raw": "{\n  \"newDeprovisionAt\": \"<dateTime>\"\n}",
+                                                  "options": {
+                                                    "raw": {
+                                                      "headerFamily": "json",
+                                                      "language": "json"
+                                                    }
+                                                  }
+                                                },
+                                                "url": {
+                                                  "raw": "{{baseUrl}}/api/v1/apps/:app_id/entitlements/:app_entitlement_id/users/:app_user_id/update-grant-duration",
+                                                  "host": [
+                                                    "{{baseUrl}}"
+                                                  ],
+                                                  "path": [
+                                                    "api",
+                                                    "v1",
+                                                    "apps",
+                                                    ":app_id",
+                                                    "entitlements",
+                                                    ":app_entitlement_id",
+                                                    "users",
+                                                    ":app_user_id",
+                                                    "update-grant-duration"
+                                                  ],
+                                                  "variable": [
+                                                    {
+                                                      "key": "app_id"
+                                                    },
+                                                    {
+                                                      "key": "app_entitlement_id"
+                                                    },
+                                                    {
+                                                      "key": "app_user_id"
+                                                    }
+                                                  ]
+                                                }
+                                              },
+                                              "status": "OK",
+                                              "code": 200,
+                                              "_postman_previewlanguage": "json",
+                                              "header": [
+                                                {
+                                                  "key": "Content-Type",
+                                                  "value": "application/json"
+                                                }
+                                              ],
+                                              "cookie": [],
+                                              "responseTime": null,
+                                              "body": "{\n  \"binding\": {\n    \"appEntitlementId\": \"<string>\",\n    \"appId\": \"<string>\",\n    \"appUserId\": \"<string>\",\n    \"createdAt\": \"<dateTime>\",\n    \"deletedAt\": \"<dateTime>\",\n    \"deprovisionAt\": \"<dateTime>\",\n    \"grantSources\": [\n      {\n        \"appId\": \"<string>\",\n        \"id\": \"<string>\"\n      },\n      {\n        \"appId\": \"<string>\",\n        \"id\": \"<string>\"\n      }\n    ]\n  }\n}",
+                                              "createdAt": "2026-10-21T20:45:23.000Z",
+                                              "updatedAt": "2026-10-21T20:45:23.000Z",
+                                              "uid": "35240-05c69f45-b358-4246-84d6-4903bd9e6cae"
+                                            }
+                                          ],
+                                          "createdAt": "2026-10-21T20:45:23.000Z",
+                                          "updatedAt": "2026-10-21T20:45:23.000Z",
+                                          "uid": "35240-7370a484-a432-4191-9918-03876a0e4d50"
+                                        }
+                                      ],
+                                      "id": "f1562a85-2872-4766-a1a7-2a105590becd",
+                                      "createdAt": "2026-10-21T20:45:23.000Z",
+                                      "updatedAt": "2026-10-21T20:45:23.000Z",
+                                      "uid": "35240-f1562a85-2872-4766-a1a7-2a105590becd"
+                                    }
+                                  ],
+                                  "id": "d778c65e-ab98-42f8-9803-62fe417c7198",
+                                  "createdAt": "2026-10-21T20:45:23.000Z",
+                                  "updatedAt": "2026-10-21T20:45:23.000Z",
+                                  "uid": "35240-d778c65e-ab98-42f8-9803-62fe417c7198"
+                                },
+                                {
+                                  "name": "{identity_user_id}",
+                                  "item": [
+                                    {
+                                      "name": "grants",
+                                      "item": [
+                                        {
+                                          "name": "List App Users For Identity With Grant",
+                                          "id": "4f01e303-bd6f-43ba-b976-fa9999d02359",
+                                          "protocolProfileBehavior": {
+                                            "disableBodyPruning": true
+                                          },
+                                          "request": {
+                                            "method": "GET",
+                                            "header": [
+                                              {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                              }
+                                            ],
+                                            "url": {
+                                              "raw": "{{baseUrl}}/api/v1/apps/:app_id/entitlements/:app_entitlement_id/users/:identity_user_id/grants",
+                                              "host": [
+                                                "{{baseUrl}}"
+                                              ],
+                                              "path": [
+                                                "api",
+                                                "v1",
+                                                "apps",
+                                                ":app_id",
+                                                "entitlements",
+                                                ":app_entitlement_id",
+                                                "users",
+                                                ":identity_user_id",
+                                                "grants"
+                                              ],
+                                              "variable": [
+                                                {
+                                                  "id": "5529ab0c-f57d-4566-a7f6-efba6f8d7ab9",
+                                                  "key": "app_id",
+                                                  "value": "<string>",
+                                                  "description": "(Required) "
+                                                },
+                                                {
+                                                  "id": "c86620dd-5f29-4402-ba74-b5209e6ccf7d",
+                                                  "key": "app_entitlement_id",
+                                                  "value": "<string>",
+                                                  "description": "(Required) "
+                                                },
+                                                {
+                                                  "id": "ae1c6679-bcf6-4bc4-97db-5205196c30ef",
+                                                  "key": "identity_user_id",
+                                                  "value": "<string>",
+                                                  "description": "(Required) "
+                                                }
+                                              ]
+                                            },
+                                            "description": "Returns a list of app users for the identity in the app. If that app user also has a grant to the entitlement from the request, data about the grant is also returned. It will always return ALL app users for this identity, but only SOME may have grant data."
+                                          },
+                                          "response": [
+                                            {
+                                              "id": "9bddfaca-15f2-49fb-a5c3-26f145aa7cd8",
+                                              "name": "Successful response",
+                                              "originalRequest": {
+                                                "method": "GET",
+                                                "header": [
+                                                  {
+                                                    "key": "Accept",
+                                                    "value": "application/json"
+                                                  },
+                                                  {
+                                                    "description": "Added as a part of security scheme: bearer",
+                                                    "key": "Authorization",
+                                                    "value": "Bearer <token>"
+                                                  }
+                                                ],
+                                                "url": {
+                                                  "raw": "{{baseUrl}}/api/v1/apps/:app_id/entitlements/:app_entitlement_id/users/:identity_user_id/grants",
+                                                  "host": [
+                                                    "{{baseUrl}}"
+                                                  ],
+                                                  "path": [
+                                                    "api",
+                                                    "v1",
+                                                    "apps",
+                                                    ":app_id",
+                                                    "entitlements",
+                                                    ":app_entitlement_id",
+                                                    "users",
+                                                    ":identity_user_id",
+                                                    "grants"
+                                                  ],
+                                                  "variable": [
+                                                    {
+                                                      "key": "app_id"
+                                                    },
+                                                    {
+                                                      "key": "app_entitlement_id"
+                                                    },
+                                                    {
+                                                      "key": "identity_user_id"
+                                                    }
+                                                  ]
+                                                }
+                                              },
+                                              "status": "OK",
+                                              "code": 200,
+                                              "_postman_previewlanguage": "json",
+                                              "header": [
+                                                {
+                                                  "key": "Content-Type",
+                                                  "value": "application/json"
+                                                }
+                                              ],
+                                              "cookie": [],
+                                              "responseTime": null,
+                                              "body": "{\n  \"bindings\": [\n    {\n      \"appEntitlementId\": \"<string>\",\n      \"appId\": \"<string>\",\n      \"appUserId\": \"<string>\",\n      \"createdAt\": \"<dateTime>\",\n      \"deletedAt\": \"<dateTime>\",\n      \"deprovisionAt\": \"<dateTime>\",\n      \"grantSources\": [\n        {\n          \"appId\": \"<string>\",\n          \"id\": \"<string>\"\n        },\n        {\n          \"appId\": \"<string>\",\n          \"id\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"appEntitlementId\": \"<string>\",\n      \"appId\": \"<string>\",\n      \"appUserId\": \"<string>\",\n      \"createdAt\": \"<dateTime>\",\n      \"deletedAt\": \"<dateTime>\",\n      \"deprovisionAt\": \"<dateTime>\",\n      \"grantSources\": [\n        {\n          \"appId\": \"<string>\",\n          \"id\": \"<string>\"\n        },\n        {\n          \"appId\": \"<string>\",\n          \"id\": \"<string>\"\n        }\n      ]\n    }\n  ]\n}",
+                                              "createdAt": "2026-10-21T20:45:23.000Z",
+                                              "updatedAt": "2026-10-21T20:45:23.000Z",
+                                              "uid": "35240-9bddfaca-15f2-49fb-a5c3-26f145aa7cd8"
+                                            }
+                                          ],
+                                          "createdAt": "2026-10-21T20:45:23.000Z",
+                                          "updatedAt": "2026-10-21T20:45:23.000Z",
+                                          "uid": "35240-4f01e303-bd6f-43ba-b976-fa9999d02359"
+                                        }
+                                      ],
+                                      "id": "b1376024-1c84-4102-80b8-50d1d4db2a13",
+                                      "createdAt": "2026-10-21T20:45:23.000Z",
+                                      "updatedAt": "2026-10-21T20:45:23.000Z",
+                                      "uid": "35240-b1376024-1c84-4102-80b8-50d1d4db2a13"
+                                    }
+                                  ],
+                                  "id": "b63e3fc6-d6e6-4337-ab5e-fc5ae7f52118",
+                                  "createdAt": "2026-10-21T20:45:23.000Z",
+                                  "updatedAt": "2026-10-21T20:45:23.000Z",
+                                  "uid": "35240-b63e3fc6-d6e6-4337-ab5e-fc5ae7f52118"
+                                }
+                              ],
+                              "id": "ea1002fe-52d0-4b3c-acb5-fd181f45295f",
+                              "createdAt": "2026-10-21T20:45:23.000Z",
+                              "updatedAt": "2026-10-21T20:45:23.000Z",
+                              "uid": "35240-ea1002fe-52d0-4b3c-acb5-fd181f45295f"
+                            }
+                          ],
+                          "id": "00bcdaab-651c-4b78-9886-34a3fdb5fa0d",
+                          "createdAt": "2026-10-21T20:45:23.000Z",
+                          "updatedAt": "2026-10-21T20:45:23.000Z",
+                          "uid": "35240-00bcdaab-651c-4b78-9886-34a3fdb5fa0d"
+                        }
+                      ],
+                      "id": "4feda05b-7469-4aa5-85cb-1ef460cd2491",
+                      "createdAt": "2026-10-21T20:45:23.000Z",
+                      "updatedAt": "2026-10-21T20:45:23.000Z",
+                      "uid": "35240-4feda05b-7469-4aa5-85cb-1ef460cd2491"
+                    }
+                  ],
+                  "id": "4e4f53e7-3eb4-4581-9b04-a727e2af2657",
+                  "createdAt": "2026-10-21T20:45:23.000Z",
+                  "updatedAt": "2026-10-21T20:45:23.000Z",
+                  "uid": "35240-4e4f53e7-3eb4-4581-9b04-a727e2af2657"
                 }
               ],
-              "body": "{\n  \"binding\": {\n    \"appEntitlementId\": \"string\",\n    \"appId\": \"string\",\n    \"appUserId\": \"string\",\n    \"createdAt\": \"1949-04-14T20:05:51.226Z\",\n    \"deletedAt\": \"1956-09-17T04:53:06.967Z\",\n    \"deprovisionAt\": \"1970-08-06T19:07:14.566Z\",\n    \"grantSources\": [\n      {\n        \"appId\": \"string\",\n        \"id\": \"string\"\n      },\n      {\n        \"appId\": \"string\",\n        \"id\": \"string\"\n      }\n    ]\n  }\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
+              "id": "a56e624f-2801-4b8c-a8de-dce207986ac3",
+              "createdAt": "2026-10-21T20:45:23.000Z",
+              "updatedAt": "2026-10-21T20:45:23.000Z",
+              "uid": "35240-a56e624f-2801-4b8c-a8de-dce207986ac3"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "081438d0-81b0-4929-9138-a3ea44148a2c",
-          "name": "Update Grant Duration",
-          "request": {
-            "name": "Update Grant Duration",
-            "description": {
-              "content": "Invokes the c1.api.app.v1.AppEntitlementUserBindingService.UpdateGrantDuration method.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "apps",
-                ":app_id",
-                "entitlements",
-                ":app_entitlement_id",
-                "users",
-                ":app_user_id",
-                "update-grant-duration"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "app_id",
-                  "description": "(Required) "
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "app_entitlement_id",
-                  "description": "(Required) "
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "app_user_id",
-                  "description": "(Required) "
-                },
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "POST",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"newDeprovisionAt\": \"<dateTime>\"\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
-            {
-              "id": "086769de-d998-4e6b-bce2-e8b1a58fccbf",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "apps",
-                    ":app_id",
-                    "entitlements",
-                    ":app_entitlement_id",
-                    "users",
-                    ":app_user_id",
-                    "update-grant-duration"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "app_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "app_entitlement_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "app_user_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"newDeprovisionAt\": \"<dateTime>\"\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"binding\": {\n    \"appEntitlementId\": \"string\",\n    \"appId\": \"string\",\n    \"appUserId\": \"string\",\n    \"createdAt\": \"1996-05-03T08:58:34.203Z\",\n    \"deletedAt\": \"1963-09-12T17:53:08.940Z\",\n    \"deprovisionAt\": \"1998-11-25T04:01:08.768Z\",\n    \"grantSources\": [\n      {\n        \"appId\": \"string\",\n        \"id\": \"string\"\n      },\n      {\n        \"appId\": \"string\",\n        \"id\": \"string\"\n      }\n    ]\n  }\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "e0563ba3-a26f-464b-8e7c-cf30385c610e",
-          "name": "List App Users For Identity With Grant",
-          "request": {
-            "name": "List App Users For Identity With Grant",
-            "description": {
-              "content": "Returns a list of app users for the identity in the app. If that app user also has a grant to the entitlement from the request, data about the grant is also returned. It will always return ALL app users for this identity, but only SOME may have grant data.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "apps",
-                ":app_id",
-                "entitlements",
-                ":app_entitlement_id",
-                "users",
-                ":identity_user_id",
-                "grants"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "app_id",
-                  "description": "(Required) "
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "app_entitlement_id",
-                  "description": "(Required) "
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "identity_user_id",
-                  "description": "(Required) "
-                },
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "24e9ef8c-6476-4081-8dfb-2bd0aab6d09a",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "apps",
-                    ":app_id",
-                    "entitlements",
-                    ":app_entitlement_id",
-                    "users",
-                    ":identity_user_id",
-                    "grants"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "app_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "app_entitlement_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "identity_user_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"bindings\": [\n    {\n      \"appEntitlementId\": \"string\",\n      \"appId\": \"string\",\n      \"appUserId\": \"string\",\n      \"createdAt\": \"1982-05-05T12:57:52.479Z\",\n      \"deletedAt\": \"2013-10-03T01:52:55.662Z\",\n      \"deprovisionAt\": \"1975-01-19T23:48:56.521Z\",\n      \"grantSources\": [\n        {\n          \"appId\": \"string\",\n          \"id\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"id\": \"string\"\n        }\n      ]\n    },\n    {\n      \"appEntitlementId\": \"string\",\n      \"appId\": \"string\",\n      \"appUserId\": \"string\",\n      \"createdAt\": \"1993-11-29T10:19:08.243Z\",\n      \"deletedAt\": \"1999-10-27T03:50:01.391Z\",\n      \"deprovisionAt\": \"2014-09-13T15:51:57.085Z\",\n      \"grantSources\": [\n        {\n          \"appId\": \"string\",\n          \"id\": \"string\"\n        },\n        {\n          \"appId\": \"string\",\n          \"id\": \"string\"\n        }\n      ]\n    }\n  ]\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "id": "d2e72245-5c72-4caf-84e6-422ea0a20bae",
+          "createdAt": "2026-10-21T20:45:23.000Z",
+          "updatedAt": "2026-10-21T20:45:23.000Z",
+          "uid": "35240-d2e72245-5c72-4caf-84e6-422ea0a20bae"
         }
       ],
-      "event": []
-    }
-  ],
-  "event": [],
-  "variable": [
-    {
-      "description": {
-        "content": "The domain of the tenant to use for this request.",
-        "type": "text/plain"
-      },
-      "type": "any",
-      "value": "example",
-      "key": "tenantDomain"
-    },
-    {
-      "type": "string",
-      "value": "https://{{tenantDomain}}.conductor.one",
-      "key": "baseUrl"
+      "id": "eaccd670-e045-415e-93e9-bcfe5e453004",
+      "createdAt": "2026-10-21T20:45:23.000Z",
+      "updatedAt": "2026-10-21T20:45:23.000Z",
+      "uid": "35240-eaccd670-e045-415e-93e9-bcfe5e453004"
     }
   ],
   "auth": {
@@ -526,17 +540,19 @@
     "bearer": [
       {
         "key": "token",
-        "value": "{{bearerToken}}"
+        "value": "{{bearerToken}}",
+        "type": "string"
       }
     ]
   },
-  "info": {
-    "_postman_id": "6b34e592-f312-407c-84bc-7bcffcb6cdbd",
-    "name": "ConductorOne Access Conflict App Entitlement User Binding API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "description": {
-      "content": "The ConductorOne API is a HTTP API for managing ConductorOne resources.",
-      "type": "text/plain"
+  "variable": [
+    {
+      "key": "tenantDomain",
+      "value": "example"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://{{tenantDomain}}.conductor.one"
     }
-  }
+  ]
 }

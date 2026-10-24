@@ -1,560 +1,523 @@
 {
+  "info": {
+    "_postman_id": "1e0f05bb-2ac7-40b2-afb4-e59660c7f249",
+    "name": "ConductorOne App Entitlement Proxy Binding API",
+    "description": "The ConductorOne API is a HTTP API for managing ConductorOne resources.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-21T20:45:17.000Z",
+    "updatedAt": "2026-10-21T20:45:17.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-1e0f05bb-2ac7-40b2-afb4-e59660c7f249"
+  },
   "item": [
     {
-      "id": "cbb725ef-53c5-465d-b546-d550fe25b4ef",
-      "name": "App Entitlement Proxy Binding",
-      "description": {
-        "content": "",
-        "type": "text/plain"
-      },
+      "name": "api",
       "item": [
         {
-          "id": "3c7c9a99-adfa-4895-9f89-ea6b721ad7cb",
-          "name": "Delete",
-          "request": {
-            "name": "Delete",
-            "description": {
-              "content": "Invokes the c1.api.app.v1.AppEntitlementsProxy.Delete method.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "apps",
-                ":src_app_id",
-                ":src_app_entitlement_id",
-                "bindings",
-                ":dst_app_id",
-                ":dst_app_entitlement_id"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "src_app_id",
-                  "description": "(Required) "
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "src_app_entitlement_id",
-                  "description": "(Required) "
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "dst_app_id",
-                  "description": "(Required) "
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "dst_app_entitlement_id",
-                  "description": "(Required) "
-                },
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "DELETE",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "<object>",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
+          "name": "v1",
+          "item": [
             {
-              "id": "7be43ad6-bb6f-4060-9963-5d4c4f5da838",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "apps",
-                    ":src_app_id",
-                    ":src_app_entitlement_id",
-                    "bindings",
-                    ":dst_app_id",
-                    ":dst_app_entitlement_id"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "src_app_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "src_app_entitlement_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "dst_app_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "dst_app_entitlement_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "DELETE",
-                "body": {
-                  "mode": "raw",
-                  "raw": "<object>",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
+              "name": "apps",
+              "item": [
                 {
-                  "key": "Content-Type",
-                  "value": "application/json"
+                  "name": "{src_app_id}",
+                  "item": [
+                    {
+                      "name": "{src_app_entitlement_id}",
+                      "item": [
+                        {
+                          "name": "bindings",
+                          "item": [
+                            {
+                              "name": "{dst_app_id}",
+                              "item": [
+                                {
+                                  "name": "{dst_app_entitlement_id}",
+                                  "item": [
+                                    {
+                                      "name": "Delete",
+                                      "id": "b1db697e-14f5-49e0-b0de-2a0055923799",
+                                      "protocolProfileBehavior": {
+                                        "disableBodyPruning": true
+                                      },
+                                      "request": {
+                                        "method": "DELETE",
+                                        "header": [
+                                          {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                          },
+                                          {
+                                            "key": "Accept",
+                                            "value": "application/json"
+                                          }
+                                        ],
+                                        "body": {
+                                          "mode": "raw",
+                                          "raw": "{}",
+                                          "options": {
+                                            "raw": {
+                                              "headerFamily": "json",
+                                              "language": "json"
+                                            }
+                                          }
+                                        },
+                                        "url": {
+                                          "raw": "{{baseUrl}}/api/v1/apps/:src_app_id/:src_app_entitlement_id/bindings/:dst_app_id/:dst_app_entitlement_id",
+                                          "host": [
+                                            "{{baseUrl}}"
+                                          ],
+                                          "path": [
+                                            "api",
+                                            "v1",
+                                            "apps",
+                                            ":src_app_id",
+                                            ":src_app_entitlement_id",
+                                            "bindings",
+                                            ":dst_app_id",
+                                            ":dst_app_entitlement_id"
+                                          ],
+                                          "variable": [
+                                            {
+                                              "id": "42de39e7-3d0a-4bb8-84be-a1e1d5a99944",
+                                              "key": "src_app_id",
+                                              "value": "<string>",
+                                              "description": "(Required) "
+                                            },
+                                            {
+                                              "id": "ffd454d4-939b-4b30-bc65-4ca6b9973378",
+                                              "key": "src_app_entitlement_id",
+                                              "value": "<string>",
+                                              "description": "(Required) "
+                                            },
+                                            {
+                                              "id": "8b725ea5-19bd-4389-8bfe-e1416ee1183d",
+                                              "key": "dst_app_id",
+                                              "value": "<string>",
+                                              "description": "(Required) "
+                                            },
+                                            {
+                                              "id": "23de8417-477f-4046-b7e5-122391824146",
+                                              "key": "dst_app_entitlement_id",
+                                              "value": "<string>",
+                                              "description": "(Required) "
+                                            }
+                                          ]
+                                        },
+                                        "description": "Invokes the c1.api.app.v1.AppEntitlementsProxy.Delete method."
+                                      },
+                                      "response": [
+                                        {
+                                          "id": "c83a26c5-a10e-4df1-a397-c0dc88aaddf8",
+                                          "name": "Successful response",
+                                          "originalRequest": {
+                                            "method": "DELETE",
+                                            "header": [
+                                              {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                              },
+                                              {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                              },
+                                              {
+                                                "description": "Added as a part of security scheme: bearer",
+                                                "key": "Authorization",
+                                                "value": "Bearer <token>"
+                                              }
+                                            ],
+                                            "body": {
+                                              "mode": "raw",
+                                              "raw": "{}",
+                                              "options": {
+                                                "raw": {
+                                                  "headerFamily": "json",
+                                                  "language": "json"
+                                                }
+                                              }
+                                            },
+                                            "url": {
+                                              "raw": "{{baseUrl}}/api/v1/apps/:src_app_id/:src_app_entitlement_id/bindings/:dst_app_id/:dst_app_entitlement_id",
+                                              "host": [
+                                                "{{baseUrl}}"
+                                              ],
+                                              "path": [
+                                                "api",
+                                                "v1",
+                                                "apps",
+                                                ":src_app_id",
+                                                ":src_app_entitlement_id",
+                                                "bindings",
+                                                ":dst_app_id",
+                                                ":dst_app_entitlement_id"
+                                              ],
+                                              "variable": [
+                                                {
+                                                  "key": "src_app_id"
+                                                },
+                                                {
+                                                  "key": "src_app_entitlement_id"
+                                                },
+                                                {
+                                                  "key": "dst_app_id"
+                                                },
+                                                {
+                                                  "key": "dst_app_entitlement_id"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "status": "OK",
+                                          "code": 200,
+                                          "_postman_previewlanguage": "json",
+                                          "header": [
+                                            {
+                                              "key": "Content-Type",
+                                              "value": "application/json"
+                                            }
+                                          ],
+                                          "cookie": [],
+                                          "responseTime": null,
+                                          "body": "{}",
+                                          "createdAt": "2026-10-21T20:45:18.000Z",
+                                          "updatedAt": "2026-10-21T20:45:18.000Z",
+                                          "uid": "35240-c83a26c5-a10e-4df1-a397-c0dc88aaddf8"
+                                        }
+                                      ],
+                                      "createdAt": "2026-10-21T20:45:18.000Z",
+                                      "updatedAt": "2026-10-21T20:45:18.000Z",
+                                      "uid": "35240-b1db697e-14f5-49e0-b0de-2a0055923799"
+                                    },
+                                    {
+                                      "name": "Get",
+                                      "id": "76f67c17-9b58-4d7c-b8c5-9c800d592e80",
+                                      "protocolProfileBehavior": {
+                                        "disableBodyPruning": true
+                                      },
+                                      "request": {
+                                        "method": "GET",
+                                        "header": [
+                                          {
+                                            "key": "Accept",
+                                            "value": "application/json"
+                                          }
+                                        ],
+                                        "url": {
+                                          "raw": "{{baseUrl}}/api/v1/apps/:src_app_id/:src_app_entitlement_id/bindings/:dst_app_id/:dst_app_entitlement_id",
+                                          "host": [
+                                            "{{baseUrl}}"
+                                          ],
+                                          "path": [
+                                            "api",
+                                            "v1",
+                                            "apps",
+                                            ":src_app_id",
+                                            ":src_app_entitlement_id",
+                                            "bindings",
+                                            ":dst_app_id",
+                                            ":dst_app_entitlement_id"
+                                          ],
+                                          "variable": [
+                                            {
+                                              "id": "85228f41-02af-48c7-b454-944873cc41a1",
+                                              "key": "src_app_id",
+                                              "value": "<string>",
+                                              "description": "(Required) "
+                                            },
+                                            {
+                                              "id": "45e43f7a-ec15-48a6-8e9a-05d32318beb3",
+                                              "key": "src_app_entitlement_id",
+                                              "value": "<string>",
+                                              "description": "(Required) "
+                                            },
+                                            {
+                                              "id": "afac40c4-1b0b-414c-a88c-baa0b8f2d066",
+                                              "key": "dst_app_id",
+                                              "value": "<string>",
+                                              "description": "(Required) "
+                                            },
+                                            {
+                                              "id": "996a37ab-4285-4a59-9634-ee8bccbc0de3",
+                                              "key": "dst_app_entitlement_id",
+                                              "value": "<string>",
+                                              "description": "(Required) "
+                                            }
+                                          ]
+                                        },
+                                        "description": "Invokes the c1.api.app.v1.AppEntitlementsProxy.Get method."
+                                      },
+                                      "response": [
+                                        {
+                                          "id": "abc1a5aa-33f7-4dfa-893f-b1a66b08640a",
+                                          "name": "Successful response",
+                                          "originalRequest": {
+                                            "method": "GET",
+                                            "header": [
+                                              {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                              },
+                                              {
+                                                "description": "Added as a part of security scheme: bearer",
+                                                "key": "Authorization",
+                                                "value": "Bearer <token>"
+                                              }
+                                            ],
+                                            "url": {
+                                              "raw": "{{baseUrl}}/api/v1/apps/:src_app_id/:src_app_entitlement_id/bindings/:dst_app_id/:dst_app_entitlement_id",
+                                              "host": [
+                                                "{{baseUrl}}"
+                                              ],
+                                              "path": [
+                                                "api",
+                                                "v1",
+                                                "apps",
+                                                ":src_app_id",
+                                                ":src_app_entitlement_id",
+                                                "bindings",
+                                                ":dst_app_id",
+                                                ":dst_app_entitlement_id"
+                                              ],
+                                              "variable": [
+                                                {
+                                                  "key": "src_app_id"
+                                                },
+                                                {
+                                                  "key": "src_app_entitlement_id"
+                                                },
+                                                {
+                                                  "key": "dst_app_id"
+                                                },
+                                                {
+                                                  "key": "dst_app_entitlement_id"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "status": "OK",
+                                          "code": 200,
+                                          "_postman_previewlanguage": "json",
+                                          "header": [
+                                            {
+                                              "key": "Content-Type",
+                                              "value": "application/json"
+                                            }
+                                          ],
+                                          "cookie": [],
+                                          "responseTime": null,
+                                          "body": "{\n  \"appProxyEntitlementView\": {\n    \"appProxyEntitlement\": {\n      \"createdAt\": \"<dateTime>\",\n      \"deletedAt\": \"<dateTime>\",\n      \"dstAppEntitlementId\": \"<string>\",\n      \"dstAppId\": \"<string>\",\n      \"implicit\": \"<boolean>\",\n      \"srcAppEntitlementId\": \"<string>\",\n      \"srcAppId\": \"<string>\",\n      \"systemBuiltin\": \"<boolean>\",\n      \"updatedAt\": \"<dateTime>\"\n    },\n    \"dstAppEntitlementPath\": \"<string>\",\n    \"dstAppPath\": \"<string>\",\n    \"srcAppEntitlementPath\": \"<string>\",\n    \"srcAppPath\": \"<string>\"\n  },\n  \"expanded\": [\n    {\n      \"@type\": \"<string>\",\n      \"Duis_0\": false\n    },\n    {\n      \"@type\": \"<string>\",\n      \"esse_216\": 26374905.265130445,\n      \"consequat__b\": \"ipsum amet cillum magna\",\n      \"adipisicingb\": 89108047\n    }\n  ]\n}",
+                                          "createdAt": "2026-10-21T20:45:18.000Z",
+                                          "updatedAt": "2026-10-21T20:45:18.000Z",
+                                          "uid": "35240-abc1a5aa-33f7-4dfa-893f-b1a66b08640a"
+                                        }
+                                      ],
+                                      "createdAt": "2026-10-21T20:45:18.000Z",
+                                      "updatedAt": "2026-10-21T20:45:18.000Z",
+                                      "uid": "35240-76f67c17-9b58-4d7c-b8c5-9c800d592e80"
+                                    },
+                                    {
+                                      "name": "Create",
+                                      "id": "8154bcee-c9e9-4ea1-bb37-5fe7eec4ac9c",
+                                      "protocolProfileBehavior": {
+                                        "disableBodyPruning": true
+                                      },
+                                      "request": {
+                                        "method": "POST",
+                                        "header": [
+                                          {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                          },
+                                          {
+                                            "key": "Accept",
+                                            "value": "application/json"
+                                          }
+                                        ],
+                                        "body": {
+                                          "mode": "raw",
+                                          "raw": "{\n  \"expandMask\": {\n    \"paths\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  }\n}",
+                                          "options": {
+                                            "raw": {
+                                              "headerFamily": "json",
+                                              "language": "json"
+                                            }
+                                          }
+                                        },
+                                        "url": {
+                                          "raw": "{{baseUrl}}/api/v1/apps/:src_app_id/:src_app_entitlement_id/bindings/:dst_app_id/:dst_app_entitlement_id",
+                                          "host": [
+                                            "{{baseUrl}}"
+                                          ],
+                                          "path": [
+                                            "api",
+                                            "v1",
+                                            "apps",
+                                            ":src_app_id",
+                                            ":src_app_entitlement_id",
+                                            "bindings",
+                                            ":dst_app_id",
+                                            ":dst_app_entitlement_id"
+                                          ],
+                                          "variable": [
+                                            {
+                                              "id": "f3662172-49d7-4d79-8c41-3c2109fbdbce",
+                                              "key": "src_app_id",
+                                              "value": "<string>",
+                                              "description": "(Required) "
+                                            },
+                                            {
+                                              "id": "06af314f-f9ca-46c9-84ac-fc375f733ed3",
+                                              "key": "src_app_entitlement_id",
+                                              "value": "<string>",
+                                              "description": "(Required) "
+                                            },
+                                            {
+                                              "id": "3033da28-ea05-4600-9094-ebb5ad1f6ced",
+                                              "key": "dst_app_id",
+                                              "value": "<string>",
+                                              "description": "(Required) "
+                                            },
+                                            {
+                                              "id": "93ff8597-57dd-47cd-80c0-68ba0d824172",
+                                              "key": "dst_app_entitlement_id",
+                                              "value": "<string>",
+                                              "description": "(Required) "
+                                            }
+                                          ]
+                                        },
+                                        "description": "Invokes the c1.api.app.v1.AppEntitlementsProxy.Create method."
+                                      },
+                                      "response": [
+                                        {
+                                          "id": "cf6055c2-8641-46aa-8d30-ea5176235adb",
+                                          "name": "Successful response",
+                                          "originalRequest": {
+                                            "method": "POST",
+                                            "header": [
+                                              {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                              },
+                                              {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                              },
+                                              {
+                                                "description": "Added as a part of security scheme: bearer",
+                                                "key": "Authorization",
+                                                "value": "Bearer <token>"
+                                              }
+                                            ],
+                                            "body": {
+                                              "mode": "raw",
+                                              "raw": "{\n  \"expandMask\": {\n    \"paths\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  }\n}",
+                                              "options": {
+                                                "raw": {
+                                                  "headerFamily": "json",
+                                                  "language": "json"
+                                                }
+                                              }
+                                            },
+                                            "url": {
+                                              "raw": "{{baseUrl}}/api/v1/apps/:src_app_id/:src_app_entitlement_id/bindings/:dst_app_id/:dst_app_entitlement_id",
+                                              "host": [
+                                                "{{baseUrl}}"
+                                              ],
+                                              "path": [
+                                                "api",
+                                                "v1",
+                                                "apps",
+                                                ":src_app_id",
+                                                ":src_app_entitlement_id",
+                                                "bindings",
+                                                ":dst_app_id",
+                                                ":dst_app_entitlement_id"
+                                              ],
+                                              "variable": [
+                                                {
+                                                  "key": "src_app_id"
+                                                },
+                                                {
+                                                  "key": "src_app_entitlement_id"
+                                                },
+                                                {
+                                                  "key": "dst_app_id"
+                                                },
+                                                {
+                                                  "key": "dst_app_entitlement_id"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "status": "OK",
+                                          "code": 200,
+                                          "_postman_previewlanguage": "json",
+                                          "header": [
+                                            {
+                                              "key": "Content-Type",
+                                              "value": "application/json"
+                                            }
+                                          ],
+                                          "cookie": [],
+                                          "responseTime": null,
+                                          "body": "{\n  \"appProxyEntitlementView\": {\n    \"appProxyEntitlement\": {\n      \"createdAt\": \"<dateTime>\",\n      \"deletedAt\": \"<dateTime>\",\n      \"dstAppEntitlementId\": \"<string>\",\n      \"dstAppId\": \"<string>\",\n      \"implicit\": \"<boolean>\",\n      \"srcAppEntitlementId\": \"<string>\",\n      \"srcAppId\": \"<string>\",\n      \"systemBuiltin\": \"<boolean>\",\n      \"updatedAt\": \"<dateTime>\"\n    },\n    \"dstAppEntitlementPath\": \"<string>\",\n    \"dstAppPath\": \"<string>\",\n    \"srcAppEntitlementPath\": \"<string>\",\n    \"srcAppPath\": \"<string>\"\n  },\n  \"expanded\": [\n    {\n      \"@type\": \"<string>\"\n    },\n    {\n      \"@type\": \"<string>\",\n      \"ut_1d\": true\n    }\n  ]\n}",
+                                          "createdAt": "2026-10-21T20:45:18.000Z",
+                                          "updatedAt": "2026-10-21T20:45:18.000Z",
+                                          "uid": "35240-cf6055c2-8641-46aa-8d30-ea5176235adb"
+                                        }
+                                      ],
+                                      "createdAt": "2026-10-21T20:45:18.000Z",
+                                      "updatedAt": "2026-10-21T20:45:18.000Z",
+                                      "uid": "35240-8154bcee-c9e9-4ea1-bb37-5fe7eec4ac9c"
+                                    }
+                                  ],
+                                  "id": "3d1d925a-bf1f-4607-8835-95412069a697",
+                                  "createdAt": "2026-10-21T20:45:18.000Z",
+                                  "updatedAt": "2026-10-21T20:45:18.000Z",
+                                  "uid": "35240-3d1d925a-bf1f-4607-8835-95412069a697"
+                                }
+                              ],
+                              "id": "343476f5-1c67-4406-9b8b-4dfef1c2d8f6",
+                              "createdAt": "2026-10-21T20:45:18.000Z",
+                              "updatedAt": "2026-10-21T20:45:18.000Z",
+                              "uid": "35240-343476f5-1c67-4406-9b8b-4dfef1c2d8f6"
+                            }
+                          ],
+                          "id": "b19f6e2e-49d1-4ac1-84a3-368bc0ab3941",
+                          "createdAt": "2026-10-21T20:45:18.000Z",
+                          "updatedAt": "2026-10-21T20:45:18.000Z",
+                          "uid": "35240-b19f6e2e-49d1-4ac1-84a3-368bc0ab3941"
+                        }
+                      ],
+                      "id": "b4086b86-2370-480e-bb64-caa1bb0b02a9",
+                      "createdAt": "2026-10-21T20:45:18.000Z",
+                      "updatedAt": "2026-10-21T20:45:18.000Z",
+                      "uid": "35240-b4086b86-2370-480e-bb64-caa1bb0b02a9"
+                    }
+                  ],
+                  "id": "2286b366-cdb9-4fba-b1c9-1266dff59393",
+                  "createdAt": "2026-10-21T20:45:18.000Z",
+                  "updatedAt": "2026-10-21T20:45:18.000Z",
+                  "uid": "35240-2286b366-cdb9-4fba-b1c9-1266dff59393"
                 }
               ],
-              "body": "{}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
+              "id": "2cec0333-7fd8-47c3-9c1e-ce5dcd39741e",
+              "createdAt": "2026-10-21T20:45:18.000Z",
+              "updatedAt": "2026-10-21T20:45:18.000Z",
+              "uid": "35240-2cec0333-7fd8-47c3-9c1e-ce5dcd39741e"
             }
           ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "88df9c6e-6de6-45b5-8979-18b7edaf0180",
-          "name": "Get",
-          "request": {
-            "name": "Get",
-            "description": {
-              "content": "Invokes the c1.api.app.v1.AppEntitlementsProxy.Get method.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "apps",
-                ":src_app_id",
-                ":src_app_entitlement_id",
-                "bindings",
-                ":dst_app_id",
-                ":dst_app_entitlement_id"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "src_app_id",
-                  "description": "(Required) "
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "src_app_entitlement_id",
-                  "description": "(Required) "
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "dst_app_id",
-                  "description": "(Required) "
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "dst_app_entitlement_id",
-                  "description": "(Required) "
-                },
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "99921b94-525d-4aa7-9771-86fca8226ddc",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "apps",
-                    ":src_app_id",
-                    ":src_app_entitlement_id",
-                    "bindings",
-                    ":dst_app_id",
-                    ":dst_app_entitlement_id"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "src_app_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "src_app_entitlement_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "dst_app_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "dst_app_entitlement_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"appProxyEntitlementView\": {\n    \"appProxyEntitlement\": {\n      \"createdAt\": \"1982-05-06T01:51:06.921Z\",\n      \"deletedAt\": \"1978-06-03T04:15:25.648Z\",\n      \"dstAppEntitlementId\": \"string\",\n      \"dstAppId\": \"string\",\n      \"implicit\": false,\n      \"srcAppEntitlementId\": \"string\",\n      \"srcAppId\": \"string\",\n      \"systemBuiltin\": true,\n      \"updatedAt\": \"2006-11-16T15:37:07.606Z\"\n    },\n    \"dstAppEntitlementPath\": \"string\",\n    \"dstAppPath\": \"string\",\n    \"srcAppEntitlementPath\": \"string\",\n    \"srcAppPath\": \"string\"\n  },\n  \"expanded\": [\n    {\n      \"@type\": \"string\"\n    },\n    {\n      \"@type\": \"string\",\n      \"key_0\": 2808.5916596454995\n    }\n  ]\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "ac62cf70-ead1-4820-ac70-11a2acb0a0d3",
-          "name": "Create",
-          "request": {
-            "name": "Create",
-            "description": {
-              "content": "Invokes the c1.api.app.v1.AppEntitlementsProxy.Create method.",
-              "type": "text/plain"
-            },
-            "url": {
-              "path": [
-                "api",
-                "v1",
-                "apps",
-                ":src_app_id",
-                ":src_app_entitlement_id",
-                "bindings",
-                ":dst_app_id",
-                ":dst_app_entitlement_id"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": [
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "src_app_id",
-                  "description": "(Required) "
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "src_app_entitlement_id",
-                  "description": "(Required) "
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "dst_app_id",
-                  "description": "(Required) "
-                },
-                {
-                  "disabled": false,
-                  "type": "any",
-                  "value": "<string>",
-                  "key": "dst_app_entitlement_id",
-                  "description": "(Required) "
-                },
-                {
-                  "description": "The domain of the tenant to use for this request.",
-                  "type": "any",
-                  "value": "{{tenantDomain}}",
-                  "key": "tenantDomain"
-                }
-              ]
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "POST",
-            "auth": null,
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"expandMask\": {\n    \"paths\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  }\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            }
-          },
-          "response": [
-            {
-              "id": "e8f867a6-81ec-460d-ae82-66832c8baf23",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "api",
-                    "v1",
-                    "apps",
-                    ":src_app_id",
-                    ":src_app_entitlement_id",
-                    "bindings",
-                    ":dst_app_id",
-                    ":dst_app_entitlement_id"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": [
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "src_app_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "src_app_entitlement_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "dst_app_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "disabled": false,
-                      "type": "any",
-                      "value": "<string>",
-                      "key": "dst_app_entitlement_id",
-                      "description": "(Required) "
-                    },
-                    {
-                      "description": "The domain of the tenant to use for this request.",
-                      "type": "any",
-                      "value": "{{tenantDomain}}",
-                      "key": "tenantDomain"
-                    }
-                  ]
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n  \"expandMask\": {\n    \"paths\": [\n      \"string\",\n      \"string\"\n    ]\n  }\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "{\n  \"appProxyEntitlementView\": {\n    \"appProxyEntitlement\": {\n      \"createdAt\": \"2014-04-07T02:24:51.299Z\",\n      \"deletedAt\": \"2023-04-20T07:03:49.333Z\",\n      \"dstAppEntitlementId\": \"string\",\n      \"dstAppId\": \"string\",\n      \"implicit\": true,\n      \"srcAppEntitlementId\": \"string\",\n      \"srcAppId\": \"string\",\n      \"systemBuiltin\": false,\n      \"updatedAt\": \"2008-06-18T09:40:47.579Z\"\n    },\n    \"dstAppEntitlementPath\": \"string\",\n    \"dstAppPath\": \"string\",\n    \"srcAppEntitlementPath\": \"string\",\n    \"srcAppPath\": \"string\"\n  },\n  \"expanded\": [\n    {\n      \"@type\": \"string\",\n      \"key_0\": true,\n      \"key_1\": 124.42367978539592\n    },\n    {\n      \"@type\": \"string\",\n      \"key_0\": false\n    }\n  ]\n}",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
+          "id": "fa370689-cc56-4444-a961-e93817dc0f17",
+          "createdAt": "2026-10-21T20:45:18.000Z",
+          "updatedAt": "2026-10-21T20:45:18.000Z",
+          "uid": "35240-fa370689-cc56-4444-a961-e93817dc0f17"
         }
       ],
-      "event": []
-    }
-  ],
-  "event": [],
-  "variable": [
-    {
-      "description": {
-        "content": "The domain of the tenant to use for this request.",
-        "type": "text/plain"
-      },
-      "type": "any",
-      "value": "example",
-      "key": "tenantDomain"
-    },
-    {
-      "type": "string",
-      "value": "https://{{tenantDomain}}.conductor.one",
-      "key": "baseUrl"
+      "id": "ac4cc8ae-85d2-4e04-bea2-1e9eb72b0d1c",
+      "createdAt": "2026-10-21T20:45:18.000Z",
+      "updatedAt": "2026-10-21T20:45:18.000Z",
+      "uid": "35240-ac4cc8ae-85d2-4e04-bea2-1e9eb72b0d1c"
     }
   ],
   "auth": {
@@ -562,17 +525,19 @@
     "bearer": [
       {
         "key": "token",
-        "value": "{{bearerToken}}"
+        "value": "{{bearerToken}}",
+        "type": "string"
       }
     ]
   },
-  "info": {
-    "_postman_id": "58dc539e-196b-4c21-8ebd-63e3d2b14a6f",
-    "name": "ConductorOne Access Conflict App Entitlement Proxy Binding API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "description": {
-      "content": "The ConductorOne API is a HTTP API for managing ConductorOne resources.",
-      "type": "text/plain"
+  "variable": [
+    {
+      "key": "tenantDomain",
+      "value": "example"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://{{tenantDomain}}.conductor.one"
     }
-  }
+  ]
 }
